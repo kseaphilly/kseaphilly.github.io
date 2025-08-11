@@ -1,0 +1,101 @@
+/* General Body Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    color: #343a40;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    padding: 0 20px;
+}
+
+/* Header and Navigation */
+header {
+    background: #004a99; /* KSEA Blue */
+    color: #ffffff;
+    padding-top: 30px;
+    min-height: 70px;
+    border-bottom: #f0ad4e 3px solid; /* KSEA Yellow */
+}
+
+header a {
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+header ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-align: center;
+}
+
+header li {
+    display: inline;
+    padding: 0 20px 0 20px;
+}
+
+/* Main Content */
+main {
+    padding: 20px 0;
+}
+
+h1, h2, h3 {
+    color: #004a99;
+}
+
+/* Event Summary on Home Page */
+.event-summary {
+    background: #ffffff;
+    padding: 20px;
+    border-left: #f0ad4e 5px solid;
+    margin-top: 20px;
+}
+
+/* Leadership Page */
+.leadership-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.leader-card {
+    background: #ffffff;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid #dee2e6;
+    border-radius: 5px;
+}
+
+.leader-card img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+/* Events Page */
+.event {
+    background: #ffffff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #dee2e6;
+}
+
+/* Footer */
+footer {
+    padding: 20px;
+    margin-top: 20px;
+    color: #ffffff;
+    background-color: #343a40;
+    text-align: center;
+}
