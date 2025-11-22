@@ -189,3 +189,104 @@ footer {
     background-color: #343a40;
     text-align: center;
 }
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+
+    /* Navigation */
+    header nav ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    header nav li {
+        padding: 5px 10px;
+    }
+
+    header nav a {
+        font-size: 12px;
+    }
+
+    /* Typography */
+    h1 {
+        font-size: 32px;
+        margin-bottom: 20px;
+    }
+
+    h2 {
+        font-size: 24px;
+        margin-top: 30px;
+    }
+
+    h3 {
+        font-size: 18px;
+    }
+
+    /* Container */
+    .container {
+        padding: 0 15px;
+    }
+
+    /* Cards */
+    .card-container {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    /* Leader Cards */
+    .leader-card img {
+        width: 120px;
+        height: 120px;
+    }
+
+    /* Main Content */
+    main {
+        padding: 20px 0;
+    }
+
+    /* Sections */
+    .section {
+        margin-bottom: 30px;
+    }
+
+    /* Recruitment Message */
+    .recruitment-message {
+        padding: 20px 15px !important;
+    }
+
+    /* Sponsors */
+    .sponsors .sponsor-logos {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    /* Extra small screens */
+    header nav li {
+        padding: 5px 8px;
+    }
+
+    header nav a {
+        font-size: 11px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    .container {
+        padding: 0 10px;
+    }
+
+    .leader-card img {
+        width: 100px;
+        height: 100px;
+    }
+}
