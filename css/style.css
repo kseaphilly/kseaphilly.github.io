@@ -24,8 +24,8 @@ body {
 header {
     background: #ffffff;
     color: #333;
-    padding: 0 0 20px 0;
-    /* Removed top padding */
+    padding: 20px 0;
+    /* Restored top padding */
     border-bottom: 1px solid #e7e7e7;
     display: flex;
     justify-content: space-between;
