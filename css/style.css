@@ -4,7 +4,8 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background-color: #ffffff; /* Changed to white for seamless integration */
+    background-color: #ffffff;
+    /* Changed to white for seamless integration */
     color: #333;
 }
 
@@ -13,14 +14,16 @@ body {
     max-width: 100%;
     margin: 0;
     overflow: hidden;
-    padding: 0; /* Removed padding as requested */
+    padding: 0;
+    /* Removed padding as requested */
 }
 
 /* Header and Navigation */
 header {
     background: #ffffff;
     color: #333;
-    padding: 20px 0;
+    padding: 0 0 20px 0;
+    /* Removed top padding */
     border-bottom: 1px solid #e7e7e7;
     display: flex;
     justify-content: space-between;
@@ -66,7 +69,9 @@ main {
     padding: 30px 0;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     color: #004a99;
     margin-bottom: 20px;
 }
@@ -101,12 +106,12 @@ h2 {
     padding: 20px;
     border: 1px solid #e7e7e7;
     border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
     transition: box-shadow 0.3s ease;
 }
 
 .card:hover {
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 .card h3 {
