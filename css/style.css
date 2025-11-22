@@ -11,11 +11,13 @@ body {
 
 .container {
     width: 100%;
-    max-width: 100%;
-    margin: 0;
+    max-width: 1200px;
+    /* Restored max-width for full page embed */
+    margin: 0 auto;
+    /* Centered content */
     overflow: hidden;
-    padding: 0;
-    /* Removed padding as requested */
+    padding: 0 20px;
+    /* Added padding for spacing */
 }
 
 /* Header and Navigation */
