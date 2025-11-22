@@ -4,16 +4,16 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background-color: #f8f9fa;
+    background-color: #ffffff; /* Changed to white for seamless integration */
     color: #333;
 }
 
 .container {
-    width: 90%;
-    max-width: 1200px;
-    margin: auto;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
     overflow: hidden;
-    padding: 20px;
+    padding: 0; /* Removed padding as requested */
 }
 
 /* Header and Navigation */
