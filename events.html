@@ -40,7 +40,8 @@
 
                 <div style="margin-top: 20px; margin-bottom: 20px;">
                     <img src="images/events/nrc2026/save-the-date.jpg" alt="NRC 2026 Save the Date"
-                        style="width: 100%; border-radius: 8px; margin-bottom: 10px;">
+                        style="width: 25%; border-radius: 8px; margin-bottom: 10px; cursor: pointer;"
+                        onclick="openLightbox(this.src)">
                 </div>
             </div>
             <!-- 
@@ -222,6 +223,23 @@
     <footer>
         <p>&copy; 2025 KSEA Philadelphia Chapter</p>
     </footer>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+        <span class="close">&times;</span>
+        <img class="lightbox-content" id="lightbox-img">
+    </div>
+
+    <script>
+        function openLightbox(src) {
+            document.getElementById('lightbox').style.display = 'block';
+            document.getElementById('lightbox-img').src = src;
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox').style.display = 'none';
+        }
+    </script>
 </body>
 
 </html>
