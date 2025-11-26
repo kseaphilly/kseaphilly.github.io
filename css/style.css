@@ -352,84 +352,93 @@ footer {
 }
 
 @media only screen and (max-width: 700px) {
-
-    /* Sponsor and Partner Styles */
-    .sponsor-tier {
-        margin-bottom: 40px;
-        text-align: center;
-    }
-
-    .sponsor-tier h2 {
-        display: inline-block;
-        padding: 10px 30px;
-        border-bottom: none;
-        border-radius: 30px;
-        color: white;
-        margin-bottom: 30px;
-    }
-
-    .partners h2 {
-        background-color: #004a99;
-        color: white;
-        background: linear-gradient(145deg, #004a99, #003366);
-    }
-
-    .aps h2 {
-        background-color: #28a745;
-        color: white;
-        background: linear-gradient(145deg, #28a745, #218838);
-    }
-
-    .sponsor-grid {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 30px;
-    }
-
-    .sponsor-item {
-        background: white;
-        padding: 20px;
-        border-radius: 10px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        width: 250px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .sponsor-item img {
-        max-width: 100%;
-        max-height: 100px;
-        margin-bottom: 15px;
-    }
-
-    .sponsor-item h3 {
-        font-size: 18px;
-        margin: 0;
-        color: #333;
-    }
-
-    /* Partner Card Styles */
-    .partner-logo-wrapper {
-        height: 80px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-bottom: 15px;
-    }
-
-    .partner-logo {
-        max-height: 100%;
-        max-width: 100%;
-    }
-
-    .partner-link {
-        text-decoration: none;
-        color: inherit;
+    .lightbox-content {
+        width: 100%;
     }
 }
 
-```
+/* Sponsor and Partner Styles */
+.sponsor-tier {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.sponsor-tier h2 {
+    display: inline-block;
+    padding: 10px 30px;
+    border-bottom: none;
+    border-radius: 30px;
+    color: white;
+    margin-bottom: 30px;
+}
+
+.sponsor-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.sponsor-item {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.sponsor-item img {
+    max-width: 100%;
+    max-height: 100px;
+    margin-bottom: 15px;
+}
+
+.sponsor-item h3 {
+    font-size: 18px;
+    margin: 0;
+    color: #333;
+}
+
+/* Partner Card Styles */
+.partner-logo-wrapper {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+    max-width: 100%;
+}
+
+.partner-logo {
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.partner-link {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.partner-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.partner-card {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
