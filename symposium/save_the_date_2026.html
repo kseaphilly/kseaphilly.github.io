@@ -44,7 +44,21 @@
         .text-glow {
             text-shadow: 0 0 20px rgba(59, 130, 246, 0.5);
         }
+
+        .no-print {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 9999;
+        }
+
+        @media print {
+            .no-print {
+                display: none;
+            }
+        }
     </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 </head>
 
 <body class="min-h-screen flex items-center justify-center p-4 ambient-bg selection:bg-blue-500 selection:text-white">
@@ -259,6 +273,47 @@
         </div>
 
     </main>
+
+    <!-- Download PDF Button -->
+    <button id="downloadPdfBtn"
+        class="no-print bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-full font-bold shadow-lg hover:shadow-xl transition-all flex items-center gap-2">
+        <i class="fas fa-file-pdf"></i> Download PDF
+    </button>
+
+    <script>
+        document.getElementById('downloadPdfBtn').addEventListener('click', async function () {
+            const btn = this;
+            btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Generating...';
+            btn.disabled = true;
+
+            const poster = document.querySelector('main');
+            const { jsPDF } = window.jspdf;
+
+            const canvas = await html2canvas(poster, {
+                scale: 3,
+                useCORS: true,
+                allowTaint: true,
+                logging: false,
+                width: poster.offsetWidth,
+                height: poster.offsetHeight
+            });
+
+            const imgData = canvas.toDataURL('image/jpeg', 1.0);
+
+            // Calculate aspect ratio for Letter size
+            const pdf = new jsPDF({
+                orientation: 'portrait',
+                unit: 'in',
+                format: 'letter'
+            });
+
+            pdf.addImage(imgData, 'JPEG', 0, 0, 8.5, 11);
+            pdf.save('save_the_date_2026.pdf');
+
+            btn.innerHTML = '<i class="fas fa-file-pdf"></i> Download PDF';
+            btn.disabled = false;
+        });
+    </script>
 
 </body>
 

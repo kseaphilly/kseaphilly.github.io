@@ -61,8 +61,20 @@
                 margin: 0;
                 page-break-after: always;
             }
+
+            .no-print {
+                display: none;
+            }
+        }
+
+        .no-print {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 9999;
         }
     </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 </head>
 
 <body>
@@ -720,6 +732,58 @@
 
         </div>
     </div>
+
+    <!-- Download PDF Button -->
+    <button id="downloadPdfBtn"
+        class="no-print bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-full font-bold shadow-lg hover:shadow-xl transition-all flex items-center gap-2">
+        <i class="fas fa-file-pdf"></i> Download PDF
+    </button>
+
+    <script>
+        document.getElementById('downloadPdfBtn').addEventListener('click', async function () {
+            const btn = this;
+            btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Generating...';
+            btn.disabled = true;
+
+            const pages = document.querySelectorAll('.page');
+            const { jsPDF } = window.jspdf;
+
+            // Create PDF with Letter size
+            const pdf = new jsPDF({
+                orientation: 'portrait',
+                unit: 'in',
+                format: 'letter'
+            });
+
+            for (let i = 0; i < pages.length; i++) {
+                const page = pages[i];
+
+                // Capture page as canvas
+                const canvas = await html2canvas(page, {
+                    scale: 3,
+                    useCORS: true,
+                    allowTaint: true,
+                    logging: false,
+                    width: page.offsetWidth,
+                    height: page.offsetHeight
+                });
+
+                const imgData = canvas.toDataURL('image/jpeg', 1.0);
+
+                if (i > 0) {
+                    pdf.addPage();
+                }
+
+                // Add image to fill entire page (no margin)
+                pdf.addImage(imgData, 'JPEG', 0, 0, 8.5, 11);
+            }
+
+            pdf.save('symposium_booklet_2026.pdf');
+
+            btn.innerHTML = '<i class="fas fa-file-pdf"></i> Download PDF';
+            btn.disabled = false;
+        });
+    </script>
 
 </body>
 
