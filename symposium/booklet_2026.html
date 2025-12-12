@@ -746,42 +746,36 @@
             btn.disabled = true;
 
             const pages = document.querySelectorAll('.page');
-            const { jsPDF } = window.jspdf;
 
-            // Create PDF with Letter size
-            const pdf = new jsPDF({
-                orientation: 'portrait',
-                unit: 'in',
-                format: 'letter'
+            // Create a container for all pages
+            const container = document.createElement('div');
+            pages.forEach(page => {
+                const clone = page.cloneNode(true);
+                clone.style.pageBreakAfter = 'always';
+                container.appendChild(clone);
             });
 
-            for (let i = 0; i < pages.length; i++) {
-                const page = pages[i];
-
-                // Capture page as canvas
-                const canvas = await html2canvas(page, {
-                    scale: 3,
+            const opt = {
+                margin: 0,
+                filename: 'symposium_booklet_2026.pdf',
+                image: { type: 'jpeg', quality: 1.0 },
+                html2canvas: {
+                    scale: 2,
                     useCORS: true,
-                    allowTaint: true,
-                    logging: false,
-                    width: page.offsetWidth,
-                    height: page.offsetHeight
-                });
+                    allowTaint: true
+                },
+                jsPDF: {
+                    unit: 'in',
+                    format: 'letter',
+                    orientation: 'portrait'
+                },
+                pagebreak: { mode: ['css', 'legacy'] }
+            };
 
-                const imgData = canvas.toDataURL('image/jpeg', 1.0);
-
-                if (i > 0) {
-                    pdf.addPage();
-                }
-
-                // Add image to fill entire page (no margin)
-                pdf.addImage(imgData, 'JPEG', 0, 0, 8.5, 11);
-            }
-
-            pdf.save('symposium_booklet_2026.pdf');
-
-            btn.innerHTML = '<i class="fas fa-file-pdf"></i> Download PDF';
-            btn.disabled = false;
+            html2pdf().set(opt).from(container).save().then(function () {
+                btn.innerHTML = '<i class="fas fa-file-pdf"></i> Download PDF';
+                btn.disabled = false;
+            });
         });
     </script>
 

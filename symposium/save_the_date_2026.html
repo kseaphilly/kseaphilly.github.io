@@ -281,37 +281,33 @@
     </button>
 
     <script>
-        document.getElementById('downloadPdfBtn').addEventListener('click', async function () {
+        document.getElementById('downloadPdfBtn').addEventListener('click', function () {
             const btn = this;
             btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Generating...';
             btn.disabled = true;
 
             const poster = document.querySelector('main');
-            const { jsPDF } = window.jspdf;
 
-            const canvas = await html2canvas(poster, {
-                scale: 3,
-                useCORS: true,
-                allowTaint: true,
-                logging: false,
-                width: poster.offsetWidth,
-                height: poster.offsetHeight
+            const opt = {
+                margin: 0,
+                filename: 'save_the_date_2026.pdf',
+                image: { type: 'jpeg', quality: 1.0 },
+                html2canvas: {
+                    scale: 3,
+                    useCORS: true,
+                    allowTaint: true
+                },
+                jsPDF: {
+                    unit: 'in',
+                    format: 'letter',
+                    orientation: 'portrait'
+                }
+            };
+
+            html2pdf().set(opt).from(poster).save().then(function () {
+                btn.innerHTML = '<i class="fas fa-file-pdf"></i> Download PDF';
+                btn.disabled = false;
             });
-
-            const imgData = canvas.toDataURL('image/jpeg', 1.0);
-
-            // Calculate aspect ratio for Letter size
-            const pdf = new jsPDF({
-                orientation: 'portrait',
-                unit: 'in',
-                format: 'letter'
-            });
-
-            pdf.addImage(imgData, 'JPEG', 0, 0, 8.5, 11);
-            pdf.save('save_the_date_2026.pdf');
-
-            btn.innerHTML = '<i class="fas fa-file-pdf"></i> Download PDF';
-            btn.disabled = false;
         });
     </script>
 
