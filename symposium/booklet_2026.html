@@ -197,8 +197,7 @@
 
             <div class="flex-grow flex flex-col">
                 <h2 class="text-3xl font-bold text-slate-800 mb-6">Welcoming Remarks</h2>
-                <div
-                    class="prose prose-slate text-sm leading-relaxed text-justify text-slate-600 flex-grow space-y-4 columns-2 gap-8">
+                <div class="prose prose-slate text-sm leading-relaxed text-justify text-slate-600 space-y-4">
                     <p class="mt-0">Dear Esteemed Guests, Colleagues, and KSEA Members,</p>
                     <p>It is our great honor to welcome you to the <strong class="text-blue-700">2026 US–Korea
                             Northeastern Symposium on AI, Biomedical Science, & Engineering</strong>, hosted by the KSEA
@@ -210,7 +209,7 @@
                     <p>We extend our deepest gratitude to KSEA and KUSCO for their generous support, and to all our
                         sponsors, speakers, and participants who make this event possible. We hope today sparks new
                         ideas and lasting partnerships.</p>
-                    <p class="font-serif italic text-right mt-2 break-after-column">Sincerely,</p>
+                    <p class="font-serif italic text-right mt-2">Sincerely,</p>
                 </div>
 
                 <div class="mt-8 flex justify-center gap-12">
@@ -312,80 +311,133 @@
     </div>
 
 
-    <!-- PAGE 4: SPHERES OF INFLUENCE (SPEAKER LIST OVERVIEW) -->
+    <!-- PAGE 4: DISTINGUISHED SPEAKERS (UNIFORM GRID) -->
     <div class="page p-12 bg-slate-50">
         <div class="flex flex-col h-full border-2 border-slate-200 p-8 relative">
-            <h2 class="text-3xl font-black text-slate-900 uppercase tracking-tight mb-6 text-center">Distinguished
+            <h2 class="text-3xl font-black text-slate-900 uppercase tracking-tight mb-8 text-center">Distinguished
                 Speakers</h2>
-            <div class="flex-grow flex flex-col gap-6">
-                <!-- Keynotes -->
-                <div class="bg-white rounded-xl p-6 shadow-sm border border-slate-100 flex-shrink-0">
-                    <h3 class="text-blue-800 font-bold uppercase tracking-widest text-sm mb-4 text-center">Keynote
-                        Speakers</h3>
-                    <div class="flex justify-center gap-12">
-                        <div class="flex flex-col items-center w-64 text-center">
+
+            <!-- Structured Speaker Sections -->
+            <div class="flex-grow flex flex-col gap-8">
+
+                <!-- Keynote Session -->
+                <div>
+                    <h3
+                        class="text-blue-800 font-bold uppercase tracking-widest text-sm mb-4 text-center border-b border-blue-100 pb-2">
+                        Keynote Session</h3>
+                    <div class="grid grid-cols-2 gap-6">
+                        <!-- Keynote 1: Junhyong Kim -->
+                        <div class="bg-white p-4 rounded-xl border border-blue-200 shadow-sm flex items-center gap-4">
                             <img src="assets/junhyong-kim.png"
-                                class="w-28 h-28 object-cover rounded-full border-4 border-blue-50 shadow-md mb-2 object-top">
-                            <h4 class="font-bold text-slate-900 text-lg leading-tight">Junhyong Kim, PhD</h4>
-                            <p class="text-blue-600 text-sm font-bold">UPenn</p>
+                                class="w-20 h-20 rounded-full object-cover object-top border-2 border-blue-100 flex-shrink-0">
+                            <div>
+                                <span
+                                    class="text-[9px] font-bold text-white bg-blue-600 px-1.5 py-0.5 rounded-full uppercase mb-1 inline-block">Keynote</span>
+                                <h4 class="font-bold text-slate-900 text-sm leading-tight">Junhyong Kim, PhD</h4>
+                                <p class="text-[10px] text-blue-600 font-bold uppercase mt-0.5">UPenn</p>
+                            </div>
                         </div>
-                        <div class="flex flex-col items-center w-64 text-center">
+                        <!-- Keynote 2: Deok-Ho Kim -->
+                        <div class="bg-white p-4 rounded-xl border border-purple-200 shadow-sm flex items-center gap-4">
                             <img src="assets/deok-ho-kim.png"
-                                class="w-28 h-28 object-cover rounded-full border-4 border-purple-50 shadow-md mb-2">
-                            <h4 class="font-bold text-slate-900 text-lg leading-tight">Deok-Ho Kim, PhD</h4>
-                            <p class="text-purple-600 text-sm font-bold mb-1">Johns Hopkins</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- Invited Speakers -->
-                <div class="bg-white rounded-xl p-6 shadow-sm border border-slate-100 flex-grow">
-                    <h3 class="text-slate-800 font-bold uppercase tracking-widest text-sm mb-6 text-center">Invited
-                        Speakers</h3>
-                    <div class="grid grid-cols-2 gap-x-8 gap-y-6">
-                        <div class="flex items-center gap-3"><img src="assets/dokyoon-kim-v2.png"
-                                class="w-14 h-14 rounded-full object-cover border border-slate-200">
+                                class="w-20 h-20 rounded-full object-cover border-2 border-purple-100 flex-shrink-0">
                             <div>
-                                <h4 class="font-bold text-slate-900 text-sm">Dokyoon Kim, PhD</h4>
-                                <p class="text-[10px] text-blue-600 font-bold uppercase">UPenn (CATI)</p>
-                            </div>
-                        </div>
-                        <div class="flex items-center gap-3"><img src="assets/jina-ko.png"
-                                class="w-14 h-14 rounded-full object-cover border border-slate-200">
-                            <div>
-                                <h4 class="font-bold text-slate-900 text-sm">Jina Ko, PhD</h4>
-                                <p class="text-[10px] text-blue-600 font-bold uppercase">UPenn</p>
-                            </div>
-                        </div>
-                        <div class="flex items-center gap-3"><img src="assets/dae-myung-yang.jpg"
-                                class="w-14 h-14 rounded-full object-cover border border-slate-200">
-                            <div>
-                                <h4 class="font-bold text-slate-900 text-sm">Dae-Myung Yang, PhD</h4>
-                                <p class="text-[10px] text-blue-600 font-bold uppercase">Fox Chase</p>
-                            </div>
-                        </div>
-                        <div class="flex items-center gap-3"><img src="assets/hayoung-bong.png"
-                                class="w-14 h-14 rounded-full object-cover border border-slate-200">
-                            <div>
-                                <h4 class="font-bold text-slate-900 text-sm">Hayoung Bong, PhD</h4>
-                                <p class="text-[10px] text-blue-600 font-bold uppercase">NASA GISS</p>
-                            </div>
-                        </div>
-                        <div class="flex items-center gap-3"><img src="assets/minsung-kim.png"
-                                class="w-14 h-14 rounded-full object-cover border border-slate-200">
-                            <div>
-                                <h4 class="font-bold text-slate-900 text-sm">Minsung Kim, PhD</h4>
-                                <p class="text-[10px] text-blue-600 font-bold uppercase">Rutgers</p>
+                                <span
+                                    class="text-[9px] font-bold text-white bg-purple-600 px-1.5 py-0.5 rounded-full uppercase mb-1 inline-block">Keynote</span>
+                                <h4 class="font-bold text-slate-900 text-sm leading-tight">Deok-Ho Kim, PhD</h4>
+                                <p class="text-[10px] text-purple-600 font-bold uppercase mt-0.5">Johns Hopkins</p>
                             </div>
                         </div>
                     </div>
                 </div>
+
+                <!-- Session 1 -->
+                <div>
+                    <h3
+                        class="text-slate-800 font-bold uppercase tracking-widest text-sm mb-4 text-center border-b border-slate-100 pb-2">
+                        Session #1: Bio-Science & Regenerative Medicine</h3>
+                    <div class="grid grid-cols-3 gap-4">
+                        <!-- Dokyoon Kim -->
+                        <div
+                            class="bg-white p-3 rounded-xl border border-slate-200 shadow-sm flex flex-col items-center text-center gap-2">
+                            <img src="assets/dokyoon-kim-v2.png"
+                                class="w-16 h-16 rounded-full object-cover border-2 border-slate-100 flex-shrink-0">
+                            <div>
+                                <h4 class="font-bold text-slate-900 text-xs leading-tight">Dokyoon Kim, PhD</h4>
+                                <p class="text-[9px] text-blue-600 font-bold uppercase mt-0.5">UPenn (CATI)</p>
+                            </div>
+                        </div>
+                        <!-- Jina Ko -->
+                        <div
+                            class="bg-white p-3 rounded-xl border border-slate-200 shadow-sm flex flex-col items-center text-center gap-2">
+                            <img src="assets/jina-ko.png"
+                                class="w-16 h-16 rounded-full object-cover border-2 border-slate-100 flex-shrink-0">
+                            <div>
+                                <h4 class="font-bold text-slate-900 text-xs leading-tight">Jina Ko, PhD</h4>
+                                <p class="text-[9px] text-blue-600 font-bold uppercase mt-0.5">UPenn</p>
+                            </div>
+                        </div>
+                        <!-- Dae-Myung Yang -->
+                        <div
+                            class="bg-white p-3 rounded-xl border border-slate-200 shadow-sm flex flex-col items-center text-center gap-2">
+                            <img src="assets/dae-myung-yang.jpg"
+                                class="w-16 h-16 rounded-full object-cover border-2 border-slate-100 flex-shrink-0">
+                            <div>
+                                <h4 class="font-bold text-slate-900 text-xs leading-tight">Dae-Myung Yang, PhD</h4>
+                                <p class="text-[9px] text-blue-600 font-bold uppercase mt-0.5">Fox Chase</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Session 2 -->
+                <div>
+                    <h3
+                        class="text-slate-800 font-bold uppercase tracking-widest text-sm mb-4 text-center border-b border-slate-100 pb-2">
+                        Session #2: Engineering & Medicine</h3>
+                    <div class="grid grid-cols-3 gap-4">
+                        <!-- Hayoung Bong -->
+                        <div
+                            class="bg-white p-3 rounded-xl border border-slate-200 shadow-sm flex flex-col items-center text-center gap-2">
+                            <img src="assets/hayoung-bong.png"
+                                class="w-16 h-16 rounded-full object-cover border-2 border-slate-100 flex-shrink-0">
+                            <div>
+                                <h4 class="font-bold text-slate-900 text-xs leading-tight">Hayoung Bong, PhD</h4>
+                                <p class="text-[9px] text-blue-600 font-bold uppercase mt-0.5">NASA GISS</p>
+                            </div>
+                        </div>
+                        <!-- Minsung Kim -->
+                        <div
+                            class="bg-white p-3 rounded-xl border border-slate-200 shadow-sm flex flex-col items-center text-center gap-2">
+                            <img src="assets/minsung-kim.png"
+                                class="w-16 h-16 rounded-full object-cover border-2 border-slate-100 flex-shrink-0">
+                            <div>
+                                <h4 class="font-bold text-slate-900 text-xs leading-tight">Minsung Kim, PhD</h4>
+                                <p class="text-[9px] text-blue-600 font-bold uppercase mt-0.5">Rutgers</p>
+                            </div>
+                        </div>
+                        <!-- Industry Talk -->
+                        <div
+                            class="bg-white p-3 rounded-xl border border-slate-200 shadow-sm flex flex-col items-center text-center gap-2">
+                            <div
+                                class="w-16 h-16 rounded-full bg-slate-100 flex items-center justify-center text-slate-400 text-xl border-2 border-slate-200 flex-shrink-0">
+                                <i class="fas fa-user-tie"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-900 text-xs leading-tight">Industry Talk</h4>
+                                <p class="text-[9px] text-blue-600 font-bold uppercase mt-0.5">TBD, Inc.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
             <span class="page-number">4</span>
         </div>
     </div>
 
 
-    <!-- PAGE 5: JUNHYONG KIM -->
+    <!-- PAGE 5: JUNHYONG KIM (Standard Template) -->
     <div class="page p-12 bg-white">
         <div class="flex flex-col h-full">
             <div class="flex items-end gap-6 border-b-2 border-slate-100 pb-8 mb-8">
@@ -414,8 +466,8 @@
                     sub-cellular processes. In this talk, I first start with some personal reflections on the
                     development of the field of single cell biology and key technologies. Then, I discuss work in my lab
                     extending single cell biology to sub-cellular biology of single mitochondria sequencing in mammalian
-                    brain cells and to sub-cellular localization of mRNA in neurites as well as some new work developing
-                    new deep learning method for reconstructing single cell lineages.</p>
+                    brain cells and to sub-cellular localization of mRNA in neurites as well as new deep learning
+                    methods for reconstructing single cell lineages.</p>
 
                 <div class="mt-8 pt-8 border-t border-slate-100">
                     <p><strong class="text-slate-900">Bio:</strong> Junhyong Kim is the Christopher H. Browne
@@ -426,9 +478,7 @@
                         National University and his Ph.D. in Ecology and Evolution from the State University of New York
                         at Stony Brook. He did his postdoctoral work at Indiana University. Before joining Penn, he was
                         Professor of Ecology and Evolutionary Biology at Yale University. He is a recipient of the Sloan
-                        Foundation Young Investigator Award and the Guggenheim Fellowship. His current research focuses
-                        on the genomics of single cells and the quantitative analysis of cell physiology and
-                        development.</p>
+                        Foundation Young Investigator Award and the Guggenheim Fellowship.</p>
                 </div>
             </div>
             <span class="page-number">5</span>
@@ -436,7 +486,7 @@
     </div>
 
 
-    <!-- PAGE 6: DEOK-HO KIM -->
+    <!-- PAGE 6: DEOK-HO KIM (Standard Template) -->
     <div class="page p-12 bg-white">
         <div class="flex flex-col h-full">
             <div class="flex items-end gap-6 border-b-2 border-slate-100 pb-8 mb-8">
@@ -466,9 +516,7 @@
                     real-time functional phenotypic biosensors for predictive drug efficacy and toxicity screening. In
                     this talk, I will introduce our recent work on a microphysiological model of Duchenne muscular
                     dystrophy, an automated 96-well drug-induced cardiotoxicity assay, and spaceflight-induced muscle
-                    aging. These biomimetic models offer key insights into human pathophysiology on Earth and in space,
-                    providing promising tools for advancing drug development and precision medicine within an evolving
-                    regulatory landscape.</p>
+                    aging.</p>
 
                 <div class="mt-8 pt-8 border-t border-slate-100 bg-slate-50 p-6 rounded-lg text-xs leading-relaxed">
                     <p class="mb-0"><strong class="text-slate-900">Bio:</strong> Dr. Deok‐Ho Kim is a Professor of
@@ -479,8 +527,7 @@
                         Engineering from Johns Hopkins. Dr. Kim’s research focuses on developing advanced
                         biomaterials/devices and stem cell/tissue engineering technologies for disease modeling, drug
                         development, and regenerative medicine. He has published over 200 peer-reviewed papers. He is an
-                        elected Fellow of AIMBE, RSC, AHA, and SLAS. He founded Curi Bio Inc., which integrates advanced
-                        3D tissue models, biosystems, and AI/ML-enabled insights.</p>
+                        elected Fellow of AIMBE, RSC, AHA, and SLAS.</p>
                 </div>
             </div>
             <span class="page-number">6</span>
@@ -488,22 +535,38 @@
     </div>
 
 
-    <!-- PAGE 7: DOKYOON KIM -->
+    <!-- PAGE 7: DOKYOON KIM (Standard Template) -->
     <div class="page p-12 bg-white">
-        <div class="flex flex-col h-full justify-center">
-            <div class="flex flex-col items-center text-center">
+        <div class="flex flex-col h-full">
+            <div class="flex items-end gap-6 border-b-2 border-slate-100 pb-8 mb-8">
                 <img src="assets/dokyoon-kim-v2.png"
-                    class="w-48 h-48 rounded-full object-cover shadow-2xl border-4 border-slate-100 mb-8">
-                <h2 class="text-4xl font-black text-slate-900 mb-2">Dokyoon Kim, PhD</h2>
-                <p class="text-blue-600 font-bold text-lg uppercase mb-4">University of Pennsylvania</p>
-                <div class="text-slate-500 text-base italic mb-12 max-w-lg mx-auto">
-                    <p>Associate Professor, Biostatistics, Epidemiology & Informatics</p>
-                    <p>Director, Cener for AI-Driven Translational Informatics (CATI)</p>
+                    class="w-32 h-32 rounded-xl object-cover shadow-lg border border-slate-200">
+                <div>
+                    <span
+                        class="bg-blue-100 text-blue-700 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider mb-2 inline-block">Invited
+                        Speaker</span>
+                    <h2 class="text-3xl font-black text-slate-900 leading-tight mb-1">Dokyoon Kim, PhD</h2>
+                    <p class="text-blue-700 font-bold text-sm uppercase mb-1">University of Pennsylvania</p>
+                    <p class="text-slate-500 text-sm italic">Associate Professor, Biostatistics via Epidemiology &
+                        Informatics<br>Director, Cener for AI-Driven Translational Informatics (CATI)</p>
+                </div>
+            </div>
+
+            <div class="flex-grow speaker-content text-justify text-slate-700 text-sm">
+                <h3 class="text-xl font-bold text-slate-900 mb-4 font-serif">"Integrating multi-omics data with clinical
+                    information using AI/ML"</h3>
+
+                <!-- Placeholder for Abstract -->
+                <p><strong class="text-slate-900">Abstract:</strong></p>
+                <div class="bg-slate-50 border border-dashed border-slate-300 rounded p-4 text-slate-400 italic mb-6">
+                    [Abstract to be updated]
                 </div>
 
-                <div class="max-w-2xl">
-                    <h3 class="text-2xl font-bold text-slate-800 mb-6 font-serif leading-tight">"Integrating multi-omics
-                        data with clinical information using AI/ML"</h3>
+                <div class="mt-8 pt-8 border-t border-slate-100">
+                    <p><strong class="text-slate-900">Bio:</strong></p>
+                    <div class="bg-slate-50 border border-dashed border-slate-300 rounded p-4 text-slate-400 italic">
+                        [Biography to be updated]
+                    </div>
                 </div>
             </div>
             <span class="page-number">7</span>
@@ -511,7 +574,7 @@
     </div>
 
 
-    <!-- PAGE 8: JINA KO -->
+    <!-- PAGE 8: JINA KO (Standard Template) -->
     <div class="page p-12 bg-white">
         <div class="flex flex-col h-full">
             <div class="flex items-end gap-6 border-b-2 border-slate-100 pb-8 mb-8">
@@ -546,9 +609,7 @@
                         at the University of Pennsylvania in 2018. For her postdoctoral training, she worked at
                         Massachusetts General Hospital and the Wyss Institute at Harvard University as a Schmidt Science
                         Fellow and a NIH K99/R00 award recipient. In 2022, Jina started her lab at the University of
-                        Pennsylvania and won the NIH New Innovator Award (DP2) and NSF CAREER award. Jina aims to
-                        develop micro and nano technologies that can profile rare disease biomarkers for personalized
-                        medicine.</p>
+                        Pennsylvania and won the NIH New Innovator Award (DP2) and NSF CAREER award.</p>
                 </div>
             </div>
             <span class="page-number">8</span>
@@ -556,21 +617,37 @@
     </div>
 
 
-    <!-- PAGE 9: DAE-MYUNG YANG -->
+    <!-- PAGE 9: DAE-MYUNG YANG (Standard Template) -->
     <div class="page p-12 bg-white">
-        <div class="flex flex-col h-full justify-center">
-            <div class="flex flex-col items-center text-center">
+        <div class="flex flex-col h-full">
+            <div class="flex items-end gap-6 border-b-2 border-slate-100 pb-8 mb-8">
                 <img src="assets/dae-myung-yang.jpg"
-                    class="w-48 h-48 rounded-full object-cover shadow-2xl border-4 border-slate-100 mb-8">
-                <h2 class="text-4xl font-black text-slate-900 mb-2">Dae-Myung Yang, PhD</h2>
-                <p class="text-blue-600 font-bold text-lg uppercase mb-4">Fox Chase Cancer Center</p>
-                <div class="text-slate-500 text-base italic mb-12 max-w-lg mx-auto">
-                    <p>Assistant Professor, Radiation Oncology</p>
+                    class="w-32 h-32 rounded-xl object-cover shadow-lg border border-slate-200">
+                <div>
+                    <span
+                        class="bg-blue-100 text-blue-700 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider mb-2 inline-block">Invited
+                        Speaker</span>
+                    <h2 class="text-3xl font-black text-slate-900 leading-tight mb-1">Dae-Myung Yang, PhD</h2>
+                    <p class="text-blue-700 font-bold text-sm uppercase mb-1">Fox Chase Cancer Center</p>
+                    <p class="text-slate-500 text-sm italic">Assistant Professor, Radiation Oncology</p>
+                </div>
+            </div>
+
+            <div class="flex-grow speaker-content text-justify text-slate-700 text-sm">
+                <h3 class="text-xl font-bold text-slate-900 mb-4 font-serif">"Medical physics, radiodynamic therapy, and
+                    quantitative imaging"</h3>
+
+                <!-- Placeholder for Abstract -->
+                <p><strong class="text-slate-900">Abstract:</strong></p>
+                <div class="bg-slate-50 border border-dashed border-slate-300 rounded p-4 text-slate-400 italic mb-6">
+                    [Abstract to be updated]
                 </div>
 
-                <div class="max-w-2xl">
-                    <h3 class="text-2xl font-bold text-slate-800 mb-6 font-serif leading-tight">"Medical physics,
-                        radiodynamic therapy, and quantitative imaging"</h3>
+                <div class="mt-8 pt-8 border-t border-slate-100">
+                    <p><strong class="text-slate-900">Bio:</strong></p>
+                    <div class="bg-slate-50 border border-dashed border-slate-300 rounded p-4 text-slate-400 italic">
+                        [Biography to be updated]
+                    </div>
                 </div>
             </div>
             <span class="page-number">9</span>
@@ -578,7 +655,7 @@
     </div>
 
 
-    <!-- PAGE 10: HAYOUNG BONG -->
+    <!-- PAGE 10: HAYOUNG BONG (Standard Template) -->
     <div class="page p-12 bg-white">
         <div class="flex flex-col h-full">
             <div class="flex items-end gap-6 border-b-2 border-slate-100 pb-8 mb-8">
@@ -624,12 +701,12 @@
     </div>
 
 
-    <!-- PAGE 11: MINSUNG KIM -->
+    <!-- PAGE 11: MINSUNG KIM (Standard Template) -->
     <div class="page p-12 bg-white">
         <div class="flex flex-col h-full">
             <div class="flex items-end gap-6 border-b-2 border-slate-100 pb-8 mb-8">
                 <img src="assets/minsung-kim.png"
-                    class="w-32 h-32 rounded-xl object-cover shadow-lg border border-slate-200">
+                    class="w-32 h-32 rounded-xl object-cover object-top shadow-lg border border-slate-200">
                 <div>
                     <span
                         class="bg-blue-100 text-blue-700 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider mb-2 inline-block">Invited
@@ -738,7 +815,8 @@
                     <h2 class="text-2xl font-black text-slate-800 uppercase tracking-tight">Registration</h2>
                     <div
                         class="flex items-center gap-2 text-blue-600 bg-blue-50 px-3 py-1 rounded-full text-xs font-bold">
-                        <i class="fas fa-info-circle"></i> Early Bird: Feb 20</div>
+                        <i class="fas fa-info-circle"></i> Early Bird: Feb 20
+                    </div>
                 </div>
                 <div class="flex gap-8 items-center">
                     <div class="flex-grow">
