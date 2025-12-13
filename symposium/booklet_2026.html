@@ -12,6 +12,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,400&family=Outfit:wght@300;400;600;800&display=swap"
         rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
     <style>
         body {
             font-family: 'Outfit', sans-serif;
@@ -22,7 +23,6 @@
             font-family: 'Merriweather', serif;
         }
 
-        /* Ambient Background Effect */
         .ambient-bg {
             background:
                 radial-gradient(circle at 10% 10%, rgba(37, 99, 235, 0.15) 0%, transparent 40%),
@@ -30,7 +30,7 @@
                 radial-gradient(circle at 50% 50%, rgba(15, 23, 42, 1) 0%, transparent 100%);
         }
 
-        /* Page Layout for Printing */
+        /* Page Layout for Printing (8.5 x 11 inches) */
         .page {
             width: 8.5in;
             height: 11in;
@@ -42,12 +42,30 @@
             flex-direction: column;
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
             margin: 2rem auto;
+            flex-shrink: 0;
         }
 
-        /* Front & Back Cover Specifics */
         .page.cover {
             background-color: #0f172a;
             color: #f8fafc;
+        }
+
+        .page-number {
+            position: absolute;
+            bottom: 1.5rem;
+            left: 0;
+            right: 0;
+            text-align: center;
+            font-size: 0.875rem;
+            color: #94a3b8;
+            font-family: 'Merriweather', serif;
+            font-style: italic;
+        }
+
+        /* Abstract/Bio Styling */
+        .speaker-content p {
+            margin-bottom: 1rem;
+            line-height: 1.6;
         }
 
         @media print {
@@ -74,14 +92,12 @@
             z-index: 9999;
         }
     </style>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 </head>
 
 <body>
 
     <!-- PAGE 1: FRONT COVER -->
     <div class="page cover ambient-bg">
-        <!-- Background Layers -->
         <div
             class="absolute inset-0 bg-slate-900 bg-[url('assets/symposium_poster_final_v6_tall.png')] bg-cover bg-bottom bg-no-repeat z-0">
         </div>
@@ -89,14 +105,9 @@
             class="absolute inset-0 bg-[url('../assets/symposium_poster_background.png')] bg-cover bg-top bg-no-repeat opacity-30 z-0 mix-blend-screen">
         </div>
         <div class="absolute inset-0 bg-gradient-to-b from-slate-900/40 via-transparent to-black/80 z-0"></div>
-
-        <!-- Top Decorative Borders -->
         <div class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-blue-600 via-purple-600 to-blue-600 z-20">
         </div>
-
-        <!-- Content -->
         <div class="relative z-10 flex flex-col items-center justify-between h-full p-16 text-center">
-            <!-- Center: Title -->
             <div class="flex-grow flex flex-col justify-center">
                 <h3 class="text-blue-400 font-bold tracking-[0.25em] uppercase text-xl mb-2">2026 US-Korea Northeastern
                     Symposium</h3>
@@ -114,17 +125,13 @@
                     "Pioneering the Future: The Convergence of AI, Bio-Science, & Engineering"
                 </p>
             </div>
-
-            <!-- Bottom: Date & Location -->
             <div class="w-full">
                 <div class="grid grid-cols-2 gap-8 max-w-4xl mx-auto">
-                    <!-- Date -->
                     <div class="bg-white/5 border border-white/10 p-6 rounded-xl backdrop-blur-md">
                         <i class="fas fa-calendar-alt text-3xl text-blue-400 mb-2"></i>
                         <p class="text-2xl font-bold text-white">FEB 27, 2026</p>
                         <p class="text-sm text-blue-200 uppercase tracking-widest font-semibold">Friday, 12:30 PM</p>
                     </div>
-                    <!-- Location -->
                     <div class="bg-white/5 border border-white/10 p-6 rounded-xl backdrop-blur-md">
                         <i class="fas fa-map-marker-alt text-3xl text-purple-400 mb-2"></i>
                         <p class="text-xl font-bold text-white">UPenn Smilow Center</p>
@@ -136,79 +143,77 @@
     </div>
 
 
-    <!-- PAGE 2: CONTENTS & WELCOMING REMARKS -->
+    <!-- PAGE 2: CONTENTS & WELCOME -->
     <div class="page bg-white text-slate-800 p-12 relative overflow-hidden">
         <div class="relative z-10 h-full flex flex-col">
-
-            <!-- Top: Contents -->
-            <div class="mb-10 border-b-2 border-slate-100 pb-8">
+            <div class="mb-8 border-b-2 border-slate-100 pb-6">
                 <h2 class="text-2xl font-bold text-slate-800 mb-6 border-b-2 border-blue-500 pb-1 inline-block">Contents
                 </h2>
-                <ul class="grid grid-cols-2 gap-x-12 gap-y-2 text-sm">
-                    <li class="flex justify-between items-center group cursor-pointer border-b border-slate-50 py-1">
-                        <span class="font-bold text-slate-600 group-hover:text-blue-600">Welcoming Remarks</span>
-                        <span class="text-slate-400 font-serif italic">02</span>
-                    </li>
-                    <li class="flex justify-between items-center group cursor-pointer border-b border-slate-50 py-1">
-                        <span class="font-bold text-slate-600 group-hover:text-blue-600">Program Schedule</span>
-                        <span class="text-slate-400 font-serif italic">03</span>
-                    </li>
-                    <li class="flex justify-between items-center group cursor-pointer border-b border-slate-50 py-1">
-                        <span class="font-bold text-slate-600 group-hover:text-blue-600">Distinguished Speakers</span>
-                        <span class="text-slate-400 font-serif italic">04</span>
-                    </li>
-                    <li class="flex justify-between items-center group cursor-pointer border-b border-slate-50 py-1">
-                        <span class="font-bold text-slate-600 group-hover:text-blue-600">Sponsorship
-                            Opportunities</span>
-                        <span class="text-slate-400 font-serif italic">05</span>
-                    </li>
-                    <li class="flex justify-between items-center group cursor-pointer border-b border-slate-50 py-1">
-                        <span class="font-bold text-slate-600 group-hover:text-blue-600">Registration & Posters</span>
-                        <span class="text-slate-400 font-serif italic">06</span>
-                    </li>
-                    <li class="flex justify-between items-center group cursor-pointer border-b border-slate-50 py-1">
-                        <span class="font-bold text-slate-600 group-hover:text-blue-600">Sponsor Advertisement</span>
-                        <span class="text-slate-400 font-serif italic">07</span>
-                    </li>
-                    <li class="flex justify-between items-center group cursor-pointer border-b border-slate-50 py-1">
-                        <span class="font-bold text-slate-600 group-hover:text-blue-600">Organizing Committee</span>
-                        <span class="text-slate-400 font-serif italic">08</span>
-                    </li>
+                <ul class="grid grid-cols-2 gap-x-12 gap-y-1.5 text-xs">
+                    <li class="flex justify-between items-center border-b border-slate-50 py-1"><span
+                            class="font-bold text-slate-600">Welcoming Remarks</span><span
+                            class="text-slate-400 font-serif italic">02</span></li>
+                    <li class="flex justify-between items-center border-b border-slate-50 py-1"><span
+                            class="font-bold text-slate-600">Program Schedule</span><span
+                            class="text-slate-400 font-serif italic">03</span></li>
+                    <li class="flex justify-between items-center border-b border-slate-50 py-1"><span
+                            class="font-bold text-slate-600">Distinguished Speakers (List)</span><span
+                            class="text-slate-400 font-serif italic">04</span></li>
+                    <li class="flex justify-between items-center border-b border-slate-50 py-1"><span
+                            class="font-bold text-slate-600">Keynote: Junhyong Kim</span><span
+                            class="text-slate-400 font-serif italic">05</span></li>
+                    <li class="flex justify-between items-center border-b border-slate-50 py-1"><span
+                            class="font-bold text-slate-600">Keynote: Deok-Ho Kim</span><span
+                            class="text-slate-400 font-serif italic">06</span></li>
+                    <li class="flex justify-between items-center border-b border-slate-50 py-1"><span
+                            class="font-bold text-slate-600">Speaker: Dokyoon Kim</span><span
+                            class="text-slate-400 font-serif italic">07</span></li>
+                    <li class="flex justify-between items-center border-b border-slate-50 py-1"><span
+                            class="font-bold text-slate-600">Speaker: Jina Ko</span><span
+                            class="text-slate-400 font-serif italic">08</span></li>
+                    <li class="flex justify-between items-center border-b border-slate-50 py-1"><span
+                            class="font-bold text-slate-600">Speaker: Dae-Myung Yang</span><span
+                            class="text-slate-400 font-serif italic">09</span></li>
+                    <li class="flex justify-between items-center border-b border-slate-50 py-1"><span
+                            class="font-bold text-slate-600">Speaker: Hayoung Bong</span><span
+                            class="text-slate-400 font-serif italic">10</span></li>
+                    <li class="flex justify-between items-center border-b border-slate-50 py-1"><span
+                            class="font-bold text-slate-600">Speaker: Minsung Kim</span><span
+                            class="text-slate-400 font-serif italic">11</span></li>
+                    <li class="flex justify-between items-center border-b border-slate-50 py-1"><span
+                            class="font-bold text-slate-600">Sponsorship Opportunities</span><span
+                            class="text-slate-400 font-serif italic">12</span></li>
+                    <li class="flex justify-between items-center border-b border-slate-50 py-1"><span
+                            class="font-bold text-slate-600">Registration & Posters</span><span
+                            class="text-slate-400 font-serif italic">13</span></li>
+                    <li class="flex justify-between items-center border-b border-slate-50 py-1"><span
+                            class="font-bold text-slate-600">Sponsor Advertisement</span><span
+                            class="text-slate-400 font-serif italic">14</span></li>
+                    <li class="flex justify-between items-center border-b border-slate-50 py-1"><span
+                            class="font-bold text-slate-600">Organizing Committee</span><span
+                            class="text-slate-400 font-serif italic">15</span></li>
                 </ul>
             </div>
 
-            <!-- Bottom: Welcome Remarks -->
             <div class="flex-grow flex flex-col">
                 <h2 class="text-3xl font-bold text-slate-800 mb-6">Welcoming Remarks</h2>
-
                 <div
                     class="prose prose-slate text-sm leading-relaxed text-justify text-slate-600 flex-grow space-y-4 columns-2 gap-8">
-                    <p class="mt-0">
-                        Dear Esteemed Guests, Colleagues, and KSEA Members,
-                    </p>
-                    <p>
-                        It is our great honor to welcome you to the <strong class="text-blue-700">2026 US–Korea
+                    <p class="mt-0">Dear Esteemed Guests, Colleagues, and KSEA Members,</p>
+                    <p>It is our great honor to welcome you to the <strong class="text-blue-700">2026 US–Korea
                             Northeastern Symposium on AI, Biomedical Science, & Engineering</strong>, hosted by the KSEA
-                        Philadelphia Chapter.
-                    </p>
-                    <p>
-                        This symposium brings together the brightest minds in our region to discuss the convergence of
+                        Philadelphia Chapter.</p>
+                    <p>This symposium brings together the brightest minds in our region to discuss the convergence of
                         artificial intelligence, biomedical sciences, and engineering. We aim to provide a vital
                         platform for exchanging ideas, presenting cutting-edge research, and forging new collaborations
-                        that will shape the future of science and technology.
-                    </p>
-                    <p>
-                        We extend our deepest gratitude to KSEA and KUSCO for their generous support, and to all our
+                        that will shape the future of science and technology.</p>
+                    <p>We extend our deepest gratitude to KSEA and KUSCO for their generous support, and to all our
                         sponsors, speakers, and participants who make this event possible. We hope today sparks new
-                        ideas and lasting partnerships.
-                    </p>
-                    <p class="font-serif italic text-right mt-2 break-after-column">
-                        Sincerely,
-                    </p>
+                        ideas and lasting partnerships.</p>
+                    <p class="font-serif italic text-right mt-2 break-after-column">Sincerely,</p>
                 </div>
 
                 <div class="mt-8 flex justify-center gap-12">
-                    <!-- Chair -->
                     <div
                         class="flex items-center gap-4 bg-slate-50 p-4 rounded-xl border border-slate-100 min-w-[240px]">
                         <img src="assets/su-chin-heo.jpg"
@@ -219,7 +224,6 @@
                             <p class="text-xs text-slate-500 leading-tight">Univ. of Pennsylvania</p>
                         </div>
                     </div>
-                    <!-- Co-Chair -->
                     <div
                         class="flex items-center gap-4 bg-slate-50 p-4 rounded-xl border border-slate-100 min-w-[240px]">
                         <img src="assets/wookjin-choi.jpg"
@@ -232,28 +236,22 @@
                     </div>
                 </div>
             </div>
-
-            <div class="absolute bottom-4 left-0 right-0 text-center">
-                <span class="text-slate-400 text-sm font-serif italic">2</span>
-            </div>
+            <span class="page-number">2</span>
         </div>
     </div>
 
 
-    <!-- PAGE 3: PROGRAM AT A GLANCE -->
+    <!-- PAGE 3: PROGRAM SCHEDULE -->
     <div class="page bg-white text-slate-800 p-12 relative overflow-hidden">
         <div class="relative z-10 h-full flex flex-col">
             <h2 class="text-3xl font-bold text-slate-800 mb-8 border-b-2 border-slate-100 pb-2">Program Schedule</h2>
-
             <div class="flex-grow space-y-4">
-                <!-- Row -->
                 <div class="flex border-l-4 border-slate-200 pl-4 py-2 hover:bg-slate-50 transition">
                     <div class="w-32 font-bold text-blue-600 text-sm">12:20 PM</div>
                     <div>
                         <h4 class="font-bold text-slate-800 text-sm">Welcome Remarks & Housekeeping</h4>
                     </div>
                 </div>
-                <!-- Row -->
                 <div class="flex border-l-4 border-blue-500 pl-4 py-3 bg-blue-50/50 rounded-r-lg">
                     <div class="w-32 font-bold text-blue-600 text-sm">12:30 PM</div>
                     <div>
@@ -264,7 +262,6 @@
                         </ul>
                     </div>
                 </div>
-                <!-- Row -->
                 <div class="flex border-l-4 border-purple-400 pl-4 py-3">
                     <div class="w-32 font-bold text-blue-600 text-sm">1:30 PM</div>
                     <div>
@@ -277,7 +274,6 @@
                         </ul>
                     </div>
                 </div>
-                <!-- Row -->
                 <div class="flex border-l-4 border-orange-400 pl-4 py-2 bg-orange-50/50 rounded-r-lg">
                     <div class="w-32 font-bold text-orange-600 text-sm">2:30 PM</div>
                     <div>
@@ -285,7 +281,6 @@
                         <p class="text-xs text-slate-500">Coffee, refreshments, and networking</p>
                     </div>
                 </div>
-                <!-- Row -->
                 <div class="flex border-l-4 border-teal-400 pl-4 py-3">
                     <div class="w-32 font-bold text-blue-600 text-sm">3:30 PM</div>
                     <div>
@@ -297,7 +292,6 @@
                         </ul>
                     </div>
                 </div>
-                <!-- Row -->
                 <div class="flex border-l-4 border-slate-200 pl-4 py-2 hover:bg-slate-50 transition">
                     <div class="w-32 font-bold text-blue-600 text-sm">4:30 PM</div>
                     <div>
@@ -305,7 +299,6 @@
                         <p class="text-xs text-slate-500">Poster Awards & Group Photo</p>
                     </div>
                 </div>
-                <!-- Row -->
                 <div class="flex border-l-4 border-slate-800 pl-4 py-3 bg-slate-100 rounded-r-lg mt-2">
                     <div class="w-32 font-bold text-slate-800 text-sm">5:00 PM</div>
                     <div>
@@ -314,105 +307,375 @@
                     </div>
                 </div>
             </div>
-
-            <div class="absolute bottom-4 left-0 right-0 text-center">
-                <span class="text-slate-400 text-sm font-serif italic">3</span>
-            </div>
+            <span class="page-number">3</span>
         </div>
     </div>
 
 
-    <!-- PAGE 4: DISTINGUISHED SPEAKERS -->
+    <!-- PAGE 4: SPHERES OF INFLUENCE (SPEAKER LIST OVERVIEW) -->
     <div class="page p-12 bg-slate-50">
         <div class="flex flex-col h-full border-2 border-slate-200 p-8 relative">
             <h2 class="text-3xl font-black text-slate-900 uppercase tracking-tight mb-6 text-center">Distinguished
                 Speakers</h2>
-
-            <div class="flex-grow flex flex-col gap-8">
-                <!-- Keynote Section -->
-                <div class="bg-white rounded-xl p-6 shadow-sm border border-slate-100">
-                    <h3 class="text-blue-800 font-bold uppercase tracking-widest text-sm mb-6 text-center">Keynote
+            <div class="flex-grow flex flex-col gap-6">
+                <!-- Keynotes -->
+                <div class="bg-white rounded-xl p-6 shadow-sm border border-slate-100 flex-shrink-0">
+                    <h3 class="text-blue-800 font-bold uppercase tracking-widest text-sm mb-4 text-center">Keynote
                         Speakers</h3>
-                    <div class="flex justify-center gap-16">
-                        <!-- Keynote 1 -->
-                        <div class="flex flex-col items-center w-56 text-center">
+                    <div class="flex justify-center gap-12">
+                        <div class="flex flex-col items-center w-64 text-center">
                             <img src="assets/junhyong-kim.png"
-                                class="w-32 h-32 object-cover rounded-full border-4 border-blue-50 shadow-md mb-3 object-top">
-                            <h4 class="font-bold text-slate-900 text-base leading-tight">Junhyong Kim, PhD</h4>
+                                class="w-28 h-28 object-cover rounded-full border-4 border-blue-50 shadow-md mb-2 object-top">
+                            <h4 class="font-bold text-slate-900 text-lg leading-tight">Junhyong Kim, PhD</h4>
                             <p class="text-blue-600 text-sm font-bold">UPenn</p>
                         </div>
-                        <!-- Keynote 2 -->
-                        <div class="flex flex-col items-center w-56 text-center">
+                        <div class="flex flex-col items-center w-64 text-center">
                             <img src="assets/deok-ho-kim.png"
-                                class="w-32 h-32 object-cover rounded-full border-4 border-purple-50 shadow-md mb-3">
-                            <h4 class="font-bold text-slate-900 text-base leading-tight">Deok-Ho Kim, PhD</h4>
-                            <p class="text-purple-600 text-sm font-bold">Johns Hopkins</p>
+                                class="w-28 h-28 object-cover rounded-full border-4 border-purple-50 shadow-md mb-2">
+                            <h4 class="font-bold text-slate-900 text-lg leading-tight">Deok-Ho Kim, PhD</h4>
+                            <p class="text-purple-600 text-sm font-bold mb-1">Johns Hopkins</p>
                         </div>
                     </div>
                 </div>
-
-                <!-- Sessions Grid -->
+                <!-- Invited Speakers -->
                 <div class="bg-white rounded-xl p-6 shadow-sm border border-slate-100 flex-grow">
-                    <h3 class="text-slate-800 font-bold uppercase tracking-widest text-sm mb-8 text-center">Invited
+                    <h3 class="text-slate-800 font-bold uppercase tracking-widest text-sm mb-6 text-center">Invited
                         Speakers</h3>
-                    <div class="grid grid-cols-3 gap-y-10 gap-x-6">
-                        <!-- S1 -->
-                        <div class="text-center group">
-                            <img src="assets/dokyoon-kim-v2.png"
-                                class="w-24 h-24 mx-auto rounded-full object-cover mb-3 border border-slate-200 shadow-sm group-hover:border-blue-400 transition">
-                            <p class="font-bold text-slate-900 text-sm leading-tight">Dokyoon Kim</p>
-                            <p class="text-[10px] text-slate-500 font-medium leading-tight mt-1">UPenn Perelman School
-                                of Medicine<br>Director, CATI</p>
+                    <div class="grid grid-cols-2 gap-x-8 gap-y-6">
+                        <div class="flex items-center gap-3"><img src="assets/dokyoon-kim-v2.png"
+                                class="w-14 h-14 rounded-full object-cover border border-slate-200">
+                            <div>
+                                <h4 class="font-bold text-slate-900 text-sm">Dokyoon Kim, PhD</h4>
+                                <p class="text-[10px] text-blue-600 font-bold uppercase">UPenn (CATI)</p>
+                            </div>
                         </div>
-                        <div class="text-center group">
-                            <img src="assets/jina-ko.png"
-                                class="w-24 h-24 mx-auto rounded-full object-cover mb-3 border border-slate-200 shadow-sm group-hover:border-blue-400 transition">
-                            <p class="font-bold text-slate-900 text-sm leading-tight">Jina Ko</p>
-                            <p class="text-[10px] text-slate-500 font-medium mt-1">UPenn</p>
+                        <div class="flex items-center gap-3"><img src="assets/jina-ko.png"
+                                class="w-14 h-14 rounded-full object-cover border border-slate-200">
+                            <div>
+                                <h4 class="font-bold text-slate-900 text-sm">Jina Ko, PhD</h4>
+                                <p class="text-[10px] text-blue-600 font-bold uppercase">UPenn</p>
+                            </div>
                         </div>
-                        <div class="text-center group">
-                            <img src="assets/dae-myung-yang.jpg"
-                                class="w-24 h-24 mx-auto rounded-full object-cover mb-3 border border-slate-200 shadow-sm group-hover:border-blue-400 transition">
-                            <p class="font-bold text-slate-900 text-sm leading-tight">Dae-Myung Yang</p>
-                            <p class="text-[10px] text-slate-500 font-medium mt-1">Fox Chase</p>
+                        <div class="flex items-center gap-3"><img src="assets/dae-myung-yang.jpg"
+                                class="w-14 h-14 rounded-full object-cover border border-slate-200">
+                            <div>
+                                <h4 class="font-bold text-slate-900 text-sm">Dae-Myung Yang, PhD</h4>
+                                <p class="text-[10px] text-blue-600 font-bold uppercase">Fox Chase</p>
+                            </div>
                         </div>
-                        <!-- S2 -->
-                        <div class="text-center group">
-                            <img src="assets/hayoung-bong.png"
-                                class="w-24 h-24 mx-auto rounded-full object-cover mb-3 border border-slate-200 shadow-sm group-hover:border-blue-400 transition">
-                            <p class="font-bold text-slate-900 text-sm leading-tight">Hayoung Bong</p>
-                            <p class="text-[10px] text-slate-500 font-medium mt-1">NASA GISS</p>
+                        <div class="flex items-center gap-3"><img src="assets/hayoung-bong.png"
+                                class="w-14 h-14 rounded-full object-cover border border-slate-200">
+                            <div>
+                                <h4 class="font-bold text-slate-900 text-sm">Hayoung Bong, PhD</h4>
+                                <p class="text-[10px] text-blue-600 font-bold uppercase">NASA GISS</p>
+                            </div>
                         </div>
-                        <div class="text-center group">
-                            <img src="assets/minsung-kim.png"
-                                class="w-24 h-24 mx-auto rounded-full object-cover mb-3 border border-slate-200 shadow-sm group-hover:border-blue-400 transition">
-                            <p class="font-bold text-slate-900 text-sm leading-tight">Minsung Kim</p>
-                            <p class="text-[10px] text-slate-500 font-medium leading-tight mt-1">Rutgers (CS/WINLAB)</p>
-                        </div>
-                        <div class="text-center group">
-                            <div
-                                class="w-24 h-24 mx-auto rounded-full bg-slate-100 flex items-center justify-center mb-3 text-slate-400 font-bold text-sm shadow-inner group-hover:bg-slate-200 transition">
-                                TBD</div>
-                            <p class="font-bold text-slate-900 text-sm leading-tight">Industry Talk</p>
-                            <p class="text-[10px] text-slate-500 font-medium mt-1">TBA</p>
+                        <div class="flex items-center gap-3"><img src="assets/minsung-kim.png"
+                                class="w-14 h-14 rounded-full object-cover border border-slate-200">
+                            <div>
+                                <h4 class="font-bold text-slate-900 text-sm">Minsung Kim, PhD</h4>
+                                <p class="text-[10px] text-blue-600 font-bold uppercase">Rutgers</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-
-            <div class="absolute bottom-4 left-0 right-0 text-center">
-                <span class="text-slate-400 text-sm font-serif italic">4</span>
-            </div>
+            <span class="page-number">4</span>
         </div>
     </div>
 
 
-    <!-- PAGE 5: SPONSORSHIP OPPORTUNITIES -->
+    <!-- PAGE 5: JUNHYONG KIM -->
+    <div class="page p-12 bg-white">
+        <div class="flex flex-col h-full">
+            <div class="flex items-end gap-6 border-b-2 border-slate-100 pb-8 mb-8">
+                <img src="assets/junhyong-kim.png"
+                    class="w-32 h-32 rounded-xl object-cover object-top shadow-lg border border-slate-200">
+                <div>
+                    <span
+                        class="bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider mb-2 inline-block">Keynote
+                        Speaker</span>
+                    <h2 class="text-3xl font-black text-slate-900 leading-tight mb-1">Junhyong Kim, PhD</h2>
+                    <p class="text-blue-700 font-bold text-sm uppercase mb-1">University of Pennsylvania</p>
+                    <p class="text-slate-500 text-sm italic">Christopher H. Browne Distinguished Professor of
+                        Biology<br>Dept. of Biology; Dept. of Computer and Information Science</p>
+                </div>
+            </div>
+
+            <div class="flex-grow speaker-content text-justify text-slate-700 text-sm">
+                <h3 class="text-xl font-bold text-slate-900 mb-4 font-serif">"Beyond Single Cells to Subcellular
+                    Biology"</h3>
+
+                <p><strong class="text-slate-900">Abstract:</strong> In the last fifteen years, there has been an
+                    exponential increase in single cell biology and associated technology research. Single cell biology,
+                    from the start, has been a broad interdisciplinary field, integrating genomics, engineering,
+                    chemistry, and computation. But, understanding the functional basis of cells, especially in terms of
+                    their phenotypic functions, requires moving beyond single cell assays to multi-omic analysis of
+                    sub-cellular processes. In this talk, I first start with some personal reflections on the
+                    development of the field of single cell biology and key technologies. Then, I discuss work in my lab
+                    extending single cell biology to sub-cellular biology of single mitochondria sequencing in mammalian
+                    brain cells and to sub-cellular localization of mRNA in neurites as well as some new work developing
+                    new deep learning method for reconstructing single cell lineages.</p>
+
+                <div class="mt-8 pt-8 border-t border-slate-100">
+                    <p><strong class="text-slate-900">Bio:</strong> Junhyong Kim is the Christopher H. Browne
+                        Distinguished Professor of Biology and Chair of the Department of Biology at the University of
+                        Pennsylvania. He also holds a secondary appointment in the Department of Computer and
+                        Information Science and is Co-Director of the Penn Program in Single Cell Biology. He is an
+                        adjunct professor of the Wistar Institute. He received his B.S. in Microbiology from Seoul
+                        National University and his Ph.D. in Ecology and Evolution from the State University of New York
+                        at Stony Brook. He did his postdoctoral work at Indiana University. Before joining Penn, he was
+                        Professor of Ecology and Evolutionary Biology at Yale University. He is a recipient of the Sloan
+                        Foundation Young Investigator Award and the Guggenheim Fellowship. His current research focuses
+                        on the genomics of single cells and the quantitative analysis of cell physiology and
+                        development.</p>
+                </div>
+            </div>
+            <span class="page-number">5</span>
+        </div>
+    </div>
+
+
+    <!-- PAGE 6: DEOK-HO KIM -->
+    <div class="page p-12 bg-white">
+        <div class="flex flex-col h-full">
+            <div class="flex items-end gap-6 border-b-2 border-slate-100 pb-8 mb-8">
+                <img src="assets/deok-ho-kim.png"
+                    class="w-32 h-32 rounded-xl object-cover shadow-lg border border-slate-200">
+                <div>
+                    <span
+                        class="bg-purple-600 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider mb-2 inline-block">Keynote
+                        Speaker</span>
+                    <h2 class="text-3xl font-black text-slate-900 leading-tight mb-1">Deok-Ho Kim, PhD</h2>
+                    <p class="text-purple-700 font-bold text-sm uppercase mb-1">Johns Hopkins University School of
+                        Medicine</p>
+                    <p class="text-slate-500 text-sm italic">Professor, Dept. of Biomedical Engineering<br>Director,
+                        Center for Microphysiological Systems</p>
+                </div>
+            </div>
+
+            <div class="flex-grow speaker-content text-justify text-slate-700 text-sm">
+                <h3 class="text-xl font-bold text-slate-900 mb-4 font-serif">"Advanced Human Organ-on-a-Chip Platforms
+                    for Disease Modeling, Drug Development, and Space Biology"</h3>
+
+                <p><strong class="text-slate-900">Abstract:</strong> In alignment with the FDA Modernization Act 2.0,
+                    there is a growing focus on human microphysiological systems (MPS), such as organs-on-chips and
+                    organoids, to replace traditional animal models in drug discovery and safety testing. My lab
+                    leverages multi-scale biofabrication techniques, patient-derived organotypic cultures, and
+                    AI-empowered biosystems to develop advanced, high-throughput organ-on-chip platforms integrated with
+                    real-time functional phenotypic biosensors for predictive drug efficacy and toxicity screening. In
+                    this talk, I will introduce our recent work on a microphysiological model of Duchenne muscular
+                    dystrophy, an automated 96-well drug-induced cardiotoxicity assay, and spaceflight-induced muscle
+                    aging. These biomimetic models offer key insights into human pathophysiology on Earth and in space,
+                    providing promising tools for advancing drug development and precision medicine within an evolving
+                    regulatory landscape.</p>
+
+                <div class="mt-8 pt-8 border-t border-slate-100 bg-slate-50 p-6 rounded-lg text-xs leading-relaxed">
+                    <p class="mb-0"><strong class="text-slate-900">Bio:</strong> Dr. Deok‐Ho Kim is a Professor of
+                        Biomedical Engineering and Medicine, as well as the founding Director of the Center for
+                        Microphysiological Systems at The Johns Hopkins University. Previously, he held a tenured
+                        Associate Professorship in the Department of Bioengineering at the University of Washington,
+                        Seattle, and worked as a Research Scientist at KIST. He earned his Ph.D. in Biomedical
+                        Engineering from Johns Hopkins. Dr. Kim’s research focuses on developing advanced
+                        biomaterials/devices and stem cell/tissue engineering technologies for disease modeling, drug
+                        development, and regenerative medicine. He has published over 200 peer-reviewed papers. He is an
+                        elected Fellow of AIMBE, RSC, AHA, and SLAS. He founded Curi Bio Inc., which integrates advanced
+                        3D tissue models, biosystems, and AI/ML-enabled insights.</p>
+                </div>
+            </div>
+            <span class="page-number">6</span>
+        </div>
+    </div>
+
+
+    <!-- PAGE 7: DOKYOON KIM -->
+    <div class="page p-12 bg-white">
+        <div class="flex flex-col h-full justify-center">
+            <div class="flex flex-col items-center text-center">
+                <img src="assets/dokyoon-kim-v2.png"
+                    class="w-48 h-48 rounded-full object-cover shadow-2xl border-4 border-slate-100 mb-8">
+                <h2 class="text-4xl font-black text-slate-900 mb-2">Dokyoon Kim, PhD</h2>
+                <p class="text-blue-600 font-bold text-lg uppercase mb-4">University of Pennsylvania</p>
+                <div class="text-slate-500 text-base italic mb-12 max-w-lg mx-auto">
+                    <p>Associate Professor, Biostatistics, Epidemiology & Informatics</p>
+                    <p>Director, Cener for AI-Driven Translational Informatics (CATI)</p>
+                </div>
+
+                <div class="max-w-2xl">
+                    <h3 class="text-2xl font-bold text-slate-800 mb-6 font-serif leading-tight">"Integrating multi-omics
+                        data with clinical information using AI/ML"</h3>
+                </div>
+            </div>
+            <span class="page-number">7</span>
+        </div>
+    </div>
+
+
+    <!-- PAGE 8: JINA KO -->
+    <div class="page p-12 bg-white">
+        <div class="flex flex-col h-full">
+            <div class="flex items-end gap-6 border-b-2 border-slate-100 pb-8 mb-8">
+                <img src="assets/jina-ko.png"
+                    class="w-32 h-32 rounded-xl object-cover shadow-lg border border-slate-200">
+                <div>
+                    <span
+                        class="bg-blue-100 text-blue-700 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider mb-2 inline-block">Invited
+                        Speaker</span>
+                    <h2 class="text-3xl font-black text-slate-900 leading-tight mb-1">Jina Ko, PhD</h2>
+                    <p class="text-blue-700 font-bold text-sm uppercase mb-1">University of Pennsylvania</p>
+                    <p class="text-slate-500 text-sm italic">Assistant Professor, Bioengineering</p>
+                </div>
+            </div>
+
+            <div class="flex-grow speaker-content text-justify text-slate-700 text-sm">
+                <h3 class="text-xl font-bold text-slate-900 mb-4 font-serif">"Next-Generation Molecular Tools for
+                    Precision Diagnostics"</h3>
+
+                <p><strong class="text-slate-900">Abstract:</strong> Due to an inherent biological heterogeneity across
+                    individuals and within a disease, it is extremely challenging to identify robust biomarkers that can
+                    accurately represent molecular status of the body for disease diagnostics. To solve this intractable
+                    problem, we have developed microfluidic platforms and molecular tools that enable high throughput,
+                    multiplexed profiling of biomarkers (e.g. cells, extracellular vesicles; EV). To resolve cell and EV
+                    heterogeneity, we have developed an ultra-fast cycling method for single cell analysis and an
+                    ultra-high sensitive microfluidics that can achieve single particle detection sensitivity, enabling
+                    individual EV measurements.</p>
+
+                <div class="mt-8 pt-8 border-t border-slate-100">
+                    <p><strong class="text-slate-900">Bio:</strong> Jina graduated from Rice University with a B.S. in
+                        Bioengineering and a B.A. in French Studies in 2013 and she earned her Ph.D. in Bioengineering
+                        at the University of Pennsylvania in 2018. For her postdoctoral training, she worked at
+                        Massachusetts General Hospital and the Wyss Institute at Harvard University as a Schmidt Science
+                        Fellow and a NIH K99/R00 award recipient. In 2022, Jina started her lab at the University of
+                        Pennsylvania and won the NIH New Innovator Award (DP2) and NSF CAREER award. Jina aims to
+                        develop micro and nano technologies that can profile rare disease biomarkers for personalized
+                        medicine.</p>
+                </div>
+            </div>
+            <span class="page-number">8</span>
+        </div>
+    </div>
+
+
+    <!-- PAGE 9: DAE-MYUNG YANG -->
+    <div class="page p-12 bg-white">
+        <div class="flex flex-col h-full justify-center">
+            <div class="flex flex-col items-center text-center">
+                <img src="assets/dae-myung-yang.jpg"
+                    class="w-48 h-48 rounded-full object-cover shadow-2xl border-4 border-slate-100 mb-8">
+                <h2 class="text-4xl font-black text-slate-900 mb-2">Dae-Myung Yang, PhD</h2>
+                <p class="text-blue-600 font-bold text-lg uppercase mb-4">Fox Chase Cancer Center</p>
+                <div class="text-slate-500 text-base italic mb-12 max-w-lg mx-auto">
+                    <p>Assistant Professor, Radiation Oncology</p>
+                </div>
+
+                <div class="max-w-2xl">
+                    <h3 class="text-2xl font-bold text-slate-800 mb-6 font-serif leading-tight">"Medical physics,
+                        radiodynamic therapy, and quantitative imaging"</h3>
+                </div>
+            </div>
+            <span class="page-number">9</span>
+        </div>
+    </div>
+
+
+    <!-- PAGE 10: HAYOUNG BONG -->
+    <div class="page p-12 bg-white">
+        <div class="flex flex-col h-full">
+            <div class="flex items-end gap-6 border-b-2 border-slate-100 pb-8 mb-8">
+                <img src="assets/hayoung-bong.png"
+                    class="w-32 h-32 rounded-xl object-cover shadow-lg border border-slate-200">
+                <div>
+                    <span
+                        class="bg-blue-100 text-blue-700 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider mb-2 inline-block">Invited
+                        Speaker</span>
+                    <h2 class="text-3xl font-black text-slate-900 leading-tight mb-1">Hayoung Bong, PhD</h2>
+                    <p class="text-blue-700 font-bold text-sm uppercase mb-1">NASA Goddard Institute for Space Studies
+                    </p>
+                    <p class="text-slate-500 text-sm italic">NASA Postdoctoral Program Fellow</p>
+                </div>
+            </div>
+
+            <div class="flex-grow speaker-content text-justify text-slate-700 text-sm">
+                <h3 class="text-xl font-bold text-slate-900 mb-4 font-serif">"How do we know the climate has been
+                    changing?"</h3>
+
+                <p><strong class="text-slate-900">Abstract:</strong> We feel the changing seasons every year, but the
+                    world we experience today is not quite the same as it was decades ago. After a cold winter, spring
+                    always returns, yet the spring we know has been gradually changing and may continue to do so in the
+                    future. How can we tell whether these changes are simply part of Earth’s natural variability, or
+                    signs of a fundamental change in the climate system? To answer this, scientists look beyond
+                    individual human lifetimes and study Earth’s climate history spanning thousands to hundreds of
+                    thousands of years. In this talk, I will explain how we know the climate has been changing, what the
+                    evidence tells us about human impacts, and how climate science informs our understanding of future
+                    climate change.</p>
+
+                <div class="mt-8 pt-8 border-t border-slate-100">
+                    <p><strong class="text-slate-900">Bio:</strong> Dr. Hayoung Bong was born and raised in South Korea.
+                        He earned his bachelor’s degree in Atmospheric Sciences from Yonsei University in Seoul. He
+                        conducted his Ph.D. research at the Laboratoire des Sciences du Climat et de l’Environnement
+                        (LSCE), Paris-Saclay University, and later earned a Ph.D. in Environmental Science from The
+                        University of Tokyo. He is currently a NASA Postdoctoral Program Fellow at NASA’s Goddard
+                        Institute for Space Studies, where he leads the present-day climate working group of the Water
+                        Isotope Model Intercomparison Project (WisoMIP).</p>
+                </div>
+            </div>
+            <span class="page-number">10</span>
+        </div>
+    </div>
+
+
+    <!-- PAGE 11: MINSUNG KIM -->
+    <div class="page p-12 bg-white">
+        <div class="flex flex-col h-full">
+            <div class="flex items-end gap-6 border-b-2 border-slate-100 pb-8 mb-8">
+                <img src="assets/minsung-kim.png"
+                    class="w-32 h-32 rounded-xl object-cover shadow-lg border border-slate-200">
+                <div>
+                    <span
+                        class="bg-blue-100 text-blue-700 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider mb-2 inline-block">Invited
+                        Speaker</span>
+                    <h2 class="text-3xl font-black text-slate-900 leading-tight mb-1">Minsung Kim, PhD</h2>
+                    <p class="text-blue-700 font-bold text-sm uppercase mb-1">Rutgers, The State University of New
+                        Jersey</p>
+                    <p class="text-slate-500 text-sm italic">Assistant Professor, Dept. of Computer Science and WINLAB
+                    </p>
+                </div>
+            </div>
+
+            <div class="flex-grow speaker-content text-justify text-slate-700 text-sm">
+                <h3 class="text-xl font-bold text-slate-900 mb-4 font-serif">"Quantum and Emerging Non-traditional
+                    Computing for NextG Wireless Networks"</h3>
+
+                <p><strong class="text-slate-900">Abstract:</strong> A central design challenge for future generations
+                    of wireless networks is to meet the ever-increasing demand for capacity, throughput, and
+                    connectivity. While significant progress has been made in designing advanced wireless technologies,
+                    the current computational capacity at base stations to support them has been consistently identified
+                    as the bottleneck, due to limitations in processing time. In this talk, I'll introduce how emerging
+                    computing methods, such as quantum and optical computing, can potentially resolve the current
+                    computational limitations and transform wireless system architectures toward next-generation (NextG)
+                    wireless. Furthermore, I'll briefly discuss how such non-traditional computing methods can affect
+                    other fields, including AI and Biomedical Engineering.</p>
+
+                <div class="mt-8 pt-8 border-t border-slate-100">
+                    <p><strong class="text-slate-900">Bio:</strong> Minsung Kim is an Assistant Professor in the
+                        Department of Computer Science and WINLAB at Rutgers University. Prior to joining Rutgers, he
+                        was a postdoctoral associate at Yale University. He received his Ph.D. in Computer Science from
+                        Princeton University and his B.E. in Electrical Engineering (Great Honor) from Korea University.
+                        His research focuses on quantum and emerging computing systems for next-generation wireless
+                        networks. He is a recipient of the Qualcomm Innovation Fellowship (North America) and the
+                        Princeton SEAS Award for Excellence.</p>
+                </div>
+            </div>
+            <span class="page-number">11</span>
+        </div>
+    </div>
+
+
+    <!-- PAGE 12: SPONSORSHIP OPPORTUNITIES -->
     <div class="page p-12 bg-white">
         <div class="h-full border-2 border-blue-100 p-8 relative flex flex-col">
             <h2 class="text-3xl font-black text-blue-800 uppercase tracking-tight mb-8 text-center">Sponsorship
                 Opportunities</h2>
-
             <div class="flex-grow space-y-6">
                 <!-- Diamond -->
                 <div class="bg-slate-900 text-white p-6 rounded-xl shadow-lg border-l-8 border-blue-500">
@@ -425,90 +688,58 @@
                     </div>
                     <ul class="grid grid-cols-2 gap-3 text-sm text-slate-200">
                         <li><i class="fas fa-check text-blue-500 mr-2"></i> Full-page Advertisement</li>
-                        <li><i class="fas fa-check text-blue-500 mr-2"></i> Exhibitor Booth (Premium Location)</li>
+                        <li><i class="fas fa-check text-blue-500 mr-2"></i> Exhibitor Booth (Premium)</li>
                         <li><i class="fas fa-check text-blue-500 mr-2"></i> 10-Min Presentation Slot</li>
                         <li><i class="fas fa-check text-blue-500 mr-2"></i> Logo on Website & Banners</li>
-                        <li><i class="fas fa-check text-blue-500 mr-2"></i> Acknowledgment during Opening</li>
                     </ul>
                 </div>
-
-                <!-- Gold -->
+                <!-- Other listings simplified -->
                 <div class="bg-white p-6 rounded-xl shadow-md border-2 border-yellow-400">
                     <div class="flex justify-between items-start mb-4">
                         <div>
-                            <h3 class="text-xl font-bold uppercase tracking-widest text-slate-800">Gold <span
-                                    class="text-xs font-normal text-slate-500 normal-case">(Networking Dinner
-                                    Sponsor)</span></h3>
+                            <h3 class="text-xl font-bold uppercase tracking-widest text-slate-800">Gold</h3>
                         </div>
                         <span class="text-3xl font-black text-yellow-600">$2,000</span>
                     </div>
-                    <ul class="grid grid-cols-2 gap-3 text-sm text-slate-600">
-                        <li><i class="fas fa-check text-yellow-500 mr-2"></i> Full-page Advertisement</li>
-                        <li><i class="fas fa-check text-yellow-500 mr-2"></i> Exhibitor Booth</li>
-                        <li><i class="fas fa-check text-yellow-500 mr-2"></i> Logo on Website</li>
-                        <li><i class="fas fa-check text-yellow-500 mr-2"></i> Dinner Recognition</li>
-                    </ul>
                 </div>
-
-                <!-- Silver -->
                 <div class="bg-white p-6 rounded-xl shadow-md border-2 border-slate-200">
                     <div class="flex justify-between items-start mb-4">
                         <div>
-                            <h3 class="text-xl font-bold uppercase tracking-widest text-slate-800">Silver <span
-                                    class="text-xs font-normal text-slate-500 normal-case">(Lunch/Coffee Sponsor)</span>
-                            </h3>
+                            <h3 class="text-xl font-bold uppercase tracking-widest text-slate-800">Silver</h3>
                         </div>
                         <span class="text-3xl font-black text-slate-500">$1,000</span>
                     </div>
-                    <ul class="grid grid-cols-2 gap-3 text-sm text-slate-600">
-                        <li><i class="fas fa-check text-slate-400 mr-2"></i> Half-page Advertisement</li>
-                        <li><i class="fas fa-check text-slate-400 mr-2"></i> Exhibitor Booth</li>
-                    </ul>
                 </div>
-
-                <!-- Bronze -->
                 <div class="bg-white p-6 rounded-xl shadow-md border-2 border-orange-200">
-                    <div class="flex justify-between items-center">
+                    <div class="flex justify-between items-start mb-4">
                         <div>
                             <h3 class="text-xl font-bold uppercase tracking-widest text-slate-800">Bronze</h3>
                         </div>
                         <span class="text-3xl font-black text-orange-400">$500</span>
                     </div>
-                    <ul class="text-sm text-slate-600 mt-2">
-                        <li><i class="fas fa-check text-orange-400 mr-2"></i> Half-page Advertisement</li>
-                    </ul>
                 </div>
             </div>
-
             <div class="mt-8 text-center">
                 <p class="text-sm text-slate-600 mb-2">To confirm your sponsorship, please contact:</p>
                 <a href="mailto:ksea.philly.chapter@gmail.com"
-                    class="inline-block bg-blue-600 text-white px-6 py-2 rounded-full font-bold hover:bg-blue-700 transition">
-                    <i class="fas fa-envelope mr-2"></i> ksea.philly.chapter@gmail.com
-                </a>
+                    class="inline-block bg-blue-600 text-white px-6 py-2 rounded-full font-bold">ksea.philly.chapter@gmail.com</a>
             </div>
-
-            <div class="absolute bottom-4 left-0 right-0 text-center">
-                <span class="text-slate-400 text-sm font-serif italic">5</span>
-            </div>
+            <span class="page-number">12</span>
         </div>
     </div>
 
 
-    <!-- PAGE 6: REGISTRATION & POSTER SESSION -->
+    <!-- PAGE 13: REGISTRATION & POSTER SESSION -->
     <div class="page p-12 bg-slate-50">
         <div class="h-full border-2 border-slate-200 p-8 relative flex flex-col gap-8">
-
             <!-- Registration -->
             <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100">
                 <div class="flex items-center justify-between mb-6">
                     <h2 class="text-2xl font-black text-slate-800 uppercase tracking-tight">Registration</h2>
                     <div
                         class="flex items-center gap-2 text-blue-600 bg-blue-50 px-3 py-1 rounded-full text-xs font-bold">
-                        <i class="fas fa-info-circle"></i> Early Bird: Feb 20
-                    </div>
+                        <i class="fas fa-info-circle"></i> Early Bird: Feb 20</div>
                 </div>
-
                 <div class="flex gap-8 items-center">
                     <div class="flex-grow">
                         <table class="w-full text-sm">
@@ -522,13 +753,13 @@
                             <tbody class="divide-y divide-slate-100">
                                 <tr>
                                     <td class="py-3 px-2 font-bold text-slate-700">Student / Postdoc</td>
-                                    <td class="text-right px-2 text-blue-600 font-bold">$10.00</td>
-                                    <td class="text-right px-2 text-slate-500">$30.00</td>
+                                    <td class="text-right px-2 text-blue-600 font-bold">$10</td>
+                                    <td class="text-right px-2 text-slate-500">$30</td>
                                 </tr>
                                 <tr>
                                     <td class="py-3 px-2 font-bold text-slate-700">Faculty / Professional</td>
-                                    <td class="text-right px-2 text-blue-600 font-bold">$30.00</td>
-                                    <td class="text-right px-2 text-slate-500">$60.00</td>
+                                    <td class="text-right px-2 text-blue-600 font-bold">$30</td>
+                                    <td class="text-right px-2 text-slate-500">$60</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -540,203 +771,125 @@
                     </div>
                 </div>
             </div>
-
             <!-- Poster Session -->
             <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100 flex-grow">
-                <div class="flex items-center justify-between mb-6">
-                    <h2 class="text-2xl font-black text-slate-800 uppercase tracking-tight">Call for Posters</h2>
-                    <div class="bg-yellow-100 text-yellow-700 px-3 py-1 rounded-full text-xs font-bold">
-                        <i class="fas fa-trophy mr-1"></i> Cash Awards
-                    </div>
-                </div>
-
+                <h2 class="text-2xl font-black text-slate-800 uppercase tracking-tight mb-4">Call for Posters</h2>
                 <div class="grid grid-cols-2 gap-8 h-full">
                     <div class="space-y-4 text-sm text-slate-600">
-                        <p class="leading-relaxed">
-                            We invite students and postdoctoral researchers to present their work. This is an excellent
-                            opportunity to network with peers and senior researchers.
-                        </p>
-                        <div class="bg-blue-50 p-4 rounded-lg border border-blue-100">
-                            <h4 class="font-bold text-blue-800 mb-2">Important Dates</h4>
-                            <ul class="space-y-2">
-                                <li class="flex justify-between">
-                                    <span>Abstract Submission:</span>
-                                    <span class="font-bold text-slate-900">Feb 15, 2026</span>
-                                </li>
-                                <li class="flex justify-between">
-                                    <span>Acceptance Notice:</span>
-                                    <span class="font-bold text-slate-900">Feb 20, 2026</span>
-                                </li>
-                            </ul>
-                        </div>
-                        <div>
-                            <h4 class="font-bold text-slate-800 mb-2">Poster Specifications</h4>
-                            <ul class="list-disc list-inside text-xs space-y-1">
-                                <li>Size: 36" (W) x 48" (H)</li>
-                                <li>Orientation: Portrait</li>
-                            </ul>
-                        </div>
+                        <p>We invite students and postdoctoral researchers to present their work.</p>
+                        <ul class="space-y-2 bg-blue-50 p-4 rounded-lg">
+                            <li class="flex justify-between"><span>Abstract Submission:</span><span
+                                    class="font-bold text-slate-900">Feb 15, 2026</span></li>
+                            <li class="flex justify-between"><span>Acceptance Notice:</span><span
+                                    class="font-bold text-slate-900">Feb 20, 2026</span></li>
+                        </ul>
                     </div>
-
-                    <div class="flex flex-col gap-4">
-                        <div class="bg-slate-50 p-4 rounded-lg flex-grow">
-                            <h4 class="font-bold text-slate-800 mb-3 text-center">Awards</h4>
-                            <div class="space-y-2">
-                                <div class="flex items-center gap-3 bg-white p-2 rounded shadow-sm">
-                                    <div
-                                        class="w-8 h-8 rounded-full bg-yellow-100 text-yellow-600 flex items-center justify-center font-bold">
-                                        1</div>
-                                    <div>
-                                        <p class="font-bold text-slate-800 text-xs">Gold Award</p>
-                                        <p class="text-[10px] text-slate-500">$300 + Certificate</p>
-                                    </div>
-                                </div>
-                                <div class="flex items-center gap-3 bg-white p-2 rounded shadow-sm">
-                                    <div
-                                        class="w-8 h-8 rounded-full bg-slate-200 text-slate-600 flex items-center justify-center font-bold">
-                                        2</div>
-                                    <div>
-                                        <p class="font-bold text-slate-800 text-xs">Silver Award</p>
-                                        <p class="text-[10px] text-slate-500">$200 + Certificate</p>
-                                    </div>
-                                </div>
-                                <div class="flex items-center gap-3 bg-white p-2 rounded shadow-sm">
-                                    <div
-                                        class="w-8 h-8 rounded-full bg-orange-100 text-orange-600 flex items-center justify-center font-bold">
-                                        3</div>
-                                    <div>
-                                        <p class="font-bold text-slate-800 text-xs">Bronze Award</p>
-                                        <p class="text-[10px] text-slate-500">$100 + Certificate</p>
-                                    </div>
-                                </div>
-                            </div>
+                    <div class="bg-slate-50 p-4 rounded-lg flex-grow">
+                        <h4 class="font-bold text-slate-800 mb-3 text-center">Awards</h4>
+                        <div class="space-y-2">
+                            <div class="bg-white p-2 rounded shadow-sm text-center"><span
+                                    class="font-bold text-slate-800 text-xs block">Gold Award</span><span
+                                    class="text-[10px] text-slate-500">$300</span></div>
+                            <div class="bg-white p-2 rounded shadow-sm text-center"><span
+                                    class="font-bold text-slate-800 text-xs block">Silver Award</span><span
+                                    class="text-[10px] text-slate-500">$200</span></div>
+                            <div class="bg-white p-2 rounded shadow-sm text-center"><span
+                                    class="font-bold text-slate-800 text-xs block">Bronze Award</span><span
+                                    class="text-[10px] text-slate-500">$100</span></div>
                         </div>
                     </div>
                 </div>
             </div>
-
-            <div class="absolute bottom-4 left-0 right-0 text-center">
-                <span class="text-slate-400 text-sm font-serif italic">6</span>
-            </div>
+            <span class="page-number">13</span>
         </div>
     </div>
 
 
-    <!-- PAGE 7: FULL PAGE AD EXAMPLE -->
+    <!-- PAGE 14: FULL PAGE AD -->
     <div class="page bg-white relative">
         <img src="assets/kusco_full_page_ad.jpg" class="w-full h-full object-cover">
-        <div class="absolute bottom-4 left-0 right-0 text-center">
-            <span class="text-white drop-shadow-md text-sm font-serif italic">7</span>
-        </div>
+        <span class="page-number text-white drop-shadow-md">14</span>
     </div>
 
 
-    <!-- PAGE 8: BACK COVER (Organizing Committee) -->
+    <!-- PAGE 15: BACK COVER (COMMITTEE) -->
     <div class="page bg-slate-900 border-l border-slate-800">
-        <!-- Background Layers -->
         <div class="absolute inset-0 bg-[url('assets/poster_back_cover_bg.jpg')] bg-cover bg-center opacity-30 z-0">
         </div>
         <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/90 to-transparent z-0"></div>
 
         <div class="relative z-10 flex flex-col items-center h-full p-12 text-center text-white">
-
-            <!-- Organizing Committee Section -->
             <div class="w-full max-w-4xl flex-grow flex flex-col justify-center">
                 <h2
                     class="text-2xl font-bold uppercase tracking-widest mb-10 border-b border-slate-700 pb-4 inline-block mx-auto text-blue-400">
-                    Organizing Committee
-                </h2>
-
+                    Organizing Committee</h2>
                 <div class="grid grid-cols-2 gap-x-12 gap-y-8 text-left max-w-2xl mx-auto">
-                    <!-- Chair -->
-                    <div class="flex items-center gap-4">
-                        <img src="assets/su-chin-heo.jpg"
+                    <div class="flex items-center gap-4"><img src="assets/su-chin-heo.jpg"
                             class="w-16 h-16 rounded-full border-2 border-slate-600 object-cover object-top">
                         <div>
                             <h4 class="font-bold text-lg">Su Chin Heo</h4>
                             <p class="text-xs text-blue-400 uppercase font-bold">Symposium Chair</p>
-                            <p class="text-xs text-slate-400">UPenn</p>
                         </div>
                     </div>
-                    <!-- Co-Chair -->
-                    <div class="flex items-center gap-4">
-                        <img src="assets/wookjin-choi.jpg"
+                    <div class="flex items-center gap-4"><img src="assets/wookjin-choi.jpg"
                             class="w-16 h-16 rounded-full border-2 border-slate-600 object-cover">
                         <div>
                             <h4 class="font-bold text-lg">Wookjin Choi</h4>
                             <p class="text-xs text-blue-400 uppercase font-bold">Co-Chair</p>
-                            <p class="text-xs text-slate-400">Jefferson Univ.</p>
                         </div>
                     </div>
-                    <!-- Program Director -->
-                    <div class="flex items-center gap-4">
-                        <img src="../assets/hyunmin-cho.jpg"
+                    <div class="flex items-center gap-4"><img src="../assets/hyunmin-cho.jpg"
                             class="w-16 h-16 rounded-full border-2 border-slate-600 object-cover">
                         <div>
                             <h4 class="font-bold text-lg">Hyunmin Cho</h4>
                             <p class="text-xs text-purple-400 uppercase font-bold">Program Director</p>
-                            <p class="text-xs text-slate-400">UPenn</p>
                         </div>
                     </div>
-                    <!-- Publication Director -->
-                    <div class="flex items-center gap-4">
-                        <img src="assets/minjeong-yeon.png"
+                    <div class="flex items-center gap-4"><img src="assets/minjeong-yeon.png"
                             class="w-16 h-16 rounded-full border-2 border-slate-600 object-cover">
                         <div>
                             <h4 class="font-bold text-lg">Minjeong Yeon</h4>
                             <p class="text-xs text-purple-400 uppercase font-bold">Publication</p>
-                            <p class="text-xs text-slate-400">Wistar</p>
                         </div>
                     </div>
-                    <!-- PR Director -->
-                    <div class="flex items-center gap-4">
-                        <img src="../assets/jaeung-ko.jpg"
+                    <div class="flex items-center gap-4"><img src="../assets/jaeung-ko.jpg"
                             class="w-16 h-16 rounded-full border-2 border-slate-600 object-cover">
                         <div>
                             <h4 class="font-bold text-lg">Jaeung Ko</h4>
                             <p class="text-xs text-purple-400 uppercase font-bold">Public Relations</p>
-                            <p class="text-xs text-slate-400">UPenn</p>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Bottom Sponsors -->
             <div class="w-full mt-10 pt-10 border-t border-slate-700">
                 <p class="text-slate-500 text-xs uppercase tracking-widest mb-6">Hosted & Supported By</p>
-
-                <!-- Logos in a single white card, split into two rows -->
                 <div class="bg-white rounded-xl py-8 px-10 shadow-2xl inline-flex flex-col gap-6 max-w-4xl mx-auto">
-
-                    <!-- Row 1: Hosted & Main Support -->
                     <div
                         class="flex flex-wrap justify-center items-center gap-10 border-b-2 border-slate-100 pb-6 w-full">
                         <img src="../assets/ksea-logo-horizontal.png" class="h-14 object-contain">
                         <div class="h-8 w-px bg-slate-200"></div>
                         <img src="../assets/kusco-logo.png" class="h-12 object-contain">
                     </div>
-
-                    <!-- Row 2: Partners -->
                     <div class="flex flex-wrap justify-center items-center gap-x-8 gap-y-4">
-                        <img src="../images/partners/KITEE.png" class="h-8 object-contain transition">
-                        <img src="../images/partners/kbmes.jpg" class="h-9 object-contain transition">
-                        <img src="../images/partners/KASBP.jpg" class="h-6 object-contain transition">
-                        <img src="../images/partners/PKSA.jpg" class="h-8 object-contain transition">
-                        <img src="../images/partners/upenn-kogsa.png" class="h-9 object-contain transition">
-                        <img src="assets/kkyu-logo.png" class="h-8 object-contain transition">
+                        <img src="../images/partners/KITEE.png" class="h-8 object-contain">
+                        <img src="../images/partners/kbmes.jpg" class="h-9 object-contain">
+                        <img src="../images/partners/KASBP.jpg" class="h-6 object-contain">
+                        <img src="../images/partners/PKSA.jpg" class="h-8 object-contain">
+                        <img src="../images/partners/upenn-kogsa.png" class="h-9 object-contain">
+                        <img src="assets/kkyu-logo.png" class="h-8 object-contain">
                     </div>
-
                 </div>
-
                 <p class="text-slate-600 text-[10px] mt-8">© 2026 KSEA Philadelphia Chapter | www.philly.ksea.org</p>
             </div>
-
+            <span class="page-number text-slate-700">15</span>
         </div>
     </div>
 
-    <!-- Download PDF Button -->
+
+    <!-- DOWNLOAD BUTTON -->
     <button id="downloadPdfBtn"
-        class="no-print bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-full font-bold shadow-lg hover:shadow-xl transition-all flex items-center gap-2">
+        class="no-print bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-full font-bold shadow-lg hover:shadow-xl transition-all flex items-center gap-2 fixed bottom-8 right-8 z-50">
         <i class="fas fa-file-pdf"></i> Download PDF
     </button>
 
@@ -747,8 +900,6 @@
             btn.disabled = true;
 
             const pages = document.querySelectorAll('.page');
-
-            // Create a container for all pages
             const container = document.createElement('div');
             pages.forEach(page => {
                 const clone = page.cloneNode(true);
@@ -760,26 +911,16 @@
                 margin: 0,
                 filename: 'symposium_booklet_2026.pdf',
                 image: { type: 'jpeg', quality: 1.0 },
-                html2canvas: {
-                    scale: 2,
-                    useCORS: true,
-                    allowTaint: true
-                },
-                jsPDF: {
-                    unit: 'in',
-                    format: 'letter',
-                    orientation: 'portrait'
-                },
-                pagebreak: { mode: ['css', 'legacy'] }
+                html2canvas: { scale: 2, useCORS: true, allowTaint: true },
+                jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
             };
 
-            html2pdf().set(opt).from(container).save().then(function () {
-                btn.innerHTML = '<i class="fas fa-file-pdf"></i> Download PDF';
-                btn.disabled = false;
-            });
+            await html2pdf().set(opt).from(container).save();
+
+            btn.innerHTML = '<i class="fas fa-file-pdf"></i> Download PDF';
+            btn.disabled = false;
         });
     </script>
-
 </body>
 
 </html>
