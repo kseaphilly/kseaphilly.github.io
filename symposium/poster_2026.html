@@ -98,153 +98,184 @@
         class="w-full max-w-[800px] aspect-[8.5/11] bg-[#0f172a] relative overflow-hidden shadow-2xl rounded-sm border border-slate-800/50 flex flex-col">
 
         <!-- 1. Full Vertical Background Image -->
-        <div class="absolute inset-0 bg-gradient-to-b from-[#020617] via-[#0f172a] to-slate-900 z-0"></div>
+        <!-- Reduced opacity of the dark overlay to show more of the background image -->
+        <div class="absolute inset-0 bg-gradient-to-b from-[#020617]/90 via-[#0f172a]/80 to-slate-900/90 z-0"></div>
+
+        <!-- Adjusted mask to reveal more of the top/middle where the skyline likely is -->
         <div class="absolute inset-0 bg-[url('assets/symposium_poster_final_v6_tall.png')] bg-no-repeat z-0"
-            style="background-size: 120% auto; background-position: center calc(100% + 4rem); -webkit-mask-image: linear-gradient(to bottom, transparent 0%, transparent 10%, black 40%, black 100%); mask-image: linear-gradient(to bottom, transparent 0%, transparent 10%, black 40%, black 100%);">
+            style="background-size: 100% auto; background-position: center bottom; opacity: 0.6;">
         </div>
 
         <!-- 2. Subtle Line Drawing Overlay -->
         <div
-            class="absolute inset-0 bg-[url('../assets/symposium_poster_background.png')] bg-cover bg-top bg-no-repeat opacity-30 z-0 mix-blend-screen">
+            class="absolute inset-0 bg-[url('../assets/symposium_poster_background.png')] bg-cover bg-top bg-no-repeat opacity-20 z-0 mix-blend-screen">
         </div>
 
-        <!-- 3. Bottom Gradient Scrim -->
+        <!-- 3. Bottom Gradient Scrim - Reduced height to not cover the bottom too much -->
         <div
-            class="absolute bottom-0 left-0 w-full h-1/3 bg-gradient-to-t from-black/90 via-black/50 to-transparent z-0">
+            class="absolute bottom-0 left-0 w-full h-1/4 bg-gradient-to-t from-black/80 via-black/40 to-transparent z-0">
         </div>
 
         <!-- Top Decorative Borders -->
         <div class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-blue-600 via-purple-600 to-blue-600 z-20">
         </div>
 
-        <div class="p-6 md:p-8 flex flex-col items-center text-center relative z-20 h-full">
+        <div class="p-5 md:p-6 flex flex-col items-center text-center relative z-20 h-full">
 
             <!-- 1. Header Section -->
             <div class="w-full mb-2">
-                <div class="flex justify-center items-center gap-4 mb-4">
-                    <img src="../assets/ksea-logo-seal.png" alt="KSEA Seal" class="h-16 w-16"
+                <div class="flex justify-center items-center gap-3 mb-2">
+                    <img src="../assets/ksea-logo-seal.png" alt="KSEA Seal" class="h-14 w-14"
                         style="filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.6));">
                     <div class="text-left flex flex-col justify-center">
-                        <h2 class="text-3xl font-black text-white tracking-widest leading-none mb-0.5"
+                        <h2 class="text-2xl font-black text-white tracking-widest leading-none mb-0.5"
                             style="text-shadow: 0 0 30px rgba(255, 255, 255, 0.3);">KSEA</h2>
-                        <p class="text-sm font-bold text-blue-300 uppercase tracking-[0.3em] leading-none ml-0.5">
+                        <p class="text-xs font-bold text-blue-300 uppercase tracking-[0.3em] leading-none ml-0.5">
                             Philadelphia</p>
                     </div>
                 </div>
-                <h3 class="text-blue-400 tracking-[0.2em] text-xs font-bold uppercase mb-1">
+                <h3 class="text-blue-400 tracking-[0.2em] text-[10px] font-bold uppercase mb-1"
+                    style="text-shadow: 0 2px 4px rgba(0,0,0,0.8);">
                     2026 US-Korea Northeastern Symposium
                 </h3>
-                <h1 class="text-4xl md:text-5xl font-black text-white leading-none tracking-tight mb-2 drop-shadow-xl">
+                <h1
+                    class="text-3xl md:text-4xl font-black text-white leading-none tracking-tight mb-2 drop-shadow-[0_4px_4px_rgba(0,0,0,0.8)]">
                     AI, BIOMEDICAL SCIENCE <br>& <span
                         class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">ENGINEERING</span>
                 </h1>
             </div>
 
             <!-- 2. Date & Location (Compact) -->
-            <div class="flex flex-wrap justify-center gap-4 mb-4 w-full">
+            <div class="flex flex-wrap justify-center gap-3 mb-3 w-full">
                 <div
-                    class="bg-white/5 border border-white/10 px-6 py-2 rounded-full flex items-center gap-3 backdrop-blur-sm shadow-lg">
-                    <i class="far fa-calendar-alt text-xl text-blue-400"></i>
+                    class="bg-slate-900/40 border border-white/20 px-4 py-1.5 rounded-full flex items-center gap-2 backdrop-blur-sm shadow-lg">
+                    <i class="far fa-calendar-alt text-lg text-blue-400"></i>
                     <div class="text-left leading-tight">
-                        <p class="text-white font-bold text-sm">FEB 27, 2026</p>
-                        <p class="text-[10px] text-slate-400 font-bold uppercase">1:00 PM - 9:00 PM</p>
+                        <p class="text-white font-bold text-xs">FEB 27, 2026</p>
+                        <p class="text-[9px] text-slate-300 font-bold uppercase">1:00 PM - 9:00 PM</p>
                     </div>
                 </div>
                 <!-- Vertical Divider (Hidden on mobile) -->
-                <div class="hidden md:block w-px h-10 bg-slate-700"></div>
+                <div class="hidden md:block w-px h-8 bg-slate-400/50"></div>
 
                 <div
-                    class="bg-white/5 border border-white/10 px-6 py-2 rounded-full flex items-center gap-3 backdrop-blur-sm shadow-lg">
-                    <i class="fas fa-map-marker-alt text-xl text-purple-400 shrink-0"></i>
+                    class="bg-slate-900/40 border border-white/20 px-4 py-1.5 rounded-full flex items-center gap-2 backdrop-blur-sm shadow-lg">
+                    <i class="fas fa-map-marker-alt text-lg text-purple-400 shrink-0"></i>
                     <div class="text-left leading-tight">
-                        <p class="text-white font-bold text-sm">UPenn Smilow Center</p>
-                        <p class="text-[10px] text-slate-400 font-bold uppercase">Philadelphia, PA</p>
+                        <p class="text-white font-bold text-xs">UPenn Smilow Center</p>
+                        <p class="text-[9px] text-slate-300 font-bold uppercase">Philadelphia, PA</p>
                     </div>
                 </div>
             </div>
 
             <!-- 3. Main Content Grid -->
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 w-full flex-grow">
+            <!-- Removing heavy backgrounds to reduce opacity -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 w-full flex-grow min-h-0">
 
                 <!-- Left Col: Speakers -->
-                <div class="flex flex-col gap-3">
+                <div class="flex flex-col gap-4 min-h-0 text-center">
                     <!-- Keynotes -->
-                    <div class="bg-white/5 rounded-xl p-3 border border-white/10 backdrop-blur-md shadow-lg">
+                    <div class="shrink-0 p-2">
                         <h3
-                            class="text-xs font-bold text-blue-400 uppercase tracking-widest mb-3 text-center border-b border-white/10 pb-2">
+                            class="text-[10px] font-bold text-blue-400 uppercase tracking-widest mb-3 text-center border-b border-white/20 pb-1 max-w-[200px] mx-auto drop-shadow-md">
                             Keynote Speakers</h3>
                         <div class="flex justify-around items-start">
                             <div class="flex flex-col items-center w-1/2">
                                 <div class="relative w-24 h-24 mb-2 group">
                                     <div class="absolute inset-0 bg-blue-500 rounded-full blur opacity-40"></div>
                                     <img src="assets/junhyong-kim.png"
-                                        class="w-full h-full rounded-full object-cover object-top border-2 border-slate-300 relative z-10 shadow-lg">
+                                        class="w-full h-full rounded-full object-cover object-top border-2 border-slate-300 relative z-10 shadow-lg"
+                                        style="box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
                                 </div>
-                                <p class="text-white text-base font-bold leading-tight">Junhyong Kim</p>
-                                <p class="text-blue-400 text-[10px] font-bold uppercase">Univ. of Pennsylvania</p>
+                                <p class="text-white text-base font-bold leading-tight drop-shadow-md">Junhyong Kim</p>
+                                <p class="text-blue-300 text-[10px] font-bold uppercase drop-shadow-md">Univ. of
+                                    Pennsylvania</p>
                             </div>
                             <div class="flex flex-col items-center w-1/2">
                                 <div class="relative w-24 h-24 mb-2 group">
                                     <div class="absolute inset-0 bg-purple-500 rounded-full blur opacity-40"></div>
                                     <img src="assets/deok-ho-kim.png"
-                                        class="w-full h-full rounded-full object-cover border-2 border-slate-300 relative z-10 shadow-lg">
+                                        class="w-full h-full rounded-full object-cover border-2 border-slate-300 relative z-10 shadow-lg"
+                                        style="box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
                                 </div>
-                                <p class="text-white text-base font-bold leading-tight">Deok-Ho Kim</p>
-                                <p class="text-purple-400 text-[10px] font-bold uppercase">Johns Hopkins Univ.</p>
+                                <p class="text-white text-base font-bold leading-tight drop-shadow-md">Deok-Ho Kim</p>
+                                <p class="text-purple-300 text-[10px] font-bold uppercase drop-shadow-md">Johns Hopkins
+                                    Univ.</p>
                             </div>
                         </div>
                     </div>
 
                     <!-- Invited Speakers -->
-                    <div
-                        class="bg-white/5 rounded-xl p-3 border border-white/10 backdrop-blur-md shadow-lg flex-grow flex flex-col justify-center">
+                    <div class="flex-grow flex flex-col justify-start min-h-0 overflow-hidden px-2">
                         <h3
-                            class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-3 text-center border-b border-white/10 pb-2">
+                            class="text-[10px] font-bold text-slate-300 uppercase tracking-widest mb-3 text-center border-b border-white/20 pb-1 max-w-[200px] mx-auto drop-shadow-md">
                             Invited Speakers</h3>
-                        <div class="grid grid-cols-3 gap-y-4 gap-x-2 text-center">
 
-                            <div class="flex flex-col items-center">
+                        <div class="grid grid-cols-2 gap-y-4 gap-x-4 text-center">
+
+                            <div class="flex items-center gap-3 text-left">
                                 <img src="assets/dokyoon-kim.png"
-                                    class="w-20 h-20 rounded-full object-cover object-top border border-blue-400/50 shadow-md mb-2">
-                                <p class="text-white text-[10px] font-bold leading-tight mb-0.5">Dokyoon Kim</p>
-                                <p class="text-blue-300 text-[9px] leading-tight">Univ. of Pennsylvania</p>
-                            </div>
-
-                            <div class="flex flex-col items-center">
-                                <img src="assets/hayoung-bong.png"
-                                    class="w-20 h-20 rounded-full object-cover object-top border border-purple-400/50 shadow-md mb-2">
-                                <p class="text-white text-[10px] font-bold leading-tight mb-0.5">Hayoung Bong</p>
-                                <p class="text-purple-300 text-[9px] leading-tight">NASA GISS</p>
-                            </div>
-
-                            <div class="flex flex-col items-center">
-                                <img src="assets/jina-ko.png"
-                                    class="w-20 h-20 rounded-full object-cover object-top border border-blue-400/50 shadow-md mb-2">
-                                <p class="text-white text-[10px] font-bold leading-tight mb-0.5">Jina Ko</p>
-                                <p class="text-blue-300 text-[9px] leading-tight">Univ. of Pennsylvania</p>
-                            </div>
-
-                            <div class="flex flex-col items-center">
-                                <img src="assets/minsung-kim.png"
-                                    class="w-20 h-20 rounded-full object-cover object-top border border-purple-400/50 shadow-md mb-2">
-                                <p class="text-white text-[10px] font-bold leading-tight mb-0.5">Minsung Kim</p>
-                                <p class="text-purple-300 text-[9px] leading-tight">Rutgers Univ.</p>
-                            </div>
-
-                            <div class="flex flex-col items-center">
-                                <img src="assets/dae-myung-yang.jpg"
-                                    class="w-20 h-20 rounded-full object-cover object-top border border-blue-400/50 shadow-md mb-2">
-                                <p class="text-white text-[10px] font-bold leading-tight mb-0.5">Dae-Myung Yang</p>
-                                <p class="text-blue-300 text-[9px] leading-tight">Fox Chase Cancer Ctr.</p>
-                            </div>
-
-                            <div class="flex flex-col items-center">
-                                <div
-                                    class="w-20 h-20 rounded-full bg-slate-800 border border-slate-600/50 shadow-md mb-2 flex items-end justify-center overflow-hidden">
-                                    <i class="fas fa-user text-5xl text-slate-600 translate-y-1"></i>
+                                    class="w-16 h-16 rounded-full object-cover object-top border-2 border-blue-400/50 shadow-lg">
+                                <div>
+                                    <p class="text-white text-[11px] font-bold leading-tight mb-0.5 drop-shadow-md">
+                                        Dokyoon Kim</p>
+                                    <p class="text-blue-200 text-[9px] leading-tight drop-shadow-md">Univ. of
+                                        Pennsylvania</p>
                                 </div>
-                                <p class="text-white text-[10px] font-bold leading-tight mb-0.5">TBD</p>
-                                <p class="text-slate-400 text-[9px] leading-tight">Industry</p>
+                            </div>
+
+                            <div class="flex items-center gap-3 text-left">
+                                <img src="assets/hayoung-bong.png"
+                                    class="w-16 h-16 rounded-full object-cover object-top border-2 border-purple-400/50 shadow-lg">
+                                <div>
+                                    <p class="text-white text-[11px] font-bold leading-tight mb-0.5 drop-shadow-md">
+                                        Hayoung Bong</p>
+                                    <p class="text-purple-200 text-[9px] leading-tight drop-shadow-md">NASA GISS</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center gap-3 text-left">
+                                <img src="assets/jina-ko.png"
+                                    class="w-16 h-16 rounded-full object-cover object-top border-2 border-blue-400/50 shadow-lg">
+                                <div>
+                                    <p class="text-white text-[11px] font-bold leading-tight mb-0.5 drop-shadow-md">Jina
+                                        Ko</p>
+                                    <p class="text-blue-200 text-[9px] leading-tight drop-shadow-md">Univ. of
+                                        Pennsylvania</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center gap-3 text-left">
+                                <img src="assets/minsung-kim.png"
+                                    class="w-16 h-16 rounded-full object-cover object-top border-2 border-purple-400/50 shadow-lg">
+                                <div>
+                                    <p class="text-white text-[11px] font-bold leading-tight mb-0.5 drop-shadow-md">
+                                        Minsung Kim</p>
+                                    <p class="text-purple-200 text-[9px] leading-tight drop-shadow-md">Rutgers Univ.</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center gap-3 text-left">
+                                <img src="assets/dae-myung-yang.jpg"
+                                    class="w-16 h-16 rounded-full object-cover object-top border-2 border-blue-400/50 shadow-lg">
+                                <div>
+                                    <p class="text-white text-[11px] font-bold leading-tight mb-0.5 drop-shadow-md">
+                                        Dae-Myung Yang</p>
+                                    <p class="text-blue-200 text-[9px] leading-tight drop-shadow-md">Fox Chase Cancer
+                                        Ctr.</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center gap-3 text-left">
+                                <div
+                                    class="w-16 h-16 rounded-full bg-slate-800/80 border-2 border-slate-600/50 shadow-lg flex items-end justify-center overflow-hidden">
+                                    <i class="fas fa-user text-4xl text-slate-500 translate-y-2"></i>
+                                </div>
+                                <div>
+                                    <p class="text-white text-[11px] font-bold leading-tight mb-0.5 drop-shadow-md">TBD
+                                    </p>
+                                    <p class="text-slate-400 text-[9px] leading-tight drop-shadow-md">Industry</p>
+                                </div>
                             </div>
 
                         </div>
@@ -252,94 +283,95 @@
                 </div>
 
                 <!-- Right Col: Schedule, Posters, Reg -->
-                <div class="flex flex-col gap-3">
+                <div class="flex flex-col gap-3 min-h-0">
 
-                    <!-- Schedule -->
-                    <div
-                        class="bg-white/5 rounded-xl border border-white/10 overflow-hidden shadow-lg backdrop-blur-md">
-                        <div class="bg-white/5 px-3 py-2 border-b border-white/5">
-                            <h3 class="text-xs font-bold text-slate-300 uppercase tracking-wider">Program Schedule</h3>
-                        </div>
-                        <div class="p-3 space-y-2">
-                            <div class="flex justify-between text-xs">
-                                <span class="font-bold text-blue-400">12:30</span>
-                                <span class="text-slate-300">Keynote Session</span>
-                            </div>
-                            <div class="flex justify-between text-xs">
-                                <span class="font-bold text-blue-400">13:30</span>
-                                <span class="text-slate-300">Bio-Science Session</span>
-                            </div>
-                            <div
-                                class="flex justify-between text-xs bg-white/5 -mx-3 px-3 py-1 border-y border-white/5">
-                                <span class="font-bold text-white">14:30</span>
-                                <span class="text-white font-bold">Poster Session &amp; Break</span>
-                            </div>
-                            <div class="flex justify-between text-xs">
-                                <span class="font-bold text-blue-400">15:30</span>
-                                <span class="text-slate-300">Engineering Session</span>
-                            </div>
-                            <div class="flex justify-between text-xs">
-                                <span class="font-bold text-blue-400">16:30</span>
-                                <span class="text-slate-300">Closing &amp; Awards</span>
-                            </div>
-                            <div class="flex justify-between text-xs">
-                                <span class="font-bold text-blue-400">17:00</span>
-                                <span class="text-slate-300">Networking Dinner</span>
-                            </div>
-                        </div>
-
-                        <!-- Call for Posters (Full Width) -->
+                    <!-- Schedule - Transparent Background -->
+                    <div class="rounded-xl overflow-hidden shrink-0">
                         <div
-                            class="bg-gradient-to-br from-amber-900/40 to-orange-900/40 rounded-xl border border-amber-500/30 p-3 shadow-lg relative overflow-hidden group">
-                            <div class="flex items-center justify-between relative z-10 mb-1">
+                            class="bg-gradient-to-r from-transparent via-slate-900/50 to-transparent px-3 py-1.5 border-b border-white/10 mb-2">
+                            <h3
+                                class="text-[10px] font-bold text-slate-300 uppercase tracking-wider text-center drop-shadow-md">
+                                Program Schedule</h3>
+                        </div>
+                        <div class="p-1 space-y-2">
+                            <div class="flex justify-between text-[11px] border-b border-white/5 pb-1">
+                                <span class="font-bold text-blue-400 drop-shadow-md">12:30</span>
+                                <span class="text-slate-100 font-medium drop-shadow-md">Keynote Session</span>
+                            </div>
+                            <div class="flex justify-between text-[11px] border-b border-white/5 pb-1">
+                                <span class="font-bold text-blue-400 drop-shadow-md">13:30</span>
+                                <span class="text-slate-100 font-medium drop-shadow-md">Bio-Science Session</span>
+                            </div>
+                            <div class="flex justify-between text-[11px] bg-white/10 -mx-2 px-3 py-1 rounded">
+                                <span class="font-bold text-white drop-shadow-md">14:30</span>
+                                <span class="text-white font-bold drop-shadow-md">Poster Session &amp; Break</span>
+                            </div>
+                            <div class="flex justify-between text-[11px] border-b border-white/5 pb-1">
+                                <span class="font-bold text-blue-400 drop-shadow-md">15:30</span>
+                                <span class="text-slate-100 font-medium drop-shadow-md">Engineering Session</span>
+                            </div>
+                            <div class="flex justify-between text-[11px] border-b border-white/5 pb-1">
+                                <span class="font-bold text-blue-400 drop-shadow-md">16:30</span>
+                                <span class="text-slate-100 font-medium drop-shadow-md">Closing &amp; Awards</span>
+                            </div>
+                            <div class="flex justify-between text-[11px]">
+                                <span class="font-bold text-blue-400 drop-shadow-md">17:00</span>
+                                <span class="text-slate-100 font-medium drop-shadow-md">Networking Dinner</span>
+                            </div>
+                        </div>
+
+                        <!-- Call for Posters (Semi-transparent) -->
+                        <div
+                            class="bg-gradient-to-r from-amber-900/40 via-amber-800/40 to-amber-900/40 border-y border-amber-500/30 p-2 mt-2 shadow-sm relative overflow-hidden group">
+                            <div class="flex items-center justify-between relative z-10 mb-0.5">
                                 <div class="text-left">
-                                    <h4 class="text-white text-sm font-bold uppercase mb-0"><i
-                                            class="fas fa-trophy text-amber-500 mr-2"></i> Call for Posters</h4>
-                                    <p class="text-[10px] text-amber-200/80 ml-6 font-semibold">Research Competition</p>
+                                    <h4 class="text-white text-xs font-bold uppercase mb-0 drop-shadow-md"><i
+                                            class="fas fa-trophy text-amber-500 mr-1.5"></i> Call for Posters</h4>
                                 </div>
                                 <div class="text-right leading-none">
-                                    <p class="text-amber-400 font-black text-2xl text-glow">$600+</p>
-                                    <p class="text-[9px] text-slate-400 uppercase">Prizes</p>
+                                    <p class="text-amber-400 font-black text-xl text-glow drop-shadow-md">$600+</p>
                                 </div>
                             </div>
-                            <div
-                                class="flex justify-between items-center border-t border-amber-500/20 pt-2 mt-1 text-[9px] text-slate-300">
-                                <span><i class="fas fa-check text-amber-500 mr-1"></i>Previous posters allowed</span>
-                                <span><i class="fas fa-users text-amber-500 mr-1"></i>Max 30 presenters</span>
+                            <div class="flex justify-between items-center text-[9px] text-slate-200 font-medium">
+                                <span class="drop-shadow-md">Research Competition (Max 30)</span>
                             </div>
                         </div>
 
-                        <!-- Registration & Payment -->
-                        <div
-                            class="bg-gradient-to-br from-blue-900/40 to-indigo-900/40 rounded-xl border border-blue-500/30 p-3 shadow-lg relative overflow-hidden flex-grow flex flex-col justify-center">
-                            <div class="flex items-center justify-between mb-2 border-b border-white/10 pb-2">
-                                <h4 class="text-white text-sm font-bold uppercase"><i
-                                        class="fas fa-ticket-alt text-blue-400 mr-2"></i> Registration <span
-                                        class="text-[9px] text-amber-400 ml-1 block sm:inline">(Early Bird: Feb
-                                        15)</span>
+                        <!-- Registration & Payment (Minimalist) -->
+                        <div class="relative overflow-hidden flex-grow flex flex-col justify-center mt-2 px-2">
+                            <div
+                                class="bg-gradient-to-r from-transparent via-blue-900/40 to-transparent px-3 py-1.5 border-b border-white/10 mb-2">
+                                <h4 class="text-white text-xs font-bold uppercase text-center drop-shadow-md"><i
+                                        class="fas fa-ticket-alt text-blue-400 mr-1.5"></i> Registration <span
+                                        class="text-[9px] text-amber-400 ml-1">(Early Bird: Feb 15)</span>
                                 </h4>
                             </div>
 
-                            <div class="w-full mb-3">
+                            <div class="w-full mb-2">
                                 <table class="w-full text-[10px] border-collapse">
                                     <thead>
-                                        <tr class="border-b border-white/10 text-slate-400">
-                                            <th class="py-1 text-left font-semibold">Category</th>
-                                            <th class="py-1 text-center font-semibold text-blue-300">Member</th>
-                                            <th class="py-1 text-center font-semibold">Non-Member</th>
+                                        <tr class="border-b border-white/20 text-slate-300">
+                                            <th class="py-0.5 text-left font-semibold drop-shadow-md">Category</th>
+                                            <th class="py-0.5 text-center font-semibold text-blue-200 drop-shadow-md">
+                                                Member</th>
+                                            <th class="py-0.5 text-center font-semibold text-slate-200 drop-shadow-md">
+                                                Non-Member</th>
                                         </tr>
                                     </thead>
                                     <tbody class="text-white">
-                                        <tr class="border-b border-white/5">
-                                            <td class="py-1.5 text-left text-slate-300 font-medium">Student / Postdoc
+                                        <tr class="border-b border-white/10">
+                                            <td class="py-1 text-left text-slate-100 font-medium drop-shadow-md">Student
+                                                / Postdoc
                                             </td>
-                                            <td class="py-1.5 text-center font-bold text-blue-300">$10</td>
-                                            <td class="py-1.5 text-center font-medium">$40</td>
+                                            <td class="py-1 text-center font-bold text-blue-300 drop-shadow-md">$10</td>
+                                            <td class="py-1 text-center font-medium drop-shadow-md">$40</td>
                                         </tr>
                                         <tr>
-                                            <td class="py-1.5 text-left text-slate-300 font-medium">Faculty</td>
-                                            <td class="py-1.5 text-center font-bold text-purple-300">$30</td>
-                                            <td class="py-1.5 text-center font-medium">$60</td>
+                                            <td class="py-1 text-left text-slate-100 font-medium drop-shadow-md">Faculty
+                                            </td>
+                                            <td class="py-1 text-center font-bold text-purple-300 drop-shadow-md">$30
+                                            </td>
+                                            <td class="py-1 text-center font-medium drop-shadow-md">$60</td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -349,30 +381,27 @@
                             <div class="flex justify-around items-start gap-1 mt-1">
                                 <div class="text-center group w-1/3">
                                     <div
-                                        class="bg-white p-1 rounded mb-1 shadow-md w-20 h-20 flex items-center justify-center mx-auto">
+                                        class="bg-white p-0.5 rounded mb-0.5 shadow-md w-14 h-14 flex items-center justify-center mx-auto">
                                         <img src="assets/registration-qr.png" class="w-full h-full object-contain">
                                     </div>
-                                    <p class="text-[10px] font-bold text-blue-300 leading-tight">Register</p>
-                                </div>
-                                <div class="w-px h-12 bg-slate-600/50 mx-1"></div>
-                                <div class="text-center group w-1/3">
-                                    <div
-                                        class="bg-white p-1 rounded mb-1 shadow-md w-20 h-20 flex items-center justify-center mx-auto">
-                                        <img src="assets/zelle-qr.png" class="w-full h-full object-contain">
-                                    </div>
-                                    <p class="text-[10px] font-bold text-white leading-tight">Zelle</p>
-                                    <p class="text-[6px] text-amber-300 font-bold leading-tight whitespace-nowrap">
-                                        ksea.philly.chapter@gmail.com
+                                    <p class="text-[9px] font-bold text-blue-300 leading-tight drop-shadow-md">Register
                                     </p>
                                 </div>
-                                <div class="w-px h-12 bg-slate-600/50 mx-1"></div>
+                                <div class="w-px h-10 bg-slate-500/50 mx-1 self-center"></div>
                                 <div class="text-center group w-1/3">
                                     <div
-                                        class="bg-white p-1 rounded mb-1 shadow-md w-20 h-20 flex items-center justify-center mx-auto">
+                                        class="bg-white p-0.5 rounded mb-0.5 shadow-md w-14 h-14 flex items-center justify-center mx-auto">
+                                        <img src="assets/zelle-qr.png" class="w-full h-full object-contain">
+                                    </div>
+                                    <p class="text-[9px] font-bold text-white leading-tight drop-shadow-md">Zelle</p>
+                                </div>
+                                <div class="w-px h-10 bg-slate-500/50 mx-1 self-center"></div>
+                                <div class="text-center group w-1/3">
+                                    <div
+                                        class="bg-white p-0.5 rounded mb-0.5 shadow-md w-14 h-14 flex items-center justify-center mx-auto">
                                         <img src="assets/venmo-qr.png" class="w-full h-full object-contain">
                                     </div>
-                                    <p class="text-[10px] font-bold text-white leading-tight">Venmo</p>
-                                    <p class="text-[8px] text-amber-300 font-bold leading-tight">@myeon</p>
+                                    <p class="text-[9px] font-bold text-white leading-tight drop-shadow-md">Venmo</p>
                                 </div>
                             </div>
                         </div>
@@ -383,30 +412,25 @@
             </div>
 
             <!-- Footer -->
-            <div class="bg-white px-6 py-4 rounded-lg shadow-xl mt-8 w-2/3 mx-auto">
+            <div class="bg-white px-4 py-3 rounded-lg shadow-xl mt-4 w-3/4 mx-auto">
                 <div class="w-full">
-                    <div class="flex flex-col md:flex-row justify-center items-center gap-4 text-[10px] text-slate-600">
+                    <div class="flex flex-col md:flex-row justify-center items-center gap-3 text-[9px] text-slate-600">
                         <div class="flex items-center gap-2">
                             <span class="uppercase font-bold tracking-wider">Hosted by</span>
                             <img src="../assets/ksea-logo-horizontal.png" class="h-6 object-contain">
                         </div>
-                        <div class="hidden md:block w-px h-3 bg-slate-300"></div>
+                        <div class="hidden md:block w-px h-3 bg-slate-400"></div>
                         <div class="flex items-center gap-2">
                             <span class="uppercase font-bold tracking-wider">Supported by</span>
                             <img src="../assets/kusco-logo.png" class="h-5 object-contain">
                         </div>
                     </div>
-                    <div class="flex justify-center flex-wrap gap-4 mt-2 transition duration-500">
-                        <img src="../images/partners/KITEE.png"
-                            class="h-5 object-contain bg-white/50 rounded-sm p-0.5 shadow-[0_0_10px_rgba(255,255,255,0.4)]">
-                        <img src="../images/partners/KASBP.jpg"
-                            class="h-5 object-contain bg-white/50 rounded-sm p-0.5 shadow-[0_0_10px_rgba(255,255,255,0.4)]">
-                        <img src="../images/partners/PKSA.jpg"
-                            class="h-5 object-contain bg-white/50 rounded-sm p-0.5 shadow-[0_0_10px_rgba(255,255,255,0.4)]">
-                        <img src="../images/partners/upenn-kogsa.png"
-                            class="h-5 object-contain bg-white/50 rounded-sm p-0.5 shadow-[0_0_10px_rgba(255,255,255,0.4)]">
-                        <img src="assets/kkyu-logo.png"
-                            class="h-5 object-contain bg-white/50 rounded-sm p-0.5 shadow-[0_0_10px_rgba(255,255,255,0.4)]">
+                    <div class="flex justify-center flex-wrap gap-3 mt-2 transition duration-500">
+                        <img src="../images/partners/KITEE.png" class="h-5 object-contain rounded-sm p-0.5">
+                        <img src="../images/partners/KASBP.jpg" class="h-5 object-contain rounded-sm p-0.5">
+                        <img src="../images/partners/PKSA.jpg" class="h-5 object-contain rounded-sm p-0.5">
+                        <img src="../images/partners/upenn-kogsa.png" class="h-5 object-contain rounded-sm p-0.5">
+                        <img src="assets/kkyu-logo.png" class="h-5 object-contain rounded-sm p-0.5">
                     </div>
                 </div>
             </div>
