@@ -53,15 +53,44 @@
         }
 
         @media print {
+            @page {
+                margin: 0;
+                size: letter portrait;
+            }
+
+            body {
+                margin: 0;
+                padding: 0 !important;
+                background: white;
+                display: block;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+
             .no-print {
-                display: none;
+                display: none !important;
+            }
+
+            main {
+                width: 100% !important;
+                max-width: none !important;
+                height: 100vh !important;
+                aspect-ratio: auto !important;
+                margin: 0 !important;
+                border: none !important;
+                box-shadow: none !important;
+                border-radius: 0 !important;
+                position: absolute;
+                top: 0;
+                left: 0;
+                overflow: hidden !important;
             }
         }
     </style>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 </head>
 
-<body class="min-h-screen flex items-center justify-center p-4 ambient-bg selection:bg-blue-500 selection:text-white">
+<body class="min-h-screen flex items-center justify-center p-4 bg-white selection:bg-blue-500 selection:text-white">
 
     <!-- Poster Container - Letter Ratio (approx 8.5/11) -->
     <main
@@ -274,41 +303,8 @@
 
     </main>
 
-    <!-- Download PDF Button -->
-    <button id="downloadPdfBtn"
-        class="no-print bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-full font-bold shadow-lg hover:shadow-xl transition-all flex items-center gap-2">
-        <i class="fas fa-file-pdf"></i> Download PDF
-    </button>
-
     <script>
-        document.getElementById('downloadPdfBtn').addEventListener('click', function () {
-            const btn = this;
-            btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Generating...';
-            btn.disabled = true;
-
-            const poster = document.querySelector('main');
-
-            const opt = {
-                margin: 0,
-                filename: 'save_the_date_2026.pdf',
-                image: { type: 'jpeg', quality: 1.0 },
-                html2canvas: {
-                    scale: 3,
-                    useCORS: true,
-                    allowTaint: true
-                },
-                jsPDF: {
-                    unit: 'in',
-                    format: 'letter',
-                    orientation: 'portrait'
-                }
-            };
-
-            html2pdf().set(opt).from(poster).save().then(function () {
-                btn.innerHTML = '<i class="fas fa-file-pdf"></i> Download PDF';
-                btn.disabled = false;
-            });
-        });
+        // PDF download functionality removed
     </script>
 
 </body>
