@@ -813,19 +813,20 @@
                     Opportunities</h2>
 
                 <div class="grid grid-cols-1 gap-6">
-                    <!-- Diamond -->
-                    <div class="bg-slate-900 p-6 rounded-xl text-white shadow-xl relative overflow-hidden">
+                    <!-- Platinum -->
+                    <div
+                        class="bg-gradient-to-br from-white to-slate-50 p-6 rounded-xl shadow-lg border-2 border-blue-200 relative overflow-hidden">
                         <div
-                            class="absolute top-0 right-0 w-32 h-32 bg-blue-600 rounded-full blur-3xl -mr-16 -mt-16 opacity-50">
+                            class="absolute top-0 right-0 w-32 h-32 bg-blue-100 rounded-full blur-3xl -mr-16 -mt-16 pointer-events-none">
                         </div>
-                        <div class="flex justify-between items-start mb-4">
+                        <div class="flex justify-between items-start mb-4 relative z-10">
                             <div>
-                                <h3 class="text-2xl font-bold uppercase tracking-widest text-blue-400">Platinum</h3>
-                                <p class="text-slate-400 text-sm">Premier Partner</p>
+                                <h3 class="text-2xl font-bold uppercase tracking-widest text-blue-600">Platinum</h3>
+                                <p class="text-slate-500 text-sm">Premier Partner</p>
                             </div>
-                            <span class="text-4xl font-black">$3,000</span>
+                            <span class="text-4xl font-black text-slate-800">$3,000</span>
                         </div>
-                        <ul class="grid grid-cols-2 gap-3 text-sm text-slate-200">
+                        <ul class="grid grid-cols-2 gap-3 text-sm text-slate-700 relative z-10">
                             <li><i class="fas fa-check text-blue-500 mr-2"></i> Full-page Advertisement</li>
                             <li><i class="fas fa-check text-blue-500 mr-2"></i> Exhibitor Booth (Premium)</li>
                             <li><i class="fas fa-check text-blue-500 mr-2"></i> 20-Min Presentation Slot</li>
@@ -973,55 +974,60 @@
 
             <!-- Poster Session -->
             <div
-                class="flex-1 bg-slate-900 text-white p-6 rounded-xl shadow-sm border border-slate-800 flex flex-col relative overflow-hidden">
-                <div
-                    class="absolute top-0 right-0 w-64 h-64 bg-blue-600 rounded-full blur-[80px] -mr-16 -mt-16 opacity-30 pointer-events-none">
+                class="flex-1 bg-slate-50 text-slate-800 p-6 rounded-xl relative overflow-hidden shadow-inner border border-slate-100">
+                <div class="flex items-center justify-between mb-6 border-b-2 border-slate-200 pb-4">
+                    <h2 class="text-3xl font-black text-slate-900">Call for Posters</h2>
                 </div>
-                <h2 class="text-3xl font-black text-white mb-4 border-b-2 border-slate-700 pb-4 relative z-10">Call for
-                    Posters</h2>
 
-                <div class="relative z-10 flex flex-col h-full">
-                    <p class="text-slate-300 mb-6 text-sm">We invite students and postdoctoral researchers to present
+                <div class="flex flex-col h-full">
+                    <p class="text-slate-600 mb-6 text-sm">We invite students and postdoctoral researchers to present
                         their work (No topic restrictions).</p>
 
                     <div class="grid grid-cols-2 gap-8 flex-grow">
-                        <div class="space-y-4 text-sm">
-                            <div class="bg-slate-800/50 p-4 rounded-lg border border-slate-700">
-                                <h4 class="font-bold text-blue-400 uppercase text-xs tracking-wider mb-3">Key Dates</h4>
-                                <ul class="space-y-3">
-                                    <li>
-                                        <span class="block text-xs text-slate-400 mb-0.5">Abstract Submission</span>
-                                        <span class="font-bold text-white">Feb 15, 2026</span>
-                                    </li>
-                                    <li>
-                                        <span class="block text-xs text-slate-400 mb-0.5">Acceptance Notice</span>
-                                        <span class="font-bold text-white">Feb 20, 2026</span>
-                                    </li>
-                                </ul>
-                            </div>
+                        <!-- Key Dates -->
+                        <div
+                            class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm flex flex-col justify-between">
+                            <h4
+                                class="font-bold text-blue-600 uppercase text-xs tracking-wider mb-4 border-b border-slate-100 pb-2">
+                                Key Dates</h4>
+                            <ul class="space-y-4">
+                                <li class="flex justify-between items-center">
+                                    <span class="text-xs text-slate-500 font-bold">Abstract Submission</span>
+                                    <span class="font-bold text-slate-800 bg-slate-100 px-2 py-1 rounded text-xs">Feb
+                                        15, 2026</span>
+                                </li>
+                                <li class="flex justify-between items-center">
+                                    <span class="text-xs text-slate-500 font-bold">Acceptance Notice</span>
+                                    <span class="font-bold text-slate-800 bg-slate-100 px-2 py-1 rounded text-xs">Feb
+                                        20, 2026</span>
+                                </li>
+                            </ul>
                         </div>
 
-                        <div class="space-y-3">
-                            <h4 class="font-bold text-blue-400 uppercase text-xs tracking-wider mb-1 text-center">Awards
-                            </h4>
+                        <!-- Awards -->
+                        <div
+                            class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm flex flex-col justify-between">
+                            <h4
+                                class="font-bold text-blue-600 uppercase text-xs tracking-wider mb-4 border-b border-slate-100 pb-2">
+                                Awards</h4>
                             <div class="space-y-2">
                                 <div
-                                    class="bg-slate-800 p-2.5 rounded border border-slate-700 flex justify-between items-center px-4">
-                                    <span class="font-bold text-yellow-400 text-sm"><i
-                                            class="fas fa-trophy mr-2"></i>Gold</span>
-                                    <span class="font-bold text-white">$300</span>
+                                    class="flex justify-between items-center bg-yellow-50 p-2 rounded border border-yellow-100">
+                                    <span class="font-bold text-yellow-700 text-sm flex items-center"><i
+                                            class="fas fa-trophy mr-2 text-yellow-500"></i>Gold</span>
+                                    <span class="font-bold text-slate-800">$300</span>
                                 </div>
                                 <div
-                                    class="bg-slate-800 p-2.5 rounded border border-slate-700 flex justify-between items-center px-4">
-                                    <span class="font-bold text-slate-300 text-sm"><i
-                                            class="fas fa-trophy mr-2"></i>Silver</span>
-                                    <span class="font-bold text-white">$200</span>
+                                    class="flex justify-between items-center bg-slate-50 p-2 rounded border border-slate-100">
+                                    <span class="font-bold text-slate-600 text-sm flex items-center"><i
+                                            class="fas fa-trophy mr-2 text-slate-400"></i>Silver</span>
+                                    <span class="font-bold text-slate-800">$200</span>
                                 </div>
                                 <div
-                                    class="bg-slate-800 p-2.5 rounded border border-slate-700 flex justify-between items-center px-4">
-                                    <span class="font-bold text-orange-400 text-sm"><i
-                                            class="fas fa-trophy mr-2"></i>Bronze</span>
-                                    <span class="font-bold text-white">$100</span>
+                                    class="flex justify-between items-center bg-orange-50 p-2 rounded border border-orange-100">
+                                    <span class="font-bold text-orange-700 text-sm flex items-center"><i
+                                            class="fas fa-trophy mr-2 text-orange-400"></i>Bronze</span>
+                                    <span class="font-bold text-slate-800">$100</span>
                                 </div>
                             </div>
                         </div>
