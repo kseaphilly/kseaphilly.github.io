@@ -92,22 +92,35 @@
         }
 
         @media print {
-            body {
-                background-color: white;
+            @page {
+                size: 8.5in 11in;
                 margin: 0;
+            }
+
+            html,
+            body {
+                height: 100%;
+                margin: 0 !important;
+                padding: 0 !important;
+                background: white;
+            }
+
+            body {
                 display: block;
-                /* Important: Reset flex layout for printing */
-                padding: 0;
-                -webkit-print-color-adjust: exact !important;
-                print-color-adjust: exact !important;
             }
 
             .page {
-                box-shadow: none !important;
+                width: 100% !important;
+                height: 100% !important;
                 border: none !important;
-                /* Remove gray border for print */
-                margin: 0;
+                box-shadow: none !important;
+                margin: 0 !important;
                 page-break-after: always;
+                page-break-inside: avoid;
+            }
+
+            .page:last-child {
+                page-break-after: auto !important;
             }
 
             .no-print {
@@ -879,37 +892,47 @@
                 </div>
 
                 <!-- QR Codes Row -->
-                <div class="flex justify-between items-start gap-4 mt-6 border-t border-slate-100 pt-4">
+                <!-- QR Codes Row -->
+                <div class="flex justify-between items-stretch gap-4 mt-6 border-t border-slate-100 pt-4">
                     <!-- Register -->
-                    <div class="text-center group flex-1 bg-slate-50 rounded-lg p-3 border border-slate-200">
-                        <div
-                            class="bg-white p-1 rounded-sm mb-2 shadow-sm w-16 h-16 flex items-center justify-center mx-auto border border-slate-100">
-                            <img src="assets/registration-qr.png" class="w-full h-full object-contain">
+                    <div
+                        class="text-center group flex-1 bg-slate-50 rounded-lg p-3 border border-slate-200 flex flex-col justify-between">
+                        <div>
+                            <div
+                                class="bg-white p-1 rounded-sm mb-2 shadow-sm w-16 h-16 flex items-center justify-center mx-auto border border-slate-100">
+                                <img src="assets/registration-qr.png" class="w-full h-full object-contain">
+                            </div>
+                            <p class="text-[10px] font-bold text-blue-600 leading-tight uppercase tracking-wide">
+                                Register</p>
                         </div>
-                        <p class="text-[10px] font-bold text-blue-600 leading-tight uppercase tracking-wide">
-                            Register</p>
                     </div>
 
                     <!-- Zelle -->
-                    <div class="text-center group flex-1 bg-slate-50 rounded-lg p-3 border border-slate-200">
-                        <div
-                            class="bg-white p-1 rounded-sm mb-2 shadow-sm w-16 h-16 flex items-center justify-center mx-auto border border-slate-100">
-                            <img src="assets/zelle-qr.png" class="w-full h-full object-contain">
+                    <div
+                        class="text-center group flex-1 bg-slate-50 rounded-lg p-3 border border-slate-200 flex flex-col justify-between">
+                        <div>
+                            <div
+                                class="bg-white p-1 rounded-sm mb-2 shadow-sm w-16 h-16 flex items-center justify-center mx-auto border border-slate-100">
+                                <img src="assets/zelle-qr.png" class="w-full h-full object-contain">
+                            </div>
+                            <p class="text-[10px] font-bold text-purple-600 leading-tight uppercase tracking-wide">
+                                Zelle</p>
                         </div>
-                        <p class="text-[10px] font-bold text-purple-600 leading-tight uppercase tracking-wide">
-                            Zelle</p>
                         <p class="text-[8px] text-slate-500 leading-tight mt-1 break-all font-mono">
                             ksea.philly.chapter<br>@gmail.com</p>
                     </div>
 
                     <!-- Venmo -->
-                    <div class="text-center group flex-1 bg-slate-50 rounded-lg p-3 border border-slate-200">
-                        <div
-                            class="bg-white p-1 rounded-sm mb-2 shadow-sm w-16 h-16 flex items-center justify-center mx-auto border border-slate-100">
-                            <img src="assets/venmo-qr.png" class="w-full h-full object-contain">
+                    <div
+                        class="text-center group flex-1 bg-slate-50 rounded-lg p-3 border border-slate-200 flex flex-col justify-between">
+                        <div>
+                            <div
+                                class="bg-white p-1 rounded-sm mb-2 shadow-sm w-16 h-16 flex items-center justify-center mx-auto border border-slate-100">
+                                <img src="assets/venmo-qr.png" class="w-full h-full object-contain">
+                            </div>
+                            <p class="text-[10px] font-bold text-blue-500 leading-tight uppercase tracking-wide">
+                                Venmo</p>
                         </div>
-                        <p class="text-[10px] font-bold text-blue-500 leading-tight uppercase tracking-wide">
-                            Venmo</p>
                         <p class="text-[8px] text-slate-500 leading-tight mt-1 font-mono">@myeon</p>
                     </div>
                 </div>
@@ -1034,7 +1057,9 @@
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const frontCover = document.querySelector('.page.cover');
-            const backCover = document.querySelector('.page:last-child'); // Assuming back cover is last .page
+            // Select the last page specifically by looking at the last .page element
+            const pages = document.querySelectorAll('.page');
+            const backCover = pages[pages.length - 1];
 
             // Helper function to create image replacement
             const replaceContentWithImage = (element, imagePath) => {
@@ -1055,9 +1080,15 @@
                 // Remove ambient-bg class if present to prevent double background
                 element.classList.remove('ambient-bg');
                 element.classList.remove('bg-slate-900'); // Remove back cover bg color
+                element.classList.remove('border-l');
+                element.classList.remove('border-slate-800');
+
                 element.style.background = 'white'; // Ensure clean background
                 element.style.padding = '0'; // Remove padding
-                element.style.border = '1px solid #94a3b8'; // Keep the border consistent
+
+
+                // Remove border for cover images (dark/full-bleed) so it only shows on white pages
+                element.style.border = 'none';
             };
 
             // Replace Front Cover
