@@ -18,12 +18,23 @@
             font-family: 'Outfit', sans-serif;
             background-color: white;
             display: flex;
-            flex-direction: column;
-            align-items: center;
-            /* Center alignment restored */
+            flex-wrap: wrap;
+            justify-content: center;
+            align-content: flex-start;
             gap: 2rem;
-            padding: 2rem 0;
+            padding: 2rem;
             min-height: 100vh;
+        }
+
+        /* Responsive Spread View */
+        @media (min-width: 1800px) {
+
+            /* Approx 2 pages width + gaps */
+            body {
+                flex-direction: row;
+                max-width: 1800px;
+                margin: 0 auto;
+            }
         }
 
         .serif-font {
@@ -84,12 +95,17 @@
             body {
                 background-color: white;
                 margin: 0;
+                display: block;
+                /* Important: Reset flex layout for printing */
+                padding: 0;
                 -webkit-print-color-adjust: exact !important;
                 print-color-adjust: exact !important;
             }
 
             .page {
-                box-shadow: none;
+                box-shadow: none !important;
+                border: none !important;
+                /* Remove gray border for print */
                 margin: 0;
                 page-break-after: always;
             }
@@ -1014,6 +1030,43 @@
 
 
 
+    <!-- Script to Replace Covers with Raster Images -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const frontCover = document.querySelector('.page.cover');
+            const backCover = document.querySelector('.page:last-child'); // Assuming back cover is last .page
+
+            // Helper function to create image replacement
+            const replaceContentWithImage = (element, imagePath) => {
+                if (!element) return;
+
+                // Create new image element
+                const img = document.createElement('img');
+                img.src = imagePath;
+                img.style.width = '100%';
+                img.style.height = '100%';
+                img.style.objectFit = 'contain';
+
+                // Clear existing HTML content and append image
+                // We keep the .page wrapper but replace innerHTML
+                element.innerHTML = '';
+                element.appendChild(img);
+
+                // Remove ambient-bg class if present to prevent double background
+                element.classList.remove('ambient-bg');
+                element.classList.remove('bg-slate-900'); // Remove back cover bg color
+                element.style.background = 'white'; // Ensure clean background
+                element.style.padding = '0'; // Remove padding
+                element.style.border = '1px solid #94a3b8'; // Keep the border consistent
+            };
+
+            // Replace Front Cover
+            replaceContentWithImage(frontCover, 'assets/cover_front_raster.png');
+
+            // Replace Back Cover
+            replaceContentWithImage(backCover, 'assets/cover_back_raster.png');
+        });
+    </script>
 </body>
 
 </html>
