@@ -17,6 +17,13 @@
         body {
             font-family: 'Outfit', sans-serif;
             background-color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* Center alignment restored */
+            gap: 2rem;
+            padding: 2rem 0;
+            min-height: 100vh;
         }
 
         .serif-font {
@@ -30,18 +37,23 @@
                 radial-gradient(circle at 50% 50%, rgba(15, 23, 42, 1) 0%, transparent 100%);
         }
 
-        /* Page Layout for Printing (8.5 x 11 inches) */
+        /* Page Layout for Printing (816px x 1056px = 8.5in x 11in) */
+        /* Using explicit pixels to ensure even width for cleaner capturing */
         .page {
-            width: 8.5in;
-            height: 11in;
+            width: 816px;
+            /* Explicit even pixel width */
+            height: 1056px;
             position: relative;
             overflow: hidden;
             background-color: white;
             color: #1e293b;
             display: flex;
             flex-direction: column;
-            box-shadow: none;
-            margin: 2rem auto;
+            border: 1px solid #94a3b8;
+            /* Visible gray solid line */
+            box-shadow: none !important;
+            /* Strictly no shadow */
+            margin: 0;
             flex-shrink: 0;
         }
 
@@ -103,7 +115,7 @@
         <!-- 1. Full Vertical Background Image (V6 - Visually Extended & Lowered) -->
         <div class="absolute inset-0 bg-gradient-to-b from-[#020617] via-[#0f172a] to-slate-900 z-0"></div>
         <div class="absolute inset-0 bg-[url('assets/symposium_poster_final_v6_tall.png')] bg-no-repeat z-0"
-            style="background-size: 120% auto; background-position: center calc(100% + 4rem); -webkit-mask-image: linear-gradient(to bottom, transparent 0%, transparent 10%, black 40%, black 100%); mask-image: linear-gradient(to bottom, transparent 0%, transparent 10%, black 40%, black 100%);">
+            style="background-size: 100% auto; background-position: center calc(100% + 4rem); -webkit-mask-image: linear-gradient(to bottom, transparent 0%, transparent 10%, black 40%, black 100%); mask-image: linear-gradient(to bottom, transparent 0%, transparent 10%, black 40%, black 100%);">
         </div>
 
         <!-- 2. Subtle Line Drawing Overlay -->
