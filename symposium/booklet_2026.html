@@ -14,9 +14,14 @@
         rel="stylesheet">
 
     <style>
+        html {
+            background-color: #f1f5f9;
+        }
+
         body {
             font-family: 'Outfit', sans-serif;
-            background-color: white;
+            background-color: #f1f5f9;
+            /* Subtle gray background for better page contrast */
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
@@ -24,16 +29,23 @@
             gap: 2rem;
             padding: 2rem;
             min-height: 100vh;
+            margin: 0;
         }
 
         /* Responsive Spread View */
-        @media (min-width: 1800px) {
-
-            /* Approx 2 pages width + gaps */
+        @media screen and (min-width: 1750px) {
             body {
-                flex-direction: row;
-                max-width: 1800px;
+                display: grid;
+                grid-template-columns: repeat(2, max-content);
+                justify-content: center;
                 margin: 0 auto;
+                /* Optional: Keep centered margin if desired, or remove for full left align */
+            }
+
+            /* Center the Front Cover alone */
+            .page:first-child {
+                grid-column: 1 / -1;
+                justify-self: center;
             }
         }
 
@@ -1174,7 +1186,8 @@
 
 
 
-    <!-- Script to Replace Covers with Raster Images -->
+    <!-- Script to Replace Covers with Raster Images (Disabled to show HTML design) -->
+
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const frontCover = document.querySelector('.page.cover');
@@ -1219,6 +1232,7 @@
             replaceContentWithImage(backCover, 'assets/cover_back_raster.png');
         });
     </script>
+
 </body>
 
 </html>
