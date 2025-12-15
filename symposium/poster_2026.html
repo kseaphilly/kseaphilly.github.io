@@ -45,6 +45,10 @@
             text-shadow: 0 0 20px rgba(59, 130, 246, 0.5);
         }
 
+        .text-shadow-strong {
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.9), 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
         .no-print {
             position: fixed;
             top: 20px;
@@ -153,8 +157,9 @@
                         <i class="far fa-calendar-alt text-lg text-blue-400"></i>
                     </div>
                     <div class="text-left leading-tight">
-                        <p class="text-white font-bold text-sm">FEB 27, 2026</p>
-                        <p class="text-[10px] text-slate-400 font-bold uppercase tracking-wide">12:20 PM - 9:00 PM</p>
+                        <p class="text-white font-bold text-sm text-shadow-strong">FEB 27, 2026</p>
+                        <p class="text-[10px] text-slate-400 font-bold uppercase tracking-wide text-shadow-strong">12:20
+                            PM - 9:00 PM</p>
                     </div>
                 </div>
 
@@ -165,8 +170,11 @@
                         <i class="fas fa-map-marker-alt text-lg text-purple-400 shrink-0"></i>
                     </div>
                     <div class="text-left leading-tight">
-                        <p class="text-white font-bold text-sm">UPenn Smilow Center Arthur H Rubenstein Auditorium</p>
-                        <p class="text-[10px] text-slate-400 font-bold uppercase tracking-wide">Philadelphia, PA</p>
+                        <p class="text-white font-bold text-sm text-shadow-strong">UPenn Smilow Center <br>
+                        <p class="text-white font-bold text-xs text-shadow-strong">Arthur H Rubenstein Auditorium</p>
+                        </p>
+                        <p class="text-[10px] text-slate-400 font-bold uppercase tracking-wide text-shadow-strong">
+                            Philadelphia, PA</p>
                     </div>
                 </div>
             </div>
@@ -192,9 +200,12 @@
                                     <img src="assets/junhyong-kim.png"
                                         class="w-full h-full rounded-full object-cover object-top border-2 border-slate-200/80 relative z-10 shadow-2xl">
                                 </div>
-                                <p class="text-white text-base font-bold leading-tight drop-shadow-md mb-0.5">Junhyong
+                                <p
+                                    class="text-white text-base font-bold leading-tight drop-shadow-md mb-0.5 text-shadow-strong">
+                                    Junhyong
                                     Kim</p>
-                                <p class="text-blue-300 text-[10px] font-bold uppercase drop-shadow-md">Univ. of
+                                <p class="text-blue-300 text-[9px] font-bold uppercase drop-shadow-md tracking-tighter">
+                                    University of
                                     Pennsylvania</p>
                             </div>
                             <div class="flex flex-col items-center w-1/2 group">
@@ -206,10 +217,14 @@
                                     <img src="assets/deok-ho-kim.png"
                                         class="w-full h-full rounded-full object-cover border-2 border-slate-200/80 relative z-10 shadow-2xl">
                                 </div>
-                                <p class="text-white text-base font-bold leading-tight drop-shadow-md mb-0.5">Deok-Ho
+                                <p
+                                    class="text-white text-base font-bold leading-tight drop-shadow-md mb-0.5 text-shadow-strong">
+                                    Deok-Ho
                                     Kim</p>
-                                <p class="text-purple-300 text-[10px] font-bold uppercase drop-shadow-md">Johns Hopkins
-                                    Univ.</p>
+                                <p
+                                    class="text-purple-300 text-[9px] font-bold uppercase drop-shadow-md tracking-tighter">
+                                    Johns Hopkins
+                                    University</p>
                             </div>
                         </div>
                     </div>
@@ -233,11 +248,12 @@
                                         class="w-20 h-20 rounded-full object-cover object-top border border-blue-400/50 shadow-lg relative z-10 bg-slate-800">
                                 </div>
                                 <div>
-                                    <p class="text-white text-[10px] font-bold leading-tight mb-0.5 drop-shadow-md">
+                                    <p
+                                        class="text-white text-[10px] font-bold leading-tight mb-0.5 drop-shadow-md text-shadow-strong">
                                         Dokyoon Kim</p>
                                     <p
-                                        class="text-blue-200 text-[8px] font-semibold leading-tight drop-shadow-md uppercase tracking-wide">
-                                        UPenn</p>
+                                        class="text-blue-200 text-[7px] font-semibold leading-tight drop-shadow-md uppercase tracking-tighter">
+                                        University of Pennsylvania</p>
                                 </div>
                             </div>
 
@@ -250,11 +266,13 @@
                                         class="w-20 h-20 rounded-full object-cover object-top border border-blue-400/50 shadow-lg relative z-10 bg-slate-800">
                                 </div>
                                 <div>
-                                    <p class="text-white text-[10px] font-bold leading-tight mb-0.5 drop-shadow-md">Jina
+                                    <p
+                                        class="text-white text-[10px] font-bold leading-tight mb-0.5 drop-shadow-md text-shadow-strong">
+                                        Jina
                                         Ko</p>
                                     <p
-                                        class="text-blue-200 text-[8px] font-semibold leading-tight drop-shadow-md uppercase tracking-wide">
-                                        UPenn</p>
+                                        class="text-blue-200 text-[7px] font-semibold leading-tight drop-shadow-md uppercase tracking-tighter">
+                                        University of Pennsylvania</p>
                                 </div>
                             </div>
 
@@ -310,16 +328,18 @@
                                 </div>
                             </div>
 
-                            <div class="flex flex-col items-center gap-1.5 opacity-80 w-full">
+                            <div class="flex flex-col items-center gap-1.5 w-full">
                                 <div
-                                    class="w-20 h-20 rounded-full bg-slate-800/80 border border-slate-600/30 shadow-lg flex items-end justify-center overflow-hidden">
-                                    <i class="fas fa-user text-3xl text-slate-600 translate-y-2"></i>
+                                    class="w-20 h-20 rounded-full bg-slate-700/50 border border-slate-500/50 shadow-lg flex items-center justify-center overflow-hidden">
+                                    <i class="fas fa-user text-4xl text-slate-400"></i>
                                 </div>
                                 <div>
-                                    <p class="text-white text-[10px] font-bold leading-tight mb-0.5 drop-shadow-md">TBD
+                                    <p
+                                        class="text-white text-[10px] font-bold leading-tight mb-0.5 drop-shadow-md text-shadow-strong">
+                                        TBD
                                     </p>
                                     <p
-                                        class="text-slate-400 text-[8px] leading-tight drop-shadow-md uppercase tracking-wide">
+                                        class="text-slate-300 text-[8px] leading-tight drop-shadow-md uppercase tracking-wide text-shadow-strong">
                                         Industry</p>
                                 </div>
                             </div>
@@ -339,40 +359,46 @@
                                 class="text-[11px] font-bold text-slate-300 uppercase tracking-widest text-center shadow-black">
                                 Program Schedule</h3>
                         </div>
-                        <div class="space-y-2.5">
+                        <div class="space-y-1.5">
                             <div class="flex justify-between items-center text-[10px] group">
                                 <span
                                     class="font-bold text-blue-300 w-12 group-hover:text-blue-200 transition-colors drop-shadow-md">12:20</span>
-                                <span class="text-white font-medium transition-colors drop-shadow-md">Keynote
+                                <span
+                                    class="text-white font-medium transition-colors drop-shadow-md text-shadow-strong">Keynote
                                     Session</span>
                             </div>
                             <div class="flex justify-between items-center text-[10px] group">
                                 <span
                                     class="font-bold text-blue-300 w-12 group-hover:text-blue-200 transition-colors drop-shadow-md">13:30</span>
-                                <span class="text-white font-medium transition-colors drop-shadow-md">Bio-Science
+                                <span
+                                    class="text-white font-medium transition-colors drop-shadow-md text-shadow-strong">Bio-Science
                                     Session</span>
                             </div>
                             <div
                                 class="flex justify-between items-center text-[10px] bg-white/10 -mx-2 px-2 py-1.5 rounded group shadow-lg border border-white/5">
                                 <span class="font-bold text-white w-12 drop-shadow-md">14:30</span>
-                                <span class="text-white font-bold drop-shadow-md">Poster Session &amp; Break</span>
+                                <span class="text-white font-bold drop-shadow-md text-shadow-strong">Poster Session
+                                    &amp; Break</span>
                             </div>
                             <div class="flex justify-between items-center text-[10px] group">
                                 <span
                                     class="font-bold text-blue-300 w-12 group-hover:text-blue-200 transition-colors drop-shadow-md">15:30</span>
-                                <span class="text-white font-medium transition-colors drop-shadow-md">Engineering
+                                <span
+                                    class="text-white font-medium transition-colors drop-shadow-md text-shadow-strong">Engineering
                                     Session</span>
                             </div>
                             <div class="flex justify-between items-center text-[10px] group">
                                 <span
                                     class="font-bold text-blue-300 w-12 group-hover:text-blue-200 transition-colors drop-shadow-md">16:30</span>
-                                <span class="text-white font-medium transition-colors drop-shadow-md">Closing
+                                <span
+                                    class="text-white font-medium transition-colors drop-shadow-md text-shadow-strong">Closing
                                     &amp; Awards</span>
                             </div>
                             <div class="flex justify-between items-center text-[10px] group">
                                 <span
                                     class="font-bold text-blue-300 w-12 group-hover:text-blue-200 transition-colors drop-shadow-md">17:00</span>
-                                <span class="text-white font-medium transition-colors drop-shadow-md">Networking
+                                <span
+                                    class="text-white font-medium transition-colors drop-shadow-md text-shadow-strong">Networking
                                     Dinner</span>
                             </div>
                         </div>
@@ -390,7 +416,8 @@
                                         <span class="text-[8px] text-amber-200 font-normal opacity-90">Previous work
                                             accepted |
                                             1 poster/presenter</span><br>
-                                        <span class="text-[8px] text-amber-200 font-normal opacity-90">Awards: Student/Postdoc Philly Chapter members only</span>
+                                        <span class="text-[8px] text-amber-200 font-normal opacity-90">Awards:
+                                            Student/Postdoc Philly Chapter members only</span>
                                     </p>
                                 </div>
                                 <div
@@ -415,38 +442,44 @@
                                 <!-- Student Row -->
                                 <div
                                     class="flex items-center justify-between bg-white/5 rounded px-2 py-1.5 border border-white/5 shadow-sm">
-                                    <span class="text-[10px] text-white font-bold w-1/3 drop-shadow-sm">Student /
+                                    <span
+                                        class="text-[10px] text-white font-bold w-1/3 drop-shadow-sm text-shadow-strong">Student
+                                        /
                                         Postdoc</span>
                                     <div class="flex gap-2 text-[10px]">
                                         <div class="flex flex-col items-center">
-                                            <span
-                                                class="text-[8px] text-slate-300 uppercase font-semibold">KSEA Mbr</span>
+                                            <span class="text-[8px] text-slate-300 uppercase font-semibold">KSEA
+                                                Mbr</span>
                                             <span class="font-bold text-blue-200 drop-shadow-md">$10</span>
                                         </div>
                                         <div class="w-px bg-white/20 mx-1"></div>
                                         <div class="flex flex-col items-center">
                                             <span
                                                 class="text-[8px] text-slate-300 uppercase font-semibold">Non-Mem</span>
-                                            <span class="font-bold text-white drop-shadow-md">$40</span>
+                                            <span
+                                                class="font-bold text-white drop-shadow-md text-shadow-strong">$40</span>
                                         </div>
                                     </div>
                                 </div>
                                 <!-- Faculty Row -->
                                 <div
                                     class="flex items-center justify-between bg-white/5 rounded px-2 py-1.5 border border-white/5 shadow-sm">
-                                    <span class="text-[10px] text-white font-bold w-1/3 drop-shadow-sm">Faculty /
+                                    <span
+                                        class="text-[10px] text-white font-bold w-1/3 drop-shadow-sm text-shadow-strong">Faculty
+                                        /
                                         General</span>
                                     <div class="flex gap-2 text-[10px]">
                                         <div class="flex flex-col items-center">
-                                            <span
-                                                class="text-[8px] text-slate-300 uppercase font-semibold">KSEA Mbr</span>
+                                            <span class="text-[8px] text-slate-300 uppercase font-semibold">KSEA
+                                                Mbr</span>
                                             <span class="font-bold text-purple-200 drop-shadow-md">$30</span>
                                         </div>
                                         <div class="w-px bg-white/20 mx-1"></div>
                                         <div class="flex flex-col items-center">
                                             <span
                                                 class="text-[8px] text-slate-300 uppercase font-semibold">Non-Mem</span>
-                                            <span class="font-bold text-white drop-shadow-md">$60</span>
+                                            <span
+                                                class="font-bold text-white drop-shadow-md text-shadow-strong">$60</span>
                                         </div>
                                     </div>
                                 </div>
@@ -503,21 +536,21 @@
                         class="flex flex-col md:flex-row justify-center items-center gap-4 text-[10px] text-slate-600 mb-2">
                         <div class="flex items-center gap-2">
                             <span class="uppercase font-bold tracking-widest text-[9px] text-slate-400">Hosted by</span>
-                            <img src="../assets/ksea-logo-horizontal.png" class="h-5 object-contain">
+                            <img src="../assets/ksea-logo-horizontal.png" class="h-10 object-contain">
                         </div>
                         <div class="hidden md:block w-px h-3 bg-slate-300"></div>
                         <div class="flex items-center gap-2">
                             <span class="uppercase font-bold tracking-widest text-[9px] text-slate-400">Supported
                                 by</span>
-                            <img src="../assets/kusco-logo.png" class="h-4 object-contain">
+                            <img src="../assets/kusco-logo.png" class="h-8 object-contain">
                         </div>
                     </div>
                     <div class="flex justify-center flex-wrap gap-4 items-center">
-                        <img src="../images/partners/KITEE.png" class="h-4 object-contain">
-                        <img src="../images/partners/KASBP.jpg" class="h-4 object-contain">
-                        <img src="../images/partners/PKSA.jpg" class="h-4 object-contain">
-                        <img src="../images/partners/upenn-kogsa.png" class="h-4 object-contain">
-                        <img src="assets/kkyu-logo.png" class="h-4 object-contain">
+                        <img src="../images/partners/KITEE.png" class="h-8 object-contain">
+                        <img src="../images/partners/KASBP.jpg" class="h-8 object-contain">
+                        <img src="../images/partners/PKSA.jpg" class="h-8 object-contain">
+                        <img src="../images/partners/upenn-kogsa.png" class="h-8 object-contain">
+                        <img src="assets/kkyu-logo.png" class="h-8 object-contain">
                     </div>
                 </div>
             </div>

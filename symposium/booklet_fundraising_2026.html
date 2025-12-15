@@ -1,0 +1,1065 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Program Booklet - 2026 US-Korea Symposium</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,400&family=Outfit:wght@300;400;600;800&display=swap"
+        rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Outfit', sans-serif;
+            background-color: white;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-content: flex-start;
+            gap: 2rem;
+            padding: 2rem;
+            min-height: 100vh;
+        }
+
+        /* Responsive Spread View */
+        @media (min-width: 1800px) {
+
+            /* Approx 2 pages width + gaps */
+            body {
+                flex-direction: row;
+                max-width: 1800px;
+                margin: 0 auto;
+            }
+        }
+
+        .serif-font {
+            font-family: 'Merriweather', serif;
+        }
+
+        .ambient-bg {
+            background:
+                radial-gradient(circle at 10% 10%, rgba(37, 99, 235, 0.15) 0%, transparent 40%),
+                radial-gradient(circle at 90% 90%, rgba(124, 58, 237, 0.15) 0%, transparent 40%),
+                radial-gradient(circle at 50% 50%, rgba(15, 23, 42, 1) 0%, transparent 100%);
+        }
+
+        /* Page Layout for Printing (816px x 1056px = 8.5in x 11in) */
+        /* Using explicit pixels to ensure even width for cleaner capturing */
+        .page {
+            width: 816px;
+            /* Explicit even pixel width */
+            height: 1056px;
+            position: relative;
+            overflow: hidden;
+            background-color: white;
+            color: #1e293b;
+            display: flex;
+            flex-direction: column;
+            border: 1px solid #94a3b8;
+            /* Visible gray solid line */
+            box-shadow: none !important;
+            /* Strictly no shadow */
+            margin: 0;
+            flex-shrink: 0;
+        }
+
+        .page.cover {
+            background-color: #0f172a;
+            color: #f8fafc;
+        }
+
+        .page-number {
+            position: absolute;
+            bottom: 1.5rem;
+            left: 0;
+            right: 0;
+            text-align: center;
+            font-size: 0.875rem;
+            color: #94a3b8;
+            font-family: 'Merriweather', serif;
+            font-style: italic;
+        }
+
+        /* Abstract/Bio Styling */
+        .speaker-content p {
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+
+        @media print {
+            @page {
+                size: 8.5in 11in;
+                margin: 0;
+            }
+
+            html,
+            body {
+                height: 100%;
+                margin: 0 !important;
+                padding: 0 !important;
+                background: white;
+            }
+
+            body {
+                display: block;
+            }
+
+            .page {
+                width: 100% !important;
+                height: 100% !important;
+                border: none !important;
+                box-shadow: none !important;
+                margin: 0 !important;
+                page-break-after: always;
+                page-break-inside: avoid;
+            }
+
+            .page:last-child {
+                page-break-after: auto !important;
+            }
+
+            .no-print {
+                display: none;
+            }
+        }
+
+        .no-print {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 9999;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- PAGE 1: FRONT COVER -->
+    <div class="page cover ambient-bg">
+        <!-- 1. Full Vertical Background Image (V6 - Visually Extended & Lowered) -->
+        <div class="absolute inset-0 bg-gradient-to-b from-[#020617] via-[#0f172a] to-slate-900 z-0"></div>
+        <div class="absolute inset-0 bg-[url('assets/symposium_poster_final_v6_tall.png')] bg-no-repeat z-0"
+            style="background-size: 100% auto; background-position: center calc(100% + 4rem); -webkit-mask-image: linear-gradient(to bottom, transparent 0%, transparent 10%, black 40%, black 100%); mask-image: linear-gradient(to bottom, transparent 0%, transparent 10%, black 40%, black 100%);">
+        </div>
+
+        <!-- 2. Subtle Line Drawing Overlay -->
+        <div
+            class="absolute inset-0 bg-[url('../assets/symposium_poster_background.png')] bg-cover bg-top bg-no-repeat opacity-30 z-0 mix-blend-screen">
+        </div>
+
+        <!-- 3. Text Readability Gradient Overlay -->
+        <div class="absolute inset-0 bg-gradient-to-b from-slate-900/40 via-transparent to-black/80 z-0"></div>
+        <div class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-blue-600 via-purple-600 to-blue-600 z-20">
+        </div>
+        <div class="relative z-10 flex flex-col items-center justify-between h-full p-16 text-center">
+            <div class="flex-grow flex flex-col justify-center items-center">
+                <!-- KSEA Logo Section -->
+                <div class="flex justify-center items-center gap-4 mb-6">
+                    <img src="../assets/ksea-logo-seal.png" alt="KSEA Seal" class="h-20 w-20"
+                        style="filter: drop-shadow(0 0 15px rgba(59, 130, 246, 0.4));">
+                    <div class="text-left flex flex-col justify-center">
+                        <h2 class="text-4xl font-black text-white tracking-widest leading-none mb-1 font-sans"
+                            style="text-shadow: 0 0 30px rgba(255, 255, 255, 0.3);">KSEA</h2>
+                        <p class="text-sm font-bold text-blue-300 uppercase tracking-[0.4em] leading-none ml-1">
+                            Philadelphia</p>
+                    </div>
+                </div>
+
+                <!-- Symposium Title Group -->
+                <h3 class="text-blue-400 tracking-[0.25em] text-xl font-bold uppercase mb-4"
+                    style="text-shadow: 0 2px 4px rgba(0,0,0,0.8);">
+                    2026 US-Korea Northeastern Symposium
+                </h3>
+
+                <h1
+                    class="text-4xl font-black text-white leading-[0.9] tracking-tight mb-8 drop-shadow-[0_4px_10px_rgba(0,0,0,0.8)] max-w-4xl mx-auto">
+                    AI, BIOMEDICAL SCIENCE <br>& <span
+                        class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400 filter drop-shadow-sm">ENGINEERING</span>
+                </h1>
+
+                <!-- Program Booklet Title (Smaller) -->
+                <div class="w-24 h-1.5 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto mb-6 rounded-full"></div>
+
+                <h2
+                    class="text-4xl font-bold text-blue-200 tracking-[0.2em] uppercase mb-4 drop-shadow-md border-2 border-blue-500/30 px-8 py-2 rounded-lg bg-blue-900/30 backdrop-blur-sm inline-block">
+                    Sponsorship Prospectus
+                </h2>
+
+                <p
+                    class="text-slate-300 text-lg font-medium italic serif-font tracking-wide drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] mt-4">
+                    "Pioneering the Future: The Convergence of AI, Bio-Science, & Engineering"
+                </p>
+            </div>
+            <div class="w-full">
+                <div class="grid grid-cols-2 gap-8 max-w-4xl mx-auto">
+                    <div class="bg-white/5 border border-white/10 p-6 rounded-xl backdrop-blur-md">
+                        <i class="fas fa-calendar-alt text-3xl text-blue-400 mb-2"></i>
+                        <p class="text-2xl font-bold text-white">FEB 27, 2026</p>
+                        <p class="text-sm text-blue-200 uppercase tracking-widest font-semibold">Friday, 12:20 PM - 9:00
+                            PM</p>
+                    </div>
+                    <div class="bg-white/5 border border-white/10 p-6 rounded-xl backdrop-blur-md">
+                        <i class="fas fa-map-marker-alt text-3xl text-purple-400 mb-2"></i>
+                        <p class="text-xl font-bold text-white">UPenn Smilow Center Arthur H Rubenstein Auditorium</p>
+                        <p class="text-sm text-purple-200 uppercase tracking-widest font-semibold">Philadelphia, PA</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- PAGE 2: ABOUT KSEA & SYMPOSIUM -->
+    <div class="page bg-white text-slate-800 p-10 relative overflow-hidden">
+        <div class="relative z-10 h-full flex flex-col">
+            <div class="flex justify-between items-end border-b-2 border-slate-100 pb-2 mb-6">
+                <h2 class="text-3xl font-bold text-slate-800">About KSEA Philadelphia Chapter</h2>
+            </div>
+
+            <div class="flex-grow flex flex-col gap-6 text-slate-600">
+                <!-- About KSEA -->
+                <div>
+                    <p class="text-base leading-relaxed text-justify text-slate-700 mb-4">
+                        The <strong>KSEA Philadelphia Chapter</strong> is a vibrant community dedicated to advancing the
+                        careers and contributions of Korean-American scientists and engineers. We serve a broad region
+                        encompassing <strong>Pennsylvania (~80%), Delaware, and New Jersey</strong>, with a strategic
+                        concentration in the <strong>Philadelphia Core</strong>, the <strong>Main Line</strong>,
+                        <strong>King of Prussia</strong>, and surrounding suburbs. Our membership represents a dynamic
+                        mix of
+                        professionals from world-class academic institutions, leading pharmaceutical and biotechnology
+                        companies, and
+                        innovative tech startups.
+                    </p>
+                    <p class="text-base leading-relaxed text-justify text-slate-700">
+                        Recently restored to full Chapter status, we are in an exciting phase of active growth and
+                        revitalization. We are committed to rebuilding a strong, interconnected community that bridges
+                        the gap between academia and industry. This symposium stands as a <strong>major
+                            milestone</strong> in our journey, designed to bring together our diverse members to foster
+                        meaningful collaboration, provide mentorship opportunities for the next generation, and drive
+                        professional growth across all disciplines.
+                    </p>
+                </div>
+
+                <!-- Why Sponsor -->
+                <div
+                    class="bg-slate-50 p-8 rounded-2xl border border-slate-200 shadow-sm flex-grow flex flex-col justify-between">
+                    <h4 class="text-xl font-bold text-slate-800 mb-6 text-center border-b border-slate-200 pb-3">Why
+                        Sponsor?</h4>
+
+                    <!-- Stats Row -->
+                    <div class="grid grid-cols-2 gap-6 mb-8">
+                        <div class="text-center py-8 px-4 bg-white rounded-xl border border-slate-100 shadow-sm">
+                            <p class="text-4xl font-black text-blue-600 mb-1">100+</p>
+                            <p class="text-sm font-bold text-slate-600 uppercase tracking-wide">STEM Professionals</p>
+                        </div>
+                        <div class="text-center py-8 px-4 bg-white rounded-xl border border-slate-100 shadow-sm">
+                            <p class="text-4xl font-black text-purple-600 mb-1">Top</p>
+                            <p class="text-sm font-bold text-slate-600 uppercase tracking-wide">Tier Universities</p>
+                        </div>
+                    </div>
+
+                    <!-- Value Props -->
+                    <div class="space-y-6 mb-6">
+                        <div class="flex gap-4">
+                            <div class="mt-1"><i class="fas fa-eye text-blue-500 text-lg"></i></div>
+                            <div>
+                                <h5 class="text-base font-bold text-slate-800">Strategic Visibility</h5>
+                                <p class="text-sm text-slate-600 leading-relaxed">Connect with leading professionals
+                                    from UPenn, Jefferson, Drexel, Temple, Rutgers, and major industry leaders.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <div class="mt-1"><i class="fas fa-user-graduate text-purple-500 text-lg"></i></div>
+                            <div>
+                                <h5 class="text-base font-bold text-slate-800">Access to Talent</h5>
+                                <p class="text-sm text-slate-600 leading-relaxed">Engage with a highly educated pool of
+                                    bilingual candidates, from PhD students to senior executives.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <div class="mt-1"><i class="fas fa-hand-holding-heart text-red-500 text-lg"></i></div>
+                            <div>
+                                <h5 class="text-base font-bold text-slate-800">Community Impact</h5>
+                                <p class="text-sm text-slate-600 leading-relaxed">Directly support the revitalization of
+                                    the Philadelphia chapter and its mentorship programs.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Regional Map -->
+                    <div class="bg-white p-4 rounded-xl border border-slate-100 shadow-sm flex items-center gap-4">
+                        <div
+                            class="w-12 h-12 rounded-full bg-indigo-100 flex items-center justify-center text-indigo-600 flex-shrink-0">
+                            <i class="fas fa-map-marked-alt text-xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-slate-900 text-base">Regional Hub</h4>
+                            <p class="text-sm text-slate-600"><strong>~80% PA</strong> (Philly, Main Line, King of
+                                Prussia), plus DE & NJ.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <span class="page-number">2</span>
+    </div>
+
+
+    <!-- PAGE 3: OUR COMMUNITY -->
+    <div class="page bg-white text-slate-800 p-12 relative overflow-hidden">
+        <div class="relative z-10 h-full flex flex-col">
+            <h2 class="text-3xl font-bold text-slate-800 mb-6 border-b-2 border-slate-100 pb-2">Our Community</h2>
+
+            <div class="flex-grow flex flex-col gap-6">
+                <!-- Demographics -->
+                <div>
+                    <h3
+                        class="text-sm font-bold text-slate-800 uppercase tracking-wide border-b border-slate-100 pb-2 mb-4">
+                        Member Demographics</h3>
+                    <div class="grid grid-cols-2 gap-6 mb-6">
+                        <!-- Left Column: Composition & Society -->
+                        <div class="space-y-6">
+                            <!-- Member Composition -->
+                            <div>
+                                <h4 class="text-xs font-bold text-slate-500 uppercase mb-2">Member Composition</h4>
+                                <div class="space-y-2">
+                                    <div>
+                                        <div class="flex justify-between text-xs font-bold text-slate-700 mb-0.5">
+                                            <span>Regular (Professional)</span>
+                                            <span>52%</span>
+                                        </div>
+                                        <div class="w-full bg-slate-100 rounded-full h-1.5">
+                                            <div class="bg-blue-600 h-1.5 rounded-full" style="width: 52%"></div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="flex justify-between text-xs font-bold text-slate-700 mb-0.5">
+                                            <span>Graduate Students</span>
+                                            <span>31%</span>
+                                        </div>
+                                        <div class="w-full bg-slate-100 rounded-full h-1.5">
+                                            <div class="bg-purple-600 h-1.5 rounded-full" style="width: 31%"></div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="flex justify-between text-xs font-bold text-slate-700 mb-0.5">
+                                            <span>Undergraduate Students</span>
+                                            <span>17%</span>
+                                        </div>
+                                        <div class="w-full bg-slate-100 rounded-full h-1.5">
+                                            <div class="bg-slate-400 h-1.5 rounded-full" style="width: 17%"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Society Affiliations -->
+                            <div>
+                                <h4 class="text-xs font-bold text-slate-500 uppercase mb-2">Society Affiliations
+                                </h4>
+                                <div class="space-y-2">
+                                    <div>
+                                        <div class="flex justify-between text-xs font-bold text-slate-700 mb-0.5">
+                                            <span>KITEE</span>
+                                            <span>43%</span>
+                                        </div>
+                                        <div class="w-full bg-slate-100 rounded-full h-1.5">
+                                            <div class="bg-indigo-600 h-1.5 rounded-full" style="width: 43%"></div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="flex justify-between text-xs font-bold text-slate-700 mb-0.5">
+                                            <span>KASBP</span>
+                                            <span>27%</span>
+                                        </div>
+                                        <div class="w-full bg-slate-100 rounded-full h-1.5">
+                                            <div class="bg-teal-600 h-1.5 rounded-full" style="width: 27%"></div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="flex justify-between text-xs font-bold text-slate-700 mb-0.5">
+                                            <span>Others (KBMES, KOCSEA...)</span>
+                                            <span>30%</span>
+                                        </div>
+                                        <div class="w-full bg-slate-100 rounded-full h-1.5">
+                                            <div class="bg-slate-400 h-1.5 rounded-full" style="width: 30%"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Right Column: Technical Expertise -->
+                        <div>
+                            <h4 class="text-xs font-bold text-slate-500 uppercase mb-2">Technical Expertise</h4>
+                            <div class="space-y-2">
+                                <div>
+                                    <div class="flex justify-between text-xs font-bold text-slate-700 mb-0.5">
+                                        <span>Biological & Biomedical Sci</span>
+                                        <span>32%</span>
+                                    </div>
+                                    <div class="w-full bg-slate-100 rounded-full h-1.5">
+                                        <div class="bg-purple-600 h-1.5 rounded-full" style="width: 32%"></div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="flex justify-between text-xs font-bold text-slate-700 mb-0.5">
+                                        <span>Computer & Info Sci</span>
+                                        <span>13%</span>
+                                    </div>
+                                    <div class="w-full bg-slate-100 rounded-full h-1.5">
+                                        <div class="bg-blue-600 h-1.5 rounded-full" style="width: 13%"></div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="flex justify-between text-xs font-bold text-slate-700 mb-0.5">
+                                        <span>Bioengineering</span>
+                                        <span>10%</span>
+                                    </div>
+                                    <div class="w-full bg-slate-100 rounded-full h-1.5">
+                                        <div class="bg-indigo-500 h-1.5 rounded-full" style="width: 10%"></div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="flex justify-between text-xs font-bold text-slate-700 mb-0.5">
+                                        <span>Health Sciences</span>
+                                        <span>8%</span>
+                                    </div>
+                                    <div class="w-full bg-slate-100 rounded-full h-1.5">
+                                        <div class="bg-purple-400 h-1.5 rounded-full" style="width: 8%"></div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="flex justify-between text-xs font-bold text-slate-700 mb-0.5">
+                                        <span>Chemical & Energy</span>
+                                        <span>7%</span>
+                                    </div>
+                                    <div class="w-full bg-slate-100 rounded-full h-1.5">
+                                        <div class="bg-blue-400 h-1.5 rounded-full" style="width: 7%"></div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="flex justify-between text-xs font-bold text-slate-700 mb-0.5">
+                                        <span>Others (Physics, Materials...)</span>
+                                        <span>30%</span>
+                                    </div>
+                                    <div class="w-full bg-slate-100 rounded-full h-1.5">
+                                        <div class="bg-slate-400 h-1.5 rounded-full" style="width: 30%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Research Interests -->
+                <div>
+                    <h4 class="text-xs font-bold text-slate-500 uppercase mb-2">Key Research Areas</h4>
+                    <div class="flex flex-wrap gap-1.5">
+                        <span class="px-2 py-1 bg-blue-100 text-blue-800 text-xs font-bold rounded">AI & Machine
+                            Learning</span>
+                        <span
+                            class="px-2 py-1 bg-purple-100 text-purple-800 text-xs font-bold rounded">Bioinformatics</span>
+                        <span
+                            class="px-2 py-1 bg-purple-100 text-purple-800 text-xs font-bold rounded">Neuroscience</span>
+                        <span
+                            class="px-2 py-1 bg-purple-100 text-purple-800 text-xs font-bold rounded">Immunology</span>
+                        <span class="px-2 py-1 bg-slate-100 text-slate-700 text-[10px] font-bold rounded">Quantum
+                            Computing</span>
+                        <span
+                            class="px-2 py-1 bg-slate-100 text-slate-700 text-[10px] font-bold rounded">Robotics</span>
+                        <span class="px-2 py-1 bg-teal-50 text-teal-700 text-[10px] font-bold rounded">Medical
+                            Devices</span>
+                        <span
+                            class="px-2 py-1 bg-slate-50 text-slate-600 text-[10px] font-bold rounded">Nanotechnology</span>
+                        <span class="px-2 py-1 bg-slate-50 text-slate-600 text-[10px] font-bold rounded">Energy &
+                            Batteries</span>
+                        <span class="px-2 py-1 bg-blue-50 text-blue-700 text-[10px] font-bold rounded">Software &
+                            Algorithms</span>
+                        <span class="px-2 py-1 bg-purple-50 text-purple-700 text-[10px] font-bold rounded">Stem Cell
+                            Biology</span>
+                    </div>
+                </div>
+                <!-- Member Affiliations (Logos) -->
+                <div class="mt-8">
+                    <h3
+                        class="text-sm font-bold text-slate-800 uppercase tracking-wide border-b border-slate-100 pb-2 mb-6">
+                        Member Affiliations</h3>
+
+                    <div class="flex flex-wrap justify-center items-center gap-x-8 gap-y-5 px-2">
+                        <!-- Academic & Research -->
+                        <img src="assets/upenn.png" class="h-12 object-contain" alt="UPenn">
+                        <img src="assets/jefferson.png" class="h-10 object-contain" alt="Jefferson">
+                        <img src="assets/drexel.png" class="h-12 object-contain" alt="Drexel">
+                        <img src="assets/temple.png" class="h-10 object-contain" alt="Temple">
+                        <img src="assets/penn-state.png" class="h-10 object-contain" alt="Penn State">
+                        <img src="assets/villanova.png" class="h-10 object-contain" alt="Villanova">
+                        <img src="assets/rutgers.png" class="h-10 object-contain" alt="Rutgers">
+                        <img src="assets/wistar.png" class="h-10 object-contain" alt="Wistar">
+                        <img src="assets/chop.png" class="h-10 object-contain" alt="CHOP">
+                        <img src="assets/tcnj.png" class="h-10 object-contain" alt="TCNJ">
+                        <img src="assets/kutztown.png" class="h-10 object-contain" alt="Kutztown">
+
+                        <!-- Industry & Gov -->
+                        <img src="assets/merck.png" class="h-12 object-contain" alt="Merck">
+                        <img src="assets/gsk.png" class="h-10 object-contain" alt="GSK">
+                        <img src="assets/jnj.png" class="h-5 object-contain" alt="Johnson & Johnson">
+                        <img src="assets/astrazeneca.png" class="h-7 object-contain" alt="AstraZeneca">
+                        <img src="assets/bms.png" class="h-7 object-contain" alt="Bristol Myers Squibb">
+                        <img src="assets/novo-nordisk.png" class="h-10 object-contain" alt="Novo Nordisk">
+                        <img src="assets/dio-medical.png" class="h-8 object-contain" alt="Dio Medical">
+                        <img src="assets/nasa.png" class="h-10 object-contain" alt="NASA">
+                        <img src="assets/lockheed-martin.png" class="h-6 object-contain" alt="Lockheed Martin">
+                        <img src="assets/samsung.png" class="h-7 object-contain" alt="Samsung">
+                        <img src="assets/dupont.png" class="h-8 object-contain" alt="DuPont">
+                    </div>
+                </div>
+                <span class="page-number">3</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- PAGE 4: DISTINGUISHED SPEAKERS (KEYNOTE) -->
+    <div class="page p-12 bg-slate-50">
+        <h2 class="text-3xl font-bold text-slate-800 mb-6 border-b-2 border-slate-100 pb-2">Symposium Program</h2>
+
+        <div class="text-center mb-8">
+            <p class="text-sm text-slate-600 max-w-2xl mx-auto leading-relaxed">
+                The 2026 US-Korea Northeastern Symposium on AI, Biomedical Science & Engineering, themed
+                <strong>"Pioneering the Future: The Convergence of AI, Bio-Science, & Engineering,"</strong> features a
+                distinguished lineup of speakers from academia and industry. Our program is designed to foster
+                cross-disciplinary dialogue and showcase cutting-edge research in life sciences, engineering, and
+                technology.
+            </p>
+        </div>
+
+        <!-- Program at a Glance (Compact) -->
+        <div class="max-w-3xl mx-auto mb-8 w-full">
+            <div class="bg-blue-50 rounded-xl p-4 border border-blue-100">
+                <h3 class="text-xs font-bold text-blue-800 uppercase tracking-widest mb-3 text-center">Program at a
+                    Glance <span class="text-slate-500 ml-2 normal-case tracking-normal">(Feb 27, 12:20 PM - 9:00
+                        PM)</span></h3>
+                <div class="grid grid-cols-2 gap-x-8 gap-y-2 text-xs text-slate-700">
+                    <div class="flex justify-between border-b border-blue-200/50 pb-1">
+                        <span class="font-bold text-slate-500">12:20 PM</span>
+                        <span>Welcome Remarks</span>
+                    </div>
+                    <div class="flex justify-between border-b border-blue-200/50 pb-1">
+                        <span class="font-bold text-slate-500">2:30 PM</span>
+                        <span>Poster Session & Break</span>
+                    </div>
+                    <div class="flex justify-between border-b border-blue-200/50 pb-1">
+                        <span class="font-bold text-slate-500">12:30 PM</span>
+                        <span class="font-bold text-blue-700">Keynote Session</span>
+                    </div>
+                    <div class="flex justify-between border-b border-blue-200/50 pb-1">
+                        <span class="font-bold text-slate-500">3:30 PM</span>
+                        <span>Session 2 (Engineering)</span>
+                    </div>
+                    <div class="flex justify-between border-b border-blue-200/50 pb-1">
+                        <span class="font-bold text-slate-500">1:30 PM</span>
+                        <span>Session 1 (Bio-Science)</span>
+                    </div>
+                    <div class="flex justify-between border-b border-blue-200/50 pb-1">
+                        <span class="font-bold text-slate-500">4:30 PM</span>
+                        <span>Awards & Closing</span>
+                    </div>
+                    <!-- Full width for Dinner -->
+                    <div class="col-span-2 flex justify-center pt-1 mt-1">
+                        <span class="font-bold text-slate-500 mr-4">5:00 PM - 9:00 PM</span>
+                        <span class="font-bold text-purple-700">Networking Dinner</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="flex-grow flex flex-col justify-center gap-6">
+            <h3
+                class="text-blue-800 font-bold uppercase tracking-widest text-lg mb-4 text-center border-b-2 border-blue-100 pb-2">
+                Keynote Session</h3>
+
+            <!-- Keynote 1: Junhyong Kim -->
+            <div class="bg-white p-6 rounded-2xl border border-blue-200 shadow-md flex items-center gap-6">
+                <img src="assets/junhyong-kim.png"
+                    class="w-32 h-32 rounded-full object-cover object-top border-4 border-blue-100 flex-shrink-0 shadow-sm">
+                <div>
+                    <span
+                        class="text-xs font-bold text-white bg-blue-600 px-3 py-1 rounded-full uppercase mb-2 inline-block tracking-wide">Keynote
+                        Speaker</span>
+                    <h4 class="text-2xl font-black text-slate-900 leading-tight mb-1">Junhyong Kim, PhD</h4>
+                    <p class="text-sm text-slate-600 font-bold mb-1">Christopher H. Browne Distinguished Professor
+                        of Biology</p>
+                    <p class="text-xs text-slate-500 italic mb-2">Department of Biology; Department of Computer and
+                        Information Science<br>University of
+                        Pennsylvania</p>
+                    <p class="text-sm text-blue-800 font-bold">"Beyond Single Cells to Subcellular Biology"</p>
+                </div>
+            </div>
+
+            <!-- Keynote 2: Deok-Ho Kim -->
+            <div class="bg-white p-6 rounded-2xl border border-purple-200 shadow-md flex items-center gap-6">
+                <img src="assets/deok-ho-kim.png"
+                    class="w-32 h-32 rounded-full object-cover border-4 border-purple-100 flex-shrink-0 shadow-sm">
+                <div>
+                    <span
+                        class="text-xs font-bold text-white bg-purple-600 px-3 py-1 rounded-full uppercase mb-2 inline-block tracking-wide">Keynote
+                        Speaker</span>
+                    <h4 class="text-2xl font-black text-slate-900 leading-tight mb-1">Deok-Ho Kim, PhD</h4>
+                    <p class="text-sm text-slate-600 font-bold mb-1">Professor, Department of Biomedical Engineering
+                    </p>
+                    <p class="text-xs text-slate-500 italic mb-2">Director, Center for Microphysiological
+                        Systems<br>Johns Hopkins University School of Medicine</p>
+                    <p class="text-sm text-purple-800 font-bold">"Advanced Human Organ-on-a-Chip Platforms for
+                        Disease Modeling, Drug Development, and Space Biology"</p>
+                </div>
+            </div>
+        </div>
+        <span class="page-number">4</span>
+    </div>
+
+    <!-- PAGE 5: DISTINGUISHED SPEAKERS (INVITED) -->
+    <div class="page p-12 bg-slate-50">
+        <h2 class="text-3xl font-black text-slate-900 uppercase tracking-tight mb-8 text-center">Invited
+            Speakers</h2>
+
+        <div class="flex-grow flex flex-col gap-8">
+
+            <!-- Session 1 -->
+            <div>
+                <h3
+                    class="text-slate-800 font-bold uppercase tracking-widest text-sm mb-4 text-center border-b border-slate-200 pb-2">
+                    Session #1: Precision Medicine & Bio-Imaging</h3>
+                <div class="grid grid-cols-1 gap-4">
+                    <!-- Dokyoon Kim -->
+                    <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm flex items-center gap-6">
+                        <img src="assets/dokyoon-kim-v2.png"
+                            class="w-20 h-20 rounded-full object-cover border-4 border-slate-100 flex-shrink-0">
+                        <div class="flex-grow">
+                            <div class="flex justify-between items-start">
+                                <div>
+                                    <h4 class="font-bold text-slate-900 text-lg">Dokyoon Kim, PhD</h4>
+                                    <p class="text-xs text-slate-500 font-bold">Associate Professor, University of
+                                        Pennsylvania</p>
+                                </div>
+                            </div>
+                            <p class="text-xs text-blue-800 font-bold mt-1">"Integrating multi-omics data with
+                                clinical information using AI/ML"</p>
+                        </div>
+                    </div>
+                    <!-- Jina Ko -->
+                    <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm flex items-center gap-6">
+                        <img src="assets/jina-ko.png"
+                            class="w-20 h-20 rounded-full object-cover border-4 border-slate-100 flex-shrink-0">
+                        <div class="flex-grow">
+                            <div class="flex justify-between items-start">
+                                <div>
+                                    <h4 class="font-bold text-slate-900 text-lg">Jina Ko, PhD</h4>
+                                    <p class="text-xs text-slate-500 font-bold">Assistant Professor, University of
+                                        Pennsylvania</p>
+                                </div>
+                            </div>
+                            <p class="text-xs text-blue-800 font-bold mt-1">"Next-Generation Molecular Tools for
+                                Precision Diagnostics"</p>
+                        </div>
+                    </div>
+                    <!-- Dae-Myung Yang -->
+                    <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm flex items-center gap-6">
+                        <img src="assets/dae-myung-yang.jpg"
+                            class="w-20 h-20 rounded-full object-cover border-4 border-slate-100 flex-shrink-0">
+                        <div class="flex-grow">
+                            <div class="flex justify-between items-start">
+                                <div>
+                                    <h4 class="font-bold text-slate-900 text-lg">Dae-Myung Yang, PhD</h4>
+                                    <p class="text-xs text-slate-500 font-bold">Assistant Professor, Fox Chase
+                                        Cancer Center</p>
+                                </div>
+                            </div>
+                            <p class="text-xs text-blue-800 font-bold mt-1">"Medical physics, radiodynamic
+                                therapy, and quantitative imaging"</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Session 2 -->
+            <div>
+                <h3
+                    class="text-slate-800 font-bold uppercase tracking-widest text-sm mb-4 text-center border-b border-slate-200 pb-2">
+                    Session #2: Advanced Computing & Environmental Science</h3>
+                <div class="grid grid-cols-1 gap-4">
+                    <!-- Hayoung Bong -->
+                    <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm flex items-center gap-6">
+                        <img src="assets/hayoung-bong.png"
+                            class="w-20 h-20 rounded-full object-cover border-4 border-slate-100 flex-shrink-0">
+                        <div class="flex-grow">
+                            <div class="flex justify-between items-start">
+                                <div>
+                                    <h4 class="font-bold text-slate-900 text-lg">Hayoung Bong, PhD</h4>
+                                    <p class="text-xs text-slate-500 font-bold">Postdoctoral Fellow, NASA Goddard
+                                        Institute for Space Studies</p>
+                                </div>
+                            </div>
+                            <p class="text-xs text-blue-800 font-bold mt-1">"How do we know the climate has been
+                                changing?"</p>
+                        </div>
+                    </div>
+                    <!-- Minsung Kim -->
+                    <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm flex items-center gap-6">
+                        <img src="assets/minsung-kim.png"
+                            class="w-20 h-20 rounded-full object-cover object-top border-4 border-slate-100 flex-shrink-0">
+                        <div class="flex-grow">
+                            <div class="flex justify-between items-start">
+                                <div>
+                                    <h4 class="font-bold text-slate-900 text-lg">Minsung Kim, PhD</h4>
+                                    <p class="text-xs text-slate-500 font-bold">Assistant Professor, Rutgers
+                                        University</p>
+                                </div>
+                            </div>
+                            <p class="text-xs text-blue-800 font-bold mt-1">"Quantum and Emerging
+                                Non-traditional Computing for NextG Wireless Networks"</p>
+                        </div>
+                    </div>
+                    <!-- Industry Talk -->
+                    <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm flex items-center gap-6">
+                        <div
+                            class="w-20 h-20 rounded-full bg-slate-100 flex items-center justify-center text-slate-400 text-3xl border-4 border-slate-200 flex-shrink-0">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <div class="flex-grow">
+                            <div class="flex justify-between items-start">
+                                <div>
+                                    <h4 class="font-bold text-slate-900 text-lg">Industry Talk</h4>
+                                    <p class="text-xs text-slate-500 font-bold">TBD, Inc.</p>
+                                </div>
+                            </div>
+                            <p class="text-xs text-blue-800 font-bold mt-1">Title TBA</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <span class="page-number">5</span>
+    </div>
+
+
+    <!-- PAGE 6: SPONSORSHIP LEVELS -->
+    <div class="page p-12 bg-white">
+        <div class="flex-grow">
+            <h2 class="text-3xl font-black text-slate-900 border-b-4 border-blue-600 inline-block mb-8">
+                Sponsorship Levels</h2>
+
+            <div class="grid grid-cols-1 gap-5">
+                <!-- Diamond -->
+                <div class="bg-slate-900 p-5 rounded-xl text-white shadow-xl relative overflow-hidden">
+                    <div
+                        class="absolute top-0 right-0 w-32 h-32 bg-blue-600 rounded-full blur-3xl -mr-16 -mt-16 opacity-50">
+                    </div>
+                    <div class="flex justify-between items-start mb-2">
+                        <div>
+                            <h3 class="text-2xl font-bold uppercase tracking-widest text-blue-400">Platinum</h3>
+                            <p class="text-slate-400 text-xs">Premier Partner (Limit 1)</p>
+                        </div>
+                        <span class="text-3xl font-black">$3,000+</span>
+                    </div>
+                    <p class="text-sm text-slate-300 mb-3">Maximum visibility and engagement.</p>
+                    <ul class="grid grid-cols-2 gap-2 text-xs text-slate-200">
+                        <li><i class="fas fa-check text-blue-500 mr-2"></i> Full-page Color Ad (Back Cover)</li>
+                        <li><i class="fas fa-check text-blue-500 mr-2"></i> Premium Exhibitor Booth</li>
+                        <li><i class="fas fa-check text-blue-500 mr-2"></i> 20-Min Keynote Intro / Talk</li>
+                        <li><i class="fas fa-check text-blue-500 mr-2"></i> Logo on All Materials</li>
+                        <li><i class="fas fa-check text-blue-500 mr-2"></i> 5 Complimentary Registrations</li>
+                    </ul>
+                </div>
+
+                <!-- Gold -->
+                <div class="bg-white p-5 rounded-xl shadow-md border-2 border-yellow-400">
+                    <div class="flex justify-between items-start mb-2">
+                        <div>
+                            <h3 class="text-xl font-bold uppercase tracking-widest text-slate-800">Gold</h3>
+                        </div>
+                        <span class="text-3xl font-black text-yellow-600">$2,000</span>
+                    </div>
+                    <ul class="grid grid-cols-2 gap-2 text-xs text-slate-600">
+                        <li><i class="fas fa-check text-yellow-500 mr-2"></i> Full-page Color Ad</li>
+                        <li><i class="fas fa-check text-yellow-500 mr-2"></i> Exhibitor Booth</li>
+                        <li><i class="fas fa-check text-yellow-500 mr-2"></i> 10-Min Session Talk</li>
+                        <li><i class="fas fa-check text-yellow-500 mr-2"></i> Logo on Website, Booklet & Banners</li>
+                        <li><i class="fas fa-check text-yellow-500 mr-2"></i> 3 Complimentary Registrations</li>
+                    </ul>
+                </div>
+
+                <!-- Silver -->
+                <div class="bg-white p-5 rounded-xl shadow-md border-2 border-slate-300">
+                    <div class="flex justify-between items-start mb-2">
+                        <div>
+                            <h3 class="text-xl font-bold uppercase tracking-widest text-slate-800">Silver</h3>
+                        </div>
+                        <span class="text-3xl font-black text-slate-500">$1,000</span>
+                    </div>
+                    <ul class="grid grid-cols-2 gap-2 text-xs text-slate-600">
+                        <li><i class="fas fa-check text-slate-400 mr-2"></i> Half-page Color Ad</li>
+                        <li><i class="fas fa-check text-slate-400 mr-2"></i> Shared Exhibitor Table</li>
+                        <li><i class="fas fa-check text-slate-400 mr-2"></i> 5-Min Session Talk</li>
+                        <li><i class="fas fa-check text-slate-400 mr-2"></i> Logo on Website, Booklet & Banners</li>
+                        <li><i class="fas fa-check text-slate-400 mr-2"></i> 2 Complimentary Registrations</li>
+                    </ul>
+                </div>
+
+                <!-- Bronze -->
+                <div class="bg-white p-5 rounded-xl shadow-md border-2 border-orange-200">
+                    <div class="flex justify-between items-start mb-2">
+                        <div>
+                            <h3 class="text-xl font-bold uppercase tracking-widest text-slate-800">Bronze</h3>
+                        </div>
+                        <span class="text-3xl font-black text-orange-400">$500</span>
+                    </div>
+                    <ul class="grid grid-cols-2 gap-2 text-xs text-slate-600">
+                        <li><i class="fas fa-check text-orange-300 mr-2"></i> Quarter-page Ad</li>
+                        <li><i class="fas fa-check text-orange-300 mr-2"></i> Logo on Website & Banners</li>
+                        <li><i class="fas fa-check text-orange-300 mr-2"></i> 1 Complimentary Registration</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="mt-6 text-center">
+                <p class="text-sm text-slate-600 mb-2">Custom packages available upon request.</p>
+            </div>
+        </div>
+        <span class="page-number">6</span>
+
+    </div>
+
+
+    <!-- PAGE 7: SPONSORSHIP BENEFITS TABLE -->
+    <div class="page p-12 bg-slate-50">
+        <h2 class="text-3xl font-black text-slate-900 uppercase tracking-tight mb-8 text-center">Benefits at a
+            Glance</h2>
+
+        <div class="flex-grow overflow-hidden">
+            <table class="w-full text-sm border-collapse">
+                <thead>
+                    <tr class="bg-slate-100 text-slate-600 uppercase text-xs tracking-wider">
+                        <th class="p-3 text-left border-b-2 border-slate-200">Benefit</th>
+                        <th class="p-3 text-center border-b-2 border-slate-200 text-orange-600">Bronze</th>
+                        <th class="p-3 text-center border-b-2 border-slate-200 text-slate-600">Silver</th>
+                        <th class="p-3 text-center border-b-2 border-slate-200 text-yellow-600">Gold</th>
+                        <th class="p-3 text-center border-b-2 border-slate-200 text-blue-600">Platinum</th>
+                    </tr>
+                </thead>
+                <tbody class="divide-y divide-slate-100">
+                    <tr class="hover:bg-slate-50">
+                        <td class="p-3 font-bold text-slate-700">Donation Amount</td>
+                        <td class="p-3 text-center font-bold text-slate-600">$500</td>
+                        <td class="p-3 text-center font-bold text-slate-600">$1,000</td>
+                        <td class="p-3 text-center font-bold text-slate-600">$2,000</td>
+                        <td class="p-3 text-center font-bold text-slate-600">$3,000+</td>
+                    </tr>
+                    <tr class="hover:bg-slate-50">
+                        <td class="p-3 text-slate-600">Booklet Ad</td>
+                        <td class="p-3 text-center text-slate-500">1/4 Page</td>
+                        <td class="p-3 text-center text-slate-500">1/2 Page</td>
+                        <td class="p-3 text-center text-slate-500">Full Page</td>
+                        <td class="p-3 text-center font-bold text-blue-600">Back Cover</td>
+                    </tr>
+                    <tr class="hover:bg-slate-50">
+                        <td class="p-3 text-slate-600">Exhibitor Booth</td>
+                        <td class="p-3 text-center text-slate-300"><i class="fas fa-minus"></i></td>
+                        <td class="p-3 text-center text-slate-500">Shared</td>
+                        <td class="p-3 text-center text-slate-900"><i class="fas fa-check text-green-500"></i>
+                        </td>
+                        <td class="p-3 text-center text-slate-900"><i class="fas fa-check text-green-500"></i>
+                            Premium</td>
+                    </tr>
+                    <tr class="hover:bg-slate-50">
+                        <td class="p-3 text-slate-600">Presentation Time</td>
+                        <td class="p-3 text-center text-slate-300"><i class="fas fa-minus"></i></td>
+                        <td class="p-3 text-center text-slate-900">5 Min</td>
+                        <td class="p-3 text-center text-slate-900">10 Min</td>
+                        <td class="p-3 text-center text-slate-900">20 Min</td>
+                    </tr>
+                    <tr class="hover:bg-slate-50">
+                        <td class="p-3 text-slate-600">Logo on Booklet</td>
+                        <td class="p-3 text-center text-slate-300"><i class="fas fa-minus"></i></td>
+                        <td class="p-3 text-center text-slate-900"><i class="fas fa-check text-green-500"></i>
+                        </td>
+                        <td class="p-3 text-center text-slate-900"><i class="fas fa-check text-green-500"></i>
+                        </td>
+                        <td class="p-3 text-center text-slate-900"><i class="fas fa-check text-green-500"></i>
+                        </td>
+                    </tr>
+                    <tr class="hover:bg-slate-50">
+                        <td class="p-3 text-slate-600">Logo on Website</td>
+                        <td class="p-3 text-center text-slate-900"><i class="fas fa-check text-green-500"></i>
+                        </td>
+                        <td class="p-3 text-center text-slate-900"><i class="fas fa-check text-green-500"></i>
+                        </td>
+                        <td class="p-3 text-center text-slate-900"><i class="fas fa-check text-green-500"></i>
+                        </td>
+                        <td class="p-3 text-center text-slate-900"><i class="fas fa-check text-green-500"></i>
+                        </td>
+                    </tr>
+                    <tr class="hover:bg-slate-50">
+                        <td class="p-3 text-slate-600">Logo on Banners</td>
+                        <td class="p-3 text-center text-slate-900"><i class="fas fa-check text-green-500"></i>
+                        </td>
+                        <td class="p-3 text-center text-slate-900"><i class="fas fa-check text-green-500"></i>
+                        </td>
+                        <td class="p-3 text-center text-slate-900"><i class="fas fa-check text-green-500"></i>
+                        </td>
+                        <td class="p-3 text-center text-slate-900"><i class="fas fa-check text-green-500"></i>
+                        </td>
+                    </tr>
+                    <tr class="hover:bg-slate-50">
+                        <td class="p-3 text-slate-600">Complimentary Reg.</td>
+                        <td class="p-3 text-center text-slate-500">1</td>
+                        <td class="p-3 text-center text-slate-500">2</td>
+                        <td class="p-3 text-center text-slate-500">3</td>
+                        <td class="p-3 text-center text-slate-500">5</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="mt-8 bg-blue-50 p-4 rounded-lg border border-blue-100">
+                <h4 class="font-bold text-blue-800 mb-2 text-sm uppercase">Ad Specifications</h4>
+                <ul class="text-xs text-slate-600 space-y-1">
+                    <li><strong>Full Page:</strong> 8.5" x 11" (with 0.125" bleed)</li>
+                    <li><strong>Half Page:</strong> 8.5" x 5.5"</li>
+                    <li><strong>Quarter Page:</strong> 4.25" x 5.5"</li>
+                    <li><strong>Format:</strong> PDF, JPG, or PNG (300 DPI)</li>
+                </ul>
+            </div>
+        </div>
+        <span class="page-number">7</span>
+    </div>
+
+    <!-- PAGE 8: BACK COVER (COMMITTEE) -->
+    <div class="page bg-slate-900 border-l border-slate-800">
+        <div class="absolute inset-0 bg-[url('assets/poster_back_cover_bg.jpg')] bg-cover bg-center opacity-30 z-0">
+        </div>
+        <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/90 to-transparent z-0"></div>
+
+        <div class="relative z-10 flex flex-col items-center h-full p-12 text-center text-white">
+            <div class="w-full max-w-4xl flex-grow flex flex-col justify-center">
+                <h2
+                    class="text-2xl font-bold uppercase tracking-widest mb-10 border-b border-slate-700 pb-4 inline-block mx-auto text-blue-400">
+                    Organizing Committee</h2>
+                <div class="grid grid-cols-2 gap-x-12 gap-y-8 text-left max-w-2xl mx-auto">
+                    <div class="flex items-center gap-4"><img src="assets/su-chin-heo.jpg"
+                            class="w-16 h-16 rounded-full border-2 border-slate-600 object-cover object-top">
+                        <div>
+                            <h4 class="font-bold text-lg">Su Chin Heo</h4>
+                            <p class="text-xs text-blue-400 uppercase font-bold">Symposium Chair</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-4"><img src="assets/wookjin-choi.jpg"
+                            class="w-16 h-16 rounded-full border-2 border-slate-600 object-cover">
+                        <div>
+                            <h4 class="font-bold text-lg">Wookjin Choi</h4>
+                            <p class="text-xs text-blue-400 uppercase font-bold">Co-Chair</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-4"><img src="../assets/hyunmin-cho.jpg"
+                            class="w-16 h-16 rounded-full border-2 border-slate-600 object-cover">
+                        <div>
+                            <h4 class="font-bold text-lg">Hyunmin Cho</h4>
+                            <p class="text-xs text-purple-400 uppercase font-bold">Program Director</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-4"><img src="assets/minjeong-yeon.png"
+                            class="w-16 h-16 rounded-full border-2 border-slate-600 object-cover">
+                        <div>
+                            <h4 class="font-bold text-lg">Minjeong Yeon</h4>
+                            <p class="text-xs text-purple-400 uppercase font-bold">Publication</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-4"><img src="../assets/jaeung-ko.jpg"
+                            class="w-16 h-16 rounded-full border-2 border-slate-600 object-cover">
+                        <div>
+                            <h4 class="font-bold text-lg">Jaeung Ko</h4>
+                            <p class="text-xs text-purple-400 uppercase font-bold">Public Relations</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w-full mt-10 pt-10 border-t border-slate-700">
+                <p class="text-slate-300 text-xs uppercase tracking-widest mb-6">Hosted & Supported By</p>
+                <div class="bg-white rounded-xl py-8 px-10 shadow-2xl inline-flex flex-col gap-6 max-w-4xl mx-auto">
+                    <div
+                        class="flex flex-wrap justify-center items-center gap-10 border-b-2 border-slate-100 pb-6 w-full">
+                        <img src="../assets/ksea-logo-horizontal.png" class="h-14 object-contain">
+                        <div class="h-8 w-px bg-slate-200"></div>
+                        <img src="../assets/kusco-logo.png" class="h-12 object-contain">
+                    </div>
+                    <div class="flex flex-wrap justify-center items-center gap-x-8 gap-y-4">
+                        <img src="../images/partners/KITEE.png" class="h-8 object-contain">
+                        <img src="../images/partners/kbmes.jpg" class="h-9 object-contain">
+                        <img src="../images/partners/KASBP.jpg" class="h-6 object-contain">
+                        <img src="../images/partners/PKSA.jpg" class="h-8 object-contain">
+                        <img src="../images/partners/upenn-kogsa.png" class="h-9 object-contain">
+                        <img src="assets/kkyu-logo.png" class="h-8 object-contain">
+                    </div>
+                </div>
+                <p class="text-slate-300 text-[10px] mt-8">© 2026 KSEA Philadelphia Chapter | philly.ksea.org |
+                    ksea.philly.chapter@gmail.com
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Script to Replace Covers with Raster Images -->
+    <!-- <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const frontCover = document.querySelector('.page.cover');
+            // Select the last page specifically by looking at the last .page element
+            const pages = document.querySelectorAll('.page');
+            const backCover = pages[pages.length - 1];
+
+            // Helper function to create image replacement
+            const replaceContentWithImage = (element, imagePath) => {
+                if (!element) return;
+
+                // Create new image element
+                const img = document.createElement('img');
+                img.src = imagePath;
+                img.style.width = '100%';
+                img.style.height = '100%';
+                img.style.objectFit = 'contain';
+
+                // Clear existing HTML content and append image
+                // We keep the .page wrapper but replace innerHTML
+                element.innerHTML = '';
+                element.appendChild(img);
+
+                // Remove ambient-bg class if present to prevent double background
+                element.classList.remove('ambient-bg');
+                element.classList.remove('bg-slate-900'); // Remove back cover bg color
+                element.classList.remove('border-l');
+                element.classList.remove('border-slate-800');
+
+                element.style.background = 'white'; // Ensure clean background
+                element.style.padding = '0'; // Remove padding
+
+
+                // Remove border for cover images (dark/full-bleed) so it only shows on white pages
+                element.style.border = 'none';
+            };
+
+            // Replace Front Cover
+            replaceContentWithImage(frontCover, 'assets/cover_front_raster.png');
+
+            // Replace Back Cover
+            replaceContentWithImage(backCover, 'assets/cover_back_raster.png');
+        });
+    </script> -->
+</body>
+
+</html>
