@@ -12,6 +12,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,400&family=Outfit:wght@300;400;600;800&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="css/symposium.css">
 
     <style>
         body {
@@ -549,35 +550,8 @@
                     <h3 class="text-xs font-bold text-blue-800 uppercase tracking-widest mb-4 text-center">Program at a
                         Glance<br><span class="text-slate-500 normal-case tracking-normal block mt-1">(Feb 27)</span>
                     </h3>
-                    <div class="flex flex-col gap-2 text-xs text-slate-700">
-                        <div class="flex justify-between border-b border-blue-200/50 pb-1">
-                            <span class="font-bold text-slate-500">12:20 PM</span>
-                            <span>Welcome Remarks</span>
-                        </div>
-                        <div class="flex justify-between border-b border-blue-200/50 pb-1">
-                            <span class="font-bold text-slate-500">12:30 PM</span>
-                            <span class="font-bold text-blue-700">Keynote</span>
-                        </div>
-                        <div class="flex justify-between border-b border-blue-200/50 pb-1">
-                            <span class="font-bold text-slate-500">1:30 PM</span>
-                            <span>Session 1 (Bio-Science)</span>
-                        </div>
-                        <div class="flex justify-between border-b border-blue-200/50 pb-1">
-                            <span class="font-bold text-slate-500">2:30 PM</span>
-                            <span>Poster Session & Break</span>
-                        </div>
-                        <div class="flex justify-between border-b border-blue-200/50 pb-1">
-                            <span class="font-bold text-slate-500">3:30 PM</span>
-                            <span>Session 2 (Engineering)</span>
-                        </div>
-                        <div class="flex justify-between border-b border-blue-200/50 pb-1">
-                            <span class="font-bold text-slate-500">4:30 PM</span>
-                            <span>Awards & Closing</span>
-                        </div>
-                        <div class="flex justify-between pt-1">
-                            <span class="font-bold text-slate-500">5:00 PM - 9:00 PM</span>
-                            <span class="font-bold text-purple-700">Networking Dinner</span>
-                        </div>
+                    <div id="booklet-schedule-container" class="space-y-2 text-xs">
+                        <!-- Rendered by JS -->
                     </div>
                 </div>
             </div>
@@ -588,49 +562,8 @@
             <h3 class="text-blue-800 font-bold uppercase tracking-widest text-lg border-b-2 border-blue-100 pb-2">
                 Keynote Speakers</h3>
 
-            <div class="grid gap-6">
-                <!-- Keynote 1: Junhyong Kim -->
-                <div class="bg-white p-5 rounded-2xl border border-blue-200 shadow-md flex flex-col gap-4">
-                    <div class="flex items-start gap-4">
-                        <img src="assets/junhyong-kim.png"
-                            class="w-20 h-20 rounded-full object-cover object-top border-4 border-blue-100 flex-shrink-0 shadow-sm">
-                        <div>
-                            <span
-                                class="text-[10px] font-bold text-white bg-blue-600 px-2 py-0.5 rounded-full uppercase mb-1 inline-block tracking-wide">Keynote
-                                Speaker</span>
-                            <h4 class="text-xl font-black text-slate-900 leading-tight mb-0.5">Junhyong Kim, PhD</h4>
-                            <p class="text-xs text-slate-600 font-bold mb-0.5">Christopher H. Browne Distinguished
-                                Professor
-                                of Biology</p>
-                            <p class="text-[10px] text-slate-500 italic mb-1">University of Pennsylvania</p>
-                        </div>
-                    </div>
-                    <p class="text-sm text-blue-800 font-bold border-t border-blue-50 pt-2">"Beyond Single Cells to
-                        Subcellular Biology"</p>
-                </div>
-            </div>
-
-            <!-- Keynote 2: Deok-Ho Kim -->
-            <div class="grid gap-6">
-                <div class="bg-white p-5 rounded-2xl border border-purple-200 shadow-md flex flex-col gap-4">
-                    <div class="flex items-start gap-4">
-                        <img src="assets/deok-ho-kim.png"
-                            class="w-20 h-20 rounded-full object-cover border-4 border-purple-100 flex-shrink-0 shadow-sm">
-                        <div>
-                            <span
-                                class="text-[10px] font-bold text-white bg-purple-600 px-2 py-0.5 rounded-full uppercase mb-1 inline-block tracking-wide">Keynote
-                                Speaker</span>
-                            <h4 class="text-xl font-black text-slate-900 leading-tight mb-0.5">Deok-Ho Kim, PhD</h4>
-                            <p class="text-xs text-slate-600 font-bold mb-0.5">Professor, Dept. of Biomedical
-                                Engineering
-                            </p>
-                            <p class="text-[10px] text-slate-500 italic mb-1">Johns Hopkins University School of
-                                Medicine</p>
-                        </div>
-                    </div>
-                    <p class="text-sm text-purple-800 font-bold border-t border-purple-50 pt-2">"Advanced Human
-                        Organ-on-a-Chip Platforms for Disease Modeling, Drug Development, and Space Biology"</p>
-                </div>
+            <div id="booklet-keynote-container" class="grid grid-cols-2 gap-6">
+                <!-- Rendered by JS -->
             </div>
         </div>
         <span class="page-number">4</span>
@@ -649,55 +582,8 @@
                 <h3
                     class="text-slate-800 font-bold uppercase tracking-widest text-sm mb-4 text-center border-b border-slate-200 pb-2">
                     Session #1: Precision Medicine & Bio-Imaging</h3>
-                <div class="grid grid-cols-1 gap-4">
-                    <!-- Dokyoon Kim -->
-                    <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm flex items-center gap-6">
-                        <img src="assets/dokyoon-kim-v2.png"
-                            class="w-20 h-20 rounded-full object-cover border-4 border-slate-100 flex-shrink-0">
-                        <div class="flex-grow">
-                            <div class="flex justify-between items-start">
-                                <div>
-                                    <h4 class="font-bold text-slate-900 text-lg">Dokyoon Kim, PhD</h4>
-                                    <p class="text-xs text-slate-500 font-bold">Associate Professor, University of
-                                        Pennsylvania</p>
-                                </div>
-                            </div>
-                            <p class="text-xs text-blue-800 font-bold mt-1">"Integrating multi-omics data with
-                                clinical information using AI/ML"</p>
-                        </div>
-                    </div>
-                    <!-- Jina Ko -->
-                    <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm flex items-center gap-6">
-                        <img src="assets/jina-ko.png"
-                            class="w-20 h-20 rounded-full object-cover border-4 border-slate-100 flex-shrink-0">
-                        <div class="flex-grow">
-                            <div class="flex justify-between items-start">
-                                <div>
-                                    <h4 class="font-bold text-slate-900 text-lg">Jina Ko, PhD</h4>
-                                    <p class="text-xs text-slate-500 font-bold">Assistant Professor, University of
-                                        Pennsylvania</p>
-                                </div>
-                            </div>
-                            <p class="text-xs text-blue-800 font-bold mt-1">"Next-Generation Molecular Tools for
-                                Precision Diagnostics"</p>
-                        </div>
-                    </div>
-                    <!-- Dae-Myung Yang -->
-                    <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm flex items-center gap-6">
-                        <img src="assets/dae-myung-yang.jpg"
-                            class="w-20 h-20 rounded-full object-cover border-4 border-slate-100 flex-shrink-0">
-                        <div class="flex-grow">
-                            <div class="flex justify-between items-start">
-                                <div>
-                                    <h4 class="font-bold text-slate-900 text-lg">Dae-Myung Yang, PhD</h4>
-                                    <p class="text-xs text-slate-500 font-bold">Assistant Professor, Fox Chase
-                                        Cancer Center</p>
-                                </div>
-                            </div>
-                            <p class="text-xs text-blue-800 font-bold mt-1">"Medical physics, radiodynamic
-                                therapy, and quantitative imaging"</p>
-                        </div>
-                    </div>
+                <div id="booklet-session1-container" class="grid grid-cols-3 gap-4">
+                    <!-- Rendered by JS -->
                 </div>
             </div>
 
@@ -706,313 +592,237 @@
                 <h3
                     class="text-slate-800 font-bold uppercase tracking-widest text-sm mb-4 text-center border-b border-slate-200 pb-2">
                     Session #2: Advanced Computing & Environmental Science</h3>
-                <div class="grid grid-cols-1 gap-4">
-                    <!-- Hayoung Bong -->
-                    <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm flex items-center gap-6">
-                        <img src="assets/hayoung-bong.png"
-                            class="w-20 h-20 rounded-full object-cover border-4 border-slate-100 flex-shrink-0">
-                        <div class="flex-grow">
-                            <div class="flex justify-between items-start">
-                                <div>
-                                    <h4 class="font-bold text-slate-900 text-lg">Hayoung Bong, PhD</h4>
-                                    <p class="text-xs text-slate-500 font-bold">Postdoctoral Fellow, NASA Goddard
-                                        Institute for Space Studies</p>
-                                </div>
-                            </div>
-                            <p class="text-xs text-blue-800 font-bold mt-1">"How do we know the climate has been
-                                changing?"</p>
-                        </div>
-                    </div>
-                    <!-- Minsung Kim -->
-                    <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm flex items-center gap-6">
-                        <img src="assets/minsung-kim.png"
-                            class="w-20 h-20 rounded-full object-cover object-top border-4 border-slate-100 flex-shrink-0">
-                        <div class="flex-grow">
-                            <div class="flex justify-between items-start">
-                                <div>
-                                    <h4 class="font-bold text-slate-900 text-lg">Minsung Kim, PhD</h4>
-                                    <p class="text-xs text-slate-500 font-bold">Assistant Professor, Rutgers
-                                        University</p>
-                                </div>
-                            </div>
-                            <p class="text-xs text-blue-800 font-bold mt-1">"Quantum and Emerging
-                                Non-traditional Computing for NextG Wireless Networks"</p>
-                        </div>
-                    </div>
-                    <!-- Industry Talk -->
-                    <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm flex items-center gap-6">
+                <div id="booklet-session2-container" class="grid grid-cols-3 gap-4">
+                    <!-- Rendered by JS -->
+                </div>
+
+            </div>
+            <span class="page-number">5</span>
+        </div>
+
+
+        <!-- PAGE 6: SPONSORSHIP LEVELS -->
+        <div class="page p-12 bg-white">
+            <div class="flex-grow">
+                <h2 class="text-3xl font-bold text-slate-800 mb-6 border-b-2 border-slate-100 pb-2">Sponsorship Levels
+                </h2>
+
+                <div class="grid grid-cols-1 gap-5">
+                    <!-- Diamond -->
+                    <div class="bg-slate-900 p-5 rounded-xl text-white shadow-xl relative overflow-hidden">
                         <div
-                            class="w-20 h-20 rounded-full bg-slate-100 flex items-center justify-center text-slate-400 text-3xl border-4 border-slate-200 flex-shrink-0">
-                            <i class="fas fa-user-tie"></i>
+                            class="absolute top-0 right-0 w-32 h-32 bg-blue-600 rounded-full blur-3xl -mr-16 -mt-16 opacity-50">
                         </div>
-                        <div class="flex-grow">
-                            <div class="flex justify-between items-start">
-                                <div>
-                                    <h4 class="font-bold text-slate-900 text-lg">Industry Talk</h4>
-                                    <p class="text-xs text-slate-500 font-bold">TBD, Inc.</p>
-                                </div>
+                        <div class="flex justify-between items-start mb-2">
+                            <div>
+                                <h3 class="text-2xl font-bold uppercase tracking-widest text-blue-400">Platinum</h3>
+                                <p class="text-slate-400 text-xs">Premier Partner (Limit 1)</p>
                             </div>
-                            <p class="text-xs text-blue-800 font-bold mt-1">Title TBA</p>
+                            <span class="text-3xl font-black">$3,000+</span>
                         </div>
+                        <p class="text-sm text-slate-300 mb-3">Maximum visibility and engagement.</p>
+                        <ul class="grid grid-cols-2 gap-2 text-xs text-slate-200">
+                            <li><i class="fas fa-check text-blue-500 mr-2"></i> Full-page Color Ad (Back Cover)</li>
+                            <li><i class="fas fa-check text-blue-500 mr-2"></i> Premium Exhibitor Booth</li>
+                            <li><i class="fas fa-check text-blue-500 mr-2"></i> 20-Min Keynote Intro / Talk</li>
+                            <li><i class="fas fa-check text-blue-500 mr-2"></i> Logo on All Materials</li>
+                            <li><i class="fas fa-check text-blue-500 mr-2"></i> 5 Complimentary Registrations</li>
+                        </ul>
                     </div>
+
+                    <!-- Gold -->
+                    <div class="bg-white p-5 rounded-xl shadow-md border-2 border-yellow-400">
+                        <div class="flex justify-between items-start mb-2">
+                            <div>
+                                <h3 class="text-xl font-bold uppercase tracking-widest text-slate-800">Gold</h3>
+                            </div>
+                            <span class="text-3xl font-black text-yellow-600">$2,000</span>
+                        </div>
+                        <ul class="grid grid-cols-2 gap-2 text-xs text-slate-600">
+                            <li><i class="fas fa-check text-yellow-500 mr-2"></i> Full-page Color Ad</li>
+                            <li><i class="fas fa-check text-yellow-500 mr-2"></i> Exhibitor Booth</li>
+                            <li><i class="fas fa-check text-yellow-500 mr-2"></i> 10-Min Session Talk</li>
+                            <li><i class="fas fa-check text-yellow-500 mr-2"></i> Logo on Website, Booklet & Banners
+                            </li>
+                            <li><i class="fas fa-check text-yellow-500 mr-2"></i> 3 Complimentary Registrations</li>
+                        </ul>
+                    </div>
+
+                    <!-- Silver -->
+                    <div class="bg-white p-5 rounded-xl shadow-md border-2 border-slate-300">
+                        <div class="flex justify-between items-start mb-2">
+                            <div>
+                                <h3 class="text-xl font-bold uppercase tracking-widest text-slate-800">Silver</h3>
+                            </div>
+                            <span class="text-3xl font-black text-slate-500">$1,000</span>
+                        </div>
+                        <ul class="grid grid-cols-2 gap-2 text-xs text-slate-600">
+                            <li><i class="fas fa-check text-slate-400 mr-2"></i> Half-page Color Ad</li>
+                            <li><i class="fas fa-check text-slate-400 mr-2"></i> Shared Exhibitor Table</li>
+                            <li><i class="fas fa-check text-slate-400 mr-2"></i> 5-Min Session Talk</li>
+                            <li><i class="fas fa-check text-slate-400 mr-2"></i> Logo on Website, Booklet & Banners</li>
+                            <li><i class="fas fa-check text-slate-400 mr-2"></i> 2 Complimentary Registrations</li>
+                        </ul>
+                    </div>
+
+                    <!-- Bronze -->
+                    <div class="bg-white p-5 rounded-xl shadow-md border-2 border-orange-200">
+                        <div class="flex justify-between items-start mb-2">
+                            <div>
+                                <h3 class="text-xl font-bold uppercase tracking-widest text-slate-800">Bronze</h3>
+                            </div>
+                            <span class="text-3xl font-black text-orange-400">$500</span>
+                        </div>
+                        <ul class="grid grid-cols-2 gap-2 text-xs text-slate-600">
+                            <li><i class="fas fa-check text-orange-300 mr-2"></i> Quarter-page Ad</li>
+                            <li><i class="fas fa-check text-orange-300 mr-2"></i> Logo on Website & Banners</li>
+                            <li><i class="fas fa-check text-orange-300 mr-2"></i> 1 Complimentary Registration</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="mt-6 text-center">
+                    <p class="text-sm text-slate-600 mb-2">Custom packages available upon request.</p>
                 </div>
             </div>
 
+            <!-- Poster Session Highlight -->
+            <div class="bg-indigo-50 p-4 rounded-xl border border-indigo-100 flex gap-4 items-start shadow-sm">
+                <div class="mt-1 text-indigo-600 bg-white p-2 rounded-full shadow-sm"><i
+                        class="fas fa-chalkboard-teacher"></i></div>
+                <div>
+                    <h4 class="text-indigo-900 font-bold text-sm">Poster Session & Research Awards</h4>
+                    <p class="text-xs text-indigo-800 leading-relaxed mt-1">
+                        A dynamic showcase of innovative research from students and postdocs. <strong>We are seeking a
+                            Poster Prize Sponsor</strong> to foster research exchange and recognize the achievements of
+                        our
+                        chapter's emerging scientists.
+                    </p>
+                </div>
+            </div>
+
+            <span class="page-number">6</span>
+
         </div>
-        <span class="page-number">5</span>
-    </div>
 
 
-    <!-- PAGE 6: SPONSORSHIP LEVELS -->
-    <div class="page p-12 bg-white">
-        <div class="flex-grow">
-            <h2 class="text-3xl font-bold text-slate-800 mb-6 border-b-2 border-slate-100 pb-2">Sponsorship Levels</h2>
+        <!-- PAGE 7: SPONSORSHIP BENEFITS TABLE -->
+        <div class="page p-12 bg-slate-50">
+            <h2 class="text-3xl font-bold text-slate-800 mb-6 border-b-2 border-slate-100 pb-2">Benefits at a Glance
+            </h2>
 
-            <div class="grid grid-cols-1 gap-5">
-                <!-- Diamond -->
-                <div class="bg-slate-900 p-5 rounded-xl text-white shadow-xl relative overflow-hidden">
-                    <div
-                        class="absolute top-0 right-0 w-32 h-32 bg-blue-600 rounded-full blur-3xl -mr-16 -mt-16 opacity-50">
-                    </div>
-                    <div class="flex justify-between items-start mb-2">
-                        <div>
-                            <h3 class="text-2xl font-bold uppercase tracking-widest text-blue-400">Platinum</h3>
-                            <p class="text-slate-400 text-xs">Premier Partner (Limit 1)</p>
-                        </div>
-                        <span class="text-3xl font-black">$3,000+</span>
-                    </div>
-                    <p class="text-sm text-slate-300 mb-3">Maximum visibility and engagement.</p>
-                    <ul class="grid grid-cols-2 gap-2 text-xs text-slate-200">
-                        <li><i class="fas fa-check text-blue-500 mr-2"></i> Full-page Color Ad (Back Cover)</li>
-                        <li><i class="fas fa-check text-blue-500 mr-2"></i> Premium Exhibitor Booth</li>
-                        <li><i class="fas fa-check text-blue-500 mr-2"></i> 20-Min Keynote Intro / Talk</li>
-                        <li><i class="fas fa-check text-blue-500 mr-2"></i> Logo on All Materials</li>
-                        <li><i class="fas fa-check text-blue-500 mr-2"></i> 5 Complimentary Registrations</li>
+            <div class="flex-grow overflow-hidden">
+                <table class="w-full text-sm border-collapse">
+                    <thead>
+                        <tr class="bg-slate-100 text-slate-600 uppercase text-xs tracking-wider">
+                            <th class="p-3 text-left border-b-2 border-slate-200">Benefit</th>
+                            <th class="p-3 text-center border-b-2 border-slate-200 text-orange-600">Bronze</th>
+                            <th class="p-3 text-center border-b-2 border-slate-200 text-slate-600">Silver</th>
+                            <th class="p-3 text-center border-b-2 border-slate-200 text-yellow-600">Gold</th>
+                            <th class="p-3 text-center border-b-2 border-slate-200 text-blue-600">Platinum</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-100">
+                        <tr class="hover:bg-slate-50">
+                            <td class="p-3 font-bold text-slate-700">Donation Amount</td>
+                            <td class="p-3 text-center font-bold text-slate-600">$500</td>
+                            <td class="p-3 text-center font-bold text-slate-600">$1,000</td>
+                            <td class="p-3 text-center font-bold text-slate-600">$2,000</td>
+                            <td class="p-3 text-center font-bold text-slate-600">$3,000+</td>
+                        </tr>
+                        <tr class="hover:bg-slate-50">
+                            <td class="p-3 text-slate-600">Booklet Ad</td>
+                            <td class="p-3 text-center text-slate-500">1/4 Page</td>
+                            <td class="p-3 text-center text-slate-500">1/2 Page</td>
+                            <td class="p-3 text-center text-slate-500">Full Page</td>
+                            <td class="p-3 text-center font-bold text-blue-600">Back Cover</td>
+                        </tr>
+                        <tr class="hover:bg-slate-50">
+                            <td class="p-3 text-slate-600">Exhibitor Booth</td>
+                            <td class="p-3 text-center text-slate-300"><i class="fas fa-minus"></i></td>
+                            <td class="p-3 text-center text-slate-500">Shared</td>
+                            <td class="p-3 text-center text-slate-900"><i class="fas fa-check text-green-500"></i>
+                            </td>
+                            <td class="p-3 text-center text-slate-900"><i class="fas fa-check text-green-500"></i>
+                                Premium</td>
+                        </tr>
+                        <tr class="hover:bg-slate-50">
+                            <td class="p-3 text-slate-600">Presentation Time</td>
+                            <td class="p-3 text-center text-slate-300"><i class="fas fa-minus"></i></td>
+                            <td class="p-3 text-center text-slate-900">5 Min</td>
+                            <td class="p-3 text-center text-slate-900">10 Min</td>
+                            <td class="p-3 text-center text-slate-900">20 Min</td>
+                        </tr>
+                        <tr class="hover:bg-slate-50">
+                            <td class="p-3 text-slate-600">Logo on Booklet</td>
+                            <td class="p-3 text-center text-slate-300"><i class="fas fa-minus"></i></td>
+                            <td class="p-3 text-center text-slate-900"><i class="fas fa-check text-green-500"></i>
+                            </td>
+                            <td class="p-3 text-center text-slate-900"><i class="fas fa-check text-green-500"></i>
+                            </td>
+                            <td class="p-3 text-center text-slate-900"><i class="fas fa-check text-green-500"></i>
+                            </td>
+                        </tr>
+                        <tr class="hover:bg-slate-50">
+                            <td class="p-3 text-slate-600">Logo on Website</td>
+                            <td class="p-3 text-center text-slate-900"><i class="fas fa-check text-green-500"></i>
+                            </td>
+                            <td class="p-3 text-center text-slate-900"><i class="fas fa-check text-green-500"></i>
+                            </td>
+                            <td class="p-3 text-center text-slate-900"><i class="fas fa-check text-green-500"></i>
+                            </td>
+                            <td class="p-3 text-center text-slate-900"><i class="fas fa-check text-green-500"></i>
+                            </td>
+                        </tr>
+                        <tr class="hover:bg-slate-50">
+                            <td class="p-3 text-slate-600">Logo on Banners</td>
+                            <td class="p-3 text-center text-slate-900"><i class="fas fa-check text-green-500"></i>
+                            </td>
+                            <td class="p-3 text-center text-slate-900"><i class="fas fa-check text-green-500"></i>
+                            </td>
+                            <td class="p-3 text-center text-slate-900"><i class="fas fa-check text-green-500"></i>
+                            </td>
+                            <td class="p-3 text-center text-slate-900"><i class="fas fa-check text-green-500"></i>
+                            </td>
+                        </tr>
+                        <tr class="hover:bg-slate-50">
+                            <td class="p-3 text-slate-600">Complimentary Reg.</td>
+                            <td class="p-3 text-center text-slate-500">1</td>
+                            <td class="p-3 text-center text-slate-500">2</td>
+                            <td class="p-3 text-center text-slate-500">3</td>
+                            <td class="p-3 text-center text-slate-500">5</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="mt-8 bg-blue-50 p-4 rounded-lg border border-blue-100">
+                    <h4 class="font-bold text-blue-800 mb-2 text-sm uppercase">Ad Specifications</h4>
+                    <ul class="text-xs text-slate-600 space-y-1">
+                        <li><strong>Full Page:</strong> 8.5" x 11" (with 0.125" bleed)</li>
+                        <li><strong>Half Page:</strong> 8.5" x 5.5"</li>
+                        <li><strong>Quarter Page:</strong> 4.25" x 5.5"</li>
+                        <li><strong>Format:</strong> PDF, JPG, or PNG (300 DPI)</li>
                     </ul>
                 </div>
-
-                <!-- Gold -->
-                <div class="bg-white p-5 rounded-xl shadow-md border-2 border-yellow-400">
-                    <div class="flex justify-between items-start mb-2">
-                        <div>
-                            <h3 class="text-xl font-bold uppercase tracking-widest text-slate-800">Gold</h3>
-                        </div>
-                        <span class="text-3xl font-black text-yellow-600">$2,000</span>
-                    </div>
-                    <ul class="grid grid-cols-2 gap-2 text-xs text-slate-600">
-                        <li><i class="fas fa-check text-yellow-500 mr-2"></i> Full-page Color Ad</li>
-                        <li><i class="fas fa-check text-yellow-500 mr-2"></i> Exhibitor Booth</li>
-                        <li><i class="fas fa-check text-yellow-500 mr-2"></i> 10-Min Session Talk</li>
-                        <li><i class="fas fa-check text-yellow-500 mr-2"></i> Logo on Website, Booklet & Banners</li>
-                        <li><i class="fas fa-check text-yellow-500 mr-2"></i> 3 Complimentary Registrations</li>
-                    </ul>
-                </div>
-
-                <!-- Silver -->
-                <div class="bg-white p-5 rounded-xl shadow-md border-2 border-slate-300">
-                    <div class="flex justify-between items-start mb-2">
-                        <div>
-                            <h3 class="text-xl font-bold uppercase tracking-widest text-slate-800">Silver</h3>
-                        </div>
-                        <span class="text-3xl font-black text-slate-500">$1,000</span>
-                    </div>
-                    <ul class="grid grid-cols-2 gap-2 text-xs text-slate-600">
-                        <li><i class="fas fa-check text-slate-400 mr-2"></i> Half-page Color Ad</li>
-                        <li><i class="fas fa-check text-slate-400 mr-2"></i> Shared Exhibitor Table</li>
-                        <li><i class="fas fa-check text-slate-400 mr-2"></i> 5-Min Session Talk</li>
-                        <li><i class="fas fa-check text-slate-400 mr-2"></i> Logo on Website, Booklet & Banners</li>
-                        <li><i class="fas fa-check text-slate-400 mr-2"></i> 2 Complimentary Registrations</li>
-                    </ul>
-                </div>
-
-                <!-- Bronze -->
-                <div class="bg-white p-5 rounded-xl shadow-md border-2 border-orange-200">
-                    <div class="flex justify-between items-start mb-2">
-                        <div>
-                            <h3 class="text-xl font-bold uppercase tracking-widest text-slate-800">Bronze</h3>
-                        </div>
-                        <span class="text-3xl font-black text-orange-400">$500</span>
-                    </div>
-                    <ul class="grid grid-cols-2 gap-2 text-xs text-slate-600">
-                        <li><i class="fas fa-check text-orange-300 mr-2"></i> Quarter-page Ad</li>
-                        <li><i class="fas fa-check text-orange-300 mr-2"></i> Logo on Website & Banners</li>
-                        <li><i class="fas fa-check text-orange-300 mr-2"></i> 1 Complimentary Registration</li>
-                    </ul>
-                </div>
             </div>
 
-            <div class="mt-6 text-center">
-                <p class="text-sm text-slate-600 mb-2">Custom packages available upon request.</p>
+            <span class="page-number">7</span>
+        </div>
+
+        <!-- PAGE 8: BACK COVER (COMMITTEE) -->
+        <div class="page bg-slate-900 border-l border-slate-800">
+            <div class="absolute inset-0 bg-[url('assets/poster_back_cover_bg.jpg')] bg-cover bg-center opacity-30 z-0">
             </div>
-        </div>
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/90 to-transparent z-0"></div>
 
-        <!-- Poster Session Highlight -->
-        <div class="bg-indigo-50 p-4 rounded-xl border border-indigo-100 flex gap-4 items-start shadow-sm">
-            <div class="mt-1 text-indigo-600 bg-white p-2 rounded-full shadow-sm"><i
-                    class="fas fa-chalkboard-teacher"></i></div>
-            <div>
-                <h4 class="text-indigo-900 font-bold text-sm">Poster Session & Research Awards</h4>
-                <p class="text-xs text-indigo-800 leading-relaxed mt-1">
-                    A dynamic showcase of innovative research from students and postdocs. <strong>We are seeking a
-                        Poster Prize Sponsor</strong> to foster research exchange and recognize the achievements of our
-                    chapter's emerging scientists.
-                </p>
-            </div>
-        </div>
-
-        <span class="page-number">6</span>
-
-    </div>
-
-
-    <!-- PAGE 7: SPONSORSHIP BENEFITS TABLE -->
-    <div class="page p-12 bg-slate-50">
-        <h2 class="text-3xl font-bold text-slate-800 mb-6 border-b-2 border-slate-100 pb-2">Benefits at a Glance</h2>
-
-        <div class="flex-grow overflow-hidden">
-            <table class="w-full text-sm border-collapse">
-                <thead>
-                    <tr class="bg-slate-100 text-slate-600 uppercase text-xs tracking-wider">
-                        <th class="p-3 text-left border-b-2 border-slate-200">Benefit</th>
-                        <th class="p-3 text-center border-b-2 border-slate-200 text-orange-600">Bronze</th>
-                        <th class="p-3 text-center border-b-2 border-slate-200 text-slate-600">Silver</th>
-                        <th class="p-3 text-center border-b-2 border-slate-200 text-yellow-600">Gold</th>
-                        <th class="p-3 text-center border-b-2 border-slate-200 text-blue-600">Platinum</th>
-                    </tr>
-                </thead>
-                <tbody class="divide-y divide-slate-100">
-                    <tr class="hover:bg-slate-50">
-                        <td class="p-3 font-bold text-slate-700">Donation Amount</td>
-                        <td class="p-3 text-center font-bold text-slate-600">$500</td>
-                        <td class="p-3 text-center font-bold text-slate-600">$1,000</td>
-                        <td class="p-3 text-center font-bold text-slate-600">$2,000</td>
-                        <td class="p-3 text-center font-bold text-slate-600">$3,000+</td>
-                    </tr>
-                    <tr class="hover:bg-slate-50">
-                        <td class="p-3 text-slate-600">Booklet Ad</td>
-                        <td class="p-3 text-center text-slate-500">1/4 Page</td>
-                        <td class="p-3 text-center text-slate-500">1/2 Page</td>
-                        <td class="p-3 text-center text-slate-500">Full Page</td>
-                        <td class="p-3 text-center font-bold text-blue-600">Back Cover</td>
-                    </tr>
-                    <tr class="hover:bg-slate-50">
-                        <td class="p-3 text-slate-600">Exhibitor Booth</td>
-                        <td class="p-3 text-center text-slate-300"><i class="fas fa-minus"></i></td>
-                        <td class="p-3 text-center text-slate-500">Shared</td>
-                        <td class="p-3 text-center text-slate-900"><i class="fas fa-check text-green-500"></i>
-                        </td>
-                        <td class="p-3 text-center text-slate-900"><i class="fas fa-check text-green-500"></i>
-                            Premium</td>
-                    </tr>
-                    <tr class="hover:bg-slate-50">
-                        <td class="p-3 text-slate-600">Presentation Time</td>
-                        <td class="p-3 text-center text-slate-300"><i class="fas fa-minus"></i></td>
-                        <td class="p-3 text-center text-slate-900">5 Min</td>
-                        <td class="p-3 text-center text-slate-900">10 Min</td>
-                        <td class="p-3 text-center text-slate-900">20 Min</td>
-                    </tr>
-                    <tr class="hover:bg-slate-50">
-                        <td class="p-3 text-slate-600">Logo on Booklet</td>
-                        <td class="p-3 text-center text-slate-300"><i class="fas fa-minus"></i></td>
-                        <td class="p-3 text-center text-slate-900"><i class="fas fa-check text-green-500"></i>
-                        </td>
-                        <td class="p-3 text-center text-slate-900"><i class="fas fa-check text-green-500"></i>
-                        </td>
-                        <td class="p-3 text-center text-slate-900"><i class="fas fa-check text-green-500"></i>
-                        </td>
-                    </tr>
-                    <tr class="hover:bg-slate-50">
-                        <td class="p-3 text-slate-600">Logo on Website</td>
-                        <td class="p-3 text-center text-slate-900"><i class="fas fa-check text-green-500"></i>
-                        </td>
-                        <td class="p-3 text-center text-slate-900"><i class="fas fa-check text-green-500"></i>
-                        </td>
-                        <td class="p-3 text-center text-slate-900"><i class="fas fa-check text-green-500"></i>
-                        </td>
-                        <td class="p-3 text-center text-slate-900"><i class="fas fa-check text-green-500"></i>
-                        </td>
-                    </tr>
-                    <tr class="hover:bg-slate-50">
-                        <td class="p-3 text-slate-600">Logo on Banners</td>
-                        <td class="p-3 text-center text-slate-900"><i class="fas fa-check text-green-500"></i>
-                        </td>
-                        <td class="p-3 text-center text-slate-900"><i class="fas fa-check text-green-500"></i>
-                        </td>
-                        <td class="p-3 text-center text-slate-900"><i class="fas fa-check text-green-500"></i>
-                        </td>
-                        <td class="p-3 text-center text-slate-900"><i class="fas fa-check text-green-500"></i>
-                        </td>
-                    </tr>
-                    <tr class="hover:bg-slate-50">
-                        <td class="p-3 text-slate-600">Complimentary Reg.</td>
-                        <td class="p-3 text-center text-slate-500">1</td>
-                        <td class="p-3 text-center text-slate-500">2</td>
-                        <td class="p-3 text-center text-slate-500">3</td>
-                        <td class="p-3 text-center text-slate-500">5</td>
-                    </tr>
-                </tbody>
-            </table>
-
-            <div class="mt-8 bg-blue-50 p-4 rounded-lg border border-blue-100">
-                <h4 class="font-bold text-blue-800 mb-2 text-sm uppercase">Ad Specifications</h4>
-                <ul class="text-xs text-slate-600 space-y-1">
-                    <li><strong>Full Page:</strong> 8.5" x 11" (with 0.125" bleed)</li>
-                    <li><strong>Half Page:</strong> 8.5" x 5.5"</li>
-                    <li><strong>Quarter Page:</strong> 4.25" x 5.5"</li>
-                    <li><strong>Format:</strong> PDF, JPG, or PNG (300 DPI)</li>
-                </ul>
-            </div>
-        </div>
-
-        <span class="page-number">7</span>
-    </div>
-
-    <!-- PAGE 8: BACK COVER (COMMITTEE) -->
-    <div class="page bg-slate-900 border-l border-slate-800">
-        <div class="absolute inset-0 bg-[url('assets/poster_back_cover_bg.jpg')] bg-cover bg-center opacity-30 z-0">
-        </div>
-        <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/90 to-transparent z-0"></div>
-
-        <div class="relative z-10 flex flex-col items-center h-full p-12 text-center text-white">
-            <div class="w-full max-w-4xl flex-grow flex flex-col justify-center">
-                <h2
-                    class="text-2xl font-bold uppercase tracking-widest mb-10 border-b border-slate-700 pb-4 inline-block mx-auto text-blue-400">
-                    Organizing Committee</h2>
-                <div class="grid grid-cols-2 gap-x-12 gap-y-8 text-left max-w-2xl mx-auto">
-                    <div class="flex items-center gap-4"><img src="assets/su-chin-heo.jpg"
-                            class="w-16 h-16 rounded-full border-2 border-slate-600 object-cover object-top">
-                        <div>
-                            <h4 class="font-bold text-lg">Su Chin Heo</h4>
-                            <p class="text-xs text-blue-400 uppercase font-bold">Symposium Chair</p>
-                        </div>
-                    </div>
-                    <div class="flex items-center gap-4"><img src="assets/wookjin-choi.jpg"
-                            class="w-16 h-16 rounded-full border-2 border-slate-600 object-cover">
-                        <div>
-                            <h4 class="font-bold text-lg">Wookjin Choi</h4>
-                            <p class="text-xs text-blue-400 uppercase font-bold">Co-Chair</p>
-                        </div>
-                    </div>
-                    <div class="flex items-center gap-4"><img src="../assets/hyunmin-cho.jpg"
-                            class="w-16 h-16 rounded-full border-2 border-slate-600 object-cover">
-                        <div>
-                            <h4 class="font-bold text-lg">Hyunmin Cho</h4>
-                            <p class="text-xs text-purple-400 uppercase font-bold">Program Director</p>
-                        </div>
-                    </div>
-                    <div class="flex items-center gap-4"><img src="assets/minjeong-yeon.png"
-                            class="w-16 h-16 rounded-full border-2 border-slate-600 object-cover">
-                        <div>
-                            <h4 class="font-bold text-lg">Minjeong Yeon</h4>
-                            <p class="text-xs text-purple-400 uppercase font-bold">Publication</p>
-                        </div>
-                    </div>
-                    <div class="flex items-center gap-4"><img src="../assets/jaeung-ko.jpg"
-                            class="w-16 h-16 rounded-full border-2 border-slate-600 object-cover">
-                        <div>
-                            <h4 class="font-bold text-lg">Jaeung Ko</h4>
-                            <p class="text-xs text-purple-400 uppercase font-bold">Public Relations</p>
-                        </div>
+            <div class="relative z-10 flex flex-col items-center h-full p-12 text-center text-white">
+                <div class="w-full max-w-4xl flex-grow flex flex-col justify-center">
+                    <h2
+                        class="text-2xl font-bold uppercase tracking-widest mb-10 border-b border-slate-700 pb-4 inline-block mx-auto text-blue-400">
+                        Organizing Committee</h2>
+                    <div id="booklet-committee-container"
+                        class="grid grid-cols-2 gap-x-12 gap-y-8 text-left max-w-2xl mx-auto">
+                        <!-- Rendered by JS -->
                     </div>
                 </div>
             </div>
@@ -1089,6 +899,8 @@
             replaceContentWithImage(backCover, 'assets/cover_back_raster.png');
         });
     </script> -->
+    <script src="js/symposium_data.js"></script>
+    <script src="js/render.js"></script>
 </body>
 
 </html>
