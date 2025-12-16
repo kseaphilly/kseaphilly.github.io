@@ -15,7 +15,7 @@ const SymposiumRenderer = {
 
         const html = SYMPOSIUM_DATA.speakers.keynote.map(speaker => `
             <div class="bg-white p-6 rounded-lg shadow-sm border border-slate-100 flex flex-col sm:flex-row gap-6 items-center sm:items-start text-center sm:text-left h-full min-h-[14rem]">
-                <img class="w-32 h-32 rounded-full object-cover object-top border-4 border-blue-50 flex-shrink-0 shadow-sm"
+                <img class="w-32 h-32 rounded-full object-cover ${speaker.imagePosition || 'object-top'} border-4 border-blue-50 flex-shrink-0 shadow-sm"
                     src="${SymposiumRenderer.getAssetPath(speaker.image)}"
                     alt="${speaker.name}">
                 <div>
@@ -37,7 +37,7 @@ const SymposiumRenderer = {
         const html = speakers.map(speaker => {
             const imgHtml = speaker.isPlaceholder
                 ? `<div class="w-32 h-32 rounded-full bg-slate-100 flex items-center justify-center text-slate-400 flex-shrink-0 border-4 border-slate-50 shadow-sm"><i class="fas fa-user-tie text-4xl"></i></div>`
-                : `<img src="${SymposiumRenderer.getAssetPath(speaker.image)}" alt="${speaker.name}" class="w-32 h-32 rounded-full object-cover ${speaker.imagePosition || ''} border-4 border-slate-50 flex-shrink-0 shadow-sm">`;
+                : `<img src="${SymposiumRenderer.getAssetPath(speaker.image)}" alt="${speaker.name}" class="w-32 h-32 rounded-full object-cover ${speaker.imagePosition || 'object-top'} border-4 border-slate-50 flex-shrink-0 shadow-sm">`;
 
             return `
             <div class="bg-white p-6 rounded-lg shadow-sm border border-slate-100 flex flex-col sm:flex-row gap-6 items-center sm:items-start text-center sm:text-left h-full min-h-[14rem]">
@@ -132,7 +132,7 @@ const SymposiumRenderer = {
         container.innerHTML = SYMPOSIUM_DATA.committee.chairs.map(chair => `
             <div class="bg-white p-6 rounded-lg shadow-sm border-l-4 border-blue-600 flex items-center gap-4">
                 <img src="${SymposiumRenderer.getAssetPath(chair.image)}" alt="${chair.name}"
-                    class="w-20 h-20 rounded-full object-cover border-2 border-slate-100 shadow-sm">
+                    class="w-20 h-20 rounded-full object-cover border-2 border-slate-100 shadow-sm object-top">
                 <div>
                     <div class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-1">${chair.role}</div>
                     <div class="font-bold text-lg text-slate-800">${chair.name}</div>
@@ -149,7 +149,7 @@ const SymposiumRenderer = {
         container.innerHTML = SYMPOSIUM_DATA.committee.members.map(member => `
             <div class="text-center flex flex-col items-center">
                 <img src="${SymposiumRenderer.getAssetPath(member.image)}" alt="${member.name}"
-                    class="w-24 h-24 rounded-full object-cover mb-3 border-2 border-slate-100 shadow-sm">
+                    class="w-24 h-24 rounded-full object-cover mb-3 border-2 border-slate-100 shadow-sm object-top">
                 <div class="text-blue-600 text-xs font-bold uppercase mb-1">${member.role}</div>
                 <div class="font-bold text-slate-800">${member.name}</div>
                 <div class="text-sm text-slate-500">${member.affiliation}</div>
@@ -167,7 +167,7 @@ const SymposiumRenderer = {
             <div class="bg-white p-5 rounded-2xl border border-${colorClass}-200 shadow-md flex flex-col gap-4">
                 <div class="flex items-start gap-4">
                     <img src="${SymposiumRenderer.getAssetPath(speaker.image)}"
-                        class="w-20 h-20 rounded-full object-cover object-top border-4 border-${colorClass}-100 flex-shrink-0 shadow-sm"
+                        class="w-20 h-20 rounded-full object-cover ${speaker.imagePosition || 'object-top'} border-4 border-${colorClass}-100 flex-shrink-0 shadow-sm"
                         alt="${speaker.name}">
                     <div>
                         <span class="text-[10px] font-bold text-white bg-${colorClass}-600 px-2 py-0.5 rounded-full uppercase mb-1 inline-block tracking-wide">Keynote Speaker</span>
@@ -237,7 +237,7 @@ const SymposiumRenderer = {
         const html = speakers.map(speaker => {
             const imgHtml = speaker.isPlaceholder
                 ? `<div class="w-20 h-20 rounded-full bg-slate-100 flex items-center justify-center text-slate-400 text-3xl border-4 border-slate-200 flex-shrink-0 mb-3"><i class="fas fa-user-tie"></i></div>`
-                : `<img src="${SymposiumRenderer.getAssetPath(speaker.image)}" class="w-20 h-20 rounded-full object-cover border-4 border-slate-100 flex-shrink-0 mb-3 shadow-sm" alt="${speaker.name}">`;
+                : `<img src="${SymposiumRenderer.getAssetPath(speaker.image)}" class="w-20 h-20 rounded-full object-cover ${speaker.imagePosition || 'object-top'} border-4 border-slate-100 flex-shrink-0 mb-3 shadow-sm" alt="${speaker.name}">`;
 
             return `
             <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm flex flex-col items-center text-center h-full">
@@ -301,7 +301,7 @@ const SymposiumRenderer = {
             return `
             <div class="glass-card p-6 rounded-2xl flex items-center gap-6 border-l-4 ${borderClass}">
                 <img src="${SymposiumRenderer.getAssetPath(speaker.image)}" alt="${speaker.name}"
-                    class="w-24 h-24 rounded-full object-cover border-2 border-white/20 shadow-lg">
+                    class="w-24 h-24 rounded-full object-cover ${speaker.imagePosition || 'object-top'} border-2 border-white/20 shadow-lg">
                 <div>
                     <h3 class="text-2xl font-bold text-white mb-1 serif-font">${speaker.name}</h3>
                     <p class="text-blue-300 text-sm font-bold uppercase tracking-wide mb-1">${speaker.affiliation}</p>
@@ -322,7 +322,7 @@ const SymposiumRenderer = {
         const html = speakers.map(speaker => {
             const imgHtml = speaker.isPlaceholder
                 ? `<div class="w-16 h-16 rounded-full bg-white/10 flex items-center justify-center text-white/50 text-2xl border-2 border-white/10 flex-shrink-0"><i class="fas fa-user-tie"></i></div>`
-                : `<img src="${SymposiumRenderer.getAssetPath(speaker.image)}" alt="${speaker.name}" class="w-16 h-16 rounded-full object-cover border-2 border-white/20 flex-shrink-0">`;
+                : `<img src="${SymposiumRenderer.getAssetPath(speaker.image)}" alt="${speaker.name}" class="w-16 h-16 rounded-full object-cover ${speaker.imagePosition || 'object-top'} border-2 border-white/20 flex-shrink-0">`;
 
             return `
             <div class="glass-card p-4 rounded-xl flex items-center gap-4">
@@ -401,7 +401,7 @@ const SymposiumRenderer = {
                 <div class="flex flex-col h-full">
                     <div class="flex items-end gap-6 border-b-2 border-slate-100 pb-8 mb-8">
                         <img src="${SymposiumRenderer.getAssetPath(speaker.image)}"
-                            class="w-32 h-32 rounded-xl object-cover shadow-lg border border-slate-200">
+                            class="w-32 h-32 rounded-xl object-cover ${speaker.imagePosition || 'object-top'} shadow-lg border border-slate-200">
                         <div>
                             <span class="${badgeColor} ${badgeClass} text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider mb-2 inline-block">${badgeText}</span>
                             <h2 class="text-3xl font-black text-slate-900 leading-tight mb-1">${speaker.name}</h2>
@@ -442,7 +442,7 @@ const SymposiumRenderer = {
                     <div class="absolute inset-0 bg-${color}-500 rounded-full blur opacity-50 group-hover/speaker:opacity-80 group-hover/speaker:blur-xl transition-all duration-500 animate-pulse-glow"></div>
                     <img src="${SymposiumRenderer.getAssetPath(speaker.image)}"
                         alt="${speaker.name}"
-                        class="w-32 h-32 rounded-full object-cover object-top border-2 border-slate-700 relative z-10 transition-all duration-500 grayscale group-hover/speaker:grayscale-0 group-hover/speaker:scale-110 group-hover/speaker:border-${color}-400">
+                        class="w-32 h-32 rounded-full object-cover ${speaker.imagePosition || 'object-top'} border-2 border-slate-700 relative z-10 transition-all duration-500 grayscale group-hover/speaker:grayscale-0 group-hover/speaker:scale-110 group-hover/speaker:border-${color}-400">
                 </div>
                 <h4 class="text-xl font-bold text-white mb-1 group-hover/speaker:text-${color}-400 transition-colors">${speaker.name}</h4>
                 <p class="text-${color}-400 text-sm font-bold uppercase tracking-wide">${speaker.affiliation}</p>
@@ -457,16 +457,20 @@ const SymposiumRenderer = {
         const container = document.getElementById(containerId);
         if (!container) return;
 
-        const speakers = [...SYMPOSIUM_DATA.speakers.session1, ...SYMPOSIUM_DATA.speakers.session2];
+        const allInvited = [...SYMPOSIUM_DATA.speakers.session1, ...SYMPOSIUM_DATA.speakers.session2];
 
-        const html = speakers.map(speaker => {
+        const html = allInvited.map(speaker => {
             if (speaker.isPlaceholder) return '';
             return `
-            <div class="flex flex-col items-center w-32 group/invited cursor-pointer">
-                <img src="${SymposiumRenderer.getAssetPath(speaker.image)}"
-                    class="w-20 h-20 rounded-full object-cover border-2 border-blue-400 shadow-[0_0_15px_rgba(96,165,250,0.6)] mb-3 transition duration-300 grayscale group-hover/invited:grayscale-0 group-hover/invited:scale-110 group-hover/invited:shadow-[0_0_25px_rgba(96,165,250,0.8)]">
-                <p class="text-white text-xs font-bold leading-tight whitespace-nowrap group-hover/invited:text-blue-300 transition-colors">${speaker.name}</p>
-                <p class="text-slate-500 text-[10px] group-hover/invited:text-slate-300 transition-colors">${speaker.affiliation}</p>
+            <div class="flex flex-col items-center group/speaker">
+                <div class="w-20 h-20 mb-3 relative">
+                    <div class="absolute inset-0 bg-blue-500 rounded-full blur opacity-0 group-hover/speaker:opacity-40 transition-opacity duration-300"></div>
+                    <img src="${SymposiumRenderer.getAssetPath(speaker.image)}"
+                        alt="${speaker.name}"
+                        class="w-20 h-20 rounded-full object-cover ${speaker.imagePosition || 'object-top'} border border-slate-600 relative z-10 grayscale group-hover/speaker:grayscale-0 transition-all duration-300">
+                </div>
+                <h5 class="text-sm font-bold text-slate-300 group-hover/speaker:text-white transition-colors">${speaker.name}</h5>
+                <p class="text-[10px] text-slate-500 uppercase tracking-wide">${speaker.affiliation}</p>
             </div>
             `;
         }).join('');
@@ -484,7 +488,7 @@ const SymposiumRenderer = {
             <div class="bg-white p-5 rounded-2xl border border-${colorClass}-200 shadow-md flex flex-col gap-4 flex-1 justify-between h-full">
                 <div class="flex items-start gap-4">
                     <img src="${SymposiumRenderer.getAssetPath(speaker.image)}"
-                        class="w-20 h-20 rounded-full object-cover object-top border-4 border-${colorClass}-100 flex-shrink-0 shadow-sm"
+                        class="w-20 h-20 rounded-full object-cover ${speaker.imagePosition || 'object-top'} border-4 border-${colorClass}-100 flex-shrink-0 shadow-sm"
                         alt="${speaker.name}">
                     <div>
                         <span class="text-[10px] font-bold text-white bg-${colorClass}-600 px-2 py-0.5 rounded-full uppercase mb-1 inline-block tracking-wide">Keynote Speaker</span>
@@ -508,7 +512,7 @@ const SymposiumRenderer = {
         const html = speakers.map(speaker => {
             const imgHtml = speaker.isPlaceholder
                 ? `<div class="w-20 h-20 rounded-full bg-slate-100 flex items-center justify-center text-slate-400 text-3xl border-4 border-slate-200 flex-shrink-0"><i class="fas fa-user-tie"></i></div>`
-                : `<img src="${SymposiumRenderer.getAssetPath(speaker.image)}" class="w-20 h-20 rounded-full object-cover border-4 border-slate-100 flex-shrink-0" alt="${speaker.name}">`;
+                : `<img src="${SymposiumRenderer.getAssetPath(speaker.image)}" class="w-20 h-20 rounded-full object-cover ${speaker.imagePosition || 'object-top'} border-4 border-slate-100 flex-shrink-0" alt="${speaker.name}">`;
 
             return `
             <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm flex items-center gap-6">
