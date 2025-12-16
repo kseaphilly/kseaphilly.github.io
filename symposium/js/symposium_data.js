@@ -56,7 +56,7 @@ const SYMPOSIUM_DATA = {
                 name: "Dae-Myung Yang, PhD",
                 title: "Assistant Professor, Radiation Oncology",
                 affiliation: "Fox Chase Cancer Center",
-                talkTitle: "Medical physics, radiodynamic therapy, and quantitative imaging",
+                talkTitle: "Radiodynamic Therapy: Advancing Cancer Treatment",
                 image: "assets/dae-myung-yang.jpg",
                 abstract: "Abstract to be updated.",
                 bio: "Biography to be updated."
@@ -79,8 +79,8 @@ const SYMPOSIUM_DATA = {
                 talkTitle: "Quantum and Emerging Non-traditional Computing for NextG Wireless Networks",
                 image: "assets/minsung-kim.png",
                 imagePosition: "object-top",
-                abstract: "Abstract to be updated.",
-                bio: "Biography to be updated."
+                abstract: "A central design challenge for future generations of wireless networks is to meet the ever-increasing demand for capacity, throughput, and connectivity. While significant progress has been made in designing advanced wireless technologies, the current computational capacity at base stations to support them has been consistently identified as the bottleneck, due to limitations in processing time. In this talk, I'll introduce how emerging computing methods, such as quantum and optical computing, can potentially resolve the current computational limitations and transform wireless system architectures toward next-generation (NextG) wireless. Furthermore, I'll briefly discuss how such non-traditional computing methods can affect other fields, including AI and Biomedical Engineering.",
+                bio: "Minsung Kim is an Assistant Professor in the Department of Computer Science and WINLAB at Rutgers University. Prior to joining Rutgers, he was a postdoctoral associate at Yale University. He received his Ph.D. in Computer Science from Princeton University and his B.E. in Electrical Engineering (Great Honor) from Korea University. His research focuses on quantum and emerging computing systems for next-generation wireless networks. His work has been published in the premier venues of mobile computing and wireless networking such as ACM SIGCOMM and MobiCom. He is a recipient of the Qualcomm Innovation Fellowship (North America) and the Princeton SEAS Award for Excellence. He was named a Siebel Scholar and an ACM MobiSys Rising Star."
             },
             {
                 name: "Industry Talk",
@@ -97,9 +97,9 @@ const SYMPOSIUM_DATA = {
     schedule: [
         { time: "12:20 – 12:30 PM", event: "Welcome Remarks & Housekeeping", type: "general" },
         { time: "12:30 – 1:30 PM", event: "KEYNOTE SESSION", type: "keynote", details: ["Junhyong Kim, PhD (UPenn)", "Deok-Ho Kim, PhD (JHU)"] },
-        { time: "1:30 – 2:30 PM", event: "SESSION #1: Bio-Science & Regenerative Medicine", type: "session", details: ["Dokyoon Kim, PhD", "Jina Ko, PhD", "Dae-Myung Yang, PhD"] },
+        { time: "1:30 – 2:30 PM", event: "SESSION #1: Precision Medicine & Bio-Innovation", type: "session", details: ["Dokyoon Kim, PhD", "Jina Ko, PhD", "Dae-Myung Yang, PhD"] },
         { time: "2:30 – 3:30 PM", event: "BREAK & POSTER SESSION", type: "break", details: ["Coffee, refreshments, and networking"] },
-        { time: "3:30 – 4:30 PM", event: "SESSION #2: Engineering & Medicine", type: "session", details: ["Hayoung Bong, PhD", "Minsung Kim, PhD", "Industry Talk"] },
+        { time: "3:30 – 4:30 PM", event: "SESSION #2: Future Science & Next-Gen Tech", type: "session", details: ["Hayoung Bong, PhD", "Minsung Kim, PhD", "Industry Talk"] },
         { time: "4:30 – 4:40 PM", event: "Closing Remarks & Poster Awards", type: "general", details: ["Group Photo"] },
         { time: "5:00 PM –", event: "NETWORKING DINNER", type: "social", details: ["Venue TBA"] }
     ],

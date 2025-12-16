@@ -207,8 +207,8 @@ const SymposiumRenderer = {
                 if (eventName.includes(":")) {
                     eventName = eventName.split(":")[0] + " (" + eventName.split(":")[1].trim().split(" ")[0] + ")"; // Hacky shortening?
                     // Actually, let's just use a mapped short name or logic
-                    if (item.event.includes("Bio-Science")) eventName = "Session 1 (Bio-Science)";
-                    if (item.event.includes("Engineering")) eventName = "Session 2 (Engineering)";
+                    if (item.event.includes("Precision Medicine")) eventName = "Session 1 (Precision Med)";
+                    if (item.event.includes("Future Science")) eventName = "Session 2 (Future Sci)";
                 }
             }
             if (item.type === "break") eventName = "Poster Session & Break";
@@ -352,8 +352,8 @@ const SymposiumRenderer = {
             // Simplify event name for poster
             let eventName = item.event;
             if (item.type === "session") {
-                if (item.event.includes("Bio-Science")) eventName = "Session 1: Bio-Science";
-                if (item.event.includes("Engineering")) eventName = "Session 2: Engineering";
+                if (item.event.includes("Precision Medicine")) eventName = "Session 1: Precision Med";
+                if (item.event.includes("Future Science")) eventName = "Session 2: Future Sci";
             }
 
             return `
