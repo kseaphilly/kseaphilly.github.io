@@ -26,6 +26,35 @@
             padding: 2rem;
             min-height: 100vh;
         }
+
+        @media print {
+            @page {
+                size: letter;
+                margin: 0;
+            }
+
+            body {
+                padding: 0;
+                margin: 0;
+                background: none;
+                display: block;
+                width: 8.5in;
+                height: 11in;
+            }
+
+            .page {
+                margin: 0 !important;
+                box-shadow: none !important;
+                page-break-after: always;
+                break-inside: avoid;
+                border: none !important;
+                width: 816px !important;
+                /* 8.5in */
+                height: 1056px !important;
+                /* 11in */
+                overflow: hidden;
+            }
+        }
     </style>
 </head>
 
@@ -113,89 +142,106 @@
                 <h2 class="text-3xl font-bold text-slate-800">About</h2>
             </div>
 
-            <div class="flex-grow flex flex-col gap-5 text-slate-600">
+            <div class="flex-grow flex flex-col gap-6 text-slate-600">
                 <!-- About KSEA -->
                 <div>
-                    <p class="text-base leading-relaxed text-justify text-slate-700 mb-4">
-                        The <strong>KSEA Philadelphia Chapter</strong> is a vibrant community advancing Korean-American
-                        scientists and engineers across the <strong>Philadelphia Metropolitan Area</strong> (PA, DE,
-                        NJ). Our diverse membership spans world-class academic institutions, leading pharmaceutical and
-                        biotechnology companies, and innovative startups.
+                    <p class="text-base leading-relaxed text-justify text-slate-700 mb-5">
+                        The <strong>KSEA Philadelphia Chapter</strong> is the central hub for the Korean-American
+                        scientific and engineering network in the <strong>Philadelphia Metropolitan Area</strong>. We
+                        serve as a bridge connecting deep academic insights with innovative industrial execution.
                     </p>
-                    <p class="text-base leading-relaxed text-justify text-slate-700">
-                        Now in an exciting phase of revitalization, we are rebuilding a strong network bridging academia
-                        and industry. This symposium is a <strong>major milestone</strong>, fostering collaboration and
-                        mentorship. We aim to raise <strong>$10,000</strong> to support student travel and research
-                        awards.
-                    </p>
+                    <div class="bg-blue-50 p-5 rounded-xl border border-blue-100">
+                        <h4 class="text-base font-bold text-blue-800 mb-3 uppercase tracking-wide">Our Vision: The New
+                            Era
+                        </h4>
+                        <ul class="list-disc list-inside text-sm text-slate-700 space-y-2">
+                            <li><strong>Rebuilding Networks:</strong> Partnerships between top universities & global
+                                biotech.</li>
+                            <li><strong>Nurturing Talent:</strong> Practical mentoring & research opportunities.</li>
+                            <li><strong>Knowledge Cycle:</strong> Sharing tech trends & advancing regional science.</li>
+                        </ul>
+                    </div>
                 </div>
 
                 <!-- Why Sponsor -->
-                <div class="mb-6">
+                <div class="mb-4 flex-grow flex flex-col">
                     <div
-                        class="bg-slate-50 p-6 rounded-2xl border border-slate-200 shadow-sm flex-grow flex flex-col gap-4">
+                        class="bg-slate-50 p-6 rounded-2xl border border-slate-200 shadow-sm flex-grow flex flex-col gap-5">
                         <h4 class="text-xl font-bold text-slate-800 text-center border-b border-slate-200 pb-3">Why
                             Sponsor?</h4>
 
                         <!-- Stats Row -->
-                        <div class="grid grid-cols-2 gap-3">
-                            <div class="text-center py-4 px-4 bg-white rounded-xl border border-slate-100 shadow-sm">
-                                <p class="text-4xl font-black text-blue-600 mb-1">100+</p>
-                                <p class="text-sm font-bold text-slate-600 uppercase tracking-wide">STEM Professionals
-                                </p>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div
+                                class="text-center py-4 px-4 bg-white rounded-xl border border-slate-100 shadow-sm flex flex-col justify-center">
+                                <p class="text-3xl font-black text-blue-600 mb-1">$10,000</p>
+                                <p class="text-xs font-bold text-slate-600 uppercase tracking-wide">Impact Goal</p>
                             </div>
-                            <div class="text-center py-4 px-4 bg-white rounded-xl border border-slate-100 shadow-sm">
-                                <p class="text-4xl font-black text-purple-600 mb-1">Top</p>
-                                <p class="text-sm font-bold text-slate-600 uppercase tracking-wide">Tier Universities
+                            <div
+                                class="text-center py-4 px-4 bg-white rounded-xl border border-slate-100 shadow-sm flex flex-col justify-center">
+                                <p class="text-3xl font-black text-purple-600 mb-1">Region</p>
+                                <p class="text-xs font-bold text-slate-600 uppercase tracking-wide">PA, DE, NJ Hub
                                 </p>
                             </div>
                         </div>
 
                         <!-- Value Props -->
-                        <div class="space-y-3">
-                            <div class="flex gap-4">
-                                <div class="mt-1"><i class="fas fa-eye text-blue-500 text-lg"></i></div>
+                        <div class="space-y-4 flex-grow flex flex-col justify-center">
+                            <div class="flex gap-4 items-start">
+                                <div class="mt-1"><i class="fas fa-bullhorn text-blue-500 text-xl"></i></div>
                                 <div>
-                                    <h5 class="text-base font-bold text-slate-800">Strategic Visibility</h5>
-                                    <p class="text-sm text-slate-600 leading-relaxed">Connect with leading professionals
-                                        from UPenn, Jefferson, Drexel, Temple, Rutgers, and major industry leaders.</p>
+                                    <h5 class="text-base font-bold text-slate-800">Brand Exposure</h5>
+                                    <p class="text-sm text-slate-600 leading-snug">Exposure to top experts via symposium
+                                        & SNS.</p>
                                 </div>
                             </div>
-                            <div class="flex gap-4">
-                                <div class="mt-1"><i class="fas fa-user-graduate text-purple-500 text-lg"></i></div>
+                            <div class="flex gap-4 items-start">
+                                <div class="mt-1"><i class="fas fa-user-graduate text-purple-500 text-xl"></i></div>
                                 <div>
-                                    <h5 class="text-base font-bold text-slate-800">Access to Talent</h5>
-                                    <p class="text-sm text-slate-600 leading-relaxed">Engage with a highly educated pool
-                                        of
-                                        bilingual candidates, from PhD students to senior executives.</p>
+                                    <h5 class="text-base font-bold text-slate-800">Talent Acquisition</h5>
+                                    <p class="text-sm text-slate-600 leading-snug">Access to bilingual Masters/PhD
+                                        talent pool.</p>
                                 </div>
                             </div>
-                            <div class="flex gap-4">
-                                <div class="mt-1"><i class="fas fa-hand-holding-heart text-red-500 text-lg"></i></div>
+                            <div class="flex gap-4 items-start">
+                                <div class="mt-1"><i class="fas fa-handshake text-indigo-500 text-xl"></i></div>
                                 <div>
-                                    <h5 class="text-base font-bold text-slate-800">Community Impact</h5>
-                                    <p class="text-sm text-slate-600 leading-relaxed">Directly support the
-                                        revitalization of
-                                        the Philadelphia chapter and its mentorship programs.</p>
+                                    <h5 class="text-base font-bold text-slate-800">Networking</h5>
+                                    <p class="text-sm text-slate-600 leading-snug">Direct engagement with Big Pharma &
+                                        Startups.</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-4 items-start">
+                                <div class="mt-1"><i class="fas fa-hand-holding-heart text-green-500 text-xl"></i></div>
+                                <div>
+                                    <h5 class="text-base font-bold text-slate-800">CSR Impact</h5>
+                                    <p class="text-sm text-slate-600 leading-snug">Support scholarships & future talent.
+                                    </p>
                                 </div>
                             </div>
                         </div>
 
                         <!-- Regional Map -->
-                        <div class="bg-white p-4 rounded-xl border border-slate-100 shadow-sm flex items-center gap-4">
+                        <div
+                            class="bg-white p-4 rounded-xl border border-slate-100 shadow-sm flex items-center gap-4 mt-auto">
                             <div
                                 class="w-12 h-12 rounded-full bg-indigo-100 flex items-center justify-center text-indigo-600 flex-shrink-0">
                                 <i class="fas fa-map-marked-alt text-xl"></i>
                             </div>
                             <div>
-                                <h4 class="font-bold text-slate-900 text-base">Regional Hub</h4>
-                                <p class="text-sm text-slate-600">Philadelphia Metropolitan Area</p>
+                                <h4 class="font-bold text-slate-900 text-sm mb-1">Regional Influence</h4>
+                                <p class="text-xs text-slate-600 leading-tight">
+                                    <strong>Academia:</strong> UPenn, Drexel, Temple, Jefferson<br>
+                                    <strong>Industry:</strong> Janssen, GSK, Merck, Spark
+                                </p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+
+
         <span class="page-number">2</span>
     </div>
 

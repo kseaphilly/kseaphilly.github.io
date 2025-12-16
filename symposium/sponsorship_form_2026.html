@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sponsorship Commitment Form - 2026 US-Korea Northeastern Symposium</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/symposium.css">
+    <style>
+        @page {
+            size: letter;
+            margin: 0;
+        }
+
+        body {
+            background-color: #f1f5f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            font-family: 'Inter', sans-serif;
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+        }
+
+        .page {
+            background: white;
+            width: 8.5in;
+            height: 11in;
+            padding: 0.5in;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            box-sizing: border-box;
+        }
+
+        @media print {
+            body {
+                background: none;
+                display: block;
+                margin: 0;
+                padding: 0;
+            }
+
+            .page {
+                width: 8.5in;
+                height: 11in;
+                box-shadow: none;
+                margin: 0;
+                overflow: hidden;
+                border: none;
+                padding: 0.5in;
+            }
+        }
+
+        .input-line {
+            border-bottom: 1px solid #cbd5e1;
+            padding-bottom: 1px;
+            flex-grow: 1;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="page flex flex-col text-slate-800">
+        <!-- Header -->
+        <div class="text-center border-b border-slate-800 pb-3 mb-4">
+            <h1 class="text-2xl font-black uppercase tracking-tight text-slate-900 mb-1">2026 US-Korea Northeastern
+                Symposium</h1>
+            <h2 class="text-lg font-bold text-blue-700 uppercase tracking-wide mb-1">Sponsorship Commitment Form</h2>
+
+            <div class="text-xs text-slate-600 space-y-0.5">
+                <p><strong>Theme:</strong> "Pioneering the Future: The Convergence of AI, Bio-Science, & Engineering"
+                </p>
+                <p><strong>Date:</strong> February 27, 2026 <span class="mx-2">|</span> <strong>Location:</strong> UPenn
+                    Smilow Center, Philadelphia, PA</p>
+            </div>
+        </div>
+
+        <!-- 1. Sponsor Information -->
+        <div class="mb-4">
+            <h3 class="text-base font-bold text-slate-800 mb-2 border-l-4 border-blue-600 pl-2">1. Sponsor Information
+            </h3>
+            <div class="space-y-2 text-sm">
+                <div class="flex items-end gap-3">
+                    <span class="font-semibold whitespace-nowrap flex-shrink-0 w-48">Company/Organization Name:</span>
+                    <input type="text"
+                        class="input-line w-full bg-transparent focus:outline-none border-b border-slate-300 pb-0.5"
+                        aria-label="Company Name">
+                </div>
+                <div class="flex items-end gap-3">
+                    <span class="font-semibold whitespace-nowrap flex-shrink-0 w-48">Contact Person (Name/Title):</span>
+                    <input type="text"
+                        class="input-line w-full bg-transparent focus:outline-none border-b border-slate-300 pb-0.5"
+                        aria-label="Contact Person">
+                </div>
+                <div class="flex gap-6">
+                    <div class="flex items-end gap-3 flex-1">
+                        <span class="font-semibold whitespace-nowrap flex-shrink-0">Email:</span>
+                        <input type="email"
+                            class="input-line w-full bg-transparent focus:outline-none border-b border-slate-300 pb-0.5"
+                            aria-label="Email">
+                    </div>
+                    <div class="flex items-end gap-3 flex-1">
+                        <span class="font-semibold whitespace-nowrap flex-shrink-0">Phone:</span>
+                        <input type="tel"
+                            class="input-line w-full bg-transparent focus:outline-none border-b border-slate-300 pb-0.5"
+                            aria-label="Phone">
+                    </div>
+                </div>
+                <div class="flex items-end gap-3">
+                    <span class="font-semibold whitespace-nowrap flex-shrink-0 w-20">Address:</span>
+                    <input type="text"
+                        class="input-line w-full bg-transparent focus:outline-none border-b border-slate-300 pb-0.5"
+                        aria-label="Address">
+                </div>
+            </div>
+        </div>
+
+        <!-- 2. Sponsorship Level -->
+        <div class="mb-4">
+            <h3 class="text-base font-bold text-slate-800 mb-2 border-l-4 border-blue-600 pl-2">2. Sponsorship Level
+            </h3>
+            <div class="space-y-2 text-sm">
+                <label class="flex items-center gap-2 cursor-pointer">
+                    <input type="checkbox" name="sponsorship" value="platinum"
+                        class="w-4 h-4 text-blue-600 border-slate-300 rounded focus:ring-blue-500">
+                    <span class="font-bold text-slate-800 w-32">Platinum ($3,000+)</span>
+                    <span class="text-slate-600">– Premier Partner, 20-min Presentation, Back Cover Ad</span>
+                </label>
+                <label class="flex items-center gap-2 cursor-pointer">
+                    <input type="checkbox" name="sponsorship" value="gold"
+                        class="w-4 h-4 text-blue-600 border-slate-300 rounded focus:ring-blue-500">
+                    <span class="font-bold text-slate-800 w-32">Gold ($2,000)</span>
+                    <span class="text-slate-600">– Exhibitor Booth, 10-min Presentation, Full Page Ad</span>
+                </label>
+                <label class="flex items-center gap-2 cursor-pointer">
+                    <input type="checkbox" name="sponsorship" value="silver"
+                        class="w-4 h-4 text-blue-600 border-slate-300 rounded focus:ring-blue-500">
+                    <span class="font-bold text-slate-800 w-32">Silver ($1,000)</span>
+                    <span class="text-slate-600">– Shared Table, 5-min Presentation, Half Page Ad</span>
+                </label>
+                <label class="flex items-center gap-2 cursor-pointer">
+                    <input type="checkbox" name="sponsorship" value="bronze"
+                        class="w-4 h-4 text-blue-600 border-slate-300 rounded focus:ring-blue-500">
+                    <span class="font-bold text-slate-800 w-32">Bronze ($500)</span>
+                    <span class="text-slate-600">– Quarter Page Ad, Logo on Banners</span>
+                </label>
+                <label class="flex items-center gap-2 cursor-pointer">
+                    <input type="checkbox" name="sponsorship" value="custom"
+                        class="w-4 h-4 text-blue-600 border-slate-300 rounded focus:ring-blue-500">
+                    <span class="font-bold text-slate-800 w-32">Custom Amount:</span>
+                    <div class="flex items-end gap-1">
+                        <span>$</span>
+                        <input type="text"
+                            class="w-24 bg-transparent focus:outline-none border-b border-slate-300 pb-0.5 text-center"
+                            aria-label="Custom Amount">
+                        <span class="text-slate-500 italic ml-1 text-xs">(e.g., Specific Award or Poster Prize
+                            Sponsor)</span>
+                    </div>
+                </label>
+            </div>
+        </div>
+
+        <!-- 3. Payment Method -->
+        <div class="mb-4">
+            <h3 class="text-base font-bold text-slate-800 mb-2 border-l-4 border-blue-600 pl-2">3. Payment Method</h3>
+            <div class="space-y-2 text-sm">
+                <div>
+                    <label class="flex items-center gap-2 font-bold text-slate-800 mb-0.5 cursor-pointer">
+                        <input type="checkbox" name="payment" value="check"
+                            class="w-4 h-4 text-blue-600 border-slate-300 rounded focus:ring-blue-500">
+                        Check
+                    </label>
+                    <div class="ml-6 text-slate-600">
+                        <p>Payable to: <strong>"KSEA-Philadelphia"</strong></p>
+                        <p>Mailing Address: <strong>45 Cabot Dr, Chesterbrook, PA 19087</strong></p>
+                    </div>
+                </div>
+                <div>
+                    <label class="flex items-center gap-2 font-bold text-slate-800 mb-0.5 cursor-pointer">
+                        <input type="checkbox" name="payment" value="zelle"
+                            class="w-4 h-4 text-blue-600 border-slate-300 rounded focus:ring-blue-500">
+                        Zelle / Electronic Transfer
+                    </label>
+                    <div class="ml-6 text-slate-600">
+                        <p>Account Email: <strong>ksea.philly.chapter@gmail.com</strong></p>
+                        <p class="italic text-slate-500 text-xs">*Note: Please include "Sponsorship - [Company Name]" in
+                            the memo.*</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-2 bg-slate-50 p-2 rounded border border-slate-200 text-xs text-slate-600 italic">
+                <strong>Note:</strong> The KSEA Philadelphia Chapter will issue a <strong>Letter of
+                    Acknowledgment</strong> upon receipt of your contribution for your internal record-keeping and
+                corporate accounting purposes.
+            </div>
+        </div>
+
+        <!-- 4. Agreement -->
+        <div class="mb-auto">
+            <h3 class="text-base font-bold text-slate-800 mb-2 border-l-4 border-blue-600 pl-2">4. Agreement &
+                Authorization</h3>
+            <p class="text-sm text-slate-600 mb-4 text-justify leading-tight">
+                I, the undersigned, as an authorized representative of the organization named above, confirm our
+                commitment to sponsor the 2026 US-Korea Northeastern Symposium at the level indicated.
+            </p>
+
+            <div class="flex gap-12 text-sm">
+                <div class="flex-1">
+                    <input type="text"
+                        class="w-full bg-transparent focus:outline-none border-b border-slate-400 pb-1 mb-1"
+                        aria-label="Signature">
+                    <p class="font-bold text-slate-800">Signature</p>
+                </div>
+                <div class="w-40">
+                    <input type="text"
+                        class="w-full bg-transparent focus:outline-none border-b border-slate-400 pb-1 mb-1"
+                        aria-label="Date">
+                    <p class="font-bold text-slate-800">Date</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer / Submission -->
+        <div class="bg-slate-900 text-white p-4 -mx-[0.5in] -mb-[0.5in] mt-4">
+            <div class="flex justify-between items-center px-[0.5in]">
+                <div>
+                    <h4 class="font-bold text-blue-400 uppercase tracking-wide text-xs mb-0.5">Submission & Contact</h4>
+                    <p class="text-xs">Please email the signed form and your <strong class="text-white">high-resolution
+                            company logo</strong> to:</p>
+                    <p class="text-base font-bold mt-0.5">ksea.philly.chapter@gmail.com</p>
+                </div>
+                <div class="text-right text-xs text-slate-400">
+                    <p>Logo/Ad Deadline: <strong class="text-white">January 31, 2026</strong></p>
+                    <p>Website: <a href="https://philly.ksea.org"
+                            class="text-blue-400 hover:underline">philly.ksea.org</a></p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
