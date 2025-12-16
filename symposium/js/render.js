@@ -37,7 +37,7 @@ const SymposiumRenderer = {
         const html = speakers.map(speaker => {
             const imgHtml = speaker.isPlaceholder
                 ? `<div class="w-32 h-32 rounded-full bg-slate-100 flex items-center justify-center text-slate-400 flex-shrink-0 border-4 border-slate-50 shadow-sm"><i class="fas fa-user-tie text-4xl"></i></div>`
-                : `<img src="${SymposiumRenderer.getAssetPath(speaker.image)}" alt="${speaker.name}" class="w-32 h-32 rounded-full object-cover border-4 border-slate-50 flex-shrink-0 shadow-sm">`;
+                : `<img src="${SymposiumRenderer.getAssetPath(speaker.image)}" alt="${speaker.name}" class="w-32 h-32 rounded-full object-cover ${speaker.imagePosition || ''} border-4 border-slate-50 flex-shrink-0 shadow-sm">`;
 
             return `
             <div class="bg-white p-6 rounded-lg shadow-sm border border-slate-100 flex flex-col sm:flex-row gap-6 items-center sm:items-start text-center sm:text-left h-full min-h-[14rem]">
@@ -217,7 +217,7 @@ const SymposiumRenderer = {
 
             // Time formatting (strip PM if redundant? Keep as is)
             let time = item.time.split(" – ")[0]; // Just start time
-            if (item.type === "social") time = "5:00 PM - 9:00 PM"; // Special case
+            if (item.type === "social") time = "5:00 PM - <br>&nbsp;&nbsp;&nbsp;&nbsp;9:00 PM"; // Special case
 
             return `
                 <div class="${rowClass}">
@@ -474,6 +474,61 @@ const SymposiumRenderer = {
         container.innerHTML = html;
     },
 
+    renderFundraisingKeynotes: (containerId) => {
+        const container = document.getElementById(containerId);
+        if (!container) return;
+
+        const html = SYMPOSIUM_DATA.speakers.keynote.map((speaker, index) => {
+            const colorClass = index === 0 ? 'blue' : 'purple';
+            return `
+            <div class="bg-white p-5 rounded-2xl border border-${colorClass}-200 shadow-md flex flex-col gap-4 flex-1 justify-between h-full">
+                <div class="flex items-start gap-4">
+                    <img src="${SymposiumRenderer.getAssetPath(speaker.image)}"
+                        class="w-20 h-20 rounded-full object-cover object-top border-4 border-${colorClass}-100 flex-shrink-0 shadow-sm"
+                        alt="${speaker.name}">
+                    <div>
+                        <span class="text-[10px] font-bold text-white bg-${colorClass}-600 px-2 py-0.5 rounded-full uppercase mb-1 inline-block tracking-wide">Keynote Speaker</span>
+                        <h4 class="text-xl font-black text-slate-900 leading-tight mb-0.5">${speaker.name}</h4>
+                        <p class="text-xs text-slate-600 font-bold mb-0.5">${speaker.title}</p>
+                        <p class="text-[10px] text-slate-500 italic mb-1">${speaker.affiliation}</p>
+                    </div>
+                </div>
+                <p class="text-sm text-${colorClass}-800 font-bold border-t border-${colorClass}-50 pt-2">"${speaker.talkTitle}"</p>
+            </div>
+            `;
+        }).join('');
+
+        container.innerHTML = html;
+    },
+
+    renderFundraisingInvitedSpeakers: (containerId, speakers) => {
+        const container = document.getElementById(containerId);
+        if (!container) return;
+
+        const html = speakers.map(speaker => {
+            const imgHtml = speaker.isPlaceholder
+                ? `<div class="w-20 h-20 rounded-full bg-slate-100 flex items-center justify-center text-slate-400 text-3xl border-4 border-slate-200 flex-shrink-0"><i class="fas fa-user-tie"></i></div>`
+                : `<img src="${SymposiumRenderer.getAssetPath(speaker.image)}" class="w-20 h-20 rounded-full object-cover border-4 border-slate-100 flex-shrink-0" alt="${speaker.name}">`;
+
+            return `
+            <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm flex items-center gap-6">
+                ${imgHtml}
+                <div class="flex-grow">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h4 class="font-bold text-slate-900 text-lg">${speaker.name}</h4>
+                            <p class="text-xs text-slate-500 font-bold">${speaker.title}, ${speaker.affiliation}</p>
+                        </div>
+                    </div>
+                    <p class="text-xs text-blue-800 font-bold mt-1">"${speaker.talkTitle}"</p>
+                </div>
+            </div>
+            `;
+        }).join('');
+
+        container.innerHTML = html;
+    },
+
     init: () => {
         // Web
         SymposiumRenderer.renderKeynotes('keynote-speakers-container');
@@ -485,11 +540,16 @@ const SymposiumRenderer = {
         SymposiumRenderer.renderCommitteeMembers('committee-members-container');
 
         // Booklet Fundraising
-        SymposiumRenderer.renderBookletKeynotes('booklet-keynote-container');
+        SymposiumRenderer.renderFundraisingKeynotes('fundraising-keynote-container');
         SymposiumRenderer.renderBookletSchedule('booklet-schedule-container');
+        SymposiumRenderer.renderFundraisingInvitedSpeakers('fundraising-session1-container', SYMPOSIUM_DATA.speakers.session1);
+        SymposiumRenderer.renderFundraisingInvitedSpeakers('fundraising-session2-container', SYMPOSIUM_DATA.speakers.session2);
+        SymposiumRenderer.renderBookletCommittee('booklet-committee-container');
+
+        // Booklet Program (Bio Pages & Distinguished Speakers)
+        SymposiumRenderer.renderBookletKeynotes('booklet-keynote-container');
         SymposiumRenderer.renderBookletInvitedSpeakers('booklet-session1-container', SYMPOSIUM_DATA.speakers.session1);
         SymposiumRenderer.renderBookletInvitedSpeakers('booklet-session2-container', SYMPOSIUM_DATA.speakers.session2);
-        SymposiumRenderer.renderBookletCommittee('booklet-committee-container');
 
         // Booklet Program (Bio Pages)
         SymposiumRenderer.renderBookletSpeakerPages('booklet-bio-pages-start');

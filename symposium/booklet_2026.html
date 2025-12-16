@@ -46,95 +46,12 @@
             }
         }
 
-        .serif-font {
-            font-family: 'Merriweather', serif;
+        .page:last-child {
+            page-break-after: auto !important;
         }
 
-        .ambient-bg {
-            background:
-                radial-gradient(circle at 10% 10%, rgba(37, 99, 235, 0.15) 0%, transparent 40%),
-                radial-gradient(circle at 90% 90%, rgba(124, 58, 237, 0.15) 0%, transparent 40%),
-                radial-gradient(circle at 50% 50%, rgba(15, 23, 42, 1) 0%, transparent 100%);
-        }
-
-        /* Page Layout for Printing (816px x 1056px = 8.5in x 11in) */
-        /* Using explicit pixels to ensure even width for cleaner capturing */
-        .page {
-            width: 816px;
-            /* Explicit even pixel width */
-            height: 1056px;
-            position: relative;
-            overflow: hidden;
-            background-color: white;
-            color: #1e293b;
-            display: flex;
-            flex-direction: column;
-            border: 1px solid #94a3b8;
-            /* Visible gray solid line */
-            box-shadow: none !important;
-            /* Strictly no shadow */
-            margin: 0;
-            flex-shrink: 0;
-        }
-
-        .page.cover {
-            background-color: #0f172a;
-            color: #f8fafc;
-        }
-
-        .page-number {
-            position: absolute;
-            bottom: 1.5rem;
-            left: 0;
-            right: 0;
-            text-align: center;
-            font-size: 0.875rem;
-            color: #94a3b8;
-            font-family: 'Merriweather', serif;
-            font-style: italic;
-        }
-
-        /* Abstract/Bio Styling */
-        .speaker-content p {
-            margin-bottom: 1rem;
-            line-height: 1.6;
-        }
-
-        @media print {
-            @page {
-                size: 8.5in 11in;
-                margin: 0;
-            }
-
-            html,
-            body {
-                height: 100%;
-                margin: 0 !important;
-                padding: 0 !important;
-                background: white;
-            }
-
-            body {
-                display: block;
-            }
-
-            .page {
-                width: 100% !important;
-                height: 100% !important;
-                border: none !important;
-                box-shadow: none !important;
-                margin: 0 !important;
-                page-break-after: always;
-                page-break-inside: avoid;
-            }
-
-            .page:last-child {
-                page-break-after: auto !important;
-            }
-
-            .no-print {
-                display: none;
-            }
+        .no-print {
+            display: none;
         }
 
         .no-print {

@@ -78,6 +78,7 @@ const SYMPOSIUM_DATA = {
                 affiliation: "Rutgers University",
                 talkTitle: "Quantum and Emerging Non-traditional Computing for NextG Wireless Networks",
                 image: "assets/minsung-kim.png",
+                imagePosition: "object-top",
                 abstract: "Abstract to be updated.",
                 bio: "Biography to be updated."
             },
