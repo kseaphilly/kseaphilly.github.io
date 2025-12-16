@@ -114,7 +114,7 @@ const SymposiumRenderer = {
 
         container.innerHTML = SYMPOSIUM_DATA.committee.chairs.map(chair => `
             <div class="flex items-center space-x-4">
-                <img class="w-20 h-20 rounded-full border-2 border-slate-100 shadow-sm object-cover object-top"
+                <img class="w-28 h-28 rounded-full border-2 border-slate-100 shadow-sm object-cover object-top"
                     src="${SymposiumRenderer.getAssetPath(chair.image)}" alt="${chair.name}">
                 <div>
                     <h3 class="text-lg font-bold text-slate-800 serif-font">${chair.name}</h3>
@@ -132,7 +132,7 @@ const SymposiumRenderer = {
         container.innerHTML = SYMPOSIUM_DATA.committee.chairs.map(chair => `
             <div class="bg-white p-6 rounded-lg shadow-sm border-l-4 border-blue-600 flex items-center gap-4">
                 <img src="${SymposiumRenderer.getAssetPath(chair.image)}" alt="${chair.name}"
-                    class="w-20 h-20 rounded-full object-cover border-2 border-slate-100 shadow-sm object-top">
+                    class="w-28 h-28 rounded-full object-cover border-2 border-slate-100 shadow-sm object-top">
                 <div>
                     <div class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-1">${chair.role}</div>
                     <div class="font-bold text-lg text-slate-800">${chair.name}</div>
