@@ -53,7 +53,7 @@ const SYMPOSIUM_DATA = {
                 bio: "Jina graduated from Rice University with a B.S. in Bioengineering and a B.A. in French Studies in 2013 and she earned her Ph.D. in Bioengineering at the University of Pennsylvania in 2018. For her postdoctoral training, she worked at Massachusetts General Hospital and the Wyss Institute at Harvard University as a Schmidt Science Fellow and a NIH K99/R00 award recipient. In 2022, Jina started her lab at the University of Pennsylvania and won the NIH New Innovator Award (DP2) and NSF CAREER award."
             },
             {
-                name: "Dae-Myung Yang, PhD",
+                name: "Dae-Myoung Yang, PhD",
                 title: "Assistant Professor, Radiation Oncology",
                 affiliation: "Fox Chase Cancer Center",
                 talkTitle: "Radiodynamic Therapy: Advancing Cancer Treatment",
@@ -97,7 +97,7 @@ const SYMPOSIUM_DATA = {
     schedule: [
         { time: "12:20 – 12:30 PM", event: "Welcome Remarks & Housekeeping", type: "general" },
         { time: "12:30 – 1:30 PM", event: "KEYNOTE SESSION", type: "keynote", details: ["Junhyong Kim, PhD (UPenn)", "Deok-Ho Kim, PhD (JHU)"] },
-        { time: "1:30 – 2:30 PM", event: "SESSION #1: Precision Medicine & Bio-Innovation", type: "session", details: ["Dokyoon Kim, PhD", "Jina Ko, PhD", "Dae-Myung Yang, PhD"] },
+        { time: "1:30 – 2:30 PM", event: "SESSION #1: Precision Medicine & Bio-Innovation", type: "session", details: ["Dokyoon Kim, PhD", "Jina Ko, PhD", "Dae-Myoung Yang, PhD"] },
         { time: "2:30 – 3:30 PM", event: "BREAK & POSTER SESSION", type: "break", details: ["Coffee, refreshments, and networking"] },
         { time: "3:30 – 4:30 PM", event: "SESSION #2: Future Science & Next-Gen Tech", type: "session", details: ["Hayoung Bong, PhD", "Minsung Kim, PhD", "Industry Talk"] },
         { time: "4:30 – 4:40 PM", event: "Closing Remarks & Poster Awards", type: "general", details: ["Group Photo"] },
