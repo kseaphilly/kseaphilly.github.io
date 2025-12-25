@@ -57,7 +57,7 @@ const SYMPOSIUM_DATA = {
                 title: "Assistant Professor, Radiation Oncology",
                 affiliation: "Fox Chase Cancer Center",
                 talkTitle: "Radiodynamic Therapy: Advancing Cancer Treatment",
-                image: "assets/dae-myung-yang.jpg",
+                image: "assets/dae-myoung-yang.jpg",
                 abstract: "Abstract to be updated.",
                 bio: "Biography to be updated."
             }
