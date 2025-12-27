@@ -464,27 +464,29 @@ footer {
 }
 
 /* Membership List Styling */
-.activities-list,
-.benefits-list {
-    list-style: none;
-    padding-left: 0;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 15px;
-    margin-top: 20px;
+.membership-page .activities-list,
+.membership-page .benefits-list {
+    list-style: none !important;
+    padding-left: 0 !important;
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)) !important;
+    gap: 15px !important;
+    margin-top: 20px !important;
 }
 
-.activities-list li,
-.benefits-list li {
-    background: #f8f9fa;
-    padding: 15px 20px;
-    border-radius: 8px;
-    border-left: 4px solid #004a99;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
-    font-size: 15px;
-    color: #444;
+.membership-page .activities-list li,
+.membership-page .benefits-list li {
+    background: #f8f9fa !important;
+    padding: 15px 20px !important;
+    border-radius: 8px !important;
+    border-left: 4px solid #004a99 !important;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02) !important;
+    font-size: 15px !important;
+    color: #444 !important;
+    margin-bottom: 0 !important;
+    display: block !important;
 }
 
-.benefits-list li {
-    border-left-color: #f0ad4e;
+.membership-page .benefits-list li {
+    border-left-color: #f0ad4e !important;
 }
