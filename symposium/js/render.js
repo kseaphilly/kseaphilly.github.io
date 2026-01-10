@@ -397,7 +397,7 @@ const SymposiumRenderer = {
             const bio = speaker.bio || "Biography to be updated.";
 
             return `
-            <div class="page bg-white speaker-bio-page">
+            <div class="page bg-white speaker-bio-page p-12">
                 <div class="page-content bg-white flex flex-col h-full">
                     <div class="flex items-end gap-6 border-b-2 border-slate-100 pb-4 mb-4 speaker-header">
                         <img src="${SymposiumRenderer.getAssetPath(speaker.image)}"
@@ -405,7 +405,7 @@ const SymposiumRenderer = {
                         <div>
                             <span class="${badgeColor} ${badgeClass} text-[10px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wider mb-1 inline-block">${badgeText}</span>
                             <h2 class="text-xl font-black text-slate-900 leading-tight mb-0.5">${speaker.name}</h2>
-                            <p class="${nameColor} font-bold text-xm uppercase mb-0.5">${speaker.affiliation}</p>
+                            <p class="${nameColor} font-bold text-sm uppercase mb-0.5">${speaker.affiliation}</p>
                             <p class="text-slate-500 text-[12px] italic">${speaker.title}</p>
                         </div>
                     </div>
