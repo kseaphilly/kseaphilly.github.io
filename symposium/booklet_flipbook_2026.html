@@ -130,20 +130,54 @@
         /* Specific Adjustments */
         .page-number {
             bottom: 0.5rem !important;
-            right: 1.5rem !important;
-            /* Update position for smaller padding */
+            left: 1.5rem !important;
+            /* Left aligned for Odd/Left pages */
+            right: auto !important;
             font-size: 0.7rem !important;
         }
 
         .page:nth-child(even) .page-number {
-            left: 1.5rem !important;
-            right: auto !important;
+            right: 1.5rem !important;
+            /* Right aligned for Even/Right pages */
+            left: auto !important;
         }
 
-        /* Ensure images scale */
+        /* Ensure images scale but respect fixed dimensions for avatars */
         .page-content img {
             max-width: 100%;
+            /* height: auto; <--- Removed global forced auto to allow fixed heights */
+        }
+
+        /* Restore responsive behavior only for images without fixed height */
+        .page-content img:not([class*="h-"]) {
             height: auto;
+        }
+
+        /* Force fixed heights for avatars to ensure square aspect ratio */
+        .page-content img.h-16 {
+            height: 4rem !important;
+        }
+
+        .page-content img.h-20 {
+            height: 5rem !important;
+        }
+
+        .page-content img.h-24 {
+            height: 6rem !important;
+        }
+
+        .page-content img.h-28 {
+            height: 7rem !important;
+        }
+
+        .page-content img.h-32 {
+            height: 8rem !important;
+        }
+
+        /* Ensure top-cropping for portraits */
+        .page-content img.object-cover {
+            object-fit: cover !important;
+            object-position: top !important;
         }
 
         /* --- Aggressive Scaling for Rendering Functions --- */
@@ -172,20 +206,25 @@
         .page-content .text-xl,
         .page-content .text-2xl,
         .page-content .text-3xl {
-            font-size: 0.9rem !important;
-            line-height: 1.1 !important;
+            font-size: 0.7rem !important;
+            line-height: 1.0 !important;
             margin-bottom: 0.1rem !important;
         }
 
         .page-content .text-lg {
-            font-size: 0.8rem !important;
-            line-height: 1.1 !important;
+            font-size: 0.65rem !important;
+            line-height: 1.0 !important;
+        }
+
+        .page-content .text-base {
+            font-size: 0.6rem !important;
+            line-height: 1.0 !important;
         }
 
         .page-content .text-xs,
         .page-content .text-\[10px\],
         .page-content .text-sm {
-            font-size: 0.6rem !important;
+            font-size: 0.55rem !important;
             line-height: 1.2 !important;
         }
 
@@ -212,6 +251,16 @@
         #booklet-committee-container .h-16 {
             width: 2rem !important;
             height: 2rem !important;
+        }
+
+        /* targeted overrides for Page 4 Speaker Names */
+        #booklet-keynote-container h4 {
+            font-size: 0.6rem !important;
+        }
+
+        #booklet-session1-container h4,
+        #booklet-session2-container h4 {
+            font-size: 0.5rem !important;
         }
 
         /* Controls */
@@ -358,292 +407,355 @@
     <div id="book-container">
         <!-- The pages will be rendered here -->
         <div id="flipbook" class="flip-book">
-            <!-- Front Cover -->
-            <div class="page" data-density="hard">
-                <div class="page-content" id="p1-content"></div>
-            </div>
-
-            <!-- Page 2: Contents & Welcome -->
-            <div class="page">
-                <div class="page-content bg-white text-slate-800 p-12 relative overflow-hidden">
-                    <div class="relative z-10 h-full flex flex-col pb-8">
-                        <div class="mb-8 border-b-2 border-slate-100 pb-6">
-                            <h2 class="text-3xl font-black text-slate-900 mb-8 border-b-4 border-blue-600 inline-block">
-                                Contents</h2>
-                            <ul class="grid grid-cols-1 gap-y-2 text-sm">
-                                <li class="flex justify-between items-center border-b border-slate-50 py-1"><span
-                                        class="font-bold text-slate-600">Welcoming Remarks</span><span
-                                        class="text-slate-400 font-serif italic">02</span></li>
-                                <li class="flex justify-between items-center border-b border-slate-50 py-1"><span
-                                        class="font-bold text-slate-600">Program Schedule</span><span
-                                        class="text-slate-400 font-serif italic">03</span></li>
-                                <li class="flex justify-between items-center border-b border-slate-50 py-1"><span
-                                        class="font-bold text-slate-600">Distinguished Speakers</span><span
-                                        class="text-slate-400 font-serif italic">04</span></li>
-                                <li class="flex justify-between items-center border-b border-slate-50 py-1"><span
-                                        class="font-bold text-slate-600">Abstracts & Bios</span><span
-                                        class="text-slate-400 font-serif italic">05-11</span></li>
-                                <li class="flex justify-between items-center border-b border-slate-50 py-1"><span
-                                        class="font-bold text-slate-600">Poster Session & Awards</span><span
-                                        class="text-slate-400 font-serif italic">12</span></li>
-                                <li class="flex justify-between items-center border-b border-slate-50 py-1"><span
-                                        class="font-bold text-slate-600">Sponsor Advertisement</span><span
-                                        class="text-slate-400 font-serif italic">13</span></li>
-                                <li class="flex justify-between items-center border-b border-slate-50 py-1"><span
-                                        class="font-bold text-slate-600">Organizing Committee</span><span
-                                        class="text-slate-400 font-serif italic">Back Cover</span></li>
-                            </ul>
-                        </div>
-                        <div class="flex-grow flex flex-col">
-                            <h2
-                                class="text-3xl font-black text-slate-900 border-b-4 border-blue-600 inline-block mb-8 self-start">
-                                Welcoming Remarks</h2>
-                            <div
-                                class="prose prose-slate text-sm leading-relaxed text-justify text-slate-600 space-y-4">
-                                <p class="mt-0">Dear Esteemed Guests, Colleagues, and KSEA Members,</p>
-                                <p>It is our great honor to welcome you to the <strong class="text-blue-700">2026
-                                        US-Korea Northeastern Symposium on AI, Biomedical Science, &
-                                        Engineering</strong>, hosted by the KSEA Philadelphia Chapter.</p>
-                                <p>This symposium brings together the brightest minds in our region to discuss the
-                                    convergence of artificial intelligence, biomedical sciences, and engineering. We aim
-                                    to provide a vital platform for exchanging ideas, presenting cutting-edge research,
-                                    and forging new collaborations that will shape the future of science and technology.
-                                </p>
-                                <p>We extend our deepest gratitude to KSEA and KUSCO for their generous support, and to
-                                    all our sponsors, speakers, and participants who make this event possible.</p>
-                            </div>
-                            <div class="mt-8 flex justify-center gap-4 text-[0.6rem]">
-                                <div
-                                    class="flex items-center gap-2 bg-slate-50 p-2 rounded-xl border border-slate-100 min-w-[180px]">
-                                    <img src="assets/su-chin-heo.jpg"
-                                        class="w-12 h-12 rounded-full object-cover border-2 border-white shadow-md object-top">
-                                    <div>
-                                        <p class="font-bold text-slate-800 text-xs">Su Chin Heo, PhD</p>
-                                        <p class="text-[0.6rem] text-blue-600 uppercase font-bold mb-0.5">Symposium
-                                            Chair</p>
-                                        <p class="text-[0.5rem] text-slate-500 leading-tight">University of Pennsylvania
-                                        </p>
-                                    </div>
-                                </div>
-                                <div
-                                    class="flex items-center gap-2 bg-slate-50 p-2 rounded-xl border border-slate-100 min-w-[180px]">
-                                    <img src="assets/wookjin-choi.jpg"
-                                        class="w-12 h-12 rounded-full object-cover border-2 border-white shadow-md">
-                                    <div>
-                                        <p class="font-bold text-slate-800 text-xs">Wookjin Choi, PhD</p>
-                                        <p class="text-[0.6rem] text-blue-600 uppercase font-bold mb-0.5">Co-Chair</p>
-                                        <p class="text-[0.5rem] text-slate-500 leading-tight">Thomas Jefferson
-                                            University</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <span class="page-number">2</span>
+            <!-- PAGE 1: FRONT COVER -->
+            <div class="page cover ambient-bg">
+                <!-- 1. Full Vertical Background Image (V6 - Visually Extended & Lowered) -->
+                <div class="absolute inset-0 bg-gradient-to-b from-[#020617] via-[#0f172a] to-slate-900 z-0"></div>
+                <div class="absolute inset-0 bg-[url('assets/symposium_poster_final_v6_tall.png')] bg-no-repeat z-0"
+                    style="background-size: 100% auto; background-position: center calc(100% + 4rem); -webkit-mask-image: linear-gradient(to bottom, transparent 0%, transparent 10%, black 40%, black 100%); mask-image: linear-gradient(to bottom, transparent 0%, transparent 10%, black 40%, black 100%);">
                 </div>
-            </div>
 
-            <!-- Page 3: Program Schedule (Static from booklet_2026.html) -->
-            <div class="page">
-                <div class="page-content bg-white text-slate-800 p-12 relative overflow-hidden">
-                    <div class="relative z-10 h-full flex flex-col">
-                        <h2
-                            class="text-3xl font-black text-slate-900 mb-8 border-b-4 border-blue-600 inline-block self-start">
-                            Program Schedule</h2>
-                        <div class="flex-grow space-y-2">
-                            <div class="flex border-l-4 border-slate-200 pl-4 py-1 hover:bg-slate-50 transition">
-                                <div class="w-16 font-bold text-blue-600 text-xs">12:20 PM</div>
-                                <div>
-                                    <h4 class="font-bold text-slate-800 text-xs">Welcome Remarks</h4>
-                                </div>
-                            </div>
-                            <div class="flex border-l-4 border-blue-500 pl-4 py-2 bg-blue-50/50 rounded-r-lg">
-                                <div class="w-16 font-bold text-blue-600 text-xs">12:30 PM</div>
-                                <div>
-                                    <h4 class="font-bold text-slate-800 text-xs">KEYNOTE SESSION</h4>
-                                    <ul class="text-[0.6rem] text-slate-600 mt-1 space-y-0.5">
-                                        <li><span class="font-bold text-slate-700">Junhyong Kim, PhD</span> (UPenn)</li>
-                                        <li><span class="font-bold text-slate-700">Deok-Ho Kim, PhD</span> (JHU)</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="flex border-l-4 border-purple-400 pl-4 py-2">
-                                <div class="w-16 font-bold text-blue-600 text-xs">1:30 PM</div>
-                                <div>
-                                    <h4 class="font-bold text-slate-800 text-xs">SESSION #1: Precision Med</h4>
-                                    <ul class="text-[0.6rem] text-slate-600 mt-1 space-y-0.5">
-                                        <li>D. Kim, PhD • J. Ko, PhD • D. Yang, PhD</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="flex border-l-4 border-orange-400 pl-4 py-1 bg-orange-50/50 rounded-r-lg">
-                                <div class="w-16 font-bold text-orange-600 text-xs">2:30 PM</div>
-                                <div>
-                                    <h4 class="font-bold text-slate-800 text-xs">BREAK & POSTER SESSION</h4>
-                                </div>
-                            </div>
-                            <div class="flex border-l-4 border-teal-400 pl-4 py-2">
-                                <div class="w-16 font-bold text-blue-600 text-xs">3:30 PM</div>
-                                <div>
-                                    <h4 class="font-bold text-slate-800 text-xs">SESSION #2: Future Science</h4>
-                                    <ul class="text-[0.6rem] text-slate-600 mt-1 space-y-0.5">
-                                        <li>H. Bong, PhD • M. Kim, PhD • Industry</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="flex border-l-4 border-slate-200 pl-4 py-1 hover:bg-slate-50 transition">
-                                <div class="w-16 font-bold text-blue-600 text-xs">4:30 PM</div>
-                                <div>
-                                    <h4 class="font-bold text-slate-800 text-xs">Closing & Awards</h4>
-                                </div>
-                            </div>
-                            <div class="flex border-l-4 border-slate-800 pl-4 py-2 bg-slate-100 rounded-r-lg mt-1">
-                                <div class="w-16 font-bold text-slate-800 text-xs">5:00 PM</div>
-                                <div>
-                                    <h4 class="font-bold text-slate-800 text-xs">NETWORKING DINNER</h4>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <span class="page-number">3</span>
-                </div>
-            </div>
-
-            <!-- Page 4: Distinguished Speakers -->
-            <div class="page">
-                <div class="page-content p-12 bg-white">
-                    <div class="flex flex-col h-full">
-                        <h2
-                            class="text-3xl font-black text-slate-900 border-b-4 border-blue-600 inline-block mb-12 self-start">
-                            Distinguished Speakers</h2>
-                        <div class="flex-grow flex flex-col gap-8">
-                            <div>
-                                <h3
-                                    class="text-blue-800 font-bold uppercase tracking-widest text-xs mb-4 flex items-center gap-2">
-                                    <span class="w-6 h-1 bg-blue-600 rounded-full"></span> Keynote Session
-                                </h3>
-                                <div id="booklet-keynote-container" class="grid grid-cols-1 gap-4"></div>
-                            </div>
-                            <div class="grid grid-cols-2 gap-6">
-                                <div>
-                                    <h3
-                                        class="text-slate-800 font-bold uppercase tracking-widest text-[10px] mb-3 flex items-center gap-2">
-                                        <span class="w-3 h-1 bg-slate-300 rounded-full"></span> Session #1
-                                    </h3>
-                                    <div id="booklet-session1-container" class="grid grid-cols-1 gap-3"></div>
-                                </div>
-                                <div>
-                                    <h3
-                                        class="text-slate-800 font-bold uppercase tracking-widest text-[10px] mb-3 flex items-center gap-2">
-                                        <span class="w-3 h-1 bg-slate-300 rounded-full"></span> Session #2
-                                    </h3>
-                                    <div id="booklet-session2-container" class="grid grid-cols-1 gap-3"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <span class="page-number">4</span>
-                </div>
-            </div>
-
-            <!-- Bio Pages Placeholder -->
-            <div id="booklet-speaker-pages-container" style="display: none;"></div>
-
-            <!-- Page 12: Poster Session & Awards (Replaces Registration/Sponsorship) -->
-            <div class="page">
-                <div class="page-content p-12 bg-white flex flex-col h-full">
-                    <div class="flex-grow flex flex-col">
-                        <div class="flex items-center justify-between mb-8 border-b-4 border-slate-200 pb-4">
-                            <h2
-                                class="text-3xl font-black text-slate-900 border-b-4 border-blue-600 inline-block -mb-5">
-                                Poster Session</h2>
-                        </div>
-
-                        <div class="flex flex-col">
-                            <p class="text-slate-600 mb-8 text-sm leading-relaxed">
-                                A networking break with light refreshments featuring latest findings from students and
-                                researchers. <br>
-                                <span class="text-blue-600 font-bold">Research Competition (Max 30):</span> Previous
-                                work
-                                accepted | 1 poster/presenter
-                            </p>
-
-                            <div class="grid grid-cols-1 gap-8">
-                                <!-- Awards -->
-                                <div
-                                    class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm flex flex-col justify-between">
-                                    <h4
-                                        class="font-bold text-blue-600 uppercase text-xs tracking-wider mb-4 border-b border-slate-100 pb-2">
-                                        Awards</h4>
-                                    <div class="space-y-3">
-                                        <div
-                                            class="flex justify-between items-center bg-yellow-50 p-3 rounded border border-yellow-100">
-                                            <span class="font-bold text-yellow-700 text-sm flex items-center"><i
-                                                    class="fas fa-trophy mr-2 text-yellow-500"></i>Gold</span>
-                                            <span class="font-bold text-slate-800">TBD</span>
-                                        </div>
-                                        <div
-                                            class="flex justify-between items-center bg-slate-50 p-3 rounded border border-slate-100">
-                                            <span class="font-bold text-slate-600 text-sm flex items-center"><i
-                                                    class="fas fa-trophy mr-2 text-slate-400"></i>Silver</span>
-                                            <span class="font-bold text-slate-800">TBD</span>
-                                        </div>
-                                        <div
-                                            class="flex justify-between items-center bg-orange-50 p-3 rounded border border-orange-100">
-                                            <span class="font-bold text-orange-700 text-sm flex items-center"><i
-                                                    class="fas fa-trophy mr-2 text-orange-400"></i>Bronze</span>
-                                            <span class="font-bold text-slate-800">TBD</span>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Key Dates -->
-                                <div class="bg-blue-50 p-6 rounded-xl border border-blue-100 shadow-sm">
-                                    <h4 class="font-bold text-blue-800 mb-2 uppercase text-xs">Timeline</h4>
-                                    <ul class="space-y-2 text-sm">
-                                        <li class="flex justify-between"><span>Abstract Submission:</span> <strong>Feb
-                                                15, 2026</strong></li>
-                                        <li class="flex justify-between"><span>Acceptance Notice:</span> <strong>Feb 20,
-                                                2026</strong></li>
-                                        <li class="flex justify-between"><span>Symposium:</span> <strong>Feb 27,
-                                                2026</strong></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <p class="text-[10px] text-slate-500 mt-6 italic text-center">
-                                * Presentation slots are prioritized for KSEA Philadelphia Chapter student/postdoc
-                                members.
-                            </p>
-                        </div>
-                    </div>
-                    <span class="page-number">12</span>
-                </div>
-            </div>
-
-            <!-- Page 13: KUSCO Ad -->
-            <div class="page">
-                <div class="page-content w-full h-full relative p-0 overflow-hidden">
-                    <img src="assets/kusco_full_page_ad.jpg" class="w-full h-full object-cover">
-                    <span class="page-number text-white drop-shadow-md z-10"
-                        style="text-shadow: 0 2px 4px rgba(0,0,0,0.8);">13</span>
-                </div>
-            </div>
-
-            <!-- Final Page: Committee -->
-            <div class="page" data-density="hard" id="booklet-committee-page">
+                <!-- 2. Subtle Line Drawing Overlay -->
                 <div
-                    class="page-content bg-slate-900 text-white p-12 flex flex-col items-center justify-center text-center">
-                    <h2
-                        class="text-xl font-bold uppercase tracking-widest mb-10 border-b border-slate-700 pb-4 inline-block">
-                        Organizing Committee</h2>
-                    <div id="booklet-committee-container" class="grid grid-cols-2 gap-8 text-left text-[10px]"></div>
-                    <div class="mt-12 pt-8 border-t border-slate-700 w-full">
-                        <img src="../assets/ksea-logo-horizontal.png" class="h-8 mx-auto mb-4 grayscale brightness-200">
-                        <p class="text-slate-500 text-[10px]">© 2026 KSEA Philadelphia Chapter</p>
+                    class="absolute inset-0 bg-[url('../assets/symposium_poster_background.png')] bg-cover bg-top bg-no-repeat opacity-30 z-0 mix-blend-screen">
+                </div>
+
+                <!-- 3. Text Readability Gradient Overlay -->
+                <div class="absolute inset-0 bg-gradient-to-b from-slate-900/40 via-transparent to-black/80 z-0"></div>
+                <div
+                    class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-blue-600 via-purple-600 to-blue-600 z-20">
+                </div>
+                <div class="relative z-10 flex flex-col items-center justify-between h-full p-10 text-center">
+                    <div class="flex-grow flex flex-col justify-center items-center">
+                        <!-- KSEA Logo Section -->
+                        <div class="flex justify-center items-center gap-4 mb-4">
+                            <img src="../assets/ksea-logo-seal.png" alt="KSEA Seal" class="h-16 w-16"
+                                style="filter: drop-shadow(0 0 15px rgba(59, 130, 246, 0.4));">
+                            <div class="text-left flex flex-col justify-center">
+                                <h2 class="text-3xl font-black text-white tracking-widest leading-none mb-1 font-sans"
+                                    style="text-shadow: 0 0 30px rgba(255, 255, 255, 0.3);">KSEA</h2>
+                                <p class="text-xs font-bold text-blue-300 uppercase tracking-[0.4em] leading-none ml-1">
+                                    Philadelphia</p>
+                            </div>
+                        </div>
+
+                        <!-- Symposium Title Group -->
+                        <h3 class="text-blue-400 tracking-[0.25em] text-sm font-bold uppercase mb-3"
+                            style="text-shadow: 0 2px 4px rgba(0,0,0,0.8);">
+                            2026 US-Korea Northeastern Symposium
+                        </h3>
+
+                        <h1
+                            class="text-3xl font-black text-white leading-[0.9] tracking-tight mb-6 drop-shadow-[0_4px_10px_rgba(0,0,0,0.8)] max-w-4xl mx-auto">
+                            AI, BIOMEDICAL SCIENCE <br>& <span
+                                class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400 filter drop-shadow-sm">ENGINEERING</span>
+                        </h1>
+
+                        <!-- Program Booklet Title (Smaller) -->
+                        <div class="w-20 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto mb-4 rounded-full">
+                        </div>
+
+                        <h2
+                            class="text-2xl font-bold text-blue-200 tracking-[0.2em] uppercase mb-4 drop-shadow-md border-2 border-blue-500/30 px-6 py-2 rounded-lg bg-blue-900/30 backdrop-blur-sm inline-block">
+                            Program Booklet
+                        </h2>
+
+                        <p
+                            class="text-slate-300 text-sm font-medium italic serif-font tracking-wide drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] mt-2">
+                            "Pioneering the Future: The Convergence of AI, Bio-Science, & Engineering"
+                        </p>
                     </div>
+                    <div class="w-full">
+                        <div class="grid grid-cols-2 gap-6 max-w-3xl mx-auto">
+                            <div class="bg-white/5 border border-white/10 p-4 rounded-xl backdrop-blur-md">
+                                <i class="fas fa-calendar-alt text-2xl text-blue-400 mb-1"></i>
+                                <p class="text-lg font-bold text-white">FEB 27, 2026</p>
+                                <p class="text-xs text-blue-200 uppercase tracking-widest font-semibold">Friday, 12:20
+                                    PM - 9:00 PM</p>
+                            </div>
+                            <div class="bg-white/5 border border-white/10 p-4 rounded-xl backdrop-blur-md">
+                                <i class="fas fa-map-marker-alt text-2xl text-purple-400 mb-1"></i>
+                                <p class="text-sm font-bold text-white leading-tight">UPenn Smilow Center</p>
+                                <p class="text-[10px] text-purple-200 uppercase tracking-widest font-semibold">
+                                    Philadelphia,
+                                    PA</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- PAGE 2: CONTENTS & WELCOME -->
+            <div class="page bg-white text-slate-800 p-8 relative overflow-hidden">
+                <div class="relative z-10 h-full flex flex-col pb-6">
+                    <div class="mb-6 border-b-2 border-slate-100 pb-4">
+                        <h2 class="text-2xl font-black text-slate-900 mb-6 border-b-4 border-blue-600 inline-block">
+                            Contents
+                        </h2>
+                        <ul class="grid grid-cols-1 gap-y-0.5 text-xs">
+                            <li class="flex justify-between items-center border-b border-slate-50 py-0.5"><span
+                                    class="font-bold text-slate-600">Welcoming Remarks</span><span
+                                    class="text-slate-400 font-serif italic">02</span></li>
+                            <li class="flex justify-between items-center border-b border-slate-50 py-0.5"><span
+                                    class="font-bold text-slate-600">Program Schedule</span><span
+                                    class="text-slate-400 font-serif italic">03</span></li>
+                            <li class="flex justify-between items-center border-b border-slate-50 py-0.5"><span
+                                    class="font-bold text-slate-600">Distinguished Speakers</span><span
+                                    class="text-slate-400 font-serif italic">04</span></li>
+                            <li class="flex justify-between items-center border-b border-slate-50 py-0.5"><span
+                                    class="font-bold text-slate-600">Abstracts & Bios</span><span
+                                    class="text-slate-400 font-serif italic">05-11</span></li>
+                            <li class="flex justify-between items-center border-b border-slate-50 py-0.5"><span
+                                    class="font-bold text-slate-600">Sponsorship Opportunities</span><span
+                                    class="text-slate-400 font-serif italic">12</span></li>
+                            <li class="flex justify-between items-center border-b border-slate-50 py-0.5"><span
+                                    class="font-bold text-slate-600">Registration & Posters</span><span
+                                    class="text-slate-400 font-serif italic">13</span></li>
+                            <li class="flex justify-between items-center border-b border-slate-50 py-0.5"><span
+                                    class="font-bold text-slate-600">Sponsor Advertisement</span><span
+                                    class="text-slate-400 font-serif italic">14</span></li>
+                            <li class="flex justify-between items-center border-b border-slate-50 py-0.5"><span
+                                    class="font-bold text-slate-600">Organizing Committee</span><span
+                                    class="text-slate-400 font-serif italic">Back Cover</span></li>
+                        </ul>
+                    </div>
+
+                    <div class="flex-grow flex flex-col">
+                        <h2
+                            class="text-2xl font-black text-slate-900 border-b-4 border-blue-600 inline-block mb-6 self-start">
+                            Welcoming Remarks</h2>
+                        <div class="prose prose-slate text-xs leading-relaxed text-justify text-slate-600 space-y-3">
+                            <p class="mt-0">Dear Esteemed Guests, Colleagues, and KSEA Members,</p>
+                            <p>It is our great honor to welcome you to the <strong class="text-blue-700">2026 US-Korea
+                                    Northeastern Symposium on AI, Biomedical Science, & Engineering</strong>, hosted by
+                                the KSEA
+                                Philadelphia Chapter.</p>
+                            <p>This symposium brings together the brightest minds in our region to discuss the
+                                convergence of
+                                artificial intelligence, biomedical sciences, and engineering. We aim to provide a vital
+                                platform for exchanging ideas, presenting cutting-edge research, and forging new
+                                collaborations
+                                that will shape the future of science and technology.</p>
+                            <p>We extend our deepest gratitude to KSEA and KUSCO for their generous support, and to all
+                                our
+                                sponsors, speakers, and participants who make this event possible. We hope today sparks
+                                new
+                                ideas and lasting partnerships.</p>
+                            <p>Sincerely,</p>
+                        </div>
+
+                        <div class="mt-6 flex justify-center gap-10">
+                            <div
+                                class="flex items-center gap-3 bg-slate-50 p-3 rounded-xl border border-slate-100 min-w-[200px]">
+                                <img src="assets/su-chin-heo.jpg"
+                                    class="w-20 h-20 rounded-full object-cover border-2 border-white shadow-md object-top">
+                                <div>
+                                    <p class="font-bold text-slate-800 text-sm">Su Chin Heo, PhD</p>
+                                    <p class="text-[10px] text-blue-600 uppercase font-bold mb-0.5">Symposium Chair</p>
+                                    <p class="text-[10px] text-slate-500 leading-tight">University of Pennsylvania</p>
+                                </div>
+                            </div>
+                            <div
+                                class="flex items-center gap-3 bg-slate-50 p-3 rounded-xl border border-slate-100 min-w-[200px]">
+                                <img src="assets/wookjin-choi.jpg"
+                                    class="w-20 h-20 rounded-full object-cover border-2 border-white shadow-md">
+                                <div>
+                                    <p class="font-bold text-slate-800 text-sm">Wookjin Choi, PhD</p>
+                                    <p class="text-[10px] text-blue-600 uppercase font-bold mb-0.5">Co-Chair</p>
+                                    <p class="text-[10px] text-slate-500 leading-tight">Thomas Jefferson University</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <span class="page-number z-50">2</span>
+            </div>
+
+
+            <!-- PAGE 3: PROGRAM SCHEDULE -->
+            <div class="page bg-white text-slate-800 p-8 relative overflow-hidden">
+                <div class="relative z-10 h-full flex flex-col">
+                    <h2
+                        class="text-2xl font-black text-slate-900 mb-8 border-b-4 border-blue-600 inline-block self-start">
+                        Program Schedule</h2>
+                    <div class="flex-grow space-y-3">
+                        <div class="flex border-l-4 border-slate-200 pl-4 py-2 hover:bg-slate-50 transition">
+                            <div class="w-28 font-bold text-blue-600 text-xs">12:20 PM</div>
+                            <div>
+                                <h4 class="font-bold text-slate-800 text-xs">Welcome Remarks & Housekeeping</h4>
+                            </div>
+                        </div>
+                        <div class="flex border-l-4 border-blue-500 pl-4 py-2 bg-blue-50/50 rounded-r-lg">
+                            <div class="w-28 font-bold text-blue-600 text-xs">12:30 PM</div>
+                            <div>
+                                <h4 class="font-bold text-slate-800 text-xs">KEYNOTE SESSION</h4>
+                                <ul class="text-[10px] text-slate-600 mt-1 space-y-0.5">
+                                    <li><span class="font-bold text-slate-700">Junhyong Kim, PhD</span> (University of
+                                        Pennsylvania)</li>
+                                    <li><span class="font-bold text-slate-700">Deok-Ho Kim, PhD</span> (Johns Hopkins
+                                        University)</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="flex border-l-4 border-purple-400 pl-4 py-2">
+                            <div class="w-28 font-bold text-blue-600 text-xs">1:30 PM</div>
+                            <div>
+                                <h4 class="font-bold text-slate-800 text-xs">SESSION #1: Precision Medicine &
+                                    Bio-Innovation
+                                </h4>
+                                <ul class="text-[10px] text-slate-600 mt-1 space-y-0.5">
+                                    <li>Dokyoon Kim, PhD</li>
+                                    <li>Jina Ko, PhD</li>
+                                    <li>Dae-Myoung Yang, PhD</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="flex border-l-4 border-orange-400 pl-4 py-2 bg-orange-50/50 rounded-r-lg">
+                            <div class="w-28 font-bold text-orange-600 text-xs">2:30 PM</div>
+                            <div>
+                                <h4 class="font-bold text-slate-800 text-xs">BREAK & POSTER SESSION</h4>
+                                <p class="text-[10px] text-slate-500">Coffee, refreshments, and networking</p>
+                            </div>
+                        </div>
+                        <div class="flex border-l-4 border-teal-400 pl-4 py-2">
+                            <div class="w-28 font-bold text-blue-600 text-xs">3:30 PM</div>
+                            <div>
+                                <h4 class="font-bold text-slate-800 text-xs">SESSION #2: Future Science & Next-Gen Tech
+                                </h4>
+                                <ul class="text-[10px] text-slate-600 mt-1 space-y-0.5">
+                                    <li>Hayoung Bong, PhD</li>
+                                    <li>Minsung Kim, PhD</li>
+                                    <li>Industry Talk (TBD)</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="flex border-l-4 border-slate-200 pl-4 py-2 hover:bg-slate-50 transition">
+                            <div class="w-28 font-bold text-blue-600 text-xs">4:30 PM</div>
+                            <div>
+                                <h4 class="font-bold text-slate-800 text-xs">Closing Remarks & Awards</h4>
+                                <p class="text-[10px] text-slate-500">Poster Awards & Group Photo</p>
+                            </div>
+                        </div>
+                        <div class="flex border-l-4 border-slate-800 pl-4 py-2 bg-slate-100 rounded-r-lg mt-2">
+                            <div class="w-28 font-bold text-slate-800 text-xs">5:00 PM</div>
+                            <div>
+                                <h4 class="font-bold text-slate-800 text-xs">NETWORKING DINNER</h4>
+                                <p class="text-[10px] text-slate-500">Venue TBA</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <span class="page-number z-50">3</span>
+            </div>
+        </div>
+
+
+        <!-- PAGE 4: DISTINGUISHED SPEAKERS (UNIFORM GRID) -->
+        <div class="page p-8 bg-white">
+            <div class="flex flex-col h-full">
+                <h2 class="text-2xl font-black text-slate-900 border-b-4 border-blue-600 inline-block mb-8 self-start">
+                    Distinguished Speakers</h2>
+
+                <!-- Structured Speaker Sections -->
+                <div class="flex-grow flex flex-col gap-6"> <!-- Increased gap for breathing room -->
+
+                    <!-- Keynote Session -->
+                    <div>
+                        <h3
+                            class="text-blue-800 font-bold uppercase tracking-widest text-xs mb-4 flex items-center gap-4">
+                            <span class="w-8 h-1 bg-blue-600 rounded-full"></span>
+                            Keynote Session
+                        </h3>
+                        <div id="booklet-keynote-container" class="grid grid-cols-2 gap-4">
+                            <!-- Rendered by JS -->
+                        </div>
+                    </div>
+
+                    <!-- Session 1 -->
+                    <div>
+                        <h3
+                            class="text-slate-800 font-bold uppercase tracking-widest text-xs mb-3 flex items-center gap-4">
+                            <span class="w-4 h-1 bg-slate-300 rounded-full"></span>
+                            Session #1: Precision Medicine & Bio-Innovation
+                        </h3>
+                        <div id="booklet-session1-container" class="grid grid-cols-3 gap-3">
+                            <!-- Rendered by JS -->
+                        </div>
+                    </div>
+
+                    <!-- Session 2 -->
+                    <div>
+                        <h3
+                            class="text-slate-800 font-bold uppercase tracking-widest text-xs mb-3 flex items-center gap-4">
+                            <span class="w-4 h-1 bg-slate-300 rounded-full"></span>
+                            Session #2: Future Science & Next-Gen Tech
+                        </h3>
+                        <div id="booklet-session2-container" class="grid grid-cols-3 gap-3">
+                            <!-- Rendered by JS -->
+                        </div>
+                    </div>
+
+                </div>
+                <span class="page-number">4</span>
+            </div>
+        </div>
+
+
+        <!-- Placeholder for Bio Pages -->
+        <div id="booklet-bio-pages-start" style="display: contents;"></div>
+
+
+
+        <!-- PAGE 14: FULL PAGE AD -->
+        <div class="page bg-white relative !border-none">
+            <img src="assets/kusco_full_page_ad.jpg" class="w-full h-full object-contain">
+            <span class="page-number text-slate-400">14</span>
+        </div>
+
+
+        <!-- PAGE 15: BACK COVER (COMMITTEE) -->
+        <div class="page bg-slate-900 border-l border-slate-800">
+            <div class="absolute inset-0 bg-[url('assets/poster_back_cover_bg.jpg')] bg-cover bg-center opacity-30 z-0">
+            </div>
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/90 to-transparent z-0"></div>
+
+            <div class="relative z-10 flex flex-col items-center h-full p-12 text-center text-white">
+                <div class="w-full max-w-4xl flex-grow flex flex-col justify-center">
+                    <h2
+                        class="text-2xl font-bold uppercase tracking-widest mb-10 border-b border-slate-700 pb-4 inline-block mx-auto text-blue-400">
+                        Organizing Committee</h2>
+                    <div id="booklet-committee-container"
+                        class="grid grid-cols-2 gap-x-12 gap-y-8 text-left max-w-2xl mx-auto">
+                        <!-- Rendered by JS -->
+                    </div>
+                </div>
+
+                <div class="w-full mt-10 pt-10 border-t border-slate-700">
+                    <p class="text-slate-500 text-xs uppercase tracking-widest mb-6">Hosted & Supported By</p>
+                    <div class="bg-white rounded-xl py-8 px-10 shadow-2xl inline-flex flex-col gap-6 max-w-4xl mx-auto">
+                        <div
+                            class="flex flex-wrap justify-center items-center gap-10 border-b-2 border-slate-100 pb-6 w-full">
+                            <img src="../assets/ksea-logo-horizontal.png" class="h-14 object-contain">
+                            <div class="h-8 w-px bg-slate-200"></div>
+                            <img src="../assets/kusco-logo.png" class="h-12 object-contain">
+                        </div>
+                        <div class="flex flex-wrap justify-center items-center gap-x-8 gap-y-4">
+                            <img src="../images/partners/KITEE.png" class="h-8 object-contain">
+                            <img src="../images/partners/kbmes.jpg" class="h-9 object-contain">
+                            <img src="../images/partners/KASBP.jpg" class="h-6 object-contain">
+                            <img src="../images/partners/PKSA.jpg" class="h-8 object-contain">
+                            <img src="../images/partners/upenn-kogsa.png" class="h-9 object-contain">
+                            <img src="assets/kkyu-logo.png" class="h-8 object-contain">
+                        </div>
+                    </div>
+                    <p class="text-slate-600 text-[10px] mt-4">© 2026 KSEA Philadelphia Chapter | www.philly.ksea.org
+                    </p>
                 </div>
             </div>
         </div>
+
+    </div>
     </div>
 
     <div class="controls">
@@ -674,10 +786,11 @@
                 size: "stretch",
                 minWidth: 350,
                 maxWidth: 600,
-                minHeight: 500,
+                minHeight: 500, // Standard A4 ratio approx
                 maxHeight: 850,
                 maxShadowOpacity: 0.5,
-                showCover: true,
+                showCover: false, // Changed to allow Odd-Left / Even-Right layout
+                autoCenter: true, // Ensure the book container is centered
                 mobileScrollSupport: false,
                 usePortrait: false
             });
@@ -732,26 +845,80 @@
             if (p1) {
                 p1.innerHTML = `
                     <div class="absolute inset-0 bg-gradient-to-b from-[#020617] via-[#0f172a] to-slate-900 z-0"></div>
-                    <div class="absolute inset-0 bg-[url('assets/symposium_poster_final_v6_tall.png')] bg-no-repeat z-0" style="background-size: 100% auto; background-position: center bottom;"></div>
-                    <div class="relative z-10 flex flex-col items-center justify-center h-full p-16 text-center text-white">
-                        <img src="../assets/ksea-logo-seal.png" class="h-20 w-20 mb-6" style="filter: drop-shadow(0 0 15px rgba(59, 130, 246, 0.4));">
-                        <h3 class="text-blue-400 tracking-[0.2em] text-sm font-bold uppercase mb-2">2026 US-Korea Northeastern Symposium</h3>
-                        <h1 class="text-4xl font-black mb-4 leading-tight">AI, BIOMEDICAL SCIENCE <br>& ENGINEERING</h1>
-                        <div class="w-16 h-1 bg-blue-500 mx-auto mb-6"></div>
-                        <h2 class="text-3xl font-bold text-blue-200 tracking-widest uppercase mb-4 border border-blue-500/30 px-6 py-2 rounded-lg bg-blue-900/30 backdrop-blur-sm">Program Booklet</h2>
-                        <p class="text-slate-300 italic serif-font">"Pioneering the Future"</p>
+                    <div class="absolute inset-0 bg-[url('assets/symposium_poster_final_v6_tall.png')] bg-no-repeat z-0"
+                        style="background-size: 100% auto; background-position: center bottom;">
+                    </div>
+
+                    <!-- Subtle Line Drawing Overlay -->
+                    <div class="absolute inset-0 bg-[url('../assets/symposium_poster_background.png')] bg-cover bg-top bg-no-repeat opacity-30 z-0 mix-blend-screen"></div>
+
+                    <!-- Text Readability Gradient Overlay -->
+                    <div class="absolute inset-0 bg-gradient-to-b from-slate-900/40 via-transparent to-black/80 z-0"></div>
+                    <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-600 via-purple-600 to-blue-600 z-20"></div>
+
+                    <div class="relative z-10 flex flex-col items-center justify-between h-full p-8 text-center">
+                         <div class="flex-grow flex flex-col justify-center items-center mt-6">
+                            <!-- KSEA Logo Section -->
+                            <div class="flex justify-center items-center gap-3 mb-4">
+                                <img src="../assets/ksea-logo-seal.png" alt="KSEA Seal" class="h-10 w-10"
+                                    style="filter: drop-shadow(0 0 15px rgba(59, 130, 246, 0.4));">
+                                <div class="text-left flex flex-col justify-center">
+                                    <h2 class="text-xl font-black text-white tracking-widest leading-none mb-1 font-sans"
+                                        style="text-shadow: 0 0 30px rgba(255, 255, 255, 0.3);">KSEA</h2>
+                                    <p class="text-[0.5rem] font-bold text-blue-300 uppercase tracking-[0.4em] leading-none ml-1">
+                                        Philadelphia</p>
+                                </div>
+                            </div>
+
+                            <!-- Symposium Title Group -->
+                            <h3 class="text-blue-400 tracking-[0.25em] text-[0.6rem] font-bold uppercase mb-2"
+                                style="text-shadow: 0 2px 4px rgba(0,0,0,0.8);">
+                                2026 US-Korea Northeastern Symposium
+                            </h3>
+
+                            <h1 class="text-xl font-black text-white leading-[0.9] tracking-tight mb-4 drop-shadow-[0_4px_10px_rgba(0,0,0,0.8)] max-w-xs mx-auto">
+                                AI, BIOMEDICAL SCIENCE <br>& <span
+                                    class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400 filter drop-shadow-sm">ENGINEERING</span>
+                            </h1>
+
+                            <!-- Program Booklet Title (Smaller) -->
+                            <div class="w-12 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto mb-3 rounded-full"></div>
+
+                            <h2 class="text-lg font-bold text-blue-200 tracking-[0.2em] uppercase mb-4 drop-shadow-md border border-blue-500/30 px-5 py-1 rounded-lg bg-blue-900/30 backdrop-blur-sm inline-block">
+                                Program Booklet
+                            </h2>
+
+                            <p class="text-slate-300 text-[0.65rem] font-medium italic serif-font tracking-wide drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] mt-2">
+                                "Pioneering the Future: The Convergence of AI,<br>Bio-Science, & Engineering"
+                            </p>
+                        </div>
+                        <div class="w-full">
+                            <div class="grid grid-cols-2 gap-3 max-w-sm mx-auto">
+                                <div class="bg-white/5 border border-white/10 p-3 rounded-xl backdrop-blur-md">
+                                    <i class="fas fa-calendar-alt text-xl text-blue-400 mb-1"></i>
+                                    <p class="text-xs font-bold text-white">FEB 27, 2026</p>
+                                    <p class="text-[0.5rem] text-blue-200 uppercase tracking-widest font-semibold">12:20 PM - 9:00 PM</p>
+                                </div>
+                                <div class="bg-white/5 border border-white/10 p-3 rounded-xl backdrop-blur-md">
+                                    <i class="fas fa-map-marker-alt text-xl text-purple-400 mb-1"></i>
+                                    <p class="text-[0.65rem] font-bold text-white leading-tight">UPenn Smilow Center</p>
+                                    <p class="text-[0.5rem] text-purple-200 uppercase tracking-widest font-semibold">Philadelphia, PA</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 `;
             }
 
-            // SymposiumRenderer handles the rest if IDs match
-            SymposiumRenderer.renderWelcomeChairs('welcome-chairs-container');
-            SymposiumRenderer.renderBookletSchedule('booklet-schedule-container');
-            SymposiumRenderer.renderBookletKeynotes('booklet-keynote-container');
-            SymposiumRenderer.renderBookletInvitedSpeakers('booklet-session1-container', SYMPOSIUM_DATA.speakers.session1);
-            SymposiumRenderer.renderBookletInvitedSpeakers('booklet-session2-container', SYMPOSIUM_DATA.speakers.session2);
-            SymposiumRenderer.renderBookletSpeakerPages('booklet-speaker-pages-container');
-            SymposiumRenderer.renderBookletCommittee('booklet-committee-container');
+            // SymposiumRenderer handles these in its init() on DOMContentLoaded
+            // Removing manual calls to prevent duplicates (especially for renderBookletSpeakerPages which uses insertAdjacentHTML)
+            // SymposiumRenderer.renderWelcomeChairs('welcome-chairs-container');
+            // SymposiumRenderer.renderBookletSchedule('booklet-schedule-container');
+            // SymposiumRenderer.renderBookletKeynotes('booklet-keynote-container');
+            // SymposiumRenderer.renderBookletInvitedSpeakers('booklet-session1-container', SYMPOSIUM_DATA.speakers.session1);
+            // SymposiumRenderer.renderBookletInvitedSpeakers('booklet-session2-container', SYMPOSIUM_DATA.speakers.session2);
+            // SymposiumRenderer.renderBookletSpeakerPages('booklet-bio-pages-start');
+            // SymposiumRenderer.renderBookletCommittee('booklet-committee-container');
         }
 
 
