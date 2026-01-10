@@ -397,25 +397,25 @@ const SymposiumRenderer = {
             const bio = speaker.bio || "Biography to be updated.";
 
             return `
-            <div class="page p-12 bg-white">
-                <div class="flex flex-col h-full">
-                    <div class="flex items-end gap-6 border-b-2 border-slate-100 pb-8 mb-8">
+            <div class="page bg-white speaker-bio-page">
+                <div class="page-content bg-white flex flex-col h-full">
+                    <div class="flex items-end gap-6 border-b-2 border-slate-100 pb-4 mb-4 speaker-header">
                         <img src="${SymposiumRenderer.getAssetPath(speaker.image)}"
-                            class="w-32 h-32 rounded-xl object-cover ${speaker.imagePosition || 'object-top'} shadow-lg border border-slate-200">
+                            class="w-24 h-24 rounded-xl object-cover ${speaker.imagePosition || 'object-top'} shadow-lg border border-slate-200">
                         <div>
-                            <span class="${badgeColor} ${badgeClass} text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider mb-2 inline-block">${badgeText}</span>
-                            <h2 class="text-3xl font-black text-slate-900 leading-tight mb-1">${speaker.name}</h2>
-                            <p class="${nameColor} font-bold text-sm uppercase mb-1">${speaker.affiliation}</p>
-                            <p class="text-slate-500 text-sm italic">${speaker.title}</p>
+                            <span class="${badgeColor} ${badgeClass} text-[10px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wider mb-1 inline-block">${badgeText}</span>
+                            <h2 class="text-xl font-black text-slate-900 leading-tight mb-0.5">${speaker.name}</h2>
+                            <p class="${nameColor} font-bold text-xs uppercase mb-0.5">${speaker.affiliation}</p>
+                            <p class="text-slate-500 text-[10px] italic">${speaker.title}</p>
                         </div>
                     </div>
 
-                    <div class="flex-grow speaker-content text-justify text-slate-700 text-sm">
-                        <h3 class="text-xl font-bold text-slate-900 mb-4">"${speaker.talkTitle}"</h3>
+                    <div class="flex-grow speaker-content text-justify text-slate-700 text-[10px]">
+                        <h3 class="text-sm font-bold text-slate-900 mb-2">"${speaker.talkTitle}"</h3>
 
-                        <p><strong class="text-slate-900">Abstract:</strong> ${abstract}</p>
+                        <p class="mb-2"><strong class="text-slate-900">Abstract:</strong> ${abstract}</p>
 
-                        <div class="mt-8 pt-8 border-t border-slate-100">
+                        <div class="mt-4 pt-4 border-t border-slate-100">
                             <p><strong class="text-slate-900">Bio:</strong> ${bio}</p>
                         </div>
                     </div>
