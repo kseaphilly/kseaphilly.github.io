@@ -402,142 +402,40 @@
         }
 
         function buildPages() {
-            // Replicate the page structure from booklet_2026.html
-            const container = document.getElementById('dynamic-pages');
-
-            // Page 2: Contents & Welcome
-            const p2 = document.createElement('div');
-            p2.className = 'page';
-            p2.innerHTML = `
-                <div class="page-content bg-white text-slate-800 p-12 relative overflow-hidden">
-                    <div class="relative z-10 h-full flex flex-col pb-8">
-                        <div class="mb-8 border-b-2 border-slate-100 pb-6">
-                            <h2 class="text-3xl font-black text-slate-900 mb-8 border-b-4 border-blue-600 inline-block">Contents</h2>
-                            <ul class="grid grid-cols-1 gap-y-2 text-sm">
-                                <li class="flex justify-between items-center border-b border-slate-50 py-1"><span class="font-bold text-slate-600">Welcoming Remarks</span><span class="text-slate-400 font-serif italic">02</span></li>
-                                <li class="flex justify-between items-center border-b border-slate-50 py-1"><span class="font-bold text-slate-600">Program Schedule</span><span class="text-slate-400 font-serif italic">03</span></li>
-                                <li class="flex justify-between items-center border-b border-slate-50 py-1"><span class="font-bold text-slate-600">Distinguished Speakers</span><span class="text-slate-400 font-serif italic">04</span></li>
-                                <li class="flex justify-between items-center border-b border-slate-50 py-1"><span class="font-bold text-slate-600">Abstracts & Bios</span><span class="text-slate-400 font-serif italic">05-11</span></li>
-                                <li class="flex justify-between items-center border-b border-slate-50 py-1"><span class="font-bold text-slate-600">Sponsorship Opportunities</span><span class="text-slate-400 font-serif italic">12</span></li>
-                                <li class="flex justify-between items-center border-b border-slate-50 py-1"><span class="font-bold text-slate-600">Registration & Posters</span><span class="text-slate-400 font-serif italic">13</span></li>
-                                <li class="flex justify-between items-center border-b border-slate-50 py-1"><span class="font-bold text-slate-600">Sponsor Advertisement</span><span class="text-slate-400 font-serif italic">14</span></li>
-                            </ul>
-                        </div>
-                        <div class="flex-grow flex flex-col">
-                            <h2 class="text-3xl font-black text-slate-900 border-b-4 border-blue-600 inline-block mb-8 self-start">Welcoming Remarks</h2>
-                            <div class="prose prose-slate text-sm leading-relaxed text-justify text-slate-600 space-y-4">
-                                <p class="mt-0">Dear Esteemed Guests, Colleagues, and KSEA Members,</p>
-                                <p>It is our great honor to welcome you to the <strong class="text-blue-700">2026 US-Korea Northeastern Symposium on AI, Biomedical Science, & Engineering</strong>, hosted by the KSEA Philadelphia Chapter.</p>
-                                <p>This symposium brings together the brightest minds in our region to discuss the convergence of artificial intelligence, biomedical sciences, and engineering. We aim to provide a vital platform for exchanging ideas, presenting cutting-edge research, and forging new collaborations that will shape the future of science and technology.</p>
-                                <p>We extend our deepest gratitude to KSEA and KUSCO for their generous support, and to all our sponsors, speakers, and participants who make this event possible.</p>
-                            </div>
-                            <div class="mt-8 flex justify-center gap-12" id="welcome-chairs-container"></div>
-                        </div>
-                    </div>
-                    <span class="page-number">2</span>
-                </div>
-            `;
-            container.appendChild(p2);
-
-            // Page 3: Program Schedule
-            const p3 = document.createElement('div');
-            p3.className = 'page';
-            p3.innerHTML = `
-                <div class="page-content bg-white text-slate-800 p-12 relative overflow-hidden">
-                    <div class="relative z-10 h-full flex flex-col">
-                        <h2 class="text-3xl font-black text-slate-900 mb-12 border-b-4 border-blue-600 inline-block self-start">Program Schedule</h2>
-                        <div class="flex-grow space-y-4" id="booklet-schedule-container"></div>
-                    </div>
-                    <span class="page-number">3</span>
-                </div>
-            `;
-            container.appendChild(p3);
-
-            // Page 4: Distinguished Speakers
-            const p4 = document.createElement('div');
-            p4.className = 'page';
-            p4.innerHTML = `
-                <div class="page-content p-12 bg-white">
-                    <div class="flex flex-col h-full">
-                        <h2 class="text-3xl font-black text-slate-900 border-b-4 border-blue-600 inline-block mb-12 self-start">Distinguished Speakers</h2>
-                        <div class="flex-grow flex flex-col gap-8">
-                            <div>
-                                <h3 class="text-blue-800 font-bold uppercase tracking-widest text-xs mb-4 flex items-center gap-2">
-                                    <span class="w-6 h-1 bg-blue-600 rounded-full"></span> Keynote Session
-                                </h3>
-                                <div id="booklet-keynote-container" class="grid grid-cols-1 gap-4"></div>
-                            </div>
-                            <div class="grid grid-cols-2 gap-6">
-                                <div>
-                                    <h3 class="text-slate-800 font-bold uppercase tracking-widest text-[10px] mb-3 flex items-center gap-2">
-                                        <span class="w-3 h-1 bg-slate-300 rounded-full"></span> Session #1
-                                    </h3>
-                                    <div id="booklet-session1-container" class="grid grid-cols-1 gap-3"></div>
-                                </div>
-                                <div>
-                                    <h3 class="text-slate-800 font-bold uppercase tracking-widest text-[10px] mb-3 flex items-center gap-2">
-                                        <span class="w-3 h-1 bg-slate-300 rounded-full"></span> Session #2
-                                    </h3>
-                                    <div id="booklet-session2-container" class="grid grid-cols-1 gap-3"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <span class="page-number">4</span>
-                    </div>
-                </div>
-            `;
-            container.appendChild(p4);
-
-            // Bio Pages Container
-            const bioContainer = document.createElement('div');
-            bioContainer.id = 'booklet-speaker-pages-container';
-            container.appendChild(bioContainer);
-
-            // Final Page: Committee
-            const pLast = document.createElement('div');
-            pLast.id = 'booklet-committee-page'; // Optional ID
-            pLast.className = 'page';
-            pLast.innerHTML = `
-                <div class="page-content bg-slate-900 text-white p-12 flex flex-col items-center justify-center text-center">
-                    <h2 class="text-xl font-bold uppercase tracking-widest mb-10 border-b border-slate-700 pb-4 inline-block">Organizing Committee</h2>
-                    <div id="booklet-committee-container" class="grid grid-cols-2 gap-8 text-left text-[10px]"></div>
-                    <div class="mt-12 pt-8 border-t border-slate-700 w-full">
-                        <img src="../assets/ksea-logo-horizontal.png" class="h-8 mx-auto mb-4 grayscale brightness-200">
-                        <p class="text-slate-500 text-[10px]">© 2026 KSEA Philadelphia Chapter</p>
-                    </div>
-                </div>
-            `;
-            container.appendChild(pLast);
+            // Bio pages are already handled by SymposiumRenderer.renderBookletSpeakerPages
+            // which appends pages AFTER the container.
+            // We just need to make sure the library sees them.
         }
 
         function renderContents() {
             // Front Cover
             const p1 = document.getElementById('p1-content');
-            p1.innerHTML = `
-                <div class="absolute inset-0 bg-gradient-to-b from-[#020617] via-[#0f172a] to-slate-900 z-0"></div>
-                <div class="absolute inset-0 bg-[url('assets/symposium_poster_final_v6_tall.png')] bg-no-repeat z-0" style="background-size: 100% auto; background-position: center bottom;"></div>
-                <div class="relative z-10 flex flex-col items-center justify-center h-full p-16 text-center text-white">
-                    <img src="../assets/ksea-logo-seal.png" class="h-20 w-20 mb-6" style="filter: drop-shadow(0 0 15px rgba(59, 130, 246, 0.4));">
-                    <h3 class="text-blue-400 tracking-[0.2em] text-sm font-bold uppercase mb-2">2026 US-Korea Northeastern Symposium</h3>
-                    <h1 class="text-4xl font-black mb-4 leading-tight">AI, BIOMEDICAL SCIENCE <br>& ENGINEERING</h1>
-                    <div class="w-16 h-1 bg-blue-500 mx-auto mb-6"></div>
-                    <h2 class="text-3xl font-bold text-blue-200 tracking-widest uppercase mb-4 border border-blue-500/30 px-6 py-2 rounded-lg bg-blue-900/30 backdrop-blur-sm">Program Booklet</h2>
-                    <p class="text-slate-300 italic serif-font">"Pioneering the Future"</p>
-                </div>
-            `;
+            if (p1) {
+                p1.innerHTML = `
+                    <div class="absolute inset-0 bg-gradient-to-b from-[#020617] via-[#0f172a] to-slate-900 z-0"></div>
+                    <div class="absolute inset-0 bg-[url('assets/symposium_poster_final_v6_tall.png')] bg-no-repeat z-0" style="background-size: 100% auto; background-position: center bottom;"></div>
+                    <div class="relative z-10 flex flex-col items-center justify-center h-full p-16 text-center text-white">
+                        <img src="../assets/ksea-logo-seal.png" class="h-20 w-20 mb-6" style="filter: drop-shadow(0 0 15px rgba(59, 130, 246, 0.4));">
+                        <h3 class="text-blue-400 tracking-[0.2em] text-sm font-bold uppercase mb-2">2026 US-Korea Northeastern Symposium</h3>
+                        <h1 class="text-4xl font-black mb-4 leading-tight">AI, BIOMEDICAL SCIENCE <br>& ENGINEERING</h1>
+                        <div class="w-16 h-1 bg-blue-500 mx-auto mb-6"></div>
+                        <h2 class="text-3xl font-bold text-blue-200 tracking-widest uppercase mb-4 border border-blue-500/30 px-6 py-2 rounded-lg bg-blue-900/30 backdrop-blur-sm">Program Booklet</h2>
+                        <p class="text-slate-300 italic serif-font">"Pioneering the Future"</p>
+                    </div>
+                `;
+            }
 
-            // Note: SymposiumRenderer.init() handles the rest if IDs match
-            // We need to call it specifically for the containers we have
+            // SymposiumRenderer handles the rest if IDs match
             SymposiumRenderer.renderWelcomeChairs('welcome-chairs-container');
             SymposiumRenderer.renderBookletSchedule('booklet-schedule-container');
             SymposiumRenderer.renderBookletKeynotes('booklet-keynote-container');
-
             SymposiumRenderer.renderBookletInvitedSpeakers('booklet-session1-container', SYMPOSIUM_DATA.speakers.session1);
             SymposiumRenderer.renderBookletInvitedSpeakers('booklet-session2-container', SYMPOSIUM_DATA.speakers.session2);
-
             SymposiumRenderer.renderBookletSpeakerPages('booklet-speaker-pages-container');
             SymposiumRenderer.renderBookletCommittee('booklet-committee-container');
         }
+
+
 
         window.onload = initFlipbook;
     </script>
