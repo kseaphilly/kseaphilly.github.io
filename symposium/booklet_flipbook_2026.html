@@ -958,12 +958,12 @@
 
         async function initFlipbook() {
             const flipBook = new St.PageFlip(document.getElementById('flipbook'), {
-                width: 500, // Increased slightly for better visibility
+                width: 540, // Adjusted for US Letter aspect ratio (8.5x11 ~ 0.77) keeping height 700
                 height: 700,
                 size: "stretch",
-                minWidth: 350,
-                maxWidth: 600,
-                minHeight: 500, // Standard A4 ratio approx
+                minWidth: 378,
+                maxWidth: 648,
+                minHeight: 500,
                 maxHeight: 850,
                 maxShadowOpacity: 0.5,
                 showCover: false, // Changed to allow Odd-Left / Even-Right layout
