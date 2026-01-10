@@ -253,14 +253,40 @@
             height: 2rem !important;
         }
 
-        /* targeted overrides for Page 4 Speaker Names */
+        /* targeted overrides for Page 4 Speaker Names vs Metadata */
         #booklet-keynote-container h4 {
+            font-size: 0.75rem !important;
+            margin-bottom: 0.2rem !important;
+        }
+
+        #booklet-keynote-container p {
             font-size: 0.6rem !important;
+            line-height: 1.1 !important;
+            /* Tighten line height */
         }
 
         #booklet-session1-container h4,
         #booklet-session2-container h4 {
-            font-size: 0.5rem !important;
+            font-size: 0.65rem !important;
+            margin-bottom: 0.1rem !important;
+        }
+
+        #booklet-session1-container p,
+        #booklet-session2-container p {
+            font-size: 0.55rem !important;
+            line-height: 1.0 !important;
+            /* Tighten line height */
+        }
+
+        /* targeted overrides for Bio Pages */
+        .speaker-bio-page .text-xl {
+            font-size: 0.9rem !important;
+            /* Speaker Name */
+        }
+
+        .speaker-bio-page p.text-xs.uppercase {
+            font-size: 0.65rem !important;
+            /* Affiliation */
         }
 
         /* Controls */

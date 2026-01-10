@@ -405,13 +405,13 @@ const SymposiumRenderer = {
                         <div>
                             <span class="${badgeColor} ${badgeClass} text-[10px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wider mb-1 inline-block">${badgeText}</span>
                             <h2 class="text-xl font-black text-slate-900 leading-tight mb-0.5">${speaker.name}</h2>
-                            <p class="${nameColor} font-bold text-xs uppercase mb-0.5">${speaker.affiliation}</p>
-                            <p class="text-slate-500 text-[10px] italic">${speaker.title}</p>
+                            <p class="${nameColor} font-bold text-xm uppercase mb-0.5">${speaker.affiliation}</p>
+                            <p class="text-slate-500 text-[12px] italic">${speaker.title}</p>
                         </div>
                     </div>
 
                     <div class="flex-grow speaker-content text-justify text-slate-700 text-[10px]">
-                        <h3 class="text-sm font-bold text-slate-900 mb-2">"${speaker.talkTitle}"</h3>
+                        <h3 class="text-lg font-bold text-slate-900 mb-2">"${speaker.talkTitle}"</h3>
 
                         <p class="mb-2"><strong class="text-slate-900">Abstract:</strong> ${abstract}</p>
 
