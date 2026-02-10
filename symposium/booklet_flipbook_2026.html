@@ -1047,7 +1047,7 @@
                 showCover: false, // Changed to allow Odd-Left / Even-Right layout
                 autoCenter: true, // Ensure the book container is centered
                 mobileScrollSupport: false,
-                usePortrait: false
+                usePortrait: window.innerWidth < 768 // Single page on mobile, Double page on desktop
             });
 
             // Extract pages from a hidden template or build them here
