@@ -564,7 +564,7 @@
                             class="text-xl md:text-3xl font-black text-slate-900 mb-4 md:mb-8 border-b-4 border-blue-600 inline-block">
                             Contents
                         </h2>
-                        <ul class="grid grid-cols-1 gap-y-1 md:gap-y-2 text-[10px] md:text-base">
+                        <ul class="grid grid-cols-1 gap-y-1 md:gap-y-2 text-[10px] md:text-lg">
                             <li class="flex justify-between items-center border-b border-slate-50 py-0.5"><span
                                     class="font-bold text-slate-600">Welcoming Remarks</span><span
                                     class="text-slate-400 font-serif italic">02, 03</span></li>
@@ -597,7 +597,7 @@
                             class="text-2xl font-black text-slate-900 border-b-4 border-blue-600 inline-block mb-6 self-start">
                             Welcoming Remarks</h2>
                         <div
-                            class="prose prose-slate text-xs md:text-sm leading-relaxed text-justify text-slate-600 space-y-3">
+                            class="prose prose-slate text-xs md:text-base leading-relaxed text-justify text-slate-600 space-y-3">
                             <p class="mt-0">Dear Esteemed Guests, Colleagues, and KSEA Members,</p>
                             <p>It is our great honor to welcome you to the <strong class="text-blue-700">2026 US-Korea
                                     Northeastern Symposium on AI, Biomedical Science, & Engineering</strong>, hosted by
@@ -651,7 +651,7 @@
                         class="text-xl md:text-4xl font-black text-slate-900 border-b-2 md:border-b-4 border-blue-600 inline-block mb-4 md:mb-8 self-start">
                         Welcoming Remarks: 2026 US-Korea Northeastern Symposium</h2>
                     <div
-                        class="prose prose-slate text-xs md:text-base leading-tight md:leading-loose text-justify text-slate-600 space-y-1.5 md:space-y-4 flex-grow">
+                        class="prose prose-slate text-xs md:text-lg leading-tight md:leading-loose text-justify text-slate-600 space-y-1.5 md:space-y-4 flex-grow">
                         <p class="mt-0">Dear fellow KSEA members and the extended Philadelphia community,</p>
                         <p>It is a profound honor to offer these welcoming remarks for the <strong
                                 class="text-blue-700">2026 US-Korea Northeastern Symposium on AI, Biomedical Science, &
@@ -1066,21 +1066,43 @@
         // but for now, we'll just replicate the necessary structures.
 
         async function initFlipbook() {
-            const isMobile = window.innerWidth < 768;
-            const baseWidth = isMobile ? 360 : 540;
-            const baseHeight = isMobile ? 640 : 700; // Taller aspect ratio for mobile
+            const width = window.innerWidth;
+            const height = window.innerHeight;
+            const isMobile = width < 768;
+
+            // Dimensions logic
+            let baseWidth, baseHeight;
+
+            if (isMobile) {
+                // Mobile: Fit to width, taller aspect ratio
+                baseWidth = Math.min(width * 0.95, 400);
+                baseHeight = Math.min(height * 0.8, 600);
+            } else {
+                // Desktop/Laptop: Fit to height, standard aspect ratio (A4-ish)
+                // Available height for the book (accounting for margins/UI)
+                const availableHeight = Math.min(height * 0.85, 800);
+                baseHeight = availableHeight;
+                // Calculate width based on A4 ratio (1 : 1.414), but per page
+                baseWidth = baseHeight / 1.414;
+
+                // Ensure double spread fits in width
+                if (baseWidth * 2 > width * 0.9) {
+                    baseWidth = (width * 0.9) / 2;
+                    baseHeight = baseWidth * 1.414;
+                }
+            }
 
             const flipBook = new St.PageFlip(document.getElementById('flipbook'), {
                 width: baseWidth,
                 height: baseHeight,
-                size: "stretch",
+                size: "fixed", // Use fixed to respect our calculated dimensions
                 minWidth: 300,
                 maxWidth: 1000,
                 minHeight: 400,
-                maxHeight: 1200, // Allow taller pages
+                maxHeight: 1200,
                 maxShadowOpacity: 0.5,
-                showCover: false, // Changed to allow Odd-Left / Even-Right layout
-                autoCenter: true, // Ensure the book container is centered
+                showCover: false,
+                autoCenter: true,
                 mobileScrollSupport: false,
                 usePortrait: isMobile // Single page on mobile, Double page on desktop
             });
@@ -1098,13 +1120,19 @@
             const pageCurrent = document.getElementById('page-current');
             const loading = document.getElementById('loading');
 
-            pageTotal.innerText = flipBook.getPageCount();
+            // Update total pages
+            // Wait a moment for the book to initialize
+            setTimeout(() => {
+                pageTotal.innerText = flipBook.getPageCount();
+            }, 500);
 
             flipBook.on('flip', (e) => {
-                pageCurrent.innerText = e.data + 1;
-                if (e.data + 1 > 1 && e.data + 1 < flipBook.getPageCount()) {
-                    // Optional: handle double page view logic
-                }
+                // Determine display page number
+                let pageNum = e.data + 1;
+
+                // In double page mode (desktop), we might want to show "2-3" or just current index
+                // but usually the library returns the index of the folded page or left page.
+                pageCurrent.innerText = pageNum;
             });
 
             document.getElementById('btn-prev').addEventListener('click', () => {
@@ -1121,6 +1149,20 @@
                 loading.style.opacity = '0';
                 setTimeout(() => loading.style.display = 'none', 500);
             }, 1000);
+
+            // Handle Resize - Simple reload for now to recalculate complex dimensions
+            let resizeTimeout;
+            window.addEventListener('resize', () => {
+                clearTimeout(resizeTimeout);
+                resizeTimeout = setTimeout(() => {
+                    // Only reload if crossing the mobile/desktop threshold or significant dimension change
+                    const newWidth = window.innerWidth;
+                    const newIsMobile = newWidth < 768;
+                    if (newIsMobile !== isMobile || Math.abs(newWidth - width) > 100) {
+                        location.reload();
+                    }
+                }, 500);
+            });
         }
 
         function buildPages() {
