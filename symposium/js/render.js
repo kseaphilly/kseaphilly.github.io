@@ -397,7 +397,7 @@ const SymposiumRenderer = {
             const bio = speaker.bio || "Biography to be updated.";
 
             return `
-            <div class="page bg-white speaker-bio-page p-12">
+            <div class="page bg-white speaker-bio-page p-6 md:p-12">
                 <div class="page-content bg-white flex flex-col h-full">
                     <div class="flex items-end gap-6 border-b-2 border-slate-100 pb-4 mb-4 speaker-header">
                         <img src="${SymposiumRenderer.getAssetPath(speaker.image)}"
@@ -410,8 +410,8 @@ const SymposiumRenderer = {
                         </div>
                     </div>
 
-                    <div class="flex-grow speaker-content text-justify text-slate-700 text-[10px]">
-                        <h3 class="text-lg font-bold text-slate-900 mb-2">"${speaker.talkTitle}"</h3>
+                    <div class="flex-grow speaker-content text-justify text-slate-700 text-[9px] md:text-[10px] leading-tight md:leading-normal">
+                        <h3 class="text-base md:text-lg font-bold text-slate-900 mb-1 md:mb-2">"${speaker.talkTitle}"</h3>
 
                         <p class="mb-2"><strong class="text-slate-900">Abstract:</strong> ${abstract}</p>
 
