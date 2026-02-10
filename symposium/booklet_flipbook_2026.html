@@ -101,6 +101,35 @@
             line-height: 1.4 !important;
         }
 
+        @media (max-width: 768px) {
+            .page-content {
+                padding: 1.25rem !important;
+            }
+
+            .page-content h1 {
+                font-size: 1.5rem !important;
+            }
+
+            .page-content h2 {
+                font-size: 1.2rem !important;
+                margin-bottom: 0.5rem !important;
+            }
+
+            .page-content h3 {
+                font-size: 0.9rem !important;
+            }
+
+            .page-content p,
+            .page-content li {
+                font-size: 0.75rem !important;
+                line-height: 1.25 !important;
+            }
+
+            .speaker-bio-page {
+                padding: 1.5rem !important;
+            }
+        }
+
         /* Adjust Grid Gaps and Spacing */
         .page-content .gap-12 {
             gap: 1.5rem !important;
@@ -458,7 +487,7 @@
                 <!-- 1. Full Vertical Background Image (V6 - Visually Extended & Lowered) -->
                 <div class="absolute inset-0 bg-gradient-to-b from-[#020617] via-[#0f172a] to-slate-900 z-0"></div>
                 <div class="absolute inset-0 bg-[url('assets/symposium_poster_final_v6_tall.png')] bg-no-repeat z-0"
-                    style="background-size: 100% auto; background-position: center calc(100% + 4rem); -webkit-mask-image: linear-gradient(to bottom, transparent 0%, transparent 10%, black 40%, black 100%); mask-image: linear-gradient(to bottom, transparent 0%, transparent 10%, black 40%, black 100%);">
+                    style="background-size: cover; background-position: center bottom; -webkit-mask-image: linear-gradient(to bottom, transparent 0%, transparent 10%, black 40%, black 100%); mask-image: linear-gradient(to bottom, transparent 0%, transparent 10%, black 40%, black 100%);">
                 </div>
 
                 <!-- 2. Subtle Line Drawing Overlay -->
@@ -528,13 +557,14 @@
 
 
             <!-- PAGE 2: CONTENTS & WELCOME -->
-            <div class="page bg-white text-slate-800 p-6 relative overflow-hidden">
-                <div class="relative z-10 h-full flex flex-col pb-6">
-                    <div class="mb-6 border-b-2 border-slate-100 pb-4">
-                        <h2 class="text-2xl font-black text-slate-900 mb-6 border-b-4 border-blue-600 inline-block">
+            <div class="page bg-white text-slate-800 p-6 md:p-12 relative overflow-hidden">
+                <div class="relative z-10 h-full flex flex-col pb-6 md:pb-8">
+                    <div class="mb-4 md:mb-8 border-b-2 border-slate-100 pb-4 md:pb-6">
+                        <h2
+                            class="text-xl md:text-3xl font-black text-slate-900 mb-4 md:mb-8 border-b-4 border-blue-600 inline-block">
                             Contents
                         </h2>
-                        <ul class="grid grid-cols-1 gap-y-0.5 text-xs">
+                        <ul class="grid grid-cols-1 gap-y-1 md:gap-y-2 text-[10px] md:text-base">
                             <li class="flex justify-between items-center border-b border-slate-50 py-0.5"><span
                                     class="font-bold text-slate-600">Welcoming Remarks</span><span
                                     class="text-slate-400 font-serif italic">02, 03</span></li>
@@ -566,7 +596,8 @@
                         <h2
                             class="text-2xl font-black text-slate-900 border-b-4 border-blue-600 inline-block mb-6 self-start">
                             Welcoming Remarks</h2>
-                        <div class="prose prose-slate text-xs leading-relaxed text-justify text-slate-600 space-y-3">
+                        <div
+                            class="prose prose-slate text-xs md:text-sm leading-relaxed text-justify text-slate-600 space-y-3">
                             <p class="mt-0">Dear Esteemed Guests, Colleagues, and KSEA Members,</p>
                             <p>It is our great honor to welcome you to the <strong class="text-blue-700">2026 US-Korea
                                     Northeastern Symposium on AI, Biomedical Science, & Engineering</strong>, hosted by
@@ -614,13 +645,13 @@
             </div>
 
             <!-- PAGE 3: PRESIDENT'S CONGRATULATORY REMARKS -->
-            <div class="page bg-white text-slate-800 p-5 relative overflow-hidden">
+            <div class="page bg-white text-slate-800 p-6 md:p-12 relative overflow-hidden">
                 <div class="relative z-10 h-full flex flex-col">
                     <h2
-                        class="text-xl font-black text-slate-900 border-b-2 border-blue-600 inline-block mb-3 self-start">
-                        Welcoming Remarks</h2>
+                        class="text-xl md:text-4xl font-black text-slate-900 border-b-2 md:border-b-4 border-blue-600 inline-block mb-4 md:mb-8 self-start">
+                        Welcoming Remarks: 2026 US-Korea Northeastern Symposium</h2>
                     <div
-                        class="prose prose-slate text-[10px] leading-tight text-justify text-slate-600 space-y-1.5 flex-grow">
+                        class="prose prose-slate text-xs md:text-base leading-tight md:leading-loose text-justify text-slate-600 space-y-1.5 md:space-y-4 flex-grow">
                         <p class="mt-0">Dear fellow KSEA members and the extended Philadelphia community,</p>
                         <p>It is a profound honor to offer these welcoming remarks for the <strong
                                 class="text-blue-700">2026 US-Korea Northeastern Symposium on AI, Biomedical Science, &
@@ -670,14 +701,14 @@
 
 
             <!-- PAGE 3: PROGRAM SCHEDULE -->
-            <div id="booklet-schedule-page" class="page bg-white text-slate-800 p-6 relative overflow-hidden">
+            <div id="booklet-schedule-page" class="page bg-white text-slate-800 p-6 md:p-8 relative overflow-hidden">
                 <div class="relative z-10 h-full flex flex-col">
                     <h2
-                        class="text-2xl font-black text-slate-900 mb-8 border-b-4 border-blue-600 inline-block self-start">
+                        class="text-xl md:text-2xl font-black text-slate-900 mb-4 md:mb-8 border-b-4 border-blue-600 inline-block self-start">
                         Program Schedule</h2>
-                    <div class="flex-grow space-y-3">
-                        <div class="flex border-l-4 border-slate-200 pl-4 py-2 hover:bg-slate-50 transition">
-                            <div class="w-28 font-bold text-blue-600 text-xs">12:20 PM</div>
+                    <div class="flex-grow space-y-1 md:space-y-3">
+                        <div class="flex border-l-4 border-slate-200 pl-4 py-1 md:py-2 hover:bg-slate-50 transition">
+                            <div class="w-20 md:w-28 font-bold text-blue-600 text-[10px] md:text-xs">12:20 PM</div>
                             <div>
                                 <h4 class="font-bold text-slate-800 text-xs">Welcome Remarks & Housekeeping</h4>
                             </div>
@@ -1035,19 +1066,23 @@
         // but for now, we'll just replicate the necessary structures.
 
         async function initFlipbook() {
+            const isMobile = window.innerWidth < 768;
+            const baseWidth = isMobile ? 360 : 540;
+            const baseHeight = isMobile ? 640 : 700; // Taller aspect ratio for mobile
+
             const flipBook = new St.PageFlip(document.getElementById('flipbook'), {
-                width: 540, // Adjusted for US Letter aspect ratio (8.5x11 ~ 0.77) keeping height 700
-                height: 700,
+                width: baseWidth,
+                height: baseHeight,
                 size: "stretch",
-                minWidth: 378,
-                maxWidth: 648,
-                minHeight: 500,
-                maxHeight: 850,
+                minWidth: 300,
+                maxWidth: 1000,
+                minHeight: 400,
+                maxHeight: 1200, // Allow taller pages
                 maxShadowOpacity: 0.5,
                 showCover: false, // Changed to allow Odd-Left / Even-Right layout
                 autoCenter: true, // Ensure the book container is centered
                 mobileScrollSupport: false,
-                usePortrait: window.innerWidth < 768 // Single page on mobile, Double page on desktop
+                usePortrait: isMobile // Single page on mobile, Double page on desktop
             });
 
             // Extract pages from a hidden template or build them here
