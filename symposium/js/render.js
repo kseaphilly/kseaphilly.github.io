@@ -378,7 +378,7 @@ const SymposiumRenderer = {
             ...SYMPOSIUM_DATA.speakers.session2
         ];
 
-        let pageNumber = 5; // Starting page number for bios
+        let pageNumber = 6; // Starting page number for bios
 
         const html = allSpeakers.map(speaker => {
             if (speaker.isPlaceholder) return ''; // Skip placeholders
