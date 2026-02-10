@@ -69,168 +69,293 @@
             border-radius: 2px;
         }
 
-        /* --- DYNAMIC CONTENT SCALING --- */
-        /* 
-           The root font-size for .page-content is set via JS (var(--page-base-size)).
-           All internal sizes must use 'em' to scale relative to that base.
-        */
+        /* --- CONTENT SCALING FOR SMALL BOOKLET --- */
+        /* Override Tailwind utilities to ensure content fits in the smaller page dimensions */
         .page-content {
-            font-size: var(--page-base-size, 10px) !important;
-            padding: 2.5em !important;
+            padding: 1.5rem !important;
+            /* Reduce padding from p-12 (3rem) to 1.5rem */
         }
 
-        /* Headings */
+        /* Adjust Headings */
         .page-content h1 {
-            font-size: 2.2em !important;
-            margin-bottom: 0.6em !important;
-            line-height: 1.1 !important;
+            font-size: 1.8rem !important;
+            margin-bottom: 0.75rem !important;
         }
 
         .page-content h2 {
-            font-size: 1.6em !important;
-            margin-bottom: 0.5em !important;
-            padding-bottom: 0.3em !important;
-            border-bottom-width: 0.15em !important;
+            font-size: 1.4rem !important;
+            margin-bottom: 0.75rem !important;
+            padding-bottom: 0.5rem !important;
         }
 
         .page-content h3 {
-            font-size: 1.1em !important;
-            margin-bottom: 0.4em !important;
+            font-size: 1rem !important;
+            margin-bottom: 0.5rem !important;
         }
 
-        .page-content h4 {
-            font-size: 0.95em !important;
-            margin-bottom: 0.2em !important;
-        }
-
-        /* Body & Text */
+        /* Adjust Text */
         .page-content p,
         .page-content li,
         .page-content span:not(.page-number) {
-            font-size: 1em !important;
+            font-size: 0.85rem !important;
             line-height: 1.4 !important;
         }
 
-        .page-content .text-xl,
-        .page-content .text-2xl,
-        .page-content .text-3xl {
-            font-size: 1.3em !important;
+        /* Adjust Grid Gaps and Spacing */
+        .page-content .gap-12 {
+            gap: 1.5rem !important;
         }
 
-        .page-content .text-lg {
-            font-size: 1.1em !important;
+        .page-content .gap-8 {
+            gap: 1rem !important;
         }
 
-        .page-content .text-base {
-            font-size: 1em !important;
+        .page-content .gap-6 {
+            gap: 0.75rem !important;
         }
 
-        .page-content .text-sm {
-            font-size: 0.9em !important;
+        .page-content .space-y-4>:not([hidden])~:not([hidden]) {
+            --tw-space-y-reverse: 0;
+            margin-top: 0.5rem !important;
+            margin-bottom: 0.5rem !important;
         }
 
-        .page-content .text-xs,
-        .page-content .text-\[10px\] {
-            font-size: 0.8em !important;
+        .page-content .mb-12 {
+            margin-bottom: 1.5rem !important;
         }
 
-        /* Specific Elements */
+        .page-content .mb-8 {
+            margin-bottom: 1rem !important;
+        }
+
+        .page-content .p-12 {
+            padding: 1.5rem !important;
+        }
+
+        /* Specific Adjustments */
         .page-number {
-            font-size: 0.8em !important;
-            bottom: 0.8em !important;
-            left: 2em !important;
+            bottom: 0.5rem !important;
+            left: 1.5rem !important;
+            /* Left aligned for Odd/Left pages */
+            right: auto !important;
+            font-size: 0.7rem !important;
         }
 
         .page:nth-child(even) .page-number {
-            right: 2em !important;
+            right: 1.5rem !important;
+            /* Right aligned for Even/Right pages */
             left: auto !important;
         }
 
-        .page-content .gap-6,
-        .page-content .gap-8,
-        .page-content .gap-4,
-        .page-content .gap-12 {
-            gap: 1em !important;
+        /* Ensure images scale but respect fixed dimensions for avatars */
+        .page-content img {
+            max-width: 100%;
+            /* height: auto; <--- Removed global forced auto to allow fixed heights */
         }
 
-        .page-content .space-y-4> :not([hidden])~ :not([hidden]) {
-            margin-top: 0.8em !important;
-            margin-bottom: 0.8em !important;
+        /* Restore responsive behavior only for images without fixed height */
+        .page-content img:not([class*="h-"]) {
+            height: auto;
         }
 
-        .page-content .mb-12,
-        .page-content .mb-8,
-        .page-content .mb-4 {
-            margin-bottom: 1em !important;
-        }
-
-        /* Images & Avatars */
+        /* Force fixed heights for avatars to ensure square aspect ratio */
         .page-content img.h-16 {
-            height: 4em !important;
-            width: 4em !important;
+            height: 4rem !important;
         }
 
         .page-content img.h-20 {
-            height: 5em !important;
-            width: 5em !important;
+            height: 5rem !important;
         }
 
         .page-content img.h-24 {
-            height: 6em !important;
-            width: 6em !important;
+            height: 6rem !important;
         }
 
-        .page-content img.w-16,
-        .page-content img.w-20 {
-            width: auto !important;
+        .page-content img.h-28 {
+            height: 7rem !important;
         }
 
-        /* Allow width to scale with height */
+        .page-content img.h-32 {
+            height: 8rem !important;
+        }
 
-        /* Specific Container Overrides */
+        /* Ensure top-cropping for portraits */
+        .page-content img.object-cover {
+            object-fit: cover !important;
+            object-position: top !important;
+        }
+
+        /* --- Aggressive Scaling for Rendering Functions --- */
+        /* Override generic classes used by render.js output within page-content */
+
+        /* Speaker Cards */
+        .page-content .bg-white.p-5,
+        .page-content .bg-white.p-6 {
+            padding: 0.75rem !important;
+            border-radius: 0.5rem !important;
+            /* rounded-lg equivalent scaled */
+            gap: 0.5rem !important;
+        }
+
+        /* Keynote Images */
+        .page-content .w-20,
+        .page-content .h-20,
+        .page-content .w-32,
+        .page-content .h-32 {
+            width: 3rem !important;
+            height: 3rem !important;
+            border-width: 2px !important;
+        }
+
+        /* Text Sizes */
+        .page-content .text-xl,
+        .page-content .text-2xl,
+        .page-content .text-3xl {
+            font-size: 1.0rem !important;
+            line-height: 1.1 !important;
+            margin-bottom: 0.3rem !important;
+        }
+
+        .page-content .text-lg {
+            font-size: 0.9rem !important;
+            line-height: 1.1 !important;
+        }
+
+        .page-content .text-base {
+            font-size: 0.85rem !important;
+            line-height: 1.2 !important;
+        }
+
+        .page-content .text-xs,
+        .page-content .text-\[10px\],
+        .page-content .text-sm {
+            font-size: 0.7rem !important;
+            line-height: 1.3 !important;
+        }
+
+        /* Badges */
+        .page-content .px-3,
+        .page-content .py-1 {
+            padding: 0.15rem 0.5rem !important;
+        }
+
+        /* Grid Layouts */
+        .page-content .gap-6,
+        .page-content .gap-8,
+        .page-content .gap-4 {
+            gap: 0.6rem !important;
+        }
+
+        /* Specific overrides for Committee Grid */
         #booklet-committee-container {
-            column-gap: 2em !important;
-            row-gap: 1em !important;
+            column-gap: 1.2rem !important;
+            row-gap: 0.7rem !important;
         }
 
-        .speaker-bio-page {
-            padding: 2.5em !important;
+        #booklet-committee-container .w-16,
+        #booklet-committee-container .h-16 {
+            width: 2.2rem !important;
+            height: 2.2rem !important;
         }
 
+        /* targeted overrides for Page 4 Speaker Names vs Metadata */
+        #booklet-keynote-container h4 {
+            font-size: 0.85rem !important;
+            margin-bottom: 0.3rem !important;
+        }
+
+        #booklet-keynote-container p {
+            font-size: 0.75rem !important;
+            line-height: 1.25 !important;
+        }
+
+        #booklet-session1-container h4,
+        #booklet-session2-container h4 {
+            font-size: 0.72rem !important;
+            margin-bottom: 0.2rem !important;
+        }
+
+        #booklet-session1-container p,
+        #booklet-session2-container p {
+            font-size: 0.65rem !important;
+            line-height: 1.15 !important;
+        }
+
+        /* targeted overrides for Bio Pages */
+        .speaker-bio-page .text-xl {
+            font-size: 1.1rem !important;
+            /* Speaker Name */
+        }
+
+        /* Program Schedule Page Specific Overrides */
+        #booklet-schedule-page .text-xs {
+            font-size: 0.85rem !important;
+            /* Time & Event Title */
+        }
+
+        #booklet-schedule-page .text-\[10px\] {
+            font-size: 0.8rem !important;
+            /* Speakers */
+        }
+
+        #booklet-schedule-page .w-28 {
+            width: 5rem !important;
+            /* Adjust width for larger time font if needed */
+            font-size: 0.85rem !important;
+        }
+
+        .speaker-bio-page p.text-xs.uppercase {
+            font-size: 0.8rem !important;
+            /* Affiliation */
+        }
+
+        /* Controls */
         .controls {
             position: fixed;
-            bottom: 20px;
+            bottom: 30px;
             left: 50%;
             transform: translateX(-50%);
             display: flex;
             align-items: center;
-            gap: 15px;
+            gap: 20px;
             z-index: 1000;
-            background: rgba(15, 23, 42, 0.9);
+            background: rgba(15, 23, 42, 0.8);
             backdrop-filter: blur(8px);
-            padding: 8px 20px;
+            padding: 10px 25px;
             border-radius: 50px;
-            border: 1px solid rgba(255, 255, 255, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.1);
             color: white;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
         }
 
-        /* Mobile Specific Overrides in CSS if absolutely needed for layout shifts, standard scaling handles most */
-        @media (max-width: 768px) {
-            .controls {
-                bottom: 10px;
-                padding: 5px 15px;
-                gap: 8px;
-            }
-
-            .page-content {
-                padding: 1.8em !important;
-            }
-
-            /* Slightly less padding on mobile relative to font */
+        .btn-ctrl {
+            background: none;
+            border: none;
+            color: white;
+            cursor: pointer;
+            font-size: 1.2rem;
+            opacity: 0.7;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
         }
 
-        /* --- Loading Overlay --- */
+        .btn-ctrl:hover {
+            opacity: 1;
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .page-info {
+            font-size: 0.9rem;
+            font-weight: 600;
+            min-width: 80px;
+            text-align: center;
+        }
+
         .loading-overlay {
             position: fixed;
             inset: 0;
@@ -259,6 +384,58 @@
                 transform: rotate(360deg);
             }
         }
+
+        /* Responsive scaling */
+        @media (max-width: 850px) {
+            .controls {
+                bottom: 15px;
+                padding: 5px 15px;
+                gap: 10px;
+            }
+        }
+
+        .stf__parent {
+            /* Fix for page-flip z-index issues in some browsers */
+            perspective: 2000px;
+        }
+
+        /* Custom scrollbar for bio content if needed */
+        .speaker-content::-webkit-scrollbar {
+            width: 4px;
+        }
+
+        .speaker-content::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        .speaker-content::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 2px;
+        }
+
+        .back-to-site {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 1000;
+            background: rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(8px);
+            padding: 8px 15px;
+            border-radius: 8px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: white;
+            font-size: 0.85rem;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.2s;
+        }
+
+        .back-to-site:hover {
+            background: rgba(30, 41, 59, 1);
+            transform: translateX(5px);
+        }
     </style>
 </head>
 
@@ -281,7 +458,7 @@
                 <!-- 1. Full Vertical Background Image (V6 - Visually Extended & Lowered) -->
                 <div class="absolute inset-0 bg-gradient-to-b from-[#020617] via-[#0f172a] to-slate-900 z-0"></div>
                 <div class="absolute inset-0 bg-[url('assets/symposium_poster_final_v6_tall.png')] bg-no-repeat z-0"
-                    style="background-size: cover; background-position: center bottom; -webkit-mask-image: linear-gradient(to bottom, transparent 0%, transparent 10%, black 40%, black 100%); mask-image: linear-gradient(to bottom, transparent 0%, transparent 10%, black 40%, black 100%);">
+                    style="background-size: 100% auto; background-position: center calc(100% + 4rem); -webkit-mask-image: linear-gradient(to bottom, transparent 0%, transparent 10%, black 40%, black 100%); mask-image: linear-gradient(to bottom, transparent 0%, transparent 10%, black 40%, black 100%);">
                 </div>
 
                 <!-- 2. Subtle Line Drawing Overlay -->
@@ -351,14 +528,13 @@
 
 
             <!-- PAGE 2: CONTENTS & WELCOME -->
-            <div class="page bg-white text-slate-800 p-6 md:p-12 relative overflow-hidden">
-                <div class="relative z-10 h-full flex flex-col pb-6 md:pb-8">
-                    <div class="mb-4 md:mb-8 border-b-2 border-slate-100 pb-4 md:pb-6">
-                        <h2
-                            class="text-xl md:text-3xl font-black text-slate-900 mb-4 md:mb-8 border-b-4 border-blue-600 inline-block">
+            <div class="page bg-white text-slate-800 p-8 relative overflow-hidden">
+                <div class="relative z-10 h-full flex flex-col pb-6">
+                    <div class="mb-6 border-b-2 border-slate-100 pb-4">
+                        <h2 class="text-2xl font-black text-slate-900 mb-6 border-b-4 border-blue-600 inline-block">
                             Contents
                         </h2>
-                        <ul class="grid grid-cols-1 gap-y-1 md:gap-y-2 text-[10px] md:text-lg">
+                        <ul class="grid grid-cols-1 gap-y-0.5 text-xs">
                             <li class="flex justify-between items-center border-b border-slate-50 py-0.5"><span
                                     class="font-bold text-slate-600">Welcoming Remarks</span><span
                                     class="text-slate-400 font-serif italic">02, 03</span></li>
@@ -390,8 +566,7 @@
                         <h2
                             class="text-2xl font-black text-slate-900 border-b-4 border-blue-600 inline-block mb-6 self-start">
                             Welcoming Remarks</h2>
-                        <div
-                            class="prose prose-slate text-xs md:text-base leading-relaxed text-justify text-slate-600 space-y-3">
+                        <div class="prose prose-slate text-xs leading-relaxed text-justify text-slate-600 space-y-3">
                             <p class="mt-0">Dear Esteemed Guests, Colleagues, and KSEA Members,</p>
                             <p>It is our great honor to welcome you to the <strong class="text-blue-700">2026 US-Korea
                                     Northeastern Symposium on AI, Biomedical Science, & Engineering</strong>, hosted by
@@ -439,13 +614,13 @@
             </div>
 
             <!-- PAGE 3: PRESIDENT'S CONGRATULATORY REMARKS -->
-            <div class="page bg-white text-slate-800 p-6 md:p-12 relative overflow-hidden">
+            <div class="page bg-white text-slate-800 p-8 relative overflow-hidden">
                 <div class="relative z-10 h-full flex flex-col">
                     <h2
-                        class="text-xl md:text-4xl font-black text-slate-900 border-b-2 md:border-b-4 border-blue-600 inline-block mb-4 md:mb-8 self-start">
-                        Welcoming Remarks: 2026 US-Korea Northeastern Symposium</h2>
+                        class="text-2xl font-black text-slate-900 border-b-4 border-blue-600 inline-block mb-6 self-start">
+                        Welcoming Remarks</h2>
                     <div
-                        class="prose prose-slate text-xs md:text-lg leading-tight md:leading-loose text-justify text-slate-600 space-y-1.5 md:space-y-4 flex-grow">
+                        class="prose prose-slate text-xs leading-relaxed text-justify text-slate-600 space-y-3 flex-grow">
                         <p class="mt-0">Dear fellow KSEA members and the extended Philadelphia community,</p>
                         <p>It is a profound honor to offer these welcoming remarks for the <strong
                                 class="text-blue-700">2026 US-Korea Northeastern Symposium on AI, Biomedical Science, &
@@ -495,14 +670,14 @@
 
 
             <!-- PAGE 3: PROGRAM SCHEDULE -->
-            <div id="booklet-schedule-page" class="page bg-white text-slate-800 p-6 md:p-8 relative overflow-hidden">
+            <div id="booklet-schedule-page" class="page bg-white text-slate-800 p-8 relative overflow-hidden">
                 <div class="relative z-10 h-full flex flex-col">
                     <h2
-                        class="text-xl md:text-2xl font-black text-slate-900 mb-4 md:mb-8 border-b-4 border-blue-600 inline-block self-start">
+                        class="text-2xl font-black text-slate-900 mb-8 border-b-4 border-blue-600 inline-block self-start">
                         Program Schedule</h2>
-                    <div class="flex-grow space-y-1 md:space-y-3">
-                        <div class="flex border-l-4 border-slate-200 pl-4 py-1 md:py-2 hover:bg-slate-50 transition">
-                            <div class="w-20 md:w-28 font-bold text-blue-600 text-[10px] md:text-xs">12:20 PM</div>
+                    <div class="flex-grow space-y-3">
+                        <div class="flex border-l-4 border-slate-200 pl-4 py-2 hover:bg-slate-50 transition">
+                            <div class="w-28 font-bold text-blue-600 text-xs">12:20 PM</div>
                             <div>
                                 <h4 class="font-bold text-slate-800 text-xs">Welcome Remarks & Housekeeping</h4>
                             </div>
@@ -676,113 +851,111 @@
 
         <!-- PAGE 13: REGISTRATION & POSTER SESSION -->
         <!-- PAGE 13: REGISTRATION & POSTER SESSION -->
-        <div class="page bg-white p-12">
-            <div class="page-content flex flex-col h-full">
+        <div class="page bg-white p-12 page-content flex flex-col h-full">
 
-                <!-- Registration Section -->
-                <div class="mb-8">
-                    <div class="flex items-center justify-between mb-4 border-b-2 border-slate-100 pb-2">
-                        <h2 class="text-2xl font-black text-slate-900">Registration</h2>
-                        <div class="text-blue-600 bg-blue-50 px-3 py-1 rounded-full text-xs font-bold">
-                            <i class="fas fa-info-circle mr-1"></i> Early Bird: Feb 15
-                        </div>
-                    </div>
-
-                    <table class="w-full text-sm mb-6 text-left">
-                        <thead class="text-slate-500 uppercase text-xs border-b border-slate-200">
-                            <tr>
-                                <th class="py-2 px-2">Category</th>
-                                <th class="py-2 px-2 text-right">KSEA Member</th>
-                                <th class="py-2 px-2 text-right">Non-Member</th>
-                            </tr>
-                        </thead>
-                        <tbody class="divide-y divide-slate-100">
-                            <tr>
-                                <td class="py-2 px-2 font-bold text-slate-700">Student / Postdoc</td>
-                                <td class="py-2 px-2 text-right text-blue-600 font-bold">$10</td>
-                                <td class="py-2 px-2 text-right text-slate-500">$40</td>
-                            </tr>
-                            <tr>
-                                <td class="py-2 px-2 font-bold text-slate-700">Faculty / Professional</td>
-                                <td class="py-2 px-2 text-right text-blue-600 font-bold">$30</td>
-                                <td class="py-2 px-2 text-right text-slate-500">$60</td>
-                            </tr>
-                        </tbody>
-                    </table>
-
-                    <div class="grid grid-cols-3 gap-6">
-                        <a href="https://philly.ksea.org/symposium/registration" target="_blank"
-                            class="text-center group block">
-                            <div
-                                class="w-full aspect-square bg-slate-50 rounded-lg p-2 border border-slate-100 mx-auto mb-2 flex items-center justify-center group-hover:bg-blue-50 transition-colors">
-                                <img src="assets/registration-qr.png" class="max-w-full max-h-full object-contain">
-                            </div>
-                            <p class="text-xs font-bold text-blue-600 uppercase tracking-wide">Register</p>
-                        </a>
-                        <div class="text-center group">
-                            <div
-                                class="w-full aspect-square bg-slate-50 rounded-lg p-2 border border-slate-100 mx-auto mb-2 flex items-center justify-center">
-                                <img src="assets/zelle-qr.png" class="max-w-full max-h-full object-contain">
-                            </div>
-                            <p class="text-xs font-bold text-purple-600 uppercase tracking-wide">Zelle</p>
-                        </div>
-                        <div class="text-center group">
-                            <div
-                                class="w-full aspect-square bg-slate-50 rounded-lg p-2 border border-slate-100 mx-auto mb-2 flex items-center justify-center">
-                                <img src="assets/venmo-qr.png" class="max-w-full max-h-full object-contain">
-                            </div>
-                            <p class="text-xs font-bold text-blue-500 uppercase tracking-wide">Venmo</p>
-                        </div>
+            <!-- Registration Section -->
+            <div class="mb-8">
+                <div class="flex items-center justify-between mb-4 border-b-2 border-slate-100 pb-2">
+                    <h2 class="text-2xl font-black text-slate-900">Registration</h2>
+                    <div class="text-blue-600 bg-blue-50 px-3 py-1 rounded-full text-xs font-bold">
+                        <i class="fas fa-info-circle mr-1"></i> Early Bird: Feb 15
                     </div>
                 </div>
 
-                <!-- Poster Session Section -->
-                <div class="flex-grow flex flex-col">
-                    <div class="flex items-center justify-between mb-4 border-b-2 border-slate-100 pb-2">
-                        <h2 class="text-2xl font-black text-slate-900">Poster Session</h2>
-                        <div class="text-right">
-                            <div class="text-blue-600 font-bold text-sm">2:30 – 3:30 PM</div>
-                            <div class="text-slate-400 text-xs uppercase font-bold tracking-wide">Lobby Space</div>
+                <table class="w-full text-sm mb-6 text-left">
+                    <thead class="text-slate-500 uppercase text-xs border-b border-slate-200">
+                        <tr>
+                            <th class="py-2 px-2">Category</th>
+                            <th class="py-2 px-2 text-right">KSEA Member</th>
+                            <th class="py-2 px-2 text-right">Non-Member</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-100">
+                        <tr>
+                            <td class="py-2 px-2 font-bold text-slate-700">Student / Postdoc</td>
+                            <td class="py-2 px-2 text-right text-blue-600 font-bold">$10</td>
+                            <td class="py-2 px-2 text-right text-slate-500">$40</td>
+                        </tr>
+                        <tr>
+                            <td class="py-2 px-2 font-bold text-slate-700">Faculty / Professional</td>
+                            <td class="py-2 px-2 text-right text-blue-600 font-bold">$30</td>
+                            <td class="py-2 px-2 text-right text-slate-500">$60</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="grid grid-cols-3 gap-6">
+                    <a href="https://philly.ksea.org/symposium/registration" target="_blank"
+                        class="text-center group block">
+                        <div
+                            class="w-full aspect-square bg-slate-50 rounded-lg p-2 border border-slate-100 mx-auto mb-2 flex items-center justify-center group-hover:bg-blue-50 transition-colors">
+                            <img src="assets/registration-qr.png" class="max-w-full max-h-full object-contain">
                         </div>
+                        <p class="text-xs font-bold text-blue-600 uppercase tracking-wide">Register</p>
+                    </a>
+                    <div class="text-center group">
+                        <div
+                            class="w-full aspect-square bg-slate-50 rounded-lg p-2 border border-slate-100 mx-auto mb-2 flex items-center justify-center">
+                            <img src="assets/zelle-qr.png" class="max-w-full max-h-full object-contain">
+                        </div>
+                        <p class="text-xs font-bold text-purple-600 uppercase tracking-wide">Zelle</p>
                     </div>
-
-                    <p class="text-slate-600 mb-4 text-sm leading-relaxed">
-                        A networking break with light refreshments featuring latest findings from students and
-                        researchers.
-                    </p>
-
-                    <div class="bg-blue-50/50 border-l-4 border-blue-500 pl-4 py-2 rounded-r mb-6">
-                        <p class="text-sm font-bold text-slate-800 mb-0.5"><span class="text-blue-600">Research
-                                Competition (Max 30):</span></p>
-                        <p class="text-sm text-slate-600">Previous work accepted | 1 poster/presenter</p>
+                    <div class="text-center group">
+                        <div
+                            class="w-full aspect-square bg-slate-50 rounded-lg p-2 border border-slate-100 mx-auto mb-2 flex items-center justify-center">
+                            <img src="assets/venmo-qr.png" class="max-w-full max-h-full object-contain">
+                        </div>
+                        <p class="text-xs font-bold text-blue-500 uppercase tracking-wide">Venmo</p>
                     </div>
-
-                    <h4 class="font-bold text-slate-800 uppercase text-xs tracking-wider mb-3">Awards Categories</h4>
-                    <ul class="space-y-3 mb-auto">
-                        <li class="flex items-center text-sm text-slate-700">
-                            <span class="w-6 flex justify-center mr-2"><i
-                                    class="fas fa-trophy text-yellow-500 text-lg"></i></span>
-                            <span class="font-bold">Best Poster Award</span>
-                        </li>
-                        <li class="flex items-center text-sm text-slate-700">
-                            <span class="w-6 flex justify-center mr-2"><i
-                                    class="fas fa-medal text-slate-400 text-lg"></i></span>
-                            <span class="font-bold">Best Student Poster Award</span>
-                        </li>
-                        <li class="flex items-center text-sm text-slate-700">
-                            <span class="w-6 flex justify-center mr-2"><i
-                                    class="fas fa-award text-orange-400 text-lg"></i></span>
-                            <span class="font-bold">People's Choice Award</span>
-                        </li>
-                    </ul>
-
-                    <p class="text-xs text-slate-400 italic text-center mt-4">
-                        * Presentation slots prioritized for KSEA Philadelphia Chapter student/postdoc members.
-                    </p>
                 </div>
-
-                <span class="page-number">14</span>
             </div>
+
+            <!-- Poster Session Section -->
+            <div class="flex-grow flex flex-col">
+                <div class="flex items-center justify-between mb-4 border-b-2 border-slate-100 pb-2">
+                    <h2 class="text-2xl font-black text-slate-900">Poster Session</h2>
+                    <div class="text-right">
+                        <div class="text-blue-600 font-bold text-sm">2:30 – 3:30 PM</div>
+                        <div class="text-slate-400 text-xs uppercase font-bold tracking-wide">Lobby Space</div>
+                    </div>
+                </div>
+
+                <p class="text-slate-600 mb-4 text-sm leading-relaxed">
+                    A networking break with light refreshments featuring latest findings from students and
+                    researchers.
+                </p>
+
+                <div class="bg-blue-50/50 border-l-4 border-blue-500 pl-4 py-2 rounded-r mb-6">
+                    <p class="text-sm font-bold text-slate-800 mb-0.5"><span class="text-blue-600">Research
+                            Competition (Max 30):</span></p>
+                    <p class="text-sm text-slate-600">Previous work accepted | 1 poster/presenter</p>
+                </div>
+
+                <h4 class="font-bold text-slate-800 uppercase text-xs tracking-wider mb-3">Awards Categories</h4>
+                <ul class="space-y-3 mb-auto">
+                    <li class="flex items-center text-sm text-slate-700">
+                        <span class="w-6 flex justify-center mr-2"><i
+                                class="fas fa-trophy text-yellow-500 text-lg"></i></span>
+                        <span class="font-bold">Best Poster Award</span>
+                    </li>
+                    <li class="flex items-center text-sm text-slate-700">
+                        <span class="w-6 flex justify-center mr-2"><i
+                                class="fas fa-medal text-slate-400 text-lg"></i></span>
+                        <span class="font-bold">Best Student Poster Award</span>
+                    </li>
+                    <li class="flex items-center text-sm text-slate-700">
+                        <span class="w-6 flex justify-center mr-2"><i
+                                class="fas fa-award text-orange-400 text-lg"></i></span>
+                        <span class="font-bold">People's Choice Award</span>
+                    </li>
+                </ul>
+
+                <p class="text-xs text-slate-400 italic text-center mt-4">
+                    * Presentation slots prioritized for KSEA Philadelphia Chapter student/postdoc members.
+                </p>
+            </div>
+
+            <span class="page-number">14</span>
         </div>
 
 
@@ -860,63 +1033,19 @@
         // but for now, we'll just replicate the necessary structures.
 
         async function initFlipbook() {
-            const width = window.innerWidth;
-            const height = window.innerHeight;
-            const isMobile = width < 768;
-
-            // --- Dimensions and Aspect Ratio Logic ---
-            let baseWidth, baseHeight;
-            let usePortraitMode = false;
-            let sizeMode = "stretch"; // Default to stretch for desktop/resizing
-
-            // Calculate available space
-            const availableHeight = height - 100; // Buffer for controls/margins
-            const availableWidth = width - 40;   // Buffer for side margins
-
-            if (isMobile) {
-                // Mobile: Prioritize width, use taller aspect ratio (e.g., 9:16 or similar)
-                // Maximize width within reason
-                baseWidth = Math.min(availableWidth, 400);
-                baseHeight = Math.min(availableHeight, 600);
-
-                // If height is too small relative to width, adjust
-                if (baseHeight < baseWidth * 1.3) {
-                    baseHeight = baseWidth * 1.3;
-                }
-                usePortraitMode = true; // Force single page on mobile
-                sizeMode = "fixed"; // Keep fixed size on mobile to prevent weird stretching
-            } else {
-                // Desktop/Laptop: Use Standard A4-ish Ratio (1 : 1.414) per page
-                // Revert to stable desktop logic: Allow stretching and standard aspect ratio
-
-                baseWidth = 540; // Standard base width
-                baseHeight = 700; // Standard base height
-                usePortraitMode = false; // Double page spread
-                sizeMode = "stretch"; // Allow scaling to fit screen
-            }
-
-            // --- Dynamic Font Scaling ---
-            // Set scale factor: 2.2% of page height seems to be a sweet spot
-            // e.g., 600px height -> 13.2px base font
-            //       800px height -> 17.6px base font
-            const baseFontSize = Math.max(baseHeight * 0.022, 11); // Min 11px
-            document.documentElement.style.setProperty('--page-base-size', baseFontSize + 'px');
-
-            console.log(`Flipbook Init: ${baseWidth}x${baseHeight} (Mode: ${isMobile ? 'Single' : 'Double'}), Font: ${baseFontSize}px`);
-
             const flipBook = new St.PageFlip(document.getElementById('flipbook'), {
-                width: baseWidth,
-                height: baseHeight,
-                size: sizeMode,
-                minWidth: 300,
-                maxWidth: 1000,
-                minHeight: 400,
-                maxHeight: 1200,
+                width: 540, // Adjusted for US Letter aspect ratio (8.5x11 ~ 0.77) keeping height 700
+                height: 700,
+                size: "stretch",
+                minWidth: 378,
+                maxWidth: 648,
+                minHeight: 500,
+                maxHeight: 850,
                 maxShadowOpacity: 0.5,
-                showCover: false,
-                autoCenter: true,
+                showCover: false, // Changed to allow Odd-Left / Even-Right layout
+                autoCenter: true, // Ensure the book container is centered
                 mobileScrollSupport: false,
-                usePortrait: usePortraitMode
+                usePortrait: false
             });
 
             // Extract pages from a hidden template or build them here
@@ -932,14 +1061,13 @@
             const pageCurrent = document.getElementById('page-current');
             const loading = document.getElementById('loading');
 
-            // Update total pages
-            setTimeout(() => {
-                pageTotal.innerText = flipBook.getPageCount();
-            }, 500);
+            pageTotal.innerText = flipBook.getPageCount();
 
             flipBook.on('flip', (e) => {
-                let pageNum = e.data + 1;
-                pageCurrent.innerText = pageNum;
+                pageCurrent.innerText = e.data + 1;
+                if (e.data + 1 > 1 && e.data + 1 < flipBook.getPageCount()) {
+                    // Optional: handle double page view logic
+                }
             });
 
             document.getElementById('btn-prev').addEventListener('click', () => {
@@ -956,20 +1084,6 @@
                 loading.style.opacity = '0';
                 setTimeout(() => loading.style.display = 'none', 500);
             }, 1000);
-
-            // Resizing Support
-            // Debounced reload to handle orientation changes or window resizing
-            let resizeTimer;
-            window.addEventListener('resize', () => {
-                clearTimeout(resizeTimer);
-                resizeTimer = setTimeout(() => {
-                    // Check if dimensions actually changed significantly (to avoid mobile url bar jitter)
-                    const newWidth = window.innerWidth;
-                    if (Math.abs(newWidth - width) > 50) {
-                        location.reload();
-                    }
-                }, 500);
-            });
         }
 
         function buildPages() {
