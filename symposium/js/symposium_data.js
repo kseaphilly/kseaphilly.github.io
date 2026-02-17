@@ -100,7 +100,7 @@ const SYMPOSIUM_DATA = {
         { time: "2:30 – 3:30 PM", event: "BREAK & POSTER SESSION", type: "break", details: ["Coffee, refreshments, and networking"] },
         { time: "3:30 – 4:30 PM", event: "SESSION #2: Future Science & Next-Gen Tech", type: "session", details: ["Hayoung Bong, PhD: How do we know the climate has been changing?", "Minsung Kim, PhD: Quantum Computing for NextG Wireless", "Ian Yun (META BIOMED USA)"] },
         { time: "4:30 – 4:40 PM", event: "Closing Remarks & Poster Awards", type: "general", details: ["Group Photo"] },
-        { time: "5:00 PM –", event: "NETWORKING DINNER", type: "social", details: ["Venue TBA"] }
+        { time: "5:00 PM –", event: "NETWORKING DINNER", type: "social", details: ["Cafe 58 at Irvine Auditorium"] }
     ],
     committee: {
         chairs: [
