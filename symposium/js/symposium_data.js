@@ -38,10 +38,10 @@ const SYMPOSIUM_DATA = {
                 name: "Dokyoon Kim, PhD",
                 title: "Associate Professor",
                 affiliation: "University of Pennsylvania",
-                talkTitle: "Integrating multi-omics data with clinical information using AI/ML",
+                talkTitle: "Advancing Precision Medicine: Polygenic Risk Scores and Beyond",
                 image: "assets/dokyoon-kim-v2.png",
-                abstract: "Abstract to be updated.",
-                bio: "Biography to be updated."
+                abstract: "Large-scale biomedical data, including EHR-linked biobanks, genomics, proteomics, and immune profiling, are expanding opportunities for precision medicine. While polygenic risk scores (PRS) capture inherited susceptibility, they often miss dynamic biological signals that influence disease development. Integrating proteomic, clinical, and immune data may improve risk prediction and biological insight. We present an integrative framework that combines genetic, proteomic, clinical, and immune profiling data to enhance disease risk stratification. Using large biobank resources, we evaluate complementary contributions of PRS and proteomic risk scores (ProRS) across multiple diseases and demonstrate improved predictive performance when these data are combined. We also develop machine learning approaches for immune profiling using high-dimensional cytometry data to enable interpretable immune state characterization. Together, these approaches highlight the potential of multi-modal biomedical data integration to advance precision medicine through improved disease prediction, patient stratification, and translational insight.",
+                bio: "Dr. Dokyoon Kim is an Associate Professor of Informatics in the Department of Biostatistics, Epidemiology, and Informatics at the Perelman School of Medicine, University of Pennsylvania. He also serves as the Director of the Center for AI-Driven Translational Informatics (CATI) and holds the role of Associate Director of Informatics at Penn Immune Health. His primary focus is on the integration of multi-modal data, encompassing 'omics data, environmental data, imaging, and phenotype data from Electronic Health Records (EHR). Through the use of artificial intelligence (AI), he advances the fields of precision medicine and translational informatics."
             },
             {
                 name: "Jina Ko, PhD",
