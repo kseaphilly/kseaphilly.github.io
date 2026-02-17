@@ -86,10 +86,10 @@ const SYMPOSIUM_DATA = {
                 name: "Ian Yun",
                 title: "President, META BIOMED USA",
                 affiliation: "META BIOMED Co., Ltd.",
-                talkTitle: "Advancing Healthcare Solutions: META BIOMED's Innovation Journey",
+                talkTitle: "",
                 image: "assets/ian-yun.jpg",
-                abstract: "META BIOMED is a global leader in biocompatible medical devices and bioengineering solutions, exporting to over 80 countries. This talk will explore how META BIOMED integrates cutting-edge technology with clinical excellence to deliver innovative healthcare products. From dental materials and surgical instruments to future-oriented bioengineering, we demonstrate our commitment to advancing healthcare solutions worldwide while maintaining our core values of Diamond Quality, Gold Service, and Silver Price.",
-                bio: "Ian Yun serves as the President of META BIOMED USA, leading the American operations of META BIOMED Co., Ltd., a global technology-driven company specializing in biocompatible medical devices. Founded in 1990 and headquartered in South Korea, META BIOMED has established itself as a premier partner in the healthcare industry, with products reaching over 80 countries. Under his leadership, META BIOMED USA continues to expand its presence in the North American market, bringing innovative solutions in dental materials, surgical equipment, and bioengineering to healthcare professionals."
+                abstract: "",
+                bio: ""
             }
         ]
     },
@@ -98,7 +98,7 @@ const SYMPOSIUM_DATA = {
         { time: "12:30 – 1:30 PM", event: "KEYNOTE SESSION", type: "keynote", details: ["Junhyong Kim, PhD: Beyond Single Cells to Subcellular Biology", "Deok-Ho Kim, PhD: Advanced Human Organ-on-a-Chip Platforms"] },
         { time: "1:30 – 2:30 PM", event: "SESSION #1: Precision Medicine & Bio-Innovation", type: "session", details: ["Dokyoon Kim, PhD: Integrating multi-omics data with AI", "Jina Ko, PhD: Next-Gen Molecular Tools for Precision Diagnostics", "Dae-Myoung Yang, PhD: Radiodynamic Therapy"] },
         { time: "2:30 – 3:30 PM", event: "BREAK & POSTER SESSION", type: "break", details: ["Coffee, refreshments, and networking"] },
-        { time: "3:30 – 4:30 PM", event: "SESSION #2: Future Science & Next-Gen Tech", type: "session", details: ["Hayoung Bong, PhD: How do we know the climate has been changing?", "Minsung Kim, PhD: Quantum Computing for NextG Wireless", "Ian Yun (META BIOMED USA): Advancing Healthcare Solutions"] },
+        { time: "3:30 – 4:30 PM", event: "SESSION #2: Future Science & Next-Gen Tech", type: "session", details: ["Hayoung Bong, PhD: How do we know the climate has been changing?", "Minsung Kim, PhD: Quantum Computing for NextG Wireless", "Ian Yun (META BIOMED USA)"] },
         { time: "4:30 – 4:40 PM", event: "Closing Remarks & Poster Awards", type: "general", details: ["Group Photo"] },
         { time: "5:00 PM –", event: "NETWORKING DINNER", type: "social", details: ["Venue TBA"] }
     ],
