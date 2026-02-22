@@ -98,7 +98,7 @@ const SYMPOSIUM_DATA = {
         { time: "12:30 – 1:30 PM", event: "KEYNOTE SESSION", type: "keynote", details: ["Junhyong Kim, PhD: Beyond Single Cells to Subcellular Biology", "Deok-Ho Kim, PhD: Advanced Human Organ-on-a-Chip Platforms"] },
         { time: "1:30 – 2:30 PM", event: "SESSION #1: Precision Medicine & Bio-Innovation", type: "session", details: ["Dokyoon Kim, PhD: Integrating multi-omics data with AI", "Jina Ko, PhD: Next-Gen Molecular Tools for Precision Diagnostics", "Dae-Myoung Yang, PhD: Radiodynamic Therapy"] },
         { time: "2:30 – 3:30 PM", event: "BREAK & POSTER SESSION", type: "break", details: ["Coffee, refreshments, and networking"] },
-        { time: "3:30 – 4:30 PM", event: "SESSION #2: Future Science & Next-Gen Tech", type: "session", details: ["Hayoung Bong, PhD: How do we know the climate has been changing?", "Minsung Kim, PhD: Quantum Computing for NextG Wireless", "Ian Yun (META BIOMED USA)"] },
+        { time: "3:30 – 4:30 PM", event: "SESSION #2: Future Science & Next-Gen Tech", type: "session", details: ["Hayoung Bong, PhD: How do we know the climate has been changing?", "Minsung Kim, PhD: Quantum Computing for NextG Wireless", "Ian Yun (META BIOMED America)"] },
         { time: "4:30 – 4:40 PM", event: "Closing Remarks & Poster Awards", type: "general", details: ["Group Photo"] },
         { time: "5:00 PM –", event: "NETWORKING DINNER", type: "social", details: ["Cafe 58 at Irvine Auditorium"] }
     ],
