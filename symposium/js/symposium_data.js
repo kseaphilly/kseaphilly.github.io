@@ -110,7 +110,8 @@ const SYMPOSIUM_DATA = {
         members: [
             { name: "Hyunmin Cho, PhD", role: "Program Director", affiliation: "University of Pennsylvania", image: "assets/hyunmin-cho.jpg" },
             { name: "Minjeong Yeon, PhD", role: "Publication Director", affiliation: "The Wistar Institute", image: "assets/minjeong-yeon.png" },
-            { name: "Jaeung Ko", role: "Public Relations Director", affiliation: "University of Pennsylvania", image: "assets/jaeung-ko.jpg" }
+            { name: "Jaeung Ko", role: "Public Relations Director", affiliation: "University of Pennsylvania", image: "assets/jaeung-ko.jpg" },
+            { name: "Sangin Kim, PhD", role: "General Director", affiliation: "University of Pennsylvania, Perelman School of Medicine", image: "assets/sangin-kim.jpg" }
         ]
     },
     sponsors: {
