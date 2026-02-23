@@ -149,7 +149,7 @@ const SymposiumRenderer = {
         container.innerHTML = SYMPOSIUM_DATA.committee.members.map(member => `
             <div class="text-center flex flex-col items-center">
                 <img src="${SymposiumRenderer.getAssetPath(member.image)}" alt="${member.name}"
-                    class="w-24 h-24 rounded-full object-cover mb-3 border-2 border-slate-100 shadow-sm object-top">
+                    class="w-28 h-28 rounded-full object-cover mb-3 border-2 border-slate-100 shadow-sm object-top">
                 <div class="text-blue-600 text-xs font-bold uppercase mb-1">${member.role}</div>
                 <div class="font-bold text-slate-800">${member.name}</div>
                 <div class="text-sm text-slate-500">${member.affiliation}</div>
