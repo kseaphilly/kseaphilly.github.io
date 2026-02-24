@@ -28,6 +28,7 @@
             align-items: center;
             justify-content: center;
             padding: 20px;
+            box-sizing: border-box;
         }
 
         .flip-book {
@@ -391,6 +392,47 @@
                 bottom: 15px;
                 padding: 5px 15px;
                 gap: 10px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            #book-container {
+                padding: 6px 6px 78px;
+            }
+
+            .flip-book {
+                box-shadow: 0 0 24px rgba(0, 0, 0, 0.35);
+            }
+
+            .stf__parent,
+            .stf__wrapper {
+                max-width: 100% !important;
+                max-height: 100% !important;
+            }
+
+            .page {
+                overflow: hidden !important;
+            }
+
+            .controls {
+                width: calc(100vw - 16px);
+                max-width: 420px;
+                bottom: 8px;
+                padding: 6px 12px;
+                gap: 8px;
+                border-radius: 16px;
+            }
+
+            .btn-ctrl {
+                width: 36px;
+                height: 36px;
+            }
+
+            .back-to-site {
+                top: 10px;
+                left: 10px;
+                padding: 6px 10px;
+                font-size: 0.75rem;
             }
         }
 
@@ -1041,58 +1083,200 @@
         // We will adapt the render.js logic to use templates instead of direct innerHTML if needed,
         // but for now, we'll just replicate the necessary structures.
 
-        async function initFlipbook() {
-            const flipBook = new St.PageFlip(document.getElementById('flipbook'), {
-                width: 540, // Adjusted for US Letter aspect ratio (8.5x11 ~ 0.77) keeping height 700
-                height: 700,
-                size: "stretch",
-                minWidth: 378,
-                maxWidth: 648,
-                minHeight: 500,
-                maxHeight: 850,
-                maxShadowOpacity: 0.5,
-                showCover: false, // Changed to allow Odd-Left / Even-Right layout
-                autoCenter: true, // Ensure the book container is centered
-                mobileScrollSupport: false,
-                usePortrait: false
-            });
+        let flipBookInstance = null;
+        let hasRenderedStaticContent = false;
+        let hasBoundControls = false;
+        let resizeDebounceTimer = null;
+        let lastViewportSignature = '';
+
+        function getFlipbookConfig() {
+            const viewportWidth = Math.round(window.visualViewport?.width || window.innerWidth);
+            const viewportHeight = Math.round(window.visualViewport?.height || window.innerHeight);
+            const isMobileViewport = viewportWidth <= 980;
+            const desktopPageWidth = 648;
+            const desktopPageHeight = 840;
+
+            const container = document.getElementById('book-container');
+            const controls = document.querySelector('.controls');
+            const backToSite = document.querySelector('.back-to-site');
+            let horizontalPadding = 12;
+            let verticalPadding = 12;
+            if (container) {
+                const containerStyle = window.getComputedStyle(container);
+                const padLeft = parseFloat(containerStyle.paddingLeft) || 0;
+                const padRight = parseFloat(containerStyle.paddingRight) || 0;
+                const padTop = parseFloat(containerStyle.paddingTop) || 0;
+                const padBottom = parseFloat(containerStyle.paddingBottom) || 0;
+                horizontalPadding = padLeft + padRight;
+                verticalPadding = padTop + padBottom;
+            }
+
+            const availableMobileWidth = Math.max(220, viewportWidth - horizontalPadding);
+            const topReserved = backToSite ? Math.max(0, backToSite.getBoundingClientRect().bottom + 8) : 0;
+            const bottomReserved = controls ? Math.max(0, viewportHeight - controls.getBoundingClientRect().top + 8) : 0;
+            const availableDesktopWidth = Math.max(320, viewportWidth - horizontalPadding);
+            const availableDesktopHeight = Math.max(420, viewportHeight - verticalPadding - topReserved - bottomReserved);
+
+            const mobileScale = Math.min(1, availableMobileWidth / desktopPageWidth);
+            const desktopFitScale = Math.min(
+                availableDesktopWidth / desktopPageWidth,
+                availableDesktopHeight / desktopPageHeight
+            );
+
+            const pageScale = isMobileViewport
+                ? mobileScale
+                : desktopFitScale;
+
+            const options = isMobileViewport
+                ? {
+                    width: desktopPageWidth,
+                    height: desktopPageHeight,
+                    size: "fixed",
+                    minWidth: desktopPageWidth,
+                    maxWidth: desktopPageWidth,
+                    minHeight: desktopPageHeight,
+                    maxHeight: desktopPageHeight,
+                    maxShadowOpacity: 0.25,
+                    showCover: false,
+                    autoCenter: true,
+                    mobileScrollSupport: false,
+                    usePortrait: true
+                }
+                : {
+                    width: desktopPageWidth,
+                    height: desktopPageHeight,
+                    size: "fixed",
+                    minWidth: 648,
+                    maxWidth: 648,
+                    minHeight: 840,
+                    maxHeight: 840,
+                    maxShadowOpacity: 0.5,
+                    showCover: false,
+                    autoCenter: true,
+                    mobileScrollSupport: false,
+                    usePortrait: false
+                };
+
+            const signature = `${isMobileViewport}-${Math.round(pageScale * 1000)}-${viewportWidth}-${viewportHeight}-${Math.round(horizontalPadding)}`;
+            return { options, signature, pageScale, isMobileViewport };
+        }
+
+        function applyGlobalPageScale(pageScale, isMobileViewport) {
+            const flipbookElement = document.getElementById('flipbook');
+            if (!flipbookElement) return;
+
+            flipbookElement.style.transformOrigin = 'center center';
+            flipbookElement.style.transform = `scale(${pageScale})`;
+            flipbookElement.style.margin = '0 auto';
+        }
+
+        function updatePageInfo() {
+            const pageTotal = document.getElementById('page-total');
+            const pageCurrent = document.getElementById('page-current');
+            if (!flipBookInstance || !pageTotal || !pageCurrent) return;
+
+            pageTotal.innerText = flipBookInstance.getPageCount();
+            const currentIndex = typeof flipBookInstance.getCurrentPageIndex === 'function'
+                ? flipBookInstance.getCurrentPageIndex()
+                : 0;
+            pageCurrent.innerText = currentIndex + 1;
+        }
+
+        function bindControls() {
+            if (hasBoundControls) return;
+
+            const prevButton = document.getElementById('btn-prev');
+            const nextButton = document.getElementById('btn-next');
+            prevButton.onclick = () => {
+                if (flipBookInstance) flipBookInstance.flipPrev();
+            };
+            nextButton.onclick = () => {
+                if (flipBookInstance) flipBookInstance.flipNext();
+            };
+
+            hasBoundControls = true;
+        }
+
+        function getCurrentPageIndexSafe() {
+            if (!flipBookInstance) return 0;
+            if (typeof flipBookInstance.getCurrentPageIndex === 'function') {
+                return flipBookInstance.getCurrentPageIndex();
+            }
+
+            const currentText = document.getElementById('page-current')?.innerText;
+            const parsed = Number(currentText);
+            return Number.isFinite(parsed) ? Math.max(0, parsed - 1) : 0;
+        }
+
+        function restorePageIndex(targetIndex) {
+            if (!flipBookInstance || targetIndex <= 0) return;
+
+            if (typeof flipBookInstance.turnToPage === 'function') {
+                flipBookInstance.turnToPage(targetIndex);
+                return;
+            }
+
+            if (typeof flipBookInstance.flip === 'function') {
+                flipBookInstance.flip(targetIndex);
+            }
+        }
+
+        async function initFlipbook(targetPageIndex = 0) {
+            const { options, signature, pageScale, isMobileViewport } = getFlipbookConfig();
+
+            if (flipBookInstance && typeof flipBookInstance.destroy === 'function') {
+                flipBookInstance.destroy();
+            }
+
+            flipBookInstance = new St.PageFlip(document.getElementById('flipbook'), options);
+            lastViewportSignature = signature;
 
             // Extract pages from a hidden template or build them here
             await buildPages();
 
             // Render content using existing SymposiumRenderer
-            renderContents();
+            if (!hasRenderedStaticContent) {
+                renderContents();
+                hasRenderedStaticContent = true;
+            }
 
             // Load the flipbook
-            flipBook.loadFromHTML(document.querySelectorAll(".page"));
+            flipBookInstance.loadFromHTML(document.querySelectorAll(".page"));
+            applyGlobalPageScale(pageScale, isMobileViewport);
 
-            const pageTotal = document.getElementById('page-total');
-            const pageCurrent = document.getElementById('page-current');
             const loading = document.getElementById('loading');
 
-            pageTotal.innerText = flipBook.getPageCount();
+            restorePageIndex(targetPageIndex);
+            updatePageInfo();
 
-            flipBook.on('flip', (e) => {
-                pageCurrent.innerText = e.data + 1;
-                if (e.data + 1 > 1 && e.data + 1 < flipBook.getPageCount()) {
-                    // Optional: handle double page view logic
+            flipBookInstance.on('flip', (e) => {
+                const pageCurrent = document.getElementById('page-current');
+                if (pageCurrent) {
+                    pageCurrent.innerText = e.data + 1;
                 }
             });
 
-            document.getElementById('btn-prev').addEventListener('click', () => {
-                flipBook.flipPrev();
-            });
-
-            document.getElementById('btn-next').addEventListener('click', () => {
-                flipBook.flipNext();
-            });
+            bindControls();
 
             // Show UI
             document.getElementById('flipbook').style.display = 'block';
-            setTimeout(() => {
-                loading.style.opacity = '0';
-                setTimeout(() => loading.style.display = 'none', 500);
-            }, 1000);
+            if (loading && loading.style.display !== 'none') {
+                setTimeout(() => {
+                    loading.style.opacity = '0';
+                    setTimeout(() => loading.style.display = 'none', 500);
+                }, 1000);
+            }
+        }
+
+        function handleViewportChange() {
+            clearTimeout(resizeDebounceTimer);
+            resizeDebounceTimer = setTimeout(() => {
+                const { signature } = getFlipbookConfig();
+                if (signature === lastViewportSignature) return;
+
+                const currentIndex = getCurrentPageIndexSafe();
+                initFlipbook(currentIndex);
+            }, 180);
         }
 
         function buildPages() {
@@ -1176,10 +1360,9 @@
             // SymposiumRenderer.renderBookletSpeakerPages('booklet-bio-pages-start');
             // SymposiumRenderer.renderBookletCommittee('booklet-committee-container');
         }
-
-
-
-        window.onload = initFlipbook;
+        window.addEventListener('resize', handleViewportChange);
+        window.addEventListener('orientationchange', handleViewportChange);
+        window.onload = () => initFlipbook();
     </script>
 </body>
 
