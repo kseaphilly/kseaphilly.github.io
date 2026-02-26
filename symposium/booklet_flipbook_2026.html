@@ -1088,6 +1088,7 @@
         let hasBoundControls = false;
         let resizeDebounceTimer = null;
         let lastViewportSignature = '';
+        let currentIsMobileViewport = null;
 
         function getFlipbookConfig() {
             const viewportWidth = Math.round(window.visualViewport?.width || window.innerWidth);
@@ -1230,6 +1231,7 @@
 
             flipBookInstance = new St.PageFlip(document.getElementById('flipbook'), options);
             lastViewportSignature = signature;
+            currentIsMobileViewport = isMobileViewport;
 
             // Extract pages from a hidden template or build them here
             await buildPages();
@@ -1271,11 +1273,22 @@
         function handleViewportChange() {
             clearTimeout(resizeDebounceTimer);
             resizeDebounceTimer = setTimeout(() => {
-                const { signature } = getFlipbookConfig();
-                if (signature === lastViewportSignature) return;
+                const { signature, pageScale, isMobileViewport } = getFlipbookConfig();
+                if (!flipBookInstance) {
+                    initFlipbook();
+                    return;
+                }
 
-                const currentIndex = getCurrentPageIndexSafe();
-                initFlipbook(currentIndex);
+                if (isMobileViewport !== currentIsMobileViewport) {
+                    const currentIndex = getCurrentPageIndexSafe();
+                    initFlipbook(currentIndex);
+                    return;
+                }
+
+                if (signature !== lastViewportSignature) {
+                    lastViewportSignature = signature;
+                    applyGlobalPageScale(pageScale, isMobileViewport);
+                }
             }, 180);
         }
 
