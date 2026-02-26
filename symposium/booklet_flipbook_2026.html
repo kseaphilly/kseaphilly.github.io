@@ -1089,11 +1089,20 @@
         let resizeDebounceTimer = null;
         let lastViewportSignature = '';
         let currentIsMobileViewport = null;
+        const modeMediaQuery = window.matchMedia('(max-width: 980px)');
 
         function getFlipbookConfig() {
-            const viewportWidth = Math.round(window.visualViewport?.width || window.innerWidth);
-            const viewportHeight = Math.round(window.visualViewport?.height || window.innerHeight);
-            const isMobileViewport = viewportWidth <= 980;
+            const visualWidth = window.visualViewport?.width || Number.POSITIVE_INFINITY;
+            const innerWidth = window.innerWidth || Number.POSITIVE_INFINITY;
+            const clientWidth = document.documentElement?.clientWidth || Number.POSITIVE_INFINITY;
+            const viewportWidth = Math.round(Math.min(visualWidth, innerWidth, clientWidth));
+
+            const visualHeight = window.visualViewport?.height || Number.POSITIVE_INFINITY;
+            const innerHeight = window.innerHeight || Number.POSITIVE_INFINITY;
+            const clientHeight = document.documentElement?.clientHeight || Number.POSITIVE_INFINITY;
+            const viewportHeight = Math.round(Math.min(visualHeight, innerHeight, clientHeight));
+
+            const isMobileViewport = modeMediaQuery.matches;
             const desktopPageWidth = 648;
             const desktopPageHeight = 840;
 
@@ -1279,7 +1288,7 @@
                     return;
                 }
 
-                if (isMobileViewport !== currentIsMobileViewport) {
+                if (modeMediaQuery.matches !== currentIsMobileViewport || isMobileViewport !== currentIsMobileViewport) {
                     const currentIndex = getCurrentPageIndexSafe();
                     initFlipbook(currentIndex);
                     return;
@@ -1290,6 +1299,14 @@
                     applyGlobalPageScale(pageScale, isMobileViewport);
                 }
             }, 180);
+        }
+
+        function handleViewportModeChange() {
+            if (modeMediaQuery.matches === currentIsMobileViewport && flipBookInstance) {
+                return;
+            }
+            const currentIndex = getCurrentPageIndexSafe();
+            initFlipbook(currentIndex);
         }
 
         function buildPages() {
@@ -1373,8 +1390,8 @@
             // SymposiumRenderer.renderBookletSpeakerPages('booklet-bio-pages-start');
             // SymposiumRenderer.renderBookletCommittee('booklet-committee-container');
         }
-        window.addEventListener('resize', handleViewportChange);
-        window.addEventListener('orientationchange', handleViewportChange);
+        // Mode is determined only once at initial load.
+        // Runtime viewport/mode switching is intentionally disabled.
         window.onload = () => initFlipbook();
     </script>
 </body>
