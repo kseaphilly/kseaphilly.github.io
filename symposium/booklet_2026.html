@@ -50,20 +50,188 @@
             page-break-after: auto !important;
         }
 
-        .no-print {
-            display: none;
+        /* Print Styles */
+        @media print {
+            @page {
+                size: letter;
+                margin: 0;
+            }
+
+            html, body {
+                background-color: white !important;
+                margin: 0;
+                padding: 0;
+            }
+
+            body {
+                display: block !important;
+                padding: 0 !important;
+                gap: 0 !important;
+            }
+
+            .page {
+                page-break-after: always;
+                page-break-inside: avoid;
+                margin: 0 !important;
+                box-shadow: none !important;
+                border: none !important;
+                width: 8.5in;
+                height: 11in;
+                display: block;
+            }
+
+            .page:last-child {
+                page-break-after: auto;
+            }
+
+            /* Ensure backgrounds and images print */
+            * {
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
+                color-adjust: exact !important;
+            }
+
+            /* Hide print button and page numbers in print */
+            .no-print {
+                display: none !important;
+            }
+
+            /* Optional: Show page numbers in print if desired */
+            .page-number {
+                display: block !important;
+            }
         }
 
-        .no-print {
+        /* Print Button */
+        .print-button {
             position: fixed;
             top: 20px;
             right: 20px;
             z-index: 9999;
+            background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            border: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .print-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        @media print {
+            .print-button {
+                display: none !important;
+            }
+        }
+
+        /* Bio Pages (Pages 6-13) Font Size Adjustments */
+        .speaker-bio-page h2 {
+            font-size: 1.5rem !important;
+            margin-bottom: 1rem !important;
+        }
+
+        .speaker-bio-page h3 {
+            font-size: 1.125rem !important;
+            margin-bottom: 0.75rem !important;
+        }
+
+        .speaker-bio-page h4 {
+            font-size: 1rem !important;
+            margin-bottom: 0.5rem !important;
+        }
+
+        .speaker-bio-page p {
+            font-size: 0.95rem !important;
+            line-height: 1.6 !important;
+        }
+
+        .speaker-bio-page .text-xs {
+            font-size: 0.85rem !important;
+        }
+
+        .speaker-bio-page .text-sm {
+            font-size: 0.9rem !important;
+        }
+
+        .speaker-bio-page .text-base {
+            font-size: 1rem !important;
+        }
+
+        .speaker-bio-page .text-lg {
+            font-size: 1.125rem !important;
+        }
+
+        .speaker-bio-page .text-xl {
+            font-size: 1.25rem !important;
+        }
+
+        .speaker-bio-page li {
+            font-size: 0.95rem !important;
+            line-height: 1.6 !important;
+        }
+
+        /* Ensure speaker names are prominent */
+        .speaker-bio-page .speaker-name {
+            font-size: 1.75rem !important;
+        }
+
+        /* Adjust spacing for better readability */
+        .speaker-bio-page .space-y-4 > * + * {
+            margin-top: 1rem !important;
+        }
+
+        .speaker-bio-page .space-y-6 > * + * {
+            margin-top: 1.5rem !important;
+        }
+
+        /* Full Page Ad Pages - Prevent Overflow */
+        .page.ad-page {
+            overflow: hidden !important;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0 !important;
+        }
+
+        .page.ad-page img {
+            max-width: 100%;
+            max-height: 100%;
+            width: 100%;
+            height: 100%;
+            object-fit: contain !important;
+        }
+
+        @media print {
+            .page.ad-page {
+                page-break-before: always;
+                page-break-after: always;
+                page-break-inside: avoid;
+                overflow: hidden !important;
+            }
+
+            .page.ad-page img {
+                max-height: 11in !important;
+                page-break-inside: avoid;
+            }
         }
     </style>
 </head>
 
 <body>
+    <!-- Print Button -->
+    <button class="print-button no-print" onclick="window.print()">
+        <i class="fas fa-print"></i>
+        Print Booklet
+    </button>
 
     <!-- PAGE 1: FRONT COVER -->
     <div class="page cover ambient-bg">
@@ -622,14 +790,14 @@
     </div>
 
     <!-- PAGE 14: FULL PAGE AD - META BIOMED (Bronze Sponsor - upgraded to full page) -->
-    <div class="page bg-white relative !border-none">
-        <img src="assets/meta_biomed_ad.png" class="w-full h-full object-cover">
+    <div class="page ad-page bg-white relative !border-none">
+        <img src="assets/meta_biomed_ad.png" alt="Meta Biomed Advertisement">
         <span class="page-number">14</span>
     </div>
 
     <!-- PAGE 15: FULL PAGE AD -->
-    <div class="page bg-white relative !border-none">
-        <img src="assets/kusco_full_page_ad.jpg" class="w-full h-full object-cover">
+    <div class="page ad-page bg-white relative !border-none">
+        <img src="assets/kusco_full_page_ad.jpg" alt="KUSCO Advertisement">
         <span class="page-number text-white drop-shadow-md">15</span>
     </div>
 
@@ -698,8 +866,7 @@
 
 
 
-    <!-- Script to Replace Covers with Raster Images (Disabled to show HTML design) -->
-
+    <!-- Script to Replace Covers with Raster Images (Disabled to show HTML design) 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const frontCover = document.querySelector('.page.cover');
@@ -743,8 +910,7 @@
             // Replace Back Cover
             replaceContentWithImage(backCover, 'assets/cover_back_raster.png');
         });
-    </script>
-
+    </script> -->
     <script src="js/symposium_data.js"></script>
     <script src="js/render.js"></script>
 </body>
