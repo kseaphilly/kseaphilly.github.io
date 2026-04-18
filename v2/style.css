@@ -15,9 +15,16 @@
 }
 
 /* ── Reset ───────────────────────────────────────────────── */
-html, body {
+html {
     margin: 0;
     padding: 0;
+    background: var(--w-ink);
+}
+
+body {
+    margin: 0 auto;
+    padding: 0;
+    max-width: 1440px;
     background: var(--w-paper);
     color: var(--w-ink);
     font-family: 'Space Grotesk', -apple-system, sans-serif;
