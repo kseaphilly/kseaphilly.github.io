@@ -1,8 +1,10 @@
 # KSEA Philly Wiki Index
 
 ## Core Documents
+- [[_context]]: High-level project map.
 - [[purpose]]: Why this wiki exists.
-- [[schema]]: Rules for the wiki.
+- [[schema]]: Rules for the wiki files.
+- [[GUIDELINES]]: How to operate and maintain the wiki.
 - [[log]]: Operation history.
 
 ## Concepts
