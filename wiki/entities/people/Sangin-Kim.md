@@ -2,7 +2,7 @@
 title: Sangin Kim
 type: entity
 role: Councilor
-affiliation: PKSA President, University of Pennsylvania
+affiliation: PKSA President University of Pennsylvania
 ---
 
 # Sangin Kim

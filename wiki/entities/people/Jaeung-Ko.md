@@ -2,7 +2,7 @@
 title: Jaeung Ko
 type: entity
 role: Councilor
-affiliation: UPenn KoGSA President, University of Pennsylvania
+affiliation: UPenn KoGSA President University of Pennsylvania
 ---
 
 # Jaeung Ko
