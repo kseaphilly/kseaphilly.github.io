@@ -9,20 +9,18 @@
 - [AGENTS](../AGENTS.md): Intelligence profile and memory for AI agents.
 - [[log]]: Operation history.
 
-## Concepts
-- [[Bio-AI-Design-System]]: Visual guidelines and CSS tokens.
-- [[Site-Architecture-Blueprint]]: Design-agnostic structural requirements.
+## Concepts (Design & Layout)
+- [[Bio-AI-Design-System]]: Visual guidelines, colors, and CSS tokens.
+- [[Site-Architecture-Blueprint]]: Structural requirements for the site.
+- [[Template-Mapping-Rules]]: How to map Wiki data to HTML templates.
 
-## Entities
-- [[KSEA-Philadelphia-v2-Migration]]: Project overview of the 2026 site launch.
-- [[Legacy-Home-Content]]: Data from the old v1 homepage.
-- [[V2-Home-Content]]: Current text and metadata for v2.
+## Entities (Pure Content)
 - [[About-Page-Content]]: Mission, Vision, and Partners.
 - [[Leadership-Page-Content]]: Executive Committee and Councilors.
-- [[Events-Log]]: Detailed history and schedule (NMSC, NRC, STEP-UP).
+- [[Events-Log]]: Detailed history and schedule.
 - [[Site-Content-Catalogue]]: Data for Membership, Sponsors, YG, and Careers.
-- [[Dr-Wookjin-Choi]]: President profile.
-- [[NRC-2026]], [[Symposium-2026]], [[NMSC-2026]]: Specific event nodes.
+- [[People]]: (In-progress) Directory of chapter members.
+- [[Specific-Events]]: [[NMSC-2026]], [[NRC-2026]], [[Symposium-2026]].
 
 ## Sources (Patterns & References)
 - [[Karpathy-LLM-Wiki-Pattern]]: The original design philosophy and 3-layer architecture.
