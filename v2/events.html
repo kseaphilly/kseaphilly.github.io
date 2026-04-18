@@ -3,262 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KSEA Philadelphia Chapter</title>
+    <title>Events — KSEA Philadelphia Chapter</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Serif+KR:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
     <style>
-        :root {
-            --w-navy: #2E3A94;
-            --w-light: #6B7AC9;
-            --w-cream: #F4EBD9;
-            --w-brick: #B0413E;
-            --w-ink: #121212;
-            --w-paper: #FAF6EC;
-            --w-bio: #2A6F5B;
-        }
-
-        html, body {
-            margin: 0;
-            padding: 0;
-            background: var(--w-paper);
-            color: var(--w-ink);
-            font-family: 'Space Grotesk', -apple-system, sans-serif;
-            overflow-x: hidden;
-        }
-        
-        * { box-sizing: border-box; }
-
-        a { text-decoration: none; color: inherit; }
-
-        .ticker {
-            background: var(--w-ink);
-            color: var(--w-cream);
-            padding: 8px 40px;
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 12px;
-            letter-spacing: 0.6px;
-            text-transform: uppercase;
-            display: flex;
-            justify-content: space-between;
-        }
-
-        nav {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 20px 40px;
-            border-bottom: 1px solid var(--w-ink);
-            background: var(--w-paper);
-        }
-
-        .nav-left {
-            display: flex;
-            align-items: center;
-            gap: 16px;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 30px;
-            font-size: 14px;
-            align-items: center;
-            font-weight: 500;
-        }
-
-        .nav-links a:hover {
-            color: var(--w-navy);
-        }
-
-        .btn-join, .btn-primary, .btn-outline {
-            border: none;
-            cursor: pointer;
-            font-weight: 600;
-            font-family: 'Space Grotesk', -apple-system, sans-serif;
-        }
-
-        .btn-join {
-            background: var(--w-navy);
-            color: var(--w-cream);
-            padding: 10px 18px;
-            font-size: 13px;
-        }
-
-        .hero {
-            display: grid;
-            grid-template-columns: 1.4fr 1fr;
-            border-bottom: 1px solid var(--w-ink);
-            min-height: 580px;
-        }
-
-        .hero-left {
-            padding: 60px 40px 100px 40px;
-            border-right: 1px solid var(--w-ink);
-            position: relative;
-        }
-
-        .hero-right {
-            background: var(--w-navy);
-            color: var(--w-cream);
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            padding: 40px;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero-stats {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            border-top: 1px solid var(--w-ink);
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-        }
-
-        .stat-box {
-            padding: 20px 24px;
-            border-right: 1px solid var(--w-ink);
-        }
-        .stat-box:last-child {
-            border-right: none;
-        }
-
-        .section-header {
-            padding: 18px 40px;
-            display: flex;
-            justify-content: space-between;
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 12px;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            border-bottom: 1px solid var(--w-ink);
-        }
-
-        .pillars {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            border-bottom: 1px solid var(--w-ink);
-        }
-
-        .pillar-box {
-            padding: 40px 32px 32px;
-            border-right: 1px solid var(--w-ink);
-            min-height: 340px;
-            position: relative;
-        }
-        .pillar-box:last-child { border-right: none; background: var(--w-cream); }
-
-        .events-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            border-bottom: 1px solid var(--w-ink);
-        }
-
-        .event-card {
-            padding: 32px 32px 28px;
-            border-right: 1px solid var(--w-ink);
-            border-bottom: 1px solid var(--w-ink);
-            background: var(--w-paper);
-            min-height: 340px;
-            display: flex;
-            flex-direction: column;
-        }
-        .event-card:nth-child(3n) { border-right: none; }
-        .events-grid.single-row .event-card { border-bottom: none; }
-
-        .labs-section {
-            border-bottom: 1px solid var(--w-ink);
-            padding: 60px 40px;
-        }
-
-        .labs-grid {
-            margin-top: 40px;
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            border-top: 1px solid var(--w-ink);
-            border-left: 1px solid var(--w-ink);
-        }
-
-        .lab-box {
-            padding: 22px 20px;
-            border-right: 1px solid var(--w-ink);
-            border-bottom: 1px solid var(--w-ink);
-            min-height: 100px;
-        }
-
-        .board-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            border-bottom: 1px solid var(--w-ink);
-        }
-
-        .board-card {
-            padding: 32px;
-            border-right: 1px solid var(--w-ink);
-            min-height: 300px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-        .board-card:last-child { border-right: none; }
-
-        .sponsors-section {
-            background: var(--w-navy);
-            color: var(--w-cream);
-            padding: 60px 40px;
-            border-bottom: 1px solid var(--w-ink);
-        }
-
-        .cta-section {
-            padding: 80px 40px;
-            display: grid;
-            grid-template-columns: 1.2fr 1fr;
-            gap: 60px;
-            align-items: center;
-        }
-
-        footer {
-            background: var(--w-ink);
-            color: var(--w-cream);
-            padding: 40px 40px 28px;
-            display: grid;
-            grid-template-columns: 2fr 1fr 1fr 1fr;
-            gap: 40px;
-        }
-
-        @media (max-width: 1024px) {
-            .hero, .pillars, .events-grid, .labs-grid, .board-grid, .cta-section { grid-template-columns: 1fr; }
-            .hero-stats { grid-template-columns: repeat(2, 1fr); position: relative; border-top: 1px solid var(--w-ink); margin-top: 40px; }
-            .stat-box { border-bottom: 1px solid var(--w-ink); }
-            .stat-box:nth-child(2) { border-right: none; }
-            .hero-left { padding-bottom: 0; }
-            .nav-links { display: none; }
-            footer { grid-template-columns: 1fr 1fr; }
-        }
+        /* Events-page-only styles */
+        .past-event-block { padding: 40px; margin-bottom: 0; background: var(--w-paper); border-bottom: 1px solid var(--w-ink); }
+        .past-event-block h2 { font-size: 28px; font-weight: 600; letter-spacing: -0.5px; margin: 0 0 16px; }
+        .past-event-block p { font-size: 15px; line-height: 1.6; opacity: 0.85; margin: 0 0 12px; }
+        .past-event-block ul { font-size: 15px; line-height: 1.7; opacity: 0.85; padding-left: 20px; }
+        .past-event-block li { margin-bottom: 6px; }
+        .past-event-block a { color: var(--w-navy); text-decoration: underline; }
+        .award-box { margin-top: 20px; padding: 16px 20px; background: #eef4ff; border-left: 4px solid var(--w-navy); }
+        .award-box h3 { margin: 0 0 10px; font-size: 16px; color: var(--w-navy); }
+        .photo-grid { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 20px; }
+        .photo-grid img { width: 23%; min-width: 150px; cursor: pointer; }
+        .photo-pair { display: flex; gap: 15px; margin-top: 20px; flex-wrap: wrap; }
+        .photo-pair > div { flex: 1; min-width: 250px; }
+        .photo-pair img { width: 100%; margin-bottom: 5px; }
+        .video-embed { margin-top: 20px; position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; }
+        .video-embed iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
+        .event-cta { margin-top: 20px; text-align: center; display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
+        .btn-event { display: inline-block; background: var(--w-navy); color: var(--w-cream); padding: 10px 20px; text-decoration: none; font-weight: 600; }
+        .btn-event-gold { display: inline-block; background: #f2a900; color: white; padding: 10px 20px; text-decoration: none; font-weight: 600; }
+        /* Lightbox */
+        #lightbox { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.85); z-index: 9999; align-items: center; justify-content: center; }
+        #lightbox.active { display: flex; }
+        #lightbox img { max-width: 90vw; max-height: 90vh; object-fit: contain; }
+        #lightbox-close { position: absolute; top: 20px; right: 30px; color: white; font-size: 36px; cursor: pointer; line-height: 1; }
     </style>
 </head>
 <body>
     <div class="ticker">
-        <span>▸ UPCOMING: National Math and Science Competition (NMSC) · April 18, 2026 · UPenn</span>
+        <span>▸ CONCLUDED: NMSC 2026 · April 18, 2026 · UPenn — Thank you to all participants! · Next: STEP-UP · May 16–17</span>
         <span style="opacity: 0.7;">필라델피아 지부</span>
     </div>
 
     <nav>
         <div class="nav-left">
             <img src="../assets/ksea_phily_logo.png" alt="KSEA Philly" style="height: 46px; width: auto; display: block;" onerror="this.src='https://ksea.org/files/ksea_logo_new.png';"/>
-            <div style="line-height: 1;">
-                <div style="font-size: 19px; font-weight: 700; letter-spacing: -0.3px; color: var(--w-navy);">
-                    <a href="index.html">KSEA Philadelphia</a>
-                </div>
+            <div class="nav-wordmark">
+                <div class="nav-wordmark-title"><a href="index.html">KSEA Philadelphia</a></div>
+                <div class="nav-wordmark-sub">Bio · Bio-Engineering · AI</div>
             </div>
         </div>
         <div class="nav-links">
             <a href="about.html">About</a>
             <a href="leadership.html">Leadership</a>
-            <a href="events.html">Events</a>
+            <a href="events.html" style="color: var(--w-navy);">Events</a>
             <a href="membership.html">Membership</a>
             <a href="sponsors.html">Sponsors</a>
             <a href="yg.html">YG</a>
@@ -270,34 +64,13 @@
     
 
 
-    <style>
-        .v1-content h1 { font-size: 48px; font-weight: 600; letter-spacing: -1px; margin-bottom: 24px; color: var(--w-navy); }
-        .v1-content h2 { font-size: 32px; font-weight: 600; letter-spacing: -0.5px; margin-top: 40px; margin-bottom: 20px; border-bottom: 1px solid var(--w-ink); padding-bottom: 10px; }
-        .v1-content h3 { font-size: 24px; font-weight: 600; margin-top: 30px; margin-bottom: 16px; }
-        .v1-content p { font-size: 16px; line-height: 1.6; margin-bottom: 16px; opacity: 0.85; }
-        .v1-content ul, .v1-content ol { font-size: 16px; line-height: 1.6; margin-bottom: 16px; opacity: 0.85; padding-left: 20px; }
-        .v1-content li { margin-bottom: 8px; }
-        .v1-content a { color: var(--w-navy); text-decoration: underline; }
-        .v1-content a.btn { text-decoration: none; display: inline-block; background: var(--w-navy); color: var(--w-cream); padding: 10px 20px; font-weight: 600; }
-        .v1-content .card { background: var(--w-paper); padding: 32px; border: 1px solid var(--w-ink); margin-bottom: 24px; }
-        .v1-content img { border-radius: 0; max-width: 100%; }
-        .v1-content table { width: 100%; border-collapse: collapse; margin-bottom: 24px; border: 1px solid var(--w-ink); }
-        .v1-content th, .v1-content td { border: 1px solid var(--w-ink); padding: 12px; text-align: left; }
-        .v1-content th { background: var(--w-ink); color: var(--w-cream); }
-    </style>
-    <section class="v1-content" style="padding: 60px 40px; max-width: 1200px; margin: 0 auto; min-height: 60vh;">
+    <section class="page-hero">
+        <div class="page-hero-eyebrow">§ 01 — Schedule</div>
+        <h1>Events</h1>
+        <p class="page-hero-sub">Join us for upcoming competitions, networking sessions, and symposiums. Explore our past gatherings below.</p>
+    </section>
 
-        <div class="container">
-            
-        <div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.8px; text-transform: uppercase; opacity: 0.7; margin-bottom: 20px;">
-            § 01 — Schedule
-        </div>
-        <h1 style="font-size: 64px; font-weight: 600; line-height: 0.95; letter-spacing: -2px; margin: 0 0 20px 0; color: var(--w-ink);">
-            Events
-        </h1>
-        <p style="font-size: 20px; line-height: 1.55; max-width: 680px; margin-bottom: 60px; color: var(--w-ink); opacity: 0.85;">
-            Join us for upcoming competitions, networking sessions, and symposiums. Explore our past gatherings below.
-        </p>
+    <section>
     
             
 

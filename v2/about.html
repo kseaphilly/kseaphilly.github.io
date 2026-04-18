@@ -3,245 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About - KSEA Philadelphia Chapter</title>
+    <title>About — KSEA Philadelphia Chapter</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Serif+KR:wght@400;500;600;700&display=swap" rel="stylesheet" />
-    <style>
-        :root {
-            --w-navy: #2E3A94;
-            --w-light: #6B7AC9;
-            --w-cream: #F4EBD9;
-            --w-brick: #B0413E;
-            --w-ink: #121212;
-            --w-paper: #FAF6EC;
-            --w-bio: #2A6F5B;
-        }
-
-        html, body {
-            margin: 0;
-            padding: 0;
-            background: var(--w-paper);
-            color: var(--w-ink);
-            font-family: 'Space Grotesk', -apple-system, sans-serif;
-            overflow-x: hidden;
-        }
-        
-        * { box-sizing: border-box; }
-
-        a { text-decoration: none; color: inherit; }
-
-        .ticker {
-            background: var(--w-ink);
-            color: var(--w-cream);
-            padding: 8px 40px;
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 12px;
-            letter-spacing: 0.6px;
-            text-transform: uppercase;
-            display: flex;
-            justify-content: space-between;
-        }
-
-        nav {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 20px 40px;
-            border-bottom: 1px solid var(--w-ink);
-            background: var(--w-paper);
-        }
-
-        .nav-left {
-            display: flex;
-            align-items: center;
-            gap: 16px;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 30px;
-            font-size: 14px;
-            align-items: center;
-            font-weight: 500;
-        }
-
-        .nav-links a:hover {
-            color: var(--w-navy);
-        }
-
-        .btn-join, .btn-primary, .btn-outline {
-            border: none;
-            cursor: pointer;
-            font-weight: 600;
-            font-family: 'Space Grotesk', -apple-system, sans-serif;
-        }
-
-        .btn-join {
-            background: var(--w-navy);
-            color: var(--w-cream);
-            padding: 10px 18px;
-            font-size: 13px;
-        }
-
-        .hero {
-            display: grid;
-            grid-template-columns: 1.4fr 1fr;
-            border-bottom: 1px solid var(--w-ink);
-            min-height: 580px;
-        }
-
-        .hero-left {
-            padding: 60px 40px 100px 40px;
-            border-right: 1px solid var(--w-ink);
-            position: relative;
-        }
-
-        .hero-right {
-            background: var(--w-navy);
-            color: var(--w-cream);
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            padding: 40px;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero-stats {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            border-top: 1px solid var(--w-ink);
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-        }
-
-        .stat-box {
-            padding: 20px 24px;
-            border-right: 1px solid var(--w-ink);
-        }
-        .stat-box:last-child {
-            border-right: none;
-        }
-
-        .section-header {
-            padding: 18px 40px;
-            display: flex;
-            justify-content: space-between;
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 12px;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            border-bottom: 1px solid var(--w-ink);
-        }
-
-        .pillars {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            border-bottom: 1px solid var(--w-ink);
-        }
-
-        .pillar-box {
-            padding: 40px 32px 32px;
-            border-right: 1px solid var(--w-ink);
-            min-height: 340px;
-            position: relative;
-        }
-        .pillar-box:last-child { border-right: none; background: var(--w-cream); }
-
-        .events-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            border-bottom: 1px solid var(--w-ink);
-        }
-
-        .event-card {
-            padding: 32px 32px 28px;
-            border-right: 1px solid var(--w-ink);
-            border-bottom: 1px solid var(--w-ink);
-            background: var(--w-paper);
-            min-height: 340px;
-            display: flex;
-            flex-direction: column;
-        }
-        .event-card:nth-child(3n) { border-right: none; }
-        .events-grid.single-row .event-card { border-bottom: none; }
-
-        .labs-section {
-            border-bottom: 1px solid var(--w-ink);
-            padding: 60px 40px;
-        }
-
-        .labs-grid {
-            margin-top: 40px;
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            border-top: 1px solid var(--w-ink);
-            border-left: 1px solid var(--w-ink);
-        }
-
-        .lab-box {
-            padding: 22px 20px;
-            border-right: 1px solid var(--w-ink);
-            border-bottom: 1px solid var(--w-ink);
-            min-height: 100px;
-        }
-
-        .board-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            border-bottom: 1px solid var(--w-ink);
-        }
-
-        .board-card {
-            padding: 32px;
-            border-right: 1px solid var(--w-ink);
-            min-height: 300px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-        .board-card:last-child { border-right: none; }
-
-        .sponsors-section {
-            background: var(--w-navy);
-            color: var(--w-cream);
-            padding: 60px 40px;
-            border-bottom: 1px solid var(--w-ink);
-        }
-
-        .cta-section {
-            padding: 80px 40px;
-            display: grid;
-            grid-template-columns: 1.2fr 1fr;
-            gap: 60px;
-            align-items: center;
-        }
-
-        footer {
-            background: var(--w-ink);
-            color: var(--w-cream);
-            padding: 40px 40px 28px;
-            display: grid;
-            grid-template-columns: 2fr 1fr 1fr 1fr;
-            gap: 40px;
-        }
-
-        @media (max-width: 1024px) {
-            .hero, .pillars, .events-grid, .labs-grid, .board-grid, .cta-section { grid-template-columns: 1fr; }
-            .hero-stats { grid-template-columns: repeat(2, 1fr); position: relative; border-top: 1px solid var(--w-ink); margin-top: 40px; }
-            .stat-box { border-bottom: 1px solid var(--w-ink); }
-            .stat-box:nth-child(2) { border-right: none; }
-            .hero-left { padding-bottom: 0; }
-            .nav-links { display: none; }
-            footer { grid-template-columns: 1fr 1fr; }
-        }
-    
-    .v1-content img.partner-logo { max-width: 140px !important; max-height: 80px !important; object-fit: contain !important; mix-blend-mode: multiply; }
-    .v1-content .partner-logo-wrapper { height: 100px !important; display: flex !important; align-items: center !important; justify-content: center !important; }
-    </style>
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
     <div class="ticker">
@@ -252,14 +18,13 @@
     <nav>
         <div class="nav-left">
             <img src="../assets/ksea_phily_logo.png" alt="KSEA Philly" style="height: 46px; width: auto; display: block;" onerror="this.src='https://ksea.org/files/ksea_logo_new.png';"/>
-            <div style="line-height: 1;">
-                <div style="font-size: 19px; font-weight: 700; letter-spacing: -0.3px; color: var(--w-navy);">
-                    <a href="index.html">KSEA Philadelphia</a>
-                </div>
+            <div class="nav-wordmark">
+                <div class="nav-wordmark-title"><a href="index.html">KSEA Philadelphia</a></div>
+                <div class="nav-wordmark-sub">Bio · Bio-Engineering · AI</div>
             </div>
         </div>
         <div class="nav-links">
-            <a href="about.html">About</a>
+            <a href="about.html" style="color: var(--w-navy);">About</a>
             <a href="leadership.html">Leadership</a>
             <a href="events.html">Events</a>
             <a href="membership.html">Membership</a>
@@ -270,150 +35,116 @@
         </div>
     </nav>
 
-    
-
-    <style>
-        .v1-content h1 { font-size: 48px; font-weight: 600; letter-spacing: -1px; margin-bottom: 24px; color: var(--w-navy); }
-        .v1-content h2 { font-size: 32px; font-weight: 600; letter-spacing: -0.5px; margin-top: 40px; margin-bottom: 20px; border-bottom: 1px solid var(--w-ink); padding-bottom: 10px; }
-        .v1-content h3 { font-size: 24px; font-weight: 600; margin-top: 30px; margin-bottom: 16px; }
-        .v1-content p { font-size: 16px; line-height: 1.6; margin-bottom: 16px; opacity: 0.85; }
-        .v1-content ul, .v1-content ol { font-size: 16px; line-height: 1.6; margin-bottom: 16px; opacity: 0.85; padding-left: 20px; }
-        .v1-content li { margin-bottom: 8px; }
-        .v1-content a { color: var(--w-navy); text-decoration: underline; }
-        .v1-content a.btn { text-decoration: none; display: inline-block; background: var(--w-navy); color: var(--w-cream); padding: 10px 20px; font-weight: 600; }
-        .v1-content .card { background: var(--w-paper); padding: 32px; border: 1px solid var(--w-ink); margin-bottom: 24px; }
-        .v1-content .partner-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 24px; margin-top: 24px; border-top: 1px solid var(--w-ink); border-left: 1px solid var(--w-ink); }
-        .v1-content .partner-card { border: none !important; border-bottom: 1px solid var(--w-ink) !important; border-right: 1px solid var(--w-ink) !important; padding: 32px !important; margin-bottom: 0 !important; display: flex; flex-direction: column; align-items: center; justify-content: flex-start; text-align: center; }
-        .v1-content .partner-logo-wrapper { height: 120px; display: flex; align-items: center; justify-content: center; margin-bottom: 16px; width: 100%; }
-        .v1-content .partner-logo { max-height: 90px; max-width: 90%; object-fit: contain; mix-blend-mode: multiply; }
-        .v1-content table { width: 100%; border-collapse: collapse; margin-bottom: 24px; border: 1px solid var(--w-ink); }
-        .v1-content th, .v1-content td { border: 1px solid var(--w-ink); padding: 12px; text-align: left; }
-        .v1-content th { background: var(--w-ink); color: var(--w-cream); }
-        .v1-content .members-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 24px; margin-top: 24px; }
-        .v1-content .member-card { padding: 24px; border: 1px solid var(--w-ink); background: var(--w-cream); display: flex; align-items: center; gap: 16px; }
-        .v1-content .org-chart { max-width: 100%; height: auto; border: 1px solid var(--w-ink); margin: 24px 0; }
-        .v1-content .profile-photo { width: 80px; height: 80px; object-fit: cover; border-radius: 50%; opacity: 0; } /* Fallback */
-    
-    .v1-content img.partner-logo { max-width: 140px !important; max-height: 80px !important; object-fit: contain !important; mix-blend-mode: multiply; }
-    .v1-content .partner-logo-wrapper { height: 100px !important; display: flex !important; align-items: center !important; justify-content: center !important; }
-    </style>
-    
-<section class="v1-content" style="padding: 60px 40px; max-width: 1200px; margin: 0 auto; min-height: 60vh;">
-
-        <div class="container">
-            
-        <div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.8px; text-transform: uppercase; opacity: 0.7; margin-bottom: 20px;">
-            § 01 — Mission & Vision
-        </div>
-        <h1 style="font-size: 64px; font-weight: 600; line-height: 0.95; letter-spacing: -2px; margin: 0 0 30px 0; color: var(--w-ink);">
-            About Us
-        </h1>
-        <p style="font-size: 20px; line-height: 1.55; max-width: 680px; margin-bottom: 60px; color: var(--w-ink); opacity: 0.85;">
-            The KSEA Philadelphia Chapter is a local chapter of the <a href="https://www.ksea.org/" target="_blank" style="text-decoration: underline; color: var(--w-navy);">Korean-American Scientists and Engineers Association (KSEA)</a>. We are dedicated to serving Korean-American scientists and engineers in the Philadelphia metropolitan area.
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="page-hero-eyebrow">§ 01 — Mission & Vision</div>
+        <h1>About Us</h1>
+        <p class="page-hero-sub">
+            The KSEA Philadelphia Chapter is a local chapter of the
+            <a href="https://www.ksea.org/" target="_blank" style="color: var(--w-navy); text-decoration: underline;">Korean-American Scientists and Engineers Association (KSEA)</a>,
+            dedicated to serving Korean-American scientists and engineers across the Philadelphia metropolitan area.
         </p>
-    
-            
+    </section>
 
-            <div style="margin-top: 80px;">
-                <h2>Our Vision</h2>
-                <p>To excel as a leading Korean-American scientific, engineering, and industrial organization, we will:
-                </p>
-                <ul>
-                    <li>Promote the application of science and technology for the general welfare of society.</li>
-                    <li>Foster international cooperation especially between the U.S. and Korea.</li>
-                    <li>Help Korean-American Scientists and Engineers develop their full career potential.</li>
-                    <li>Serve the Korean-American Communities.</li>
-                </ul>
-            </div>
+    <!-- Vision & Mission -->
+    <section style="display: grid; grid-template-columns: 1fr 1fr; border-bottom: 1px solid var(--w-ink);">
+        <div class="info-section" style="border-right: 1px solid var(--w-ink);">
+            <div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; color: var(--w-brick); margin-bottom: 14px;">Vision</div>
+            <h2>To excel as a leading Korean-American scientific and engineering organization.</h2>
+            <ul>
+                <li>Promote the application of science and technology for the general welfare of society.</li>
+                <li>Foster international cooperation especially between the U.S. and Korea.</li>
+                <li>Help Korean-American Scientists and Engineers develop their full career potential.</li>
+                <li>Serve the Korean-American Communities.</li>
+            </ul>
+        </div>
+        <div class="info-section">
+            <div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; color: var(--w-navy); margin-bottom: 14px;">Mission</div>
+            <h2>Opportunities in science, technology, and entrepreneurship.</h2>
+            <ul>
+                <li>International Cooperation</li>
+                <li>Career Development</li>
+                <li>Community Service</li>
+            </ul>
+            <p style="margin-top: 24px;">
+                We bring together researchers and engineers from Penn Medicine, CHOP, Jefferson, Drexel, Temple, and the broader Delaware Valley biotech ecosystem.
+            </p>
+        </div>
+    </section>
 
-            <div style="margin-top: 80px;">
-                <h2>Our Mission</h2>
-                <p>To provide, in the areas of science, technology and entrepreneurship, opportunities for:</p>
-                <ul>
-                    <li>International Cooperation</li>
-                    <li>Career Development</li>
-                    <li>Community Service</li>
-                </ul>
-            </div>
-
-            <div style="margin-top: 80px;">
-                <h2>Regional Partners</h2>
-                <p>We collaborate with local student and scholar
-                    associations to strengthen the regional scientific community and foster networking.</p>
-                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; border-top: 1px solid var(--w-ink); border-left: 1px solid var(--w-ink);">
-                    <div style="padding: 32px; border-right: 1px solid var(--w-ink); border-bottom: 1px solid var(--w-ink); display: flex; flex-direction: column; align-items: center; justify-content: flex-start; text-align: center; background: var(--w-paper);">
-                        <div class="partner-logo-wrapper">
-                            <a href="https://www.facebook.com/groups/PKSAScholars/" target="_blank"
-                                class="partner-link">
-                                <img src="../images/partners/PKSA.jpg" alt="PKSA Logo" class="partner-logo">
-                            </a>
-                        </div>
-                        <h3><a href="https://www.facebook.com/groups/PKSAScholars/" target="_blank"
-                                class="partner-link">PKSA</a></h3>
-                        <p>Philadelphia Korean Scholars Association</p>
-                    </div>
-                    <div style="padding: 32px; border-right: 1px solid var(--w-ink); border-bottom: 1px solid var(--w-ink); display: flex; flex-direction: column; align-items: center; justify-content: flex-start; text-align: center; background: var(--w-paper);">
-                        <div class="partner-logo-wrapper">
-                            <a href="https://www.instagram.com/upennkogsa" target="_blank" class="partner-link">
-                                <img src="../images/partners/upenn-kogsa.png" alt="UPenn KoGSA Logo" class="partner-logo">
-                            </a>
-                        </div>
-                        <h3><a href="https://www.instagram.com/upennkogsa" target="_blank" class="partner-link">UPenn
-                                KoGSA</a></h3>
-                        <p style="font-size: 0.9em; margin-bottom: 5px;">University of Pennsylvania<br>Korean Graduate
-                            Student Association</p>
-                    </div>
-                    <div style="padding: 32px; border-right: 1px solid var(--w-ink); border-bottom: 1px solid var(--w-ink); display: flex; flex-direction: column; align-items: center; justify-content: flex-start; text-align: center; background: var(--w-paper);">
-                        <div class="partner-logo-wrapper">
-                            <a href="https://kkyu.qshop.ai/" target="_blank" class="partner-link">
-                                <img src="../symposium/assets/kkyu-logo.png" alt="KKYU Logo" class="partner-logo">
-                            </a>
-                        </div>
-                        <h3 style="font-size: 20px; font-weight: 600; margin: 16px 0 8px 0;"><a href="https://kkyu.qshop.ai/" target="_blank" class="partner-link">KKYU</a></h3>
-                        <p style="font-size: 0.9em; margin-bottom: 5px;">Knowledge
-                            Knocking for Your Universe</p>
-                    </div>
+    <!-- Regional Partners -->
+    <section style="border-bottom: 1px solid var(--w-ink);">
+        <div class="section-header">
+            <span>§ 02 — Regional Partners</span>
+            <span style="opacity: 0.6;">Student & scholar associations</span>
+        </div>
+        <div class="partner-grid-3">
+            <div class="partner-cell">
+                <div class="partner-logo-wrap">
+                    <a href="https://www.facebook.com/groups/PKSAScholars/" target="_blank">
+                        <img src="../images/partners/PKSA.jpg" alt="PKSA Logo" class="partner-logo">
+                    </a>
                 </div>
+                <div class="partner-name"><a href="https://www.facebook.com/groups/PKSAScholars/" target="_blank" style="color: var(--w-navy);">PKSA</a></div>
+                <p class="partner-desc">Philadelphia Korean Scholars Association</p>
             </div>
-
-            <div style="margin-top: 80px;">
-                <h2>APS Partners</h2>
-                <p>We work closely with KSEA Affiliated Professional
-                    Societies (APS) to provide specialized professional development and industry connections.</p>
-                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; border-top: 1px solid var(--w-ink); border-left: 1px solid var(--w-ink);">
-                    <div style="padding: 32px; border-right: 1px solid var(--w-ink); border-bottom: 1px solid var(--w-ink); display: flex; flex-direction: column; align-items: center; justify-content: flex-start; text-align: center; background: var(--w-paper);">
-                        <div class="partner-logo-wrapper">
-                            <a href="https://kitee.org/" target="_blank" class="partner-link">
-                                <img src="../images/partners/KITEE.png" alt="KITEE Logo" class="partner-logo">
-                            </a>
-                        </div>
-                        <h3 style="font-size: 20px; font-weight: 600; margin: 16px 0 8px 0;"><a href="https://kitee.org/" target="_blank" class="partner-link">KITEE</a></h3>
-                        <p>Korean-American Innovative Technology Engineers and Entrepreneurs</p>
-                    </div>
-                    <div style="padding: 32px; border-right: 1px solid var(--w-ink); border-bottom: 1px solid var(--w-ink); display: flex; flex-direction: column; align-items: center; justify-content: flex-start; text-align: center; background: var(--w-paper);">
-                        <div class="partner-logo-wrapper">
-                            <a href="https://www.kasbp.org/" target="_blank" class="partner-link">
-                                <img src="../images/partners/KASBP.jpg" alt="KASBP Logo" class="partner-logo">
-                            </a>
-                        </div>
-                        <h3 style="font-size: 20px; font-weight: 600; margin: 16px 0 8px 0;"><a href="https://www.kasbp.org/" target="_blank" class="partner-link">KASBP</a></h3>
-                        <p>Korean American Society in Biotech and Pharmaceuticals</p>
-                    </div>
-                    <div style="padding: 32px; border-right: 1px solid var(--w-ink); border-bottom: 1px solid var(--w-ink); display: flex; flex-direction: column; align-items: center; justify-content: flex-start; text-align: center; background: var(--w-paper);">
-                        <div class="partner-logo-wrapper">
-                            <a href="https://www.facebook.com/kbmesksea/" target="_blank" class="partner-link">
-                                <img src="../images/partners/kbmes.jpg" alt="KBMES Logo" class="partner-logo">
-                            </a>
-                        </div>
-                        <h3><a href="https://www.facebook.com/kbmesksea/" target="_blank" class="partner-link">KBMES</a>
-                        </h3>
-                        <p>Korean American Biomedical Engineering Society</p>
-                    </div>
+            <div class="partner-cell">
+                <div class="partner-logo-wrap">
+                    <a href="https://www.instagram.com/upennkogsa" target="_blank">
+                        <img src="../images/partners/upenn-kogsa.png" alt="UPenn KoGSA Logo" class="partner-logo">
+                    </a>
                 </div>
+                <div class="partner-name"><a href="https://www.instagram.com/upennkogsa" target="_blank" style="color: var(--w-navy);">UPenn KoGSA</a></div>
+                <p class="partner-desc">University of Pennsylvania Korean Graduate Student Association</p>
+            </div>
+            <div class="partner-cell">
+                <div class="partner-logo-wrap">
+                    <a href="https://kkyu.qshop.ai/" target="_blank">
+                        <img src="../symposium/assets/kkyu-logo.png" alt="KKYU Logo" class="partner-logo">
+                    </a>
+                </div>
+                <div class="partner-name"><a href="https://kkyu.qshop.ai/" target="_blank" style="color: var(--w-navy);">KKYU</a></div>
+                <p class="partner-desc">Knowledge Knocking for Your Universe</p>
             </div>
         </div>
-    
-</section>
+    </section>
+
+    <!-- APS Partners -->
+    <section style="border-bottom: 1px solid var(--w-ink);">
+        <div class="section-header">
+            <span>§ 03 — APS Partners</span>
+            <span style="opacity: 0.6;">KSEA Affiliated Professional Societies</span>
+        </div>
+        <div class="partner-grid-3">
+            <div class="partner-cell">
+                <div class="partner-logo-wrap">
+                    <a href="https://kitee.org/" target="_blank">
+                        <img src="../images/partners/KITEE.png" alt="KITEE Logo" class="partner-logo">
+                    </a>
+                </div>
+                <div class="partner-name"><a href="https://kitee.org/" target="_blank" style="color: var(--w-navy);">KITEE</a></div>
+                <p class="partner-desc">Korean-American Innovative Technology Engineers and Entrepreneurs</p>
+            </div>
+            <div class="partner-cell">
+                <div class="partner-logo-wrap">
+                    <a href="https://www.kasbp.org/" target="_blank">
+                        <img src="../images/partners/KASBP.jpg" alt="KASBP Logo" class="partner-logo">
+                    </a>
+                </div>
+                <div class="partner-name"><a href="https://www.kasbp.org/" target="_blank" style="color: var(--w-navy);">KASBP</a></div>
+                <p class="partner-desc">Korean American Society in Biotech and Pharmaceuticals</p>
+            </div>
+            <div class="partner-cell">
+                <div class="partner-logo-wrap">
+                    <a href="https://www.facebook.com/kbmesksea/" target="_blank">
+                        <img src="../images/partners/kbmes.jpg" alt="KBMES Logo" class="partner-logo">
+                    </a>
+                </div>
+                <div class="partner-name"><a href="https://www.facebook.com/kbmesksea/" target="_blank" style="color: var(--w-navy);">KBMES</a></div>
+                <p class="partner-desc">Korean American Biomedical Engineering Society</p>
+            </div>
+        </div>
+    </section>
 
     <footer>
         <div>
@@ -426,21 +157,21 @@
             </div>
         </div>
         <div>
-            <div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; opacity: 0.5; margin-bottom: 14px;">Chapter</div>
-            <div style="font-size: 13px; margin-bottom: 6px;"><a href="about.html">About</a></div>
-            <div style="font-size: 13px; margin-bottom: 6px;"><a href="leadership.html">Leadership</a></div>
-            <div style="font-size: 13px; margin-bottom: 6px;"><a href="bylaws.html">Bylaws</a></div>
-            <div style="font-size: 13px; margin-bottom: 6px;"><a href="careers.html">Careers</a></div>
+            <div class="footer-col-head">Chapter</div>
+            <a href="about.html">About</a>
+            <a href="leadership.html">Leadership</a>
+            <a href="bylaws.html">Bylaws</a>
+            <a href="careers.html">Careers</a>
         </div>
         <div>
-            <div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; opacity: 0.5; margin-bottom: 14px;">Programs</div>
-            <div style="font-size: 13px; margin-bottom: 6px;"><a href="events.html">Events & Seminars</a></div>
-            <div style="font-size: 13px; margin-bottom: 6px;"><a href="nmsc.html">NMSC</a></div>
-            <div style="font-size: 13px; margin-bottom: 6px;"><a href="membership.html">Membership</a></div>
+            <div class="footer-col-head">Programs</div>
+            <a href="events.html">Events & Seminars</a>
+            <a href="nmsc.html">NMSC</a>
+            <a href="membership.html">Membership</a>
         </div>
         <div>
-            <div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; opacity: 0.5; margin-bottom: 14px;">Connect</div>
-            <div style="font-size: 13px; margin-bottom: 6px;"><a href="contact.html">Contact Us</a></div>
+            <div class="footer-col-head">Connect</div>
+            <a href="contact.html">Contact Us</a>
         </div>
     </footer>
 </body>
