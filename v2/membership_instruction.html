@@ -289,7 +289,18 @@
         .v1-content .members-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 24px; margin-top: 24px; }
         .v1-content .member-card { padding: 24px; border: 1px solid var(--w-ink); background: var(--w-cream); display: flex; align-items: center; gap: 16px; }
         .v1-content .org-chart { max-width: 100%; height: auto; border: 1px solid var(--w-ink); margin: 24px 0; }
-        .v1-content .profile-photo { width: 80px; height: 80px; object-fit: cover; border-radius: 50%; opacity: 0; } /* Fallback */
+        
+        .v1-content .step { background: var(--w-paper); border: 1px solid var(--w-ink); padding: 40px; margin-bottom: 40px; position: relative; }
+        .v1-content .step img { max-width: 80%; border: 1px solid rgba(18,18,18,0.1); box-shadow: 4px 4px 0 rgba(18,18,18,0.05); margin: 30px auto 0 auto; display: block; }
+        .v1-content .step-number { font-family: 'JetBrains Mono', monospace; font-size: 80px; font-weight: 700; line-height: 0.8; color: var(--w-navy); opacity: 0.1; position: absolute; top: -20px; right: 20px; }
+        .v1-content .step h3 { font-size: 24px; font-weight: 600; margin: 0 0 16px 0; color: var(--w-navy); }
+        .v1-content .step p, .v1-content .step ul { margin-bottom: 20px; }
+        .v1-content .mobile-process { margin-top: 80px; padding-top: 60px; border-top: 1px dashed var(--w-ink); }
+        .v1-content .mobile-step { display: flex; gap: 40px; align-items: flex-start; background: var(--w-paper); border: 1px solid var(--w-ink); padding: 40px; margin-bottom: 24px; }
+        .v1-content .mobile-step img { max-height: 350px; width: auto; border: 1px solid rgba(18,18,18,0.1); box-shadow: 4px 4px 0 rgba(18,18,18,0.05); margin: 0; }
+        .v1-content .mobile-step-content { flex: 1; }
+        @media (max-width: 768px) { .v1-content .mobile-step { flex-direction: column; } .v1-content .step img { max-width: 100%; } }
+    
     </style>
     
 <section class="v1-content" style="padding: 60px 40px; max-width: 1200px; margin: 0 auto; min-height: 60vh;">
@@ -349,7 +360,7 @@
                     <div class="step-number">5</div>
                     <h3>Pay Membership Fee</h3>
                     <p>Complete the one-time payment. Graduate/Undergraduate fee is $15, and Regular fee is $35.</p>
-                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 20px;">
                         <div>
                             <p><strong>Student Fee ($15)</strong></p>
                             <img src="../images/membership/step5_payment_student.png" alt="Student Payment Screen">
@@ -414,10 +425,10 @@
                     </div>
                 </div>
 
-                <div class="section" style="text-align: center; margin-top: 60px;">
+                <div class="section" style="text-align: center; margin-top: 80px; border-top: 1px solid var(--w-ink); padding-top: 40px;">
                     <p>Having trouble? Feel free to contact us at <a
                             href="mailto:ksea.philly.chapter@gmail.com">ksea.philly.chapter@gmail.com</a></p>
-                    <p><a href="membership.html" class="btn-join" style="background-color: #6c757d;">Back to Membership
+                    <p><a href="membership.html" class="btn-join" style="background-color: var(--w-ink); border-radius: 0; display: inline-block;">Back to Membership
                             Overview</a></p>
                 </div>
             </div>

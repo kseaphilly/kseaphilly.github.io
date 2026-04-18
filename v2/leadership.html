@@ -289,7 +289,8 @@
         .v1-content .members-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 24px; margin-top: 24px; }
         .v1-content .member-card { padding: 24px; border: 1px solid var(--w-ink); background: var(--w-cream); display: flex; align-items: center; gap: 16px; }
         .v1-content .org-chart { max-width: 100%; height: auto; border: 1px solid var(--w-ink); margin: 24px 0; }
-        .v1-content .profile-photo { width: 80px; height: 80px; object-fit: cover; border-radius: 50%; opacity: 0; } /* Fallback */
+        .v1-content img { border-radius: 0; max-width: 100%; }
+        .v1-content .member-card img, .v1-content div[style*="display: flex; align-items: center; gap: 20px;"] img { width: 90px !important; height: 90px !important; min-width: 90px !important; object-fit: cover !important; border-radius: 50% !important; border: 1px solid rgba(0,0,0,0.1); }
     </style>
     
 <section class="v1-content" style="padding: 60px 40px; max-width: 1200px; margin: 0 auto; min-height: 60vh;">
@@ -300,19 +301,19 @@
                 the KSEA Philadelphia Chapter.</p>
 
             <div class="recruitment-message"
-                style="text-align: center; background-color: #e9ecef; padding: 30px 20px; border-radius: 8px; margin-bottom: 40px;">
-                <h2 style="margin-top: 0; color: #004a99; margin-bottom: 15px;">We are Recruiting!</h2>
+                style="text-align: center; background-color: var(--w-paper); border: 2px dashed var(--w-navy); padding: 60px 40px; margin-top: 60px; margin-bottom: 60px;">
+                <h2 style="margin-top: 0; color: var(--w-navy); margin-bottom: 15px;">We are Recruiting!</h2>
                 <p style="margin-bottom: 25px;">The KSEA Philadelphia Chapter is looking for dedicated individuals to
                     join our leadership team.</p>
                 <!-- 
                 <div
                     style="text-align: left; max-width: 700px; margin: 0 auto 25px auto; background-color: white; padding: 20px; border-radius: 5px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
                     <p style="margin-bottom: 15px;">
-                        <strong style="color: #004a99;">Executive Committee (EC) Members:</strong><br>
+                        <strong style="color: var(--w-navy);">Executive Committee (EC) Members:</strong><br>
                         We are seeking Faculty members or Senior Research Scientists/Engineers.
                     </p>
                     <p style="margin-bottom: 0;">
-                        <strong style="color: #004a99;">Other Leadership Positions:</strong><br>
+                        <strong style="color: var(--w-navy);">Other Leadership Positions:</strong><br>
                         Open to Postdocs, Senior PhD Students, and Early Career Professionals.
                     </p>
                 </div> -->
@@ -322,159 +323,159 @@
                 <p style="margin-bottom: 20px;"><strong>Open Positions:</strong> Executive Director, Finance Director,
                     General Director, and Auditors</p>
                 <a href="contact.html" class="btn"
-                    style="display: inline-block; background-color: #004a99; color: white; padding: 12px 24px; text-decoration: none; border-radius: 5px; font-weight: bold; transition: background-color 0.3s;">Contact
+                    style="display: inline-block; background-color: var(--w-navy); color: white; padding: 12px 24px; text-decoration: none; border-radius: 5px; font-weight: bold; transition: background-color 0.3s;">Contact
                     Us to Apply</a>
             </div>
 
-            <h2 style="border-bottom: 2px solid #004a99; padding-bottom: 10px; margin-bottom: 20px; color: #004a99;">
+            <h2 style="border-bottom: 1px solid var(--w-ink); font-size: 32px; letter-spacing: -0.5px; padding-bottom: 10px; margin-bottom: 20px; color: var(--w-navy);">
                 Officers</h2>
-            <div class="card-container">
-                <div class="card leader-card">
-                    <img src="../assets/wookjin-choi.jpg" alt="Photo of Dr. Wookjin Choi">
-                    <h3>Wookjin Choi</h3>
-                    <p class="role">President</p>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 0; border-top: 1px solid var(--w-ink); border-left: 1px solid var(--w-ink);">
+                <div style="background: var(--w-paper); padding: 40px 24px; border-right: 1px solid var(--w-ink); border-bottom: 1px solid var(--w-ink); display: flex; flex-direction: column; align-items: center; text-align: center;">
+                    <img src="../assets/wookjin-choi.jpg" alt="Photo of Dr. Wookjin Choi" style="width: 120px !important; height: 120px !important; min-height: 120px !important; border-radius: 50%; object-fit: cover; object-position: top; margin-bottom: 24px; border: 1px solid rgba(18,18,18,0.1);">
+                    <h3 style="font-size: 24px; font-weight: 600; letter-spacing: -0.5px; margin: 0 0 8px 0; border: none; padding: 0;">Wookjin Choi</h3>
+                    <div style="font-family: \'JetBrains Mono\', monospace; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; color: var(--w-navy); font-weight: 600; margin-bottom: 14px;">President</div>
                     <p>Thomas Jefferson University</p>
                 </div>
 
-                <div class="card leader-card">
-                    <img src="../assets/su-chin-heo.jpg" alt="Photo of Su Chin Heo" style="object-position: top;">
-                    <h3>Su Chin Heo</h3>
-                    <p class="role">Vice President</p>
+                <div style="background: var(--w-paper); padding: 40px 24px; border-right: 1px solid var(--w-ink); border-bottom: 1px solid var(--w-ink); display: flex; flex-direction: column; align-items: center; text-align: center;">
+                    <img src="../assets/su-chin-heo.jpg" alt="Photo of Su Chin Heo" style="width: 120px !important; height: 120px !important; min-height: 120px !important; border-radius: 50%; object-fit: cover; object-position: top; margin-bottom: 24px; border: 1px solid rgba(18,18,18,0.1);">
+                    <h3 style="font-size: 24px; font-weight: 600; letter-spacing: -0.5px; margin: 0 0 8px 0; border: none; padding: 0;">Su Chin Heo</h3>
+                    <div style="font-family: \'JetBrains Mono\', monospace; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; color: var(--w-navy); font-weight: 600; margin-bottom: 14px;">Vice President</div>
                     <p>University of Pennsylvania</p>
                 </div>
 
-                <div class="card leader-card">
-                    <img src="../assets/placeholder.svg" alt="Placeholder">
-                    <h3>Open Position</h3>
-                    <p class="role">Executive Director</p>
+                <div style="background: var(--w-paper); padding: 40px 24px; border-right: 1px solid var(--w-ink); border-bottom: 1px solid var(--w-ink); display: flex; flex-direction: column; align-items: center; text-align: center;">
+                    <img src="../assets/placeholder.svg" alt="Placeholder" style="width: 120px !important; height: 120px !important; min-height: 120px !important; border-radius: 50%; object-fit: cover; object-position: top; margin-bottom: 24px; border: 1px solid rgba(18,18,18,0.1);">
+                    <h3 style="font-size: 24px; font-weight: 600; letter-spacing: -0.5px; margin: 0 0 8px 0; border: none; padding: 0;">Open Position</h3>
+                    <div style="font-family: \'JetBrains Mono\', monospace; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; color: var(--w-navy); font-weight: 600; margin-bottom: 14px;">Executive Director</div>
                     <p>Recruiting</p>
                 </div>
 
-                <div class="card leader-card">
-                    <img src="../assets/placeholder.svg" alt="Placeholder">
-                    <h3>Open Position</h3>
-                    <p class="role">Finance Director</p>
+                <div style="background: var(--w-paper); padding: 40px 24px; border-right: 1px solid var(--w-ink); border-bottom: 1px solid var(--w-ink); display: flex; flex-direction: column; align-items: center; text-align: center;">
+                    <img src="../assets/placeholder.svg" alt="Placeholder" style="width: 120px !important; height: 120px !important; min-height: 120px !important; border-radius: 50%; object-fit: cover; object-position: top; margin-bottom: 24px; border: 1px solid rgba(18,18,18,0.1);">
+                    <h3 style="font-size: 24px; font-weight: 600; letter-spacing: -0.5px; margin: 0 0 8px 0; border: none; padding: 0;">Open Position</h3>
+                    <div style="font-family: \'JetBrains Mono\', monospace; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; color: var(--w-navy); font-weight: 600; margin-bottom: 14px;">Finance Director</div>
                     <p>Recruiting</p>
                 </div>
 
-                <div class="card leader-card">
-                    <img src="../assets/placeholder.svg" alt="Placeholder">
-                    <h3>Open Position</h3>
-                    <p class="role">General Director</p>
+                <div style="background: var(--w-paper); padding: 40px 24px; border-right: 1px solid var(--w-ink); border-bottom: 1px solid var(--w-ink); display: flex; flex-direction: column; align-items: center; text-align: center;">
+                    <img src="../assets/placeholder.svg" alt="Placeholder" style="width: 120px !important; height: 120px !important; min-height: 120px !important; border-radius: 50%; object-fit: cover; object-position: top; margin-bottom: 24px; border: 1px solid rgba(18,18,18,0.1);">
+                    <h3 style="font-size: 24px; font-weight: 600; letter-spacing: -0.5px; margin: 0 0 8px 0; border: none; padding: 0;">Open Position</h3>
+                    <div style="font-family: \'JetBrains Mono\', monospace; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; color: var(--w-navy); font-weight: 600; margin-bottom: 14px;">General Director</div>
                     <p>Recruiting</p>
                 </div>
 
-                <div class="card leader-card">
-                    <img src="../assets/hyunmin-cho.jpg" alt="Photo of Hyunmin Cho">
-                    <h3>Hyunmin Cho</h3>
-                    <p class="role">Membership Director</p>
+                <div style="background: var(--w-paper); padding: 40px 24px; border-right: 1px solid var(--w-ink); border-bottom: 1px solid var(--w-ink); display: flex; flex-direction: column; align-items: center; text-align: center;">
+                    <img src="../assets/hyunmin-cho.jpg" alt="Photo of Hyunmin Cho" style="width: 120px !important; height: 120px !important; min-height: 120px !important; border-radius: 50%; object-fit: cover; object-position: top; margin-bottom: 24px; border: 1px solid rgba(18,18,18,0.1);">
+                    <h3 style="font-size: 24px; font-weight: 600; letter-spacing: -0.5px; margin: 0 0 8px 0; border: none; padding: 0;">Hyunmin Cho</h3>
+                    <div style="font-family: \'JetBrains Mono\', monospace; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; color: var(--w-navy); font-weight: 600; margin-bottom: 14px;">Membership Director</div>
                     <p>University of Pennsylvania</p>
                 </div>
             </div>
 
             <!-- <h2
-                style="border-bottom: 2px solid #004a99; padding-bottom: 10px; margin-bottom: 20px; margin-top: 50px; color: #004a99;">
+                style="border-bottom: 1px solid var(--w-ink); font-size: 32px; letter-spacing: -0.5px; padding-bottom: 10px; margin-bottom: 20px; margin-top: 50px; color: var(--w-navy);">
                 Elected Councilors</h2>
             <p style="text-align: center; max-width: 800px; margin: 0 auto 20px auto; font-style: italic;">Elected
                 Councilors serve a three-year term.</p>
-            <div class="card-container">
-                <div class="card leader-card">
-                    <img src="../assets/placeholder.svg" alt="Placeholder">
-                    <h3>Open Position</h3>
-                    <p class="role">Elected Councilor</p>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 0; border-top: 1px solid var(--w-ink); border-left: 1px solid var(--w-ink);">
+                <div style="background: var(--w-paper); padding: 40px 24px; border-right: 1px solid var(--w-ink); border-bottom: 1px solid var(--w-ink); display: flex; flex-direction: column; align-items: center; text-align: center;">
+                    <img src="../assets/placeholder.svg" alt="Placeholder" style="width: 120px !important; height: 120px !important; min-height: 120px !important; border-radius: 50%; object-fit: cover; object-position: top; margin-bottom: 24px; border: 1px solid rgba(18,18,18,0.1);">
+                    <h3 style="font-size: 24px; font-weight: 600; letter-spacing: -0.5px; margin: 0 0 8px 0; border: none; padding: 0;">Open Position</h3>
+                    <div style="font-family: \'JetBrains Mono\', monospace; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; color: var(--w-navy); font-weight: 600; margin-bottom: 14px;">Elected Councilor</div>
                     <p>Recruiting</p>
                 </div>
 
-                <div class="card leader-card">
-                    <img src="../assets/placeholder.svg" alt="Placeholder">
-                    <h3>Open Position</h3>
-                    <p class="role">Elected Councilor</p>
+                <div style="background: var(--w-paper); padding: 40px 24px; border-right: 1px solid var(--w-ink); border-bottom: 1px solid var(--w-ink); display: flex; flex-direction: column; align-items: center; text-align: center;">
+                    <img src="../assets/placeholder.svg" alt="Placeholder" style="width: 120px !important; height: 120px !important; min-height: 120px !important; border-radius: 50%; object-fit: cover; object-position: top; margin-bottom: 24px; border: 1px solid rgba(18,18,18,0.1);">
+                    <h3 style="font-size: 24px; font-weight: 600; letter-spacing: -0.5px; margin: 0 0 8px 0; border: none; padding: 0;">Open Position</h3>
+                    <div style="font-family: \'JetBrains Mono\', monospace; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; color: var(--w-navy); font-weight: 600; margin-bottom: 14px;">Elected Councilor</div>
                     <p>Recruiting</p>
                 </div>
 
-                <div class="card leader-card">
-                    <img src="../assets/placeholder.svg" alt="Placeholder">
-                    <h3>Open Position</h3>
-                    <p class="role">Elected Councilor</p>
+                <div style="background: var(--w-paper); padding: 40px 24px; border-right: 1px solid var(--w-ink); border-bottom: 1px solid var(--w-ink); display: flex; flex-direction: column; align-items: center; text-align: center;">
+                    <img src="../assets/placeholder.svg" alt="Placeholder" style="width: 120px !important; height: 120px !important; min-height: 120px !important; border-radius: 50%; object-fit: cover; object-position: top; margin-bottom: 24px; border: 1px solid rgba(18,18,18,0.1);">
+                    <h3 style="font-size: 24px; font-weight: 600; letter-spacing: -0.5px; margin: 0 0 8px 0; border: none; padding: 0;">Open Position</h3>
+                    <div style="font-family: \'JetBrains Mono\', monospace; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; color: var(--w-navy); font-weight: 600; margin-bottom: 14px;">Elected Councilor</div>
                     <p>Recruiting</p>
                 </div>
             </div> -->
 
             <h2
-                style="border-bottom: 2px solid #004a99; padding-bottom: 10px; margin-bottom: 20px; margin-top: 50px; color: #004a99;">
+                style="border-bottom: 1px solid var(--w-ink); font-size: 32px; letter-spacing: -0.5px; padding-bottom: 10px; margin-bottom: 20px; margin-top: 50px; color: var(--w-navy);">
                 Councilors</h2>
             <p style="text-align: center; max-width: 800px; margin: 0 auto 20px auto; font-style: italic;">Councilors
                 include the presidents of designated Korean student and scholar associations at local universities and
                 institutions.</p>
-            <div class="card-container">
-                <div class="card leader-card">
-                    <img src="../assets/sangin-kim.jpg" alt="Photo of Sangin Kim">
-                    <h3>Sangin Kim</h3>
-                    <p class="role">Councilor</p>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 0; border-top: 1px solid var(--w-ink); border-left: 1px solid var(--w-ink);">
+                <div style="background: var(--w-paper); padding: 40px 24px; border-right: 1px solid var(--w-ink); border-bottom: 1px solid var(--w-ink); display: flex; flex-direction: column; align-items: center; text-align: center;">
+                    <img src="../assets/sangin-kim.jpg" alt="Photo of Sangin Kim" style="width: 120px !important; height: 120px !important; min-height: 120px !important; border-radius: 50%; object-fit: cover; object-position: top; margin-bottom: 24px; border: 1px solid rgba(18,18,18,0.1);">
+                    <h3 style="font-size: 24px; font-weight: 600; letter-spacing: -0.5px; margin: 0 0 8px 0; border: none; padding: 0;">Sangin Kim</h3>
+                    <div style="font-family: \'JetBrains Mono\', monospace; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; color: var(--w-navy); font-weight: 600; margin-bottom: 14px;">Councilor</div>
                     <p>PKSA President<br>University of Pennsylvania</p>
                 </div>
 
-                <div class="card leader-card">
-                    <img src="../assets/jaeung-ko.jpg" alt="Photo of Jaeung Ko">
-                    <h3>Jaeung Ko</h3>
-                    <p class="role">Councilor</p>
+                <div style="background: var(--w-paper); padding: 40px 24px; border-right: 1px solid var(--w-ink); border-bottom: 1px solid var(--w-ink); display: flex; flex-direction: column; align-items: center; text-align: center;">
+                    <img src="../assets/jaeung-ko.jpg" alt="Photo of Jaeung Ko" style="width: 120px !important; height: 120px !important; min-height: 120px !important; border-radius: 50%; object-fit: cover; object-position: top; margin-bottom: 24px; border: 1px solid rgba(18,18,18,0.1);">
+                    <h3 style="font-size: 24px; font-weight: 600; letter-spacing: -0.5px; margin: 0 0 8px 0; border: none; padding: 0;">Jaeung Ko</h3>
+                    <div style="font-family: \'JetBrains Mono\', monospace; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; color: var(--w-navy); font-weight: 600; margin-bottom: 14px;">Councilor</div>
                     <p>UPenn KoGSA President<br>University of Pennsylvania</p>
                 </div>
             </div>
-            <!-- <div class="card-container" style="margin-top: 20px;">
-                <div class="card leader-card">
-                    <img src="../assets/placeholder.svg" alt="Photo of Monica Cho">
-                    <h3>Monica Cho</h3>
-                    <p class="role">Councilor</p>
+            <!-- <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 0; border-top: 1px solid var(--w-ink); border-left: 1px solid var(--w-ink);" style="margin-top: 20px;">
+                <div style="background: var(--w-paper); padding: 40px 24px; border-right: 1px solid var(--w-ink); border-bottom: 1px solid var(--w-ink); display: flex; flex-direction: column; align-items: center; text-align: center;">
+                    <img src="../assets/placeholder.svg" alt="Photo of Monica Cho" style="width: 120px !important; height: 120px !important; min-height: 120px !important; border-radius: 50%; object-fit: cover; object-position: top; margin-bottom: 24px; border: 1px solid rgba(18,18,18,0.1);">
+                    <h3 style="font-size: 24px; font-weight: 600; letter-spacing: -0.5px; margin: 0 0 8px 0; border: none; padding: 0;">Monica Cho</h3>
+                    <div style="font-family: \'JetBrains Mono\', monospace; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; color: var(--w-navy); font-weight: 600; margin-bottom: 14px;">Councilor</div>
                     <p>UPenn K-PEnSA President<br>University of Pennsylvania</p>
                 </div>
 
-                <div class="card leader-card">
-                    <img src="../assets/placeholder.svg" alt="Photo of Jinwook Lee">
-                    <h3>Jinwook Lee</h3>
-                    <p class="role">Councilor</p>
+                <div style="background: var(--w-paper); padding: 40px 24px; border-right: 1px solid var(--w-ink); border-bottom: 1px solid var(--w-ink); display: flex; flex-direction: column; align-items: center; text-align: center;">
+                    <img src="../assets/placeholder.svg" alt="Photo of Jinwook Lee" style="width: 120px !important; height: 120px !important; min-height: 120px !important; border-radius: 50%; object-fit: cover; object-position: top; margin-bottom: 24px; border: 1px solid rgba(18,18,18,0.1);">
+                    <h3 style="font-size: 24px; font-weight: 600; letter-spacing: -0.5px; margin: 0 0 8px 0; border: none; padding: 0;">Jinwook Lee</h3>
+                    <div style="font-family: \'JetBrains Mono\', monospace; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; color: var(--w-navy); font-weight: 600; margin-bottom: 14px;">Councilor</div>
                     <p>Former President</p>
                 </div>
             </div> -->
 
             <h2
-                style="border-bottom: 2px solid #004a99; padding-bottom: 10px; margin-bottom: 20px; margin-top: 50px; color: #004a99;">
+                style="border-bottom: 1px solid var(--w-ink); font-size: 32px; letter-spacing: -0.5px; padding-bottom: 10px; margin-bottom: 20px; margin-top: 50px; color: var(--w-navy);">
                 Auditors</h2>
-            <div class="card-container">
-                <div class="card leader-card">
-                    <img src="../assets/placeholder.svg" alt="Placeholder">
-                    <h3>Open Position</h3>
-                    <p class="role">Auditor</p>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 0; border-top: 1px solid var(--w-ink); border-left: 1px solid var(--w-ink);">
+                <div style="background: var(--w-paper); padding: 40px 24px; border-right: 1px solid var(--w-ink); border-bottom: 1px solid var(--w-ink); display: flex; flex-direction: column; align-items: center; text-align: center;">
+                    <img src="../assets/placeholder.svg" alt="Placeholder" style="width: 120px !important; height: 120px !important; min-height: 120px !important; border-radius: 50%; object-fit: cover; object-position: top; margin-bottom: 24px; border: 1px solid rgba(18,18,18,0.1);">
+                    <h3 style="font-size: 24px; font-weight: 600; letter-spacing: -0.5px; margin: 0 0 8px 0; border: none; padding: 0;">Open Position</h3>
+                    <div style="font-family: \'JetBrains Mono\', monospace; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; color: var(--w-navy); font-weight: 600; margin-bottom: 14px;">Auditor</div>
                     <p>Recruiting</p>
                 </div>
 
-                <div class="card leader-card">
-                    <img src="../assets/placeholder.svg" alt="Placeholder">
-                    <h3>Open Position</h3>
-                    <p class="role">Auditor</p>
+                <div style="background: var(--w-paper); padding: 40px 24px; border-right: 1px solid var(--w-ink); border-bottom: 1px solid var(--w-ink); display: flex; flex-direction: column; align-items: center; text-align: center;">
+                    <img src="../assets/placeholder.svg" alt="Placeholder" style="width: 120px !important; height: 120px !important; min-height: 120px !important; border-radius: 50%; object-fit: cover; object-position: top; margin-bottom: 24px; border: 1px solid rgba(18,18,18,0.1);">
+                    <h3 style="font-size: 24px; font-weight: 600; letter-spacing: -0.5px; margin: 0 0 8px 0; border: none; padding: 0;">Open Position</h3>
+                    <div style="font-family: \'JetBrains Mono\', monospace; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; color: var(--w-navy); font-weight: 600; margin-bottom: 14px;">Auditor</div>
                     <p>Recruiting</p>
                 </div>
             </div>
 
             <!-- Advisors (Not yet requested)
-                <div class="card leader-card">
-                    <img src="../assets/placeholder_advisor.jpg" alt="Photo of Frank Lee">
-                    <h3>Frank Lee</h3>
-                    <p class="role">Advisor</p>
+                <div style="background: var(--w-paper); padding: 40px 24px; border-right: 1px solid var(--w-ink); border-bottom: 1px solid var(--w-ink); display: flex; flex-direction: column; align-items: center; text-align: center;">
+                    <img src="../assets/placeholder_advisor.jpg" alt="Photo of Frank Lee" style="width: 120px !important; height: 120px !important; min-height: 120px !important; border-radius: 50%; object-fit: cover; object-position: top; margin-bottom: 24px; border: 1px solid rgba(18,18,18,0.1);">
+                    <h3 style="font-size: 24px; font-weight: 600; letter-spacing: -0.5px; margin: 0 0 8px 0; border: none; padding: 0;">Frank Lee</h3>
+                    <div style="font-family: \'JetBrains Mono\', monospace; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; color: var(--w-navy); font-weight: 600; margin-bottom: 14px;">Advisor</div>
                     <p>Drexel University</p>
                 </div>
 
-                <div class="card leader-card">
-                    <img src="../assets/placeholder_advisor.jpg" alt="Photo of Insup Lee">
-                    <h3>Insup Lee</h3>
-                    <p class="role">Advisor</p>
+                <div style="background: var(--w-paper); padding: 40px 24px; border-right: 1px solid var(--w-ink); border-bottom: 1px solid var(--w-ink); display: flex; flex-direction: column; align-items: center; text-align: center;">
+                    <img src="../assets/placeholder_advisor.jpg" alt="Photo of Insup Lee" style="width: 120px !important; height: 120px !important; min-height: 120px !important; border-radius: 50%; object-fit: cover; object-position: top; margin-bottom: 24px; border: 1px solid rgba(18,18,18,0.1);">
+                    <h3 style="font-size: 24px; font-weight: 600; letter-spacing: -0.5px; margin: 0 0 8px 0; border: none; padding: 0;">Insup Lee</h3>
+                    <div style="font-family: \'JetBrains Mono\', monospace; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; color: var(--w-navy); font-weight: 600; margin-bottom: 14px;">Advisor</div>
                     <p>University of Pennsylvania</p>
                 </div>
 
-                <div class="card leader-card">
-                    <img src="../assets/placeholder_advisor.jpg" alt="Photo of Young-Jin Son">
-                    <h3>Young-Jin Son</h3>
-                    <p class="role">Advisor</p>
+                <div style="background: var(--w-paper); padding: 40px 24px; border-right: 1px solid var(--w-ink); border-bottom: 1px solid var(--w-ink); display: flex; flex-direction: column; align-items: center; text-align: center;">
+                    <img src="../assets/placeholder_advisor.jpg" alt="Photo of Young-Jin Son" style="width: 120px !important; height: 120px !important; min-height: 120px !important; border-radius: 50%; object-fit: cover; object-position: top; margin-bottom: 24px; border: 1px solid rgba(18,18,18,0.1);">
+                    <h3 style="font-size: 24px; font-weight: 600; letter-spacing: -0.5px; margin: 0 0 8px 0; border: none; padding: 0;">Young-Jin Son</h3>
+                    <div style="font-family: \'JetBrains Mono\', monospace; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; color: var(--w-navy); font-weight: 600; margin-bottom: 14px;">Advisor</div>
                     <p>Temple University School of Medicine</p>
                 </div>
                 -->

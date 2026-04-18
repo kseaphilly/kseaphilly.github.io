@@ -238,6 +238,9 @@
             .nav-links { display: none; }
             footer { grid-template-columns: 1fr 1fr; }
         }
+        .v1-content .partner-grid div[style*="height: 160px;"] img { max-width: 85% !important; max-height: 70px !important; object-fit: contain !important; mix-blend-mode: multiply; }
+    .v1-content .partner-grid div[style*="height: 160px;"] p, .v1-content .partner-grid div[style*="height: 160px;"] h3 { display: none !important; }
+        @media (max-width: 1024px) { .v1-content .partner-grid { grid-template-columns: repeat(2, 1fr) !important; } }
     </style>
 </head>
 <body>
@@ -290,6 +293,9 @@
         .v1-content .member-card { padding: 24px; border: 1px solid var(--w-ink); background: var(--w-cream); display: flex; align-items: center; gap: 16px; }
         .v1-content .org-chart { max-width: 100%; height: auto; border: 1px solid var(--w-ink); margin: 24px 0; }
         .v1-content .profile-photo { width: 80px; height: 80px; object-fit: cover; border-radius: 50%; opacity: 0; } /* Fallback */
+        .v1-content .partner-grid div[style*="height: 160px;"] img { max-width: 85% !important; max-height: 70px !important; object-fit: contain !important; mix-blend-mode: multiply; }
+    .v1-content .partner-grid div[style*="height: 160px;"] p, .v1-content .partner-grid div[style*="height: 160px;"] h3 { display: none !important; }
+        @media (max-width: 1024px) { .v1-content .partner-grid { grid-template-columns: repeat(2, 1fr) !important; } }
     </style>
     
 <section class="v1-content" style="padding: 60px 40px; max-width: 1200px; margin: 0 auto; min-height: 60vh;">
@@ -302,82 +308,82 @@
             </p>
 
             <div class="sponsor-tier" style="margin-bottom: 50px;">
-                <div class="sponsor-grid">
-                    <div class="sponsor-item">
-                        <img src="../assets/ksea-logo-horizontal.png" alt="KSEA HQ Logo">
-                        <h3>KSEA HQ</h3>
-                        <p><a href="https://ksea.org" target="_blank">Website</a></p>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 0; border-top: 1px solid var(--w-ink); border-left: 1px solid var(--w-ink);">
+                    <div style="background: var(--w-paper); border-right: 1px solid var(--w-ink); border-bottom: 1px solid var(--w-ink); height: 220px; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 30px;">
+                        <img src="../assets/ksea-logo-horizontal.png" alt="KSEA HQ Logo" style="max-height: 80px !important; max-width: 85% !important; object-fit: contain; mix-blend-mode: multiply; margin-bottom: 16px;">
+                        <h3 style="font-size: 16px; font-weight: 600; margin: 0 0 8px 0; border: none; padding: 0;">KSEA HQ</h3>
+                        <div style="font-size: 12px; font-family: monospace; opacity: 0.6;"><a href="https://ksea.org" style="text-decoration:underline;">Website</a></div>
                     </div>
-                    <div class="sponsor-item">
-                        <img src="../assets/kusco-logo.png" alt="KUSCO Logo">
-                        <h3>KUSCO</h3>
-                        <p><a href="https://www.kusco.org" target="_blank">Website</a></p>
+                    <div style="background: var(--w-paper); border-right: 1px solid var(--w-ink); border-bottom: 1px solid var(--w-ink); height: 220px; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 30px;">
+                        <img src="../assets/kusco-logo.png" alt="KUSCO Logo" style="max-height: 80px !important; max-width: 85% !important; object-fit: contain; mix-blend-mode: multiply; margin-bottom: 16px;">
+                        <h3 style="font-size: 16px; font-weight: 600; margin: 0 0 8px 0; border: none; padding: 0;">KUSCO</h3>
+                        <div style="font-size: 12px; font-family: monospace; opacity: 0.6;"><a href="https://www.kusco.org" style="text-decoration:underline;">Website</a></div>
                     </div>
                 </div>
             </div>
             <!-- 
             <div class="sponsor-tier platinum">
                 <h2>Platinum Sponsors</h2>
-                <div class="sponsor-grid">
-                    <div class="sponsor-item">
-                        <img src="../assets/placeholder.svg" alt="Sponsor Logo">
-                        <h3>Sponsor Name</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 0; border-top: 1px solid var(--w-ink); border-left: 1px solid var(--w-ink);">
+                    <div style="background: var(--w-paper); border-right: 1px solid var(--w-ink); border-bottom: 1px solid var(--w-ink); height: 220px; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 30px;">
+                        <img src="../assets/placeholder.svg" alt="Sponsor Logo" style="max-height: 80px !important; max-width: 85% !important; object-fit: contain; mix-blend-mode: multiply; margin-bottom: 16px;">
+                        <h3 style="font-size: 16px; font-weight: 600; margin: 0 0 8px 0; border: none; padding: 0;">Sponsor Name</h3>
                     </div>
                 </div>
             </div>
 
             <div class="sponsor-tier gold">
                 <h2>Gold Sponsors</h2>
-                <div class="sponsor-grid">
-                    <div class="sponsor-item">
-                        <img src="../assets/placeholder.svg" alt="Sponsor Logo">
-                        <h3>Sponsor Name</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 0; border-top: 1px solid var(--w-ink); border-left: 1px solid var(--w-ink);">
+                    <div style="background: var(--w-paper); border-right: 1px solid var(--w-ink); border-bottom: 1px solid var(--w-ink); height: 220px; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 30px;">
+                        <img src="../assets/placeholder.svg" alt="Sponsor Logo" style="max-height: 80px !important; max-width: 85% !important; object-fit: contain; mix-blend-mode: multiply; margin-bottom: 16px;">
+                        <h3 style="font-size: 16px; font-weight: 600; margin: 0 0 8px 0; border: none; padding: 0;">Sponsor Name</h3>
                     </div>
-                    <div class="sponsor-item">
-                        <img src="../assets/placeholder.svg" alt="Sponsor Logo">
-                        <h3>Sponsor Name</h3>
+                    <div style="background: var(--w-paper); border-right: 1px solid var(--w-ink); border-bottom: 1px solid var(--w-ink); height: 220px; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 30px;">
+                        <img src="../assets/placeholder.svg" alt="Sponsor Logo" style="max-height: 80px !important; max-width: 85% !important; object-fit: contain; mix-blend-mode: multiply; margin-bottom: 16px;">
+                        <h3 style="font-size: 16px; font-weight: 600; margin: 0 0 8px 0; border: none; padding: 0;">Sponsor Name</h3>
                     </div>
                 </div>
             </div>
 
             <div class="sponsor-tier silver">
                 <h2>Silver Sponsors</h2>
-                <div class="sponsor-grid">
-                    <div class="sponsor-item">
-                        <img src="../assets/placeholder.svg" alt="Sponsor Logo">
-                        <h3>Sponsor Name</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 0; border-top: 1px solid var(--w-ink); border-left: 1px solid var(--w-ink);">
+                    <div style="background: var(--w-paper); border-right: 1px solid var(--w-ink); border-bottom: 1px solid var(--w-ink); height: 220px; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 30px;">
+                        <img src="../assets/placeholder.svg" alt="Sponsor Logo" style="max-height: 80px !important; max-width: 85% !important; object-fit: contain; mix-blend-mode: multiply; margin-bottom: 16px;">
+                        <h3 style="font-size: 16px; font-weight: 600; margin: 0 0 8px 0; border: none; padding: 0;">Sponsor Name</h3>
                     </div>
-                    <div class="sponsor-item">
-                        <img src="../assets/placeholder.svg" alt="Sponsor Logo">
-                        <h3>Sponsor Name</h3>
+                    <div style="background: var(--w-paper); border-right: 1px solid var(--w-ink); border-bottom: 1px solid var(--w-ink); height: 220px; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 30px;">
+                        <img src="../assets/placeholder.svg" alt="Sponsor Logo" style="max-height: 80px !important; max-width: 85% !important; object-fit: contain; mix-blend-mode: multiply; margin-bottom: 16px;">
+                        <h3 style="font-size: 16px; font-weight: 600; margin: 0 0 8px 0; border: none; padding: 0;">Sponsor Name</h3>
                     </div>
-                    <div class="sponsor-item">
-                        <img src="../assets/placeholder.svg" alt="Sponsor Logo">
-                        <h3>Sponsor Name</h3>
+                    <div style="background: var(--w-paper); border-right: 1px solid var(--w-ink); border-bottom: 1px solid var(--w-ink); height: 220px; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 30px;">
+                        <img src="../assets/placeholder.svg" alt="Sponsor Logo" style="max-height: 80px !important; max-width: 85% !important; object-fit: contain; mix-blend-mode: multiply; margin-bottom: 16px;">
+                        <h3 style="font-size: 16px; font-weight: 600; margin: 0 0 8px 0; border: none; padding: 0;">Sponsor Name</h3>
                     </div>
                 </div>
             </div>-->
 
             <div class="sponsor-tier" style="margin-bottom: 40px;">
-                <h2 style="background: linear-gradient(145deg, #cd7f32, #b87333); color: white;">Bronze Sponsor</h2>
-                <div class="sponsor-grid">
-                    <div class="sponsor-item">
-                        <img src="../symposium/assets/meta-biomed-logo.png" alt="META BIOMED Logo">
-                        <h3>META BIOMED</h3>
-                        <p><a href="https://www.metabiomedamericas.com" target="_blank">Website</a> | <a href="https://www.metabiomedshop.com" target="_blank">Shop</a></p>
+                <h2 style="background: transparent; color: var(--w-ink); border-bottom: 1px solid var(--w-ink); padding-bottom: 12px; font-size: 32px; letter-spacing: -0.5px;">Bronze Sponsor</h2>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 0; border-top: 1px solid var(--w-ink); border-left: 1px solid var(--w-ink);">
+                    <div style="background: var(--w-paper); border-right: 1px solid var(--w-ink); border-bottom: 1px solid var(--w-ink); height: 220px; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 30px;">
+                        <img src="../symposium/assets/meta-biomed-logo.png" alt="META BIOMED Logo" style="max-height: 80px !important; max-width: 85% !important; object-fit: contain; mix-blend-mode: multiply; margin-bottom: 16px;">
+                        <h3 style="font-size: 16px; font-weight: 600; margin: 0 0 8px 0; border: none; padding: 0;">META BIOMED</h3>
+                        <div style="font-size: 12px; font-family: monospace; opacity: 0.6;"><a href="https://www.metabiomedamericas.com" style="text-decoration:underline;">Website</a> | <a href="https://www.metabiomedshop.com" style="text-decoration:underline;">Shop</a></div>
                     </div>
                 </div>
             </div>
 
             <div class="section"
-                style="background-color: #f8f9fa; padding: 40px; border-radius: 10px; text-align: center; margin-top: 60px;">
+                style="background-color: var(--w-paper); border: 1px solid var(--w-ink); padding: 60px 40px; text-align: center; margin-top: 80px;">
                 <h2>Become a Sponsor</h2>
                 <p style="max-width: 700px; margin: 0 auto 20px auto;">
                     Support the KSEA Philadelphia Chapter and connect with our network of scientists, engineers, and
                     students. Sponsorship benefits include logo placement, event recognition, and more.
                 </p>
                 <a href="contact.html" class="btn"
-                    style="display: inline-block; background-color: #004a99; color: white; padding: 12px 24px; text-decoration: none; border-radius: 5px; font-weight: bold;">Contact
+                    style="display: inline-block; background-color: var(--w-navy); border-radius: 0; color: white; padding: 12px 24px; text-decoration: none; border-radius: 5px; font-weight: bold;">Contact
                     Us for Sponsorship</a>
             </div>
         </div>
