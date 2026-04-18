@@ -43,11 +43,12 @@
 
     <nav>
         <div class="nav-left">
-            <img src="../assets/ksea_phily_logo.png" alt="KSEA Philly" style="height: 46px; width: auto; display: block;" onerror="this.src='https://ksea.org/files/ksea_logo_new.png';"/>
-            <div class="nav-wordmark">
-                <div class="nav-wordmark-title"><a href="index.html">KSEA Philadelphia</a></div>
-                <div class="nav-wordmark-sub">Bio · Bio-Engineering · AI</div>
-            </div>
+            <a href="index.html" class="nav-logo-link">
+                <img src="../assets/ksea_phily_logo.png" alt="KSEA Philly" style="height: 46px; width: auto; display: block;" onerror="this.src='https://ksea.org/files/ksea_logo_new.png';"/>
+                <div class="nav-wordmark">
+                    <div class="nav-wordmark-title">KSEA Philadelphia</div>
+                </div>
+            </a>
         </div>
         <div class="nav-links">
             <a href="about.html">About</a>
@@ -70,25 +71,25 @@
         <p class="page-hero-sub">Join us for upcoming competitions, networking sessions, and symposiums. Explore our past gatherings below.</p>
     </section>
 
-    <section>
-    
-            
-
-            
-        <div class="events-grid single-row" style="border-top: 1px solid var(--w-ink); border-left: 1px solid var(--w-ink); margin-bottom: 60px; display: grid; grid-template-columns: repeat(3, 1fr);">
-            <div class="event-card" id="nmsc-2026" style="border-bottom: 1px solid var(--w-ink); border-right: 1px solid var(--w-ink); padding: 32px 32px 28px; background: var(--w-paper); display: flex; flex-direction: column;">
+    <section style="border-bottom: 1px solid var(--w-ink);">
+        <div class="section-header">
+            <span>§ 02 — Upcoming Events</span>
+            <span style="opacity: 0.6;">Spring → Summer 2026</span>
+        </div>
+        <div class="events-grid single-row" style="border-left: 1px solid var(--w-ink);">
+            <div class="event-card" id="nmsc-2026" style="opacity: 0.6;">
                 <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 24px;">
-                    <div style="display: inline-block; padding: 4px 10px; background: var(--w-navy); color: var(--w-cream); font-size: 10px; font-family: 'JetBrains Mono', monospace; letter-spacing: 1px; text-transform: uppercase;">Competition</div>
+                    <div style="display: inline-block; padding: 4px 10px; background: var(--w-ink); color: var(--w-cream); font-size: 10px; font-family: 'JetBrains Mono', monospace; letter-spacing: 1px; text-transform: uppercase;">Concluded</div>
                     <div style="text-align: right;">
                         <div style="font-size: 24px; font-weight: 600; letter-spacing: -0.5px; line-height: 1;">APR 18</div>
-                        <div style="font-size: 11px; font-family: 'JetBrains Mono', monospace; opacity: 0.6; margin-top: 4px;">13:20 EDT</div>
+                        <div style="font-size: 11px; font-family: 'JetBrains Mono', monospace; opacity: 0.6; margin-top: 4px;">Completed</div>
                     </div>
                 </div>
-                <h3 style="font-size: 26px; font-weight: 600; letter-spacing: -0.5px; margin: 0; line-height: 1.1;">NMSC 2026</h3>
-                <p style="font-size: 14px; line-height: 1.55; margin-top: 14px; opacity: 0.8; flex: 1;">National Math and Science Competition hosted by KSEA Philadelphia. Arrival by 1:20 PM. Orientation starts at 1:30 PM. Simple snacks and gifts will be provided!</p>
+                <h3 style="font-size: 26px; font-weight: 600; letter-spacing: -0.5px; margin: 0; line-height: 1.1;">NMSC 2026 ✓</h3>
+                <p style="font-size: 14px; line-height: 1.55; margin-top: 14px; opacity: 0.8; flex: 1;">National Math and Science Competition hosted by KSEA Philadelphia at UPenn. Successfully concluded April 18, 2026.</p>
                 <div style="border-top: 1px dashed rgba(18,18,18,0.3); padding-top: 14px; display: flex; justify-content: space-between; font-size: 12px; font-family: 'JetBrains Mono', monospace; align-items: center;">
-                    <span style="opacity: 0.7;">▸ 3601 SPRUCE ST, PA</span>
-                    <span><a href="nmsc.html" style="background: var(--w-navy); color: var(--w-cream); padding: 8px 14px; text-decoration: none; font-weight: 600;">Register →</a></span>
+                    <span style="opacity: 0.7;">▸ UPENN · 3601 SPRUCE ST</span>
+                    <a href="nmsc.html" style="text-decoration: underline; opacity: 0.7;">Details</a>
                 </div>
             </div>
             
@@ -112,14 +113,25 @@
                 <div style="font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 1px;">More TBA</div>
             </div>
         </div>
-    
+    </section>
 
-        <div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.8px; text-transform: uppercase; opacity: 0.7; margin-bottom: 12px; margin-top: 100px;">
-            § 02 — Archive
+    <section>
+        <div class="section-header">
+            <span>§ 03 — Archive</span>
+            <span style="opacity: 0.6;">Past events</span>
         </div>
-        <h2 style="font-size: 40px; font-weight: 600; margin: 0 0 30px 0; border: none; padding: 0;">Past Events</h2>
 
-            <div style="padding: 40px; margin-bottom: 40px; background: var(--w-paper); border: 1px solid var(--w-ink);" id="nrc-2026">
+        <div class="past-event-block" id="nmsc-2026-recap">
+            <h2>NMSC 2026 — National Math and Science Competition</h2>
+            <p><strong>Date:</strong> April 18, 2026</p>
+            <p><strong>Location:</strong> UPenn, 3601 Spruce St, Philadelphia, PA</p>
+            <p>Successfully concluded! Thank you to all participants and volunteers who made this year's competition a success.</p>
+            <div class="event-cta">
+                <a href="nmsc.html" class="btn-event">View Details →</a>
+            </div>
+        </div>
+
+        <div class="past-event-block" id="nrc-2026">
                 <h2>35th Northeast Regional Conference (NRC)</h2>
                 <p><strong>Date:</strong> March 14, 2026</p>
                 <p><strong>Location:</strong> DoubleTree by Hilton Hotel, Fort Lee, NJ</p>
@@ -347,11 +359,9 @@
                     style="max-width: 100%; height: auto; border-radius: 0;">
                 <p><em>A group photo of the KSEA-KITEE Networking Dinner on February 22, 2023.</em></p>
             </div>
-        </div>
-    
-</section>
+    </section>
 
-<footer>
+    <footer>
         <div>
             <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 16px;">
                 <img src="../assets/ksea_phily_logo.png" alt="" style="height: 42px; filter: brightness(0) invert(1);" onerror="this.src='https://ksea.org/files/ksea_logo_new.png'; this.style.filter='none';"/>

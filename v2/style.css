@@ -55,6 +55,7 @@ nav {
     gap: 16px;
 }
 
+.nav-logo-link { display: flex; align-items: center; gap: 16px; text-decoration: none; }
 .nav-wordmark { line-height: 1; }
 .nav-wordmark-title {
     font-size: 19px;
@@ -425,6 +426,16 @@ footer {
     display: grid;
     grid-template-columns: 2fr 1fr 1fr 1fr;
     gap: 40px;
+}
+.footer-logo {
+    height: 42px;
+    mix-blend-mode: screen;
+    opacity: 0.85;
+}
+/* Sponsor logos on dark/navy backgrounds — keep natural color, don't invert */
+.sponsor-logo {
+    height: 60px;
+    opacity: 0.8;
 }
 .footer-col-head {
     font-family: 'JetBrains Mono', monospace;
