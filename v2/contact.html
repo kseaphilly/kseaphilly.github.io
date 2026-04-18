@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - KSEA Philadelphia Chapter</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Serif+KR:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <style>
+        :root {
+            --w-navy: #2E3A94;
+            --w-light: #6B7AC9;
+            --w-cream: #F4EBD9;
+            --w-brick: #B0413E;
+            --w-ink: #121212;
+            --w-paper: #FAF6EC;
+            --w-bio: #2A6F5B;
+        }
+
+        html, body {
+            margin: 0;
+            padding: 0;
+            background: var(--w-paper);
+            color: var(--w-ink);
+            font-family: 'Space Grotesk', -apple-system, sans-serif;
+            overflow-x: hidden;
+        }
+        
+        * { box-sizing: border-box; }
+
+        a { text-decoration: none; color: inherit; }
+
+        .ticker {
+            background: var(--w-ink);
+            color: var(--w-cream);
+            padding: 8px 40px;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 12px;
+            letter-spacing: 0.6px;
+            text-transform: uppercase;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px 40px;
+            border-bottom: 1px solid var(--w-ink);
+            background: var(--w-paper);
+        }
+
+        .nav-left {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            font-size: 14px;
+            align-items: center;
+            font-weight: 500;
+        }
+
+        .nav-links a:hover {
+            color: var(--w-navy);
+        }
+
+        .btn-join, .btn-primary, .btn-outline {
+            border: none;
+            cursor: pointer;
+            font-weight: 600;
+            font-family: 'Space Grotesk', -apple-system, sans-serif;
+        }
+
+        .btn-join {
+            background: var(--w-navy);
+            color: var(--w-cream);
+            padding: 10px 18px;
+            font-size: 13px;
+        }
+
+        .hero {
+            display: grid;
+            grid-template-columns: 1.4fr 1fr;
+            border-bottom: 1px solid var(--w-ink);
+            min-height: 580px;
+        }
+
+        .hero-left {
+            padding: 60px 40px 100px 40px;
+            border-right: 1px solid var(--w-ink);
+            position: relative;
+        }
+
+        .hero-right {
+            background: var(--w-navy);
+            color: var(--w-cream);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 40px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-stats {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            border-top: 1px solid var(--w-ink);
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        .stat-box {
+            padding: 20px 24px;
+            border-right: 1px solid var(--w-ink);
+        }
+        .stat-box:last-child {
+            border-right: none;
+        }
+
+        .section-header {
+            padding: 18px 40px;
+            display: flex;
+            justify-content: space-between;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 12px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            border-bottom: 1px solid var(--w-ink);
+        }
+
+        .pillars {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            border-bottom: 1px solid var(--w-ink);
+        }
+
+        .pillar-box {
+            padding: 40px 32px 32px;
+            border-right: 1px solid var(--w-ink);
+            min-height: 340px;
+            position: relative;
+        }
+        .pillar-box:last-child { border-right: none; background: var(--w-cream); }
+
+        .events-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            border-bottom: 1px solid var(--w-ink);
+        }
+
+        .event-card {
+            padding: 32px 32px 28px;
+            border-right: 1px solid var(--w-ink);
+            border-bottom: 1px solid var(--w-ink);
+            background: var(--w-paper);
+            min-height: 340px;
+            display: flex;
+            flex-direction: column;
+        }
+        .event-card:nth-child(3n) { border-right: none; }
+        .events-grid.single-row .event-card { border-bottom: none; }
+
+        .labs-section {
+            border-bottom: 1px solid var(--w-ink);
+            padding: 60px 40px;
+        }
+
+        .labs-grid {
+            margin-top: 40px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            border-top: 1px solid var(--w-ink);
+            border-left: 1px solid var(--w-ink);
+        }
+
+        .lab-box {
+            padding: 22px 20px;
+            border-right: 1px solid var(--w-ink);
+            border-bottom: 1px solid var(--w-ink);
+            min-height: 100px;
+        }
+
+        .board-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            border-bottom: 1px solid var(--w-ink);
+        }
+
+        .board-card {
+            padding: 32px;
+            border-right: 1px solid var(--w-ink);
+            min-height: 300px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .board-card:last-child { border-right: none; }
+
+        .sponsors-section {
+            background: var(--w-navy);
+            color: var(--w-cream);
+            padding: 60px 40px;
+            border-bottom: 1px solid var(--w-ink);
+        }
+
+        .cta-section {
+            padding: 80px 40px;
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        footer {
+            background: var(--w-ink);
+            color: var(--w-cream);
+            padding: 40px 40px 28px;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+        }
+
+        @media (max-width: 1024px) {
+            .hero, .pillars, .events-grid, .labs-grid, .board-grid, .cta-section { grid-template-columns: 1fr; }
+            .hero-stats { grid-template-columns: repeat(2, 1fr); position: relative; border-top: 1px solid var(--w-ink); margin-top: 40px; }
+            .stat-box { border-bottom: 1px solid var(--w-ink); }
+            .stat-box:nth-child(2) { border-right: none; }
+            .hero-left { padding-bottom: 0; }
+            .nav-links { display: none; }
+            footer { grid-template-columns: 1fr 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <div class="ticker">
+        <span>▸ UPCOMING: National Math and Science Competition (NMSC) · April 18, 2026 · UPenn</span>
+        <span style="opacity: 0.7;">필라델피아 지부</span>
+    </div>
+
+    <nav>
+        <div class="nav-left">
+            <img src="../assets/ksea_phily_logo.png" alt="KSEA Philly" style="height: 46px; width: auto; display: block;" onerror="this.src='https://ksea.org/files/ksea_logo_new.png';"/>
+            <div style="line-height: 1;">
+                <div style="font-size: 19px; font-weight: 700; letter-spacing: -0.3px; color: var(--w-navy);">
+                    <a href="index.html">KSEA Philadelphia</a>
+                </div>
+            </div>
+        </div>
+        <div class="nav-links">
+            <a href="about.html">About</a>
+            <a href="leadership.html">Leadership</a>
+            <a href="events.html">Events</a>
+            <a href="membership.html">Membership</a>
+            <a href="sponsors.html">Sponsors</a>
+            <a href="yg.html">YG</a>
+            <a href="careers.html">Careers</a>
+            <a href="membership.html"><button class="btn-join">Join →</button></a>
+        </div>
+    </nav>
+
+    
+
+    <style>
+        .v1-content h1 { font-size: 48px; font-weight: 600; letter-spacing: -1px; margin-bottom: 24px; color: var(--w-navy); }
+        .v1-content h2 { font-size: 32px; font-weight: 600; letter-spacing: -0.5px; margin-top: 40px; margin-bottom: 20px; border-bottom: 1px solid var(--w-ink); padding-bottom: 10px; }
+        .v1-content h3 { font-size: 24px; font-weight: 600; margin-top: 30px; margin-bottom: 16px; }
+        .v1-content p { font-size: 16px; line-height: 1.6; margin-bottom: 16px; opacity: 0.85; }
+        .v1-content ul, .v1-content ol { font-size: 16px; line-height: 1.6; margin-bottom: 16px; opacity: 0.85; padding-left: 20px; }
+        .v1-content li { margin-bottom: 8px; }
+        .v1-content a { color: var(--w-navy); text-decoration: underline; }
+        .v1-content a.btn { text-decoration: none; display: inline-block; background: var(--w-navy); color: var(--w-cream); padding: 10px 20px; font-weight: 600; }
+        .v1-content .card { background: var(--w-paper); padding: 32px; border: 1px solid var(--w-ink); margin-bottom: 24px; }
+        .v1-content .partner-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 24px; margin-top: 24px; border-top: 1px solid var(--w-ink); border-left: 1px solid var(--w-ink); }
+        .v1-content .partner-card { border: none !important; border-bottom: 1px solid var(--w-ink) !important; border-right: 1px solid var(--w-ink) !important; padding: 32px !important; margin-bottom: 0 !important; display: flex; flex-direction: column; align-items: center; justify-content: flex-start; text-align: center; }
+        .v1-content .partner-logo-wrapper { height: 120px; display: flex; align-items: center; justify-content: center; margin-bottom: 16px; width: 100%; }
+        .v1-content .partner-logo { max-height: 90px; max-width: 90%; object-fit: contain; mix-blend-mode: multiply; }
+        .v1-content table { width: 100%; border-collapse: collapse; margin-bottom: 24px; border: 1px solid var(--w-ink); }
+        .v1-content th, .v1-content td { border: 1px solid var(--w-ink); padding: 12px; text-align: left; }
+        .v1-content th { background: var(--w-ink); color: var(--w-cream); }
+        .v1-content .members-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 24px; margin-top: 24px; }
+        .v1-content .member-card { padding: 24px; border: 1px solid var(--w-ink); background: var(--w-cream); display: flex; align-items: center; gap: 16px; }
+        .v1-content .org-chart { max-width: 100%; height: auto; border: 1px solid var(--w-ink); margin: 24px 0; }
+        .v1-content .profile-photo { width: 80px; height: 80px; object-fit: cover; border-radius: 50%; opacity: 0; } /* Fallback */
+    </style>
+    
+<section class="v1-content" style="padding: 60px 40px; max-width: 1200px; margin: 0 auto; min-height: 60vh;">
+
+        <div class="container">
+            <h1>Contact Us</h1>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto 40px auto;">We'd love to hear from you!
+                Whether you have questions about our events, membership, or how to get involved, please don't hesitate
+                to reach out.</p>
+
+            <div class="section">
+                <h2>Chapter Contact</h2>
+                <p><strong>Email:</strong> <a
+                        href="mailto:ksea.philly.chapter@gmail.com">ksea.philly.chapter@gmail.com</a></p>
+            </div>
+
+            <div class="section">
+                <h2>National Headquarters</h2>
+                <p>You can also find more information and resources at the KSEA National Headquarters website.</p>
+                <p><a href="https://www.ksea.org/contact" target="_blank" rel="noopener noreferrer">KSEA National
+                        Contact Page</a></p>
+            </div>
+        </div>
+    
+</section>
+
+    <footer>
+        <div>
+            <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 16px;">
+                <img src="../assets/ksea_phily_logo.png" alt="" style="height: 42px; filter: brightness(0) invert(1);" onerror="this.src='https://ksea.org/files/ksea_logo_new.png'; this.style.filter='none';"/>
+                <div style="font-size: 16px; font-weight: 700;">KSEA Philadelphia</div>
+            </div>
+            <div style="font-size: 12px; opacity: 0.6; line-height: 1.6; font-family: 'JetBrains Mono', monospace;">
+                Philadelphia chapter of the Korean-American<br/>Scientists & Engineers Association.<br/>KSEA · Est. 1971 · 501(c)(3) non-profit.
+            </div>
+        </div>
+        <div>
+            <div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; opacity: 0.5; margin-bottom: 14px;">Chapter</div>
+            <div style="font-size: 13px; margin-bottom: 6px;"><a href="about.html">About</a></div>
+            <div style="font-size: 13px; margin-bottom: 6px;"><a href="leadership.html">Leadership</a></div>
+            <div style="font-size: 13px; margin-bottom: 6px;"><a href="bylaws.html">Bylaws</a></div>
+            <div style="font-size: 13px; margin-bottom: 6px;"><a href="careers.html">Careers</a></div>
+        </div>
+        <div>
+            <div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; opacity: 0.5; margin-bottom: 14px;">Programs</div>
+            <div style="font-size: 13px; margin-bottom: 6px;"><a href="events.html">Events & Seminars</a></div>
+            <div style="font-size: 13px; margin-bottom: 6px;"><a href="nmsc.html">NMSC</a></div>
+            <div style="font-size: 13px; margin-bottom: 6px;"><a href="membership.html">Membership</a></div>
+        </div>
+        <div>
+            <div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; opacity: 0.5; margin-bottom: 14px;">Connect</div>
+            <div style="font-size: 13px; margin-bottom: 6px;"><a href="contact.html">Contact Us</a></div>
+        </div>
+    </footer>
+</body>
+</html>
