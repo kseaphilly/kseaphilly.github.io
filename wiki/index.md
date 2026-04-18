@@ -1,3 +1,5 @@
+# KSEA Philadelphia LLM-Wiki
+
 ## Core Documents
 - [[_context]]: High-level project map.
 - [[purpose]]: Why this wiki exists.
@@ -14,33 +16,38 @@
 - [[Template-Mapping-Rules]]: How to map Wiki data to HTML templates.
 
 ## Entities (Pure Content)
-- [[About-Page-Content]]: Mission, Vision, and Partners.
-- [[Leadership-Page-Content]]: Executive Committee and Councilors.
-- [[Events-Log]]: Detailed history and schedule.
-- [[Site-Content-Catalogue]]: Data for Sponsors, YG, and Careers.
-- [[Membership]]: Detailed registration steps and fees.
-- [[People]]: Directory of chapter members and leaders.
-- [[Partners]]: Detailed list of regional and APS organizations.
-- [[KoGSA]]: UPenn Korean Graduate Student Association.
-- [[KITEE]]: Technology and Entrepreneurship partner.
-- [[KASBP]]: Biotech and Pharma partner.
-- [[Joint-Seminar-Series]]: Recurring monthly seminars.
+### 🏛️ Organizational
+- [[About-Page-Content]]: Mission and Vision.
+- [[Leadership-Page-Content]]: Executive structure overview.
+- [[Partners]]: Central hub for all regional and professional partners.
 - [[Bylaws]]: Governance and rules.
 - [[Contact]]: Communication channels.
 
-## Specific Events
-- [[NMSC-2026]]
-- [[NRC-2026]]
-- [[Symposium-2026]]
+### 👥 People & Leadership
+- [[People]]: Consolidated directory of members.
+  - [[Dr-Wookjin-Choi]] (President)
+  - [[Su-Chin-Heo]] (Vice President)
+  - [[Hyunmin-Cho]] (Membership Director)
+  - [[Sangin-Kim]], [[Jaeung-Ko]] (Councilors)
+
+### 🤝 Regional & APS Partners
+- [[KoGSA]], [[PKSA]] (Regional)
+- [[KITEE]], [[KASBP]], [[KBMES]], [[KKYU]] (Professional/Support)
+
+### 📅 Programs & Events
+- [[Events-Log]]: Complete history and master schedule.
+  - [[Specific-Events]]: [[NMSC-2026]], [[NRC-2026]], [[Symposium-2026]], [[STEP-UP-2026]]
+- [[Joint-Seminar-Series]]: Recurring academic collaborations.
+- [[Membership]]: Registration steps and membership levels.
+- [[YG]]: Young Generation program details.
+- [[Site-Content-Catalogue]]: Secondary data for Sponsors, Careers, and YG.
 
 ## Legacy & Migration
 - [[Legacy-Home-Content]]: Data from v1.
 - [[V2-Home-Content]]: Analysis of v2 homepage.
 
 ## Sources (Patterns & References)
-- [[Karpathy-LLM-Wiki-Pattern]]: The original design philosophy.
-- [[Pratiyush-LLM-Wiki-Pattern]]: Focus on Agentic Memory.
-- [[Nashsu-LLM-Wiki-Pattern]]: Focus on Semantic Graphs.
+- [[Karpathy-LLM-Wiki-Pattern]], [[Pratiyush-LLM-Wiki-Pattern]], [[Nashsu-LLM-Wiki-Pattern]]
 
 ## Maintenance
 - [Migration Scripts](file:///Users/wxc151/Documents/gitRepos/kseaphilly.github.io/scripts/migration/README.md)
