@@ -70,7 +70,7 @@ background: var(--w-paper);
 ```
 - **Logo**: `height: 46px`
 - **Title**: `font-size: 19px; font-weight: 700; color: var(--w-navy);`
-- **Subtitle** (below title): `font-family: JetBrains Mono; font-size: 11px; opacity: 0.6; text-transform: uppercase;` — text: `Bio · Bio-Engineering · AI`
+- **Subtitle** (below title): Available as `.nav-wordmark-sub` class but **NOT used** — KSEA Philadelphia covers all STEM disciplines, not just Bio/AI. Leave empty.
 - **Links**: `font-size: 14px; font-weight: 500; gap: 30px`
 - **Join button**: `background: var(--w-navy); color: var(--w-cream); padding: 10px 18px;`
 
