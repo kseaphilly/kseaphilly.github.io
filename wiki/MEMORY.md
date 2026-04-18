@@ -20,6 +20,8 @@ This document serves as the long-term context buffer for AI agents. It tracks hi
 | 2026.04.18 | **Wiki-First Policy** | To prevent knowledge drift between the site and the LLM's understanding. |
 | 2026.04.18 | **Bio × AI Palette** | Established `#2E3A94` (Navy) and `#FAF6EC` (Paper) as the core identity. |
 | 2026.04.18 | **120px Circular Crop** | Enforced for all leadership photos to maintain grid rhythm. |
+| 2026.04.18 | **Strict Facts Policy** | All wiki content must be directly verifiable in source code or by user. No hallucinations. |
+| 2026.04.18 | **Category Contexts** | Added `index.md` and `_context.md` to all entity subfolders for AI steering. |
 
 ## Pending Work (Backlog)
 - [ ] **Promotion to Root**: Move contents of `/v2/` to root once final review is complete.

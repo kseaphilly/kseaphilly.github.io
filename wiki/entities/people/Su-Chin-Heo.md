@@ -7,6 +7,6 @@ affiliation: University of Pennsylvania
 
 # Su Chin Heo
 
-- **Role**: Vice President, KSEA Philadelphia.
+- **Role**: Vice President, KSEA Philadelphia Chapter.
 - **Affiliation**: University of Pennsylvania.
 - **Visual**: `assets/su-chin-heo.jpg`.

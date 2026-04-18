@@ -2,11 +2,11 @@
 title: Jaeung Ko
 type: entity
 role: Councilor
-affiliation: University of Pennsylvania
+affiliation: UPenn KoGSA President, University of Pennsylvania
 ---
 
 # Jaeung Ko
 
 - **Role**: Councilor, KSEA Philadelphia Chapter.
-- **Organization**: President of **UPenn KoGSA** (Korean Graduate Student Association).
-- **Liaison**: Coordinates student-led seminars and membership recruitment within UPenn.
+- **Affiliation**: UPenn KoGSA President, University of Pennsylvania.
+- **Visual**: `assets/jaeung-ko.jpg`.

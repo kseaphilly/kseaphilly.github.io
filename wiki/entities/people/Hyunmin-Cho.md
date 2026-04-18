@@ -9,5 +9,4 @@ affiliation: University of Pennsylvania
 
 - **Role**: Membership Director, KSEA Philadelphia Chapter.
 - **Affiliation**: University of Pennsylvania.
-- **Visual**: `assets/hyunmin-cho.jpg` (120px circular).
-- **Core Focus**: Managing the membership drive and coordinating with local student associations.
+- **Visual**: `assets/hyunmin-cho.jpg`.

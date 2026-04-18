@@ -14,6 +14,8 @@
 - [[Bio-AI-Design-System]]: Visual guidelines, colors, and CSS tokens.
 - [[Site-Architecture-Blueprint]]: Structural requirements for the site.
 - [[Template-Mapping-Rules]]: How to map Wiki data to HTML templates.
+- [[Glossary]]: Acronyms and KSEA terms definition.
+- [[Agentic-Workflows]]: Guidelines for AI-automated maintenance.
 
 ## Entities (Pure Content)
 ### 🏛️ Organizational

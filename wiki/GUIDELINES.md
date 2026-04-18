@@ -1,9 +1,10 @@
 # KSEA Philly LLM-Wiki Operating Guidelines
 
 ## principles
-1. **Source of Truth**: The wiki is the definitive record of design, code, and history. If a change happens in the code, it MUST be reflected in the wiki.
-2. **Incremental Growth**: Never rewrite everything. Add, link, and refine incrementally.
-3. **Traceability**: Every fact must point back to a source (e.g., a conversation log, a commit, or a legacy document).
+1. **Strict Facts Only**: **Most Important Operating Principle**. Never assume or use external knowledge. All wiki content must be directly verifiable in the code or verified by the human user.
+2. **Source of Truth**: The wiki is the definitive record. If a change happens in the code, it MUST be reflected in the wiki first.
+3. **Incremental Growth**: Never rewrite everything. Add, link, and refine incrementally.
+4. **Traceability**: Every fact must point back to a source (e.g., a conversation log, a commit, or a legacy document).
 
 ## 1. Ingestion Workflow
 When adding new information:
