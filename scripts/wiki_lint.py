@@ -3,16 +3,23 @@ import os
 import re
 
 def check_wiki_health():
-    wiki_path = "./wiki/entities/"
+    wiki_root = "./wiki/"
     v2_path = "./v2/"
     
-    print("--- KSEA Philly Wiki Linter ---")
+    print("--- KSEA Philly Wiki Linter (Recursive) ---")
     
-    # 1. Check for Orphan Wiki Pages (Pages not in index.md)
+    # 1. Collect all wiki files across subfolders
+    wiki_files_info = [] # List of (rel_path, filename)
+    for root, dirs, files in os.walk(wiki_root):
+        for file in files:
+            if file.endswith(".md"):
+                wiki_files_info.append((os.path.join(root, file), file))
+    
+    wiki_files = [f[1] for f in wiki_files_info]
+    
+    # Check for Orphan Wiki Pages (Pages not in index.md)
     with open("./wiki/index.md", "r") as f:
         index_content = f.read()
-    
-    wiki_files = [f for f in os.listdir(wiki_path) if f.endswith(".md")]
     orphans = []
     for wf in wiki_files:
         page_name = wf.replace(".md", "")
@@ -26,16 +33,14 @@ def check_wiki_health():
 
     # 2. Check for Broken Wikilinks
     broken_links = []
-    for wf in wiki_files:
-        with open(os.path.join(wiki_path, wf), "r") as f:
+    for full_path, filename in wiki_files_info:
+        with open(full_path, "r") as f:
             content = f.read()
             links = re.findall(r"\[\[(.*?)\]\]", content)
             for link in links:
-                if not os.path.exists(os.path.join(wiki_path, f"{link}.md")) and \
-                   not os.path.exists(os.path.join("./wiki/concepts/", f"{link}.md")) and \
-                   not os.path.exists(os.path.join("./wiki/", f"{link}.md")) and \
-                   not link.startswith("../"): # Ignore root links for now
-                    broken_links.append((wf, link))
+                # Flat check since we use wikilink style [[Name]] 
+                if f"{link}.md" not in wiki_files and not link.startswith("../") and link != "AGENTS":
+                    broken_links.append((filename, link))
 
     if broken_links:
         print(f"[!] Warning: Broken [[wikilinks]] found: {broken_links}")
