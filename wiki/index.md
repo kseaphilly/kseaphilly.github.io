@@ -25,9 +25,9 @@
 - [[NRC-2026]], [[Symposium-2026]], [[NMSC-2026]]: Specific event nodes.
 
 ## Sources (Patterns & References)
-- [[Karpathy-LLM-Wiki-Pattern]]: The original design philosophy.
-- [[Pratiyush-LLM-Wiki-Pattern]]: CLI and Agent-native enhancements.
-- [[Nashsu-LLM-Wiki-Pattern]]: Graphical and Semantic enhancements.
+- [[Karpathy-LLM-Wiki-Pattern]]: The original design philosophy and 3-layer architecture.
+- [[Pratiyush-LLM-Wiki-Pattern]]: Focus on Agentic Memory, MCP tools, and Governance.
+- [[Nashsu-LLM-Wiki-Pattern]]: Focus on Semantic Graphs, Community Detection, and Vector Search.
 
 ## Maintenance
 - [Migration Scripts](file:///Users/wxc151/Documents/gitRepos/kseaphilly.github.io/scripts/migration/README.md)
