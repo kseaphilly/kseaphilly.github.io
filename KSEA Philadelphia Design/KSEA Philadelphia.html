@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>KSEA Philadelphia — Logo & Website</title>
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Serif+KR:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  html, body { margin: 0; padding: 0; background: #f0eee9; }
+  * { box-sizing: border-box; }
+</style>
+</head>
+<body>
+<div id="root"></div>
+
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+
+<script type="text/babel" src="design-canvas.jsx"></script>
+<script type="text/babel" src="logos.jsx"></script>
+<script type="text/babel" src="website.jsx"></script>
+
+<script type="text/babel">
+const TWEAKS = /*EDITMODE-BEGIN*/{
+  "primary_logo": "heritage",
+  "website_accent": "navy"
+}/*EDITMODE-END*/;
+
+function App() {
+  const [tweaks, setTweaks] = React.useState(TWEAKS);
+  const [editMode, setEditMode] = React.useState(false);
+
+  React.useEffect(() => {
+    const handler = (e) => {
+      if (e.data?.type === '__activate_edit_mode') setEditMode(true);
+      if (e.data?.type === '__deactivate_edit_mode') setEditMode(false);
+    };
+    window.addEventListener('message', handler);
+    window.parent.postMessage({ type: '__edit_mode_available' }, '*');
+    return () => window.removeEventListener('message', handler);
+  }, []);
+
+  const setKey = (k, v) => {
+    const next = { ...tweaks, [k]: v };
+    setTweaks(next);
+    window.parent.postMessage({ type: '__edit_mode_set_keys', edits: { [k]: v } }, '*');
+  };
+
+  return (
+    <>
+      <DesignCanvas>
+        {/* ── Brief ────────────────────────────────────── */}
+        <DCSection title="KSEA Philadelphia — v2" subtitle="Heritage seal retained · modern chapter marks for Bio / Bio-engineering / AI × Bio · Philly palette">
+          <DCArtboard label="Brief · design system" width={560} height={360} style={{ background: '#FAF6EC' }}>
+            <div style={{ padding: 36, fontFamily: '"Space Grotesk", sans-serif', color: '#121212', height: '100%' }}>
+              <div style={{ fontFamily: '"JetBrains Mono", monospace', fontSize: 10, letterSpacing: 1.2, textTransform: 'uppercase', color: '#B0413E', marginBottom: 18 }}>Commit · v2</div>
+              <h2 style={{ fontSize: 26, fontWeight: 600, letterSpacing: -0.6, lineHeight: 1.1, margin: 0 }}>
+                Keep the official seal as the formal identity. Layer a modern chapter system around Bio × AI — the focus of Philly membership.
+              </h2>
+              <div style={{ marginTop: 22, fontSize: 12, lineHeight: 1.7, fontFamily: '"JetBrains Mono", monospace', opacity: 0.8 }}>
+                PRIMARY · Seal + "KSEA Philadelphia" lockup<br/>
+                CHAPTER · Helix (bio) / Neural-hex (AI × bio)<br/>
+                NAVY · #2E3A94 matched from seal<br/>
+                GREEN · #2A6F5B (bio accent)<br/>
+                TYPE · Space Grotesk · JetBrains Mono · Noto Serif KR
+              </div>
+            </div>
+          </DCArtboard>
+
+          <DCArtboard label="Palette" width={420} height={360} style={{ background: '#fff' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gridTemplateRows: '1fr 1fr 1fr', height: '100%' }}>
+              {[
+                ['#2E3A94', 'Seal Navy', '#F4EBD9'],
+                ['#2A6F5B', 'Bio Green', '#F4EBD9'],
+                ['#B0413E', 'Philly Brick', '#F4EBD9'],
+                ['#F4EBD9', 'Cream', '#121212'],
+                ['#121212', 'Ink', '#F4EBD9'],
+                ['#FAF6EC', 'Paper', '#121212'],
+              ].map(([bg, name, fg]) => (
+                <div key={bg} style={{
+                  background: bg, color: fg, padding: 14,
+                  display: 'flex', flexDirection: 'column', justifyContent: 'space-between',
+                  fontFamily: '"JetBrains Mono", monospace', fontSize: 10,
+                }}>
+                  <span style={{ letterSpacing: 1, textTransform: 'uppercase' }}>{name}</span>
+                  <span style={{ opacity: 0.75 }}>{bg}</span>
+                </div>
+              ))}
+            </div>
+          </DCArtboard>
+
+          <DCArtboard label="Type pairing" width={440} height={360} style={{ background: '#FAF6EC' }}>
+            <div style={{ padding: 32, height: '100%', color: '#121212' }}>
+              <div style={{ fontFamily: '"Space Grotesk", sans-serif', fontSize: 48, fontWeight: 600, letterSpacing: -1.2, lineHeight: 0.95, color: '#2E3A94' }}>
+                Bio × AI
+              </div>
+              <div style={{ fontFamily: '"JetBrains Mono", monospace', fontSize: 11, opacity: 0.6, marginTop: 6, letterSpacing: 1, textTransform: 'uppercase' }}>Space Grotesk · display</div>
+              <div style={{ fontFamily: '"JetBrains Mono", monospace', fontSize: 20, marginTop: 22 }}>PHILLY.KSEA//BIO</div>
+              <div style={{ fontFamily: '"JetBrains Mono", monospace', fontSize: 11, opacity: 0.6, marginTop: 4, letterSpacing: 1, textTransform: 'uppercase' }}>JetBrains Mono · accents</div>
+              <div style={{ fontFamily: '"Noto Serif KR", serif', fontSize: 24, marginTop: 18, fontWeight: 500 }}>
+                바이오 × 인공지능 · 필라델피아
+              </div>
+              <div style={{ fontFamily: '"JetBrains Mono", monospace', fontSize: 11, opacity: 0.6, marginTop: 4, letterSpacing: 1, textTransform: 'uppercase' }}>Noto Serif KR · Korean</div>
+            </div>
+          </DCArtboard>
+
+          <DCPostIt top={10} right={-40} rotate={3} width={210}>
+            v2 keeps the official 1971 seal. New chapter marks sit <b>alongside</b> it, not replacing it.
+          </DCPostIt>
+        </DCSection>
+
+        {/* ── Logos ───────────────────────────────────── */}
+        <DCSection title="Identity system" subtitle="heritage seal + two modern chapter marks reflecting Bio × AI focus">
+          <DCArtboard label="01 · Heritage lockup (primary)" width={460} height={460}>
+            <LogoHeritage size={460} />
+          </DCArtboard>
+          <DCArtboard label="01 · inverted" width={200} height={460}>
+            <div style={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
+              <div style={{ flex: 1, background: '#F4EBD9', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                <SealImage size={140} />
+              </div>
+              <div style={{ flex: 1, background: '#2E3A94', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                <img src="assets/ksea-philly-seal.png" style={{ height: 140, width: 'auto', filter: 'brightness(0) invert(1)' }} alt="" />
+              </div>
+            </div>
+          </DCArtboard>
+
+          <DCArtboard label="02 · Helix — Bio chapter mark" width={460} height={460}>
+            <LogoHelix size={460} />
+          </DCArtboard>
+          <DCArtboard label="02 · variants" width={200} height={460}>
+            <div style={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
+              <div style={{ flex: 1, background: '#F4EBD9' }}>
+                <MarkHelix size={200} bg="#F4EBD9" fg="#2E3A94" accent="#2A6F5B" />
+              </div>
+              <div style={{ flex: 1, background: '#2E3A94' }}>
+                <MarkHelix size={200} bg="#2E3A94" fg="#F4EBD9" accent="#FFB4A8" />
+              </div>
+            </div>
+          </DCArtboard>
+
+          <DCArtboard label="03 · Neural-hex — AI × Bio chapter mark" width={460} height={460}>
+            <LogoNeural size={460} />
+          </DCArtboard>
+          <DCArtboard label="03 · variants" width={200} height={460}>
+            <div style={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
+              <div style={{ flex: 1, background: '#F4EBD9' }}>
+                <MarkNeural size={200} bg="#F4EBD9" fg="#2E3A94" accent="#B0413E" />
+              </div>
+              <div style={{ flex: 1, background: '#121212' }}>
+                <MarkNeural size={200} bg="#121212" fg="#F4EBD9" accent="#FFB4A8" />
+              </div>
+            </div>
+          </DCArtboard>
+
+          <DCPostIt top={-60} right={0} rotate={-3} width={240}>
+            The <b>Helix</b> + <b>Neural-hex</b> are chapter-level marks for bio / AI × bio events. The seal stays on formal materials — letterheads, certificates, sponsor decks.
+          </DCPostIt>
+        </DCSection>
+
+        {/* ── Application ─────────────────────────────── */}
+        <DCSection title="Application" subtitle="how the three marks work together">
+          <DCArtboard label="Event poster — AI × Biotech" width={360} height={480} style={{ background: '#2E3A94', color: '#F4EBD9', padding: 28, display: 'flex', flexDirection: 'column' }}>
+            <img src="assets/ksea-philly-seal.png" alt="" style={{ height: 42, width: 'auto', filter: 'brightness(0) invert(1)', alignSelf: 'flex-start' }} />
+            <div style={{ fontFamily: '"JetBrains Mono", monospace', fontSize: 10, letterSpacing: 1, textTransform: 'uppercase', marginTop: 20, opacity: 0.7 }}>May 14, 2026 · Penn BRB II/III</div>
+            <div style={{ fontFamily: '"Noto Serif KR", serif', fontSize: 18, marginTop: 8, opacity: 0.85 }}>AI × 바이오테크 심포지엄</div>
+            <h1 style={{ fontSize: 44, fontWeight: 600, letterSpacing: -1.2, lineHeight: 0.95, margin: '14px 0 0' }}>AI ×<br/>Biotech<br/><span style={{ color: '#FFB4A8' }}>Symposium</span></h1>
+            <div style={{ flex: 1 }} />
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end' }}>
+              <MarkNeural size={80} bg="transparent" fg="#F4EBD9" accent="#FFB4A8" />
+              <div style={{ fontFamily: '"JetBrains Mono", monospace', fontSize: 11, textAlign: 'right', opacity: 0.7 }}>KSEA PHILLY · 2026</div>
+            </div>
+          </DCArtboard>
+
+          <DCArtboard label="Seminar flyer — Bio" width={360} height={480} style={{ background: '#F4EBD9', padding: 28, display: 'flex', flexDirection: 'column' }}>
+            <img src="assets/ksea-philly-seal.png" alt="" style={{ height: 42, width: 'auto', alignSelf: 'flex-start' }} />
+            <div style={{ fontFamily: '"JetBrains Mono", monospace', fontSize: 10, letterSpacing: 1, textTransform: 'uppercase', marginTop: 20, color: '#B0413E' }}>Jun 07 · CHOP Colket</div>
+            <h1 style={{ fontSize: 40, fontWeight: 600, letterSpacing: -1, lineHeight: 0.95, margin: '10px 0 0', color: '#121212' }}>Protein<br/>foundation<br/><span style={{ color: '#2A6F5B' }}>models.</span></h1>
+            <div style={{ flex: 1 }} />
+            <MarkHelix size={140} bg="transparent" fg="#2E3A94" accent="#2A6F5B" />
+            <div style={{ fontFamily: '"JetBrains Mono", monospace', fontSize: 11, color: '#121212', opacity: 0.7, marginTop: 10 }}>KSEA PHILLY · BIO SEMINAR</div>
+          </DCArtboard>
+
+          <DCArtboard label="App icon · 128" width={180} height={180} style={{ background: '#F4EBD9', display: 'flex', alignItems: 'center', justifyContent: 'center', borderRadius: 28 }}>
+            <SealEmblem size={140} />
+          </DCArtboard>
+
+          <DCArtboard label="Sticker — chapter mark" width={240} height={180} style={{ background: '#2A6F5B', color: '#F4EBD9', padding: 20, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
+            <MarkHelix size={90} bg="transparent" fg="#F4EBD9" accent="#FFB4A8" />
+            <div style={{ fontFamily: '"JetBrains Mono", monospace', fontSize: 10, letterSpacing: 1.5, marginTop: 12 }}>
+              KSEA PHILLY · BIO
+            </div>
+          </DCArtboard>
+        </DCSection>
+
+        {/* ── Website ─────────────────────────────────── */}
+        <DCSection title="Website — kseaphilly.org" subtitle="1280px · Bio / Bio-Eng / AI pillars · seal in nav & footer">
+          <DCArtboard label="Homepage" width={1280} height={3080} style={{ background: '#FAF6EC' }}>
+            <KSEAWebsite width={1280} />
+          </DCArtboard>
+
+          <DCPostIt top={60} left={-30} rotate={-4} width={220}>
+            Nav now uses the <b>official seal</b> — formality preserved.
+          </DCPostIt>
+          <DCPostIt top={640} left={-30} rotate={3} width={220}>
+            New <b>Research Pillars</b> section: Bio · Bio-engineering · AI × Bio. Korean subtitles on each pillar.
+          </DCPostIt>
+          <DCPostIt top={1400} left={-30} rotate={-2} width={220}>
+            "Labs & companies" replaces generic sponsors — Penn Med, CHOP, Merck, Spark, Iovance, Vertex, Wistar, etc.
+          </DCPostIt>
+          <DCPostIt top={2400} left={-30} rotate={3} width={220}>
+            Join form asks <b>primary focus</b> (Biology / Bio-Eng / AI × Bio) — signals the chapter's identity.
+          </DCPostIt>
+        </DCSection>
+      </DesignCanvas>
+
+      {editMode && (
+        <div style={{
+          position: 'fixed', bottom: 20, right: 20, zIndex: 1000,
+          background: '#121212', color: '#F4EBD9', padding: 20, width: 280,
+          fontFamily: '"Space Grotesk", sans-serif', boxShadow: '0 8px 40px rgba(0,0,0,0.3)',
+        }}>
+          <div style={{ fontFamily: '"JetBrains Mono", monospace', fontSize: 10, letterSpacing: 1.2, textTransform: 'uppercase', opacity: 0.7, marginBottom: 14 }}>
+            Tweaks
+          </div>
+          <div style={{ fontSize: 12, marginBottom: 8, opacity: 0.7 }}>Primary mark</div>
+          <div style={{ display: 'flex', gap: 6, marginBottom: 16 }}>
+            {['heritage', 'helix', 'neural'].map(v => (
+              <button key={v} onClick={() => setKey('primary_logo', v)} style={{
+                flex: 1, padding: '8px 6px', background: tweaks.primary_logo === v ? '#F4EBD9' : 'transparent',
+                color: tweaks.primary_logo === v ? '#121212' : '#F4EBD9',
+                border: '1px solid #F4EBD9', fontSize: 11, cursor: 'pointer', textTransform: 'uppercase',
+                fontFamily: '"JetBrains Mono", monospace', letterSpacing: 0.5,
+              }}>{v}</button>
+            ))}
+          </div>
+          <div style={{ fontSize: 12, marginBottom: 8, opacity: 0.7 }}>Website accent</div>
+          <div style={{ display: 'flex', gap: 6 }}>
+            {[['navy', '#2E3A94'], ['bio', '#2A6F5B'], ['brick', '#B0413E']].map(([v, c]) => (
+              <button key={v} onClick={() => setKey('website_accent', v)} style={{
+                flex: 1, padding: '8px 6px', background: tweaks.website_accent === v ? c : 'transparent',
+                color: '#F4EBD9', border: `1px solid ${c}`, fontSize: 11, cursor: 'pointer', textTransform: 'uppercase',
+                fontFamily: '"JetBrains Mono", monospace', letterSpacing: 0.5,
+              }}>{v}</button>
+            ))}
+          </div>
+        </div>
+      )}
+    </>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+</script>
+</body>
+</html>

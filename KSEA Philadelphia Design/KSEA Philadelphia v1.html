@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>KSEA Philadelphia — Logo & Website</title>
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Serif+KR:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  html, body { margin: 0; padding: 0; background: #f0eee9; }
+  * { box-sizing: border-box; }
+</style>
+</head>
+<body>
+<div id="root"></div>
+
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+
+<script type="text/babel" src="design-canvas.jsx"></script>
+<script type="text/babel" src="logos.jsx"></script>
+<script type="text/babel" src="website.jsx"></script>
+
+<script type="text/babel">
+const TWEAKS = /*EDITMODE-BEGIN*/{
+  "primary_logo": "bridge",
+  "website_accent": "blue"
+}/*EDITMODE-END*/;
+
+function App() {
+  const [tweaks, setTweaks] = React.useState(TWEAKS);
+  const [editMode, setEditMode] = React.useState(false);
+
+  React.useEffect(() => {
+    const handler = (e) => {
+      if (e.data?.type === '__activate_edit_mode') setEditMode(true);
+      if (e.data?.type === '__deactivate_edit_mode') setEditMode(false);
+    };
+    window.addEventListener('message', handler);
+    window.parent.postMessage({ type: '__edit_mode_available' }, '*');
+    return () => window.removeEventListener('message', handler);
+  }, []);
+
+  const setKey = (k, v) => {
+    const next = { ...tweaks, [k]: v };
+    setTweaks(next);
+    window.parent.postMessage({ type: '__edit_mode_set_keys', edits: { [k]: v } }, '*');
+  };
+
+  return (
+    <>
+      <DesignCanvas>
+        {/* ── Section 1: Context / brief ─────────────────────── */}
+        <DCSection title="KSEA Philadelphia — identity & site" subtitle="3 original logo concepts · modern tech / startup tone · Philly palette (blue · cream · brick)">
+          <DCArtboard label="Brief · design system" width={560} height={340} style={{ background: '#FAF6EC' }}>
+            <div style={{ padding: 36, fontFamily: '"Space Grotesk", sans-serif', color: '#121212', height: '100%' }}>
+              <div style={{ fontFamily: '"JetBrains Mono", monospace', fontSize: 10, letterSpacing: 1.2, textTransform: 'uppercase', color: '#B0413E', marginBottom: 18 }}>Commit</div>
+              <h2 style={{ fontSize: 28, fontWeight: 600, letterSpacing: -0.6, lineHeight: 1.1, margin: 0 }}>
+                Editorial-grid, tech-tone, bilingual-accented chapter identity for KSEA Philly.
+              </h2>
+              <div style={{ marginTop: 24, fontSize: 12, lineHeight: 1.7, fontFamily: '"JetBrains Mono", monospace', opacity: 0.8 }}>
+                TYPE · Space Grotesk + JetBrains Mono + Noto Serif KR<br/>
+                PALETTE · #0B3D91 · #F4EBD9 · #B0413E · #121212<br/>
+                LOGOS · Orbital-K / Bridge / Taegeuk-Node<br/>
+                LANG · English primary · Korean accents
+              </div>
+            </div>
+          </DCArtboard>
+
+          <DCArtboard label="Palette" width={420} height={340} style={{ background: '#fff' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', height: '100%' }}>
+              {[
+                ['#0B3D91', 'Philly Blue', '#F4EBD9'],
+                ['#B0413E', 'Philly Brick', '#F4EBD9'],
+                ['#F4EBD9', 'Cream', '#121212'],
+                ['#121212', 'Ink', '#F4EBD9'],
+              ].map(([bg, name, fg]) => (
+                <div key={bg} style={{
+                  background: bg, color: fg, padding: 18,
+                  display: 'flex', flexDirection: 'column', justifyContent: 'space-between',
+                  fontFamily: '"JetBrains Mono", monospace', fontSize: 10,
+                }}>
+                  <span style={{ letterSpacing: 1, textTransform: 'uppercase' }}>{name}</span>
+                  <span style={{ opacity: 0.75 }}>{bg}</span>
+                </div>
+              ))}
+            </div>
+          </DCArtboard>
+
+          <DCArtboard label="Type pairing" width={460} height={340} style={{ background: '#FAF6EC' }}>
+            <div style={{ padding: 32, height: '100%', color: '#121212' }}>
+              <div style={{ fontFamily: '"Space Grotesk", sans-serif', fontSize: 52, fontWeight: 600, letterSpacing: -1.2, lineHeight: 0.95 }}>
+                Aa Ka 가
+              </div>
+              <div style={{ fontFamily: '"JetBrains Mono", monospace', fontSize: 11, opacity: 0.6, marginTop: 6, letterSpacing: 1, textTransform: 'uppercase' }}>Space Grotesk 600 · display</div>
+              <div style={{ fontFamily: '"JetBrains Mono", monospace', fontSize: 22, marginTop: 22 }}>KSEA_PHILLY//01</div>
+              <div style={{ fontFamily: '"JetBrains Mono", monospace', fontSize: 11, opacity: 0.6, marginTop: 4, letterSpacing: 1, textTransform: 'uppercase' }}>JetBrains Mono · accents</div>
+              <div style={{ fontFamily: '"Noto Serif KR", serif', fontSize: 26, marginTop: 18, fontWeight: 500 }}>
+                필라델피아 한인 과학기술자
+              </div>
+              <div style={{ fontFamily: '"JetBrains Mono", monospace', fontSize: 11, opacity: 0.6, marginTop: 4, letterSpacing: 1, textTransform: 'uppercase' }}>Noto Serif KR · Korean</div>
+            </div>
+          </DCArtboard>
+
+          <DCPostIt top={10} right={-40} rotate={3} width={200}>
+            Original marks — not based on the existing KSEA HQ logo. Ready to iterate.
+          </DCPostIt>
+        </DCSection>
+
+        {/* ── Section 2: Logo concepts ─────────────────────── */}
+        <DCSection title="Logo concepts" subtitle="3 directions · full lockup, mark-only, and inverted variants">
+          <DCArtboard label="01 · Orbital K — monogram + atomic orbit" width={420} height={420}>
+            <LogoOrbital size={420} />
+          </DCArtboard>
+          <DCArtboard label="01 · mark / inverted" width={200} height={420}>
+            <div style={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
+              <div style={{ flex: 1, background: '#F4EBD9' }}>
+                <LogoMarkOnly variant="orbital" size={200} bg="#F4EBD9" fg="#121212" accent="#B0413E" />
+              </div>
+              <div style={{ flex: 1, background: '#121212' }}>
+                <LogoMarkOnly variant="orbital" size={200} bg="#121212" fg="#F4EBD9" accent="#FFB4A8" />
+              </div>
+            </div>
+          </DCArtboard>
+
+          <DCArtboard label="02 · Bridge — Ben Franklin arch + circuit nodes" width={420} height={420}>
+            <LogoBridge size={420} />
+          </DCArtboard>
+          <DCArtboard label="02 · mark / inverted" width={200} height={420}>
+            <div style={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
+              <div style={{ flex: 1, background: '#F4EBD9' }}>
+                <LogoMarkOnly variant="bridge" size={200} bg="#F4EBD9" fg="#0B3D91" accent="#B0413E" />
+              </div>
+              <div style={{ flex: 1, background: '#0B3D91' }}>
+                <LogoMarkOnly variant="bridge" size={200} bg="#0B3D91" fg="#F4EBD9" accent="#FFB4A8" />
+              </div>
+            </div>
+          </DCArtboard>
+
+          <DCArtboard label="03 · Taegeuk Node — dual-atom + ring" width={420} height={420}>
+            <LogoTaegeuk size={420} />
+          </DCArtboard>
+          <DCArtboard label="03 · mark / inverted" width={200} height={420}>
+            <div style={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
+              <div style={{ flex: 1, background: '#F4EBD9' }}>
+                <LogoMarkOnly variant="taegeuk" size={200} bg="#F4EBD9" fg="#121212" />
+              </div>
+              <div style={{ flex: 1, background: '#121212' }}>
+                <LogoMarkOnly variant="taegeuk" size={200} bg="#121212" fg="#F4EBD9" />
+              </div>
+            </div>
+          </DCArtboard>
+
+          <DCPostIt top={-60} right={0} rotate={-3} width={220}>
+            My pick: <b>01 Orbital K</b> for the site — clear legibility at small sizes, academic cred, reads as "K" instantly.
+          </DCPostIt>
+        </DCSection>
+
+        {/* ── Section 3: Scale tests ─────────────────────── */}
+        <DCSection title="Scale & application" subtitle="marks holding up from favicon to billboard">
+          <DCArtboard label="Favicon · 32px" width={120} height={120} style={{ background: '#F4EBD9', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+            <LogoMarkOnly variant="orbital" size={64} bg="#F4EBD9" fg="#121212" accent="#B0413E" />
+          </DCArtboard>
+          <DCArtboard label="App icon · 128px" width={180} height={180} style={{ background: '#0B3D91', display: 'flex', alignItems: 'center', justifyContent: 'center', borderRadius: 28 }}>
+            <LogoMarkOnly variant="orbital" size={128} bg="transparent" fg="#F4EBD9" accent="#FFB4A8" />
+          </DCArtboard>
+          <DCArtboard label="Nav / tote bag · wordmark lockup" width={520} height={180} style={{ background: '#FAF6EC', display: 'flex', alignItems: 'center', padding: 40 }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: 20 }}>
+              <LogoMarkOnly variant="orbital" size={100} bg="transparent" fg="#121212" accent="#B0413E" />
+              <div style={{ fontFamily: '"Space Grotesk", sans-serif', lineHeight: 1 }}>
+                <div style={{ fontSize: 38, fontWeight: 700, letterSpacing: -0.5 }}>KSEA Philadelphia</div>
+                <div style={{ fontFamily: '"JetBrains Mono", monospace', fontSize: 12, marginTop: 8, letterSpacing: 0.5, opacity: 0.65, textTransform: 'uppercase' }}>Korean-Am. Scientists & Engineers · Est. 1983</div>
+              </div>
+            </div>
+          </DCArtboard>
+          <DCArtboard label="Sticker · blue" width={280} height={180} style={{ background: '#0B3D91', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', padding: 20 }}>
+            <LogoMarkOnly variant="orbital" size={90} bg="transparent" fg="#F4EBD9" accent="#FFB4A8" />
+            <div style={{ color: '#F4EBD9', fontFamily: '"JetBrains Mono", monospace', fontSize: 11, marginTop: 12, letterSpacing: 1.5 }}>
+              PHILLY · CHAPTER №14
+            </div>
+          </DCArtboard>
+        </DCSection>
+
+        {/* ── Section 4: Full website ─────────────────────── */}
+        <DCSection title="Website — kseaphilly.org" subtitle="1280px · editorial grid · full homepage">
+          <DCArtboard label="Homepage" width={1280} height={2460} style={{ background: '#FAF6EC' }}>
+            <KSEAWebsite width={1280} height={2460} />
+          </DCArtboard>
+
+          <DCPostIt top={60} left={-30} rotate={-4} width={220}>
+            Editorial-grid approach — everything sits inside a hard 1px rule, monospace micro-labels mark sections, big display type does the lifting.
+          </DCPostIt>
+          <DCPostIt top={640} left={-30} rotate={3} width={220}>
+            Hero right pane doubles as an always-visible "next event" card. Swap per-event.
+          </DCPostIt>
+          <DCPostIt top={1700} left={-30} rotate={-2} width={220}>
+            Sponsor strip inverts to ink — gives the page rhythm and separates membership CTA.
+          </DCPostIt>
+        </DCSection>
+
+        {/* ── Section 5: Mobile ─────────────────────── */}
+        <DCSection title="Mobile — hero only" subtitle="390px phone frame">
+          <DCArtboard label="Mobile homepage top" width={390} height={780} style={{ background: '#FAF6EC' }}>
+            <div style={{ width: 390, height: '100%', overflow: 'hidden', fontFamily: '"Space Grotesk", sans-serif', color: '#121212' }}>
+              <div style={{ background: '#121212', color: '#F4EBD9', padding: '8px 18px', fontFamily: '"JetBrains Mono", monospace', fontSize: 10, letterSpacing: 0.6, textTransform: 'uppercase' }}>
+                ▸ Next · YGF 2026 · May 14
+              </div>
+              <div style={{ padding: '18px 20px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', borderBottom: '1px solid #121212' }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
+                  <SiteLogoMark size={30} />
+                  <div style={{ fontSize: 14, fontWeight: 700 }}>KSEA Philly</div>
+                </div>
+                <div style={{ fontSize: 22 }}>≡</div>
+              </div>
+              <div style={{ padding: '28px 20px' }}>
+                <div style={{ fontFamily: '"JetBrains Mono", monospace', fontSize: 10, letterSpacing: 1, textTransform: 'uppercase', color: '#B0413E', marginBottom: 20 }}>
+                  ❚ Chapter №14 · Est. 1983
+                </div>
+                <h1 style={{ fontSize: 42, fontWeight: 600, letterSpacing: -1.2, lineHeight: 0.98, margin: 0 }}>
+                  Where Korean scientists <span style={{ fontStyle: 'italic', color: '#B0413E' }}>meet</span> Philadelphia <span style={{ color: '#0B3D91' }}>engineering.</span>
+                </h1>
+                <p style={{ fontSize: 14, lineHeight: 1.5, marginTop: 22, opacity: 0.85 }}>
+                  420+ researchers, engineers, and students across the Delaware Valley.
+                </p>
+                <button style={{ marginTop: 18, background: '#121212', color: '#F4EBD9', border: 'none', padding: '12px 18px', fontSize: 13, fontWeight: 600, width: '100%' }}>Become a member →</button>
+              </div>
+              <div style={{ background: '#0B3D91', color: '#F4EBD9', padding: 20 }}>
+                <div style={{ fontFamily: '"JetBrains Mono", monospace', fontSize: 10, letterSpacing: 1, textTransform: 'uppercase', opacity: 0.7, marginBottom: 10 }}>Next gathering ↓</div>
+                <div style={{ fontFamily: '"Noto Serif KR", serif', fontSize: 17, opacity: 0.9, marginBottom: 6 }}>제42회 YGF</div>
+                <div style={{ fontSize: 28, fontWeight: 600, letterSpacing: -0.8, lineHeight: 1.05 }}>YGF 2026 Kickoff Mixer</div>
+                <div style={{ fontFamily: '"JetBrains Mono", monospace', fontSize: 11, lineHeight: 1.6, marginTop: 14, opacity: 0.9 }}>
+                  THU · MAY 14 · 18:30<br/>PENN PAVILION · 3417 SPRUCE
+                </div>
+                <button style={{ marginTop: 14, background: '#F4EBD9', color: '#121212', border: 'none', padding: '10px 14px', fontSize: 12, fontWeight: 700 }}>RSVP →</button>
+              </div>
+            </div>
+          </DCArtboard>
+        </DCSection>
+      </DesignCanvas>
+
+      {/* Tweaks panel */}
+      {editMode && (
+        <div style={{
+          position: 'fixed', bottom: 20, right: 20, zIndex: 1000,
+          background: '#121212', color: '#F4EBD9', padding: 20, width: 280,
+          fontFamily: '"Space Grotesk", sans-serif', boxShadow: '0 8px 40px rgba(0,0,0,0.3)',
+        }}>
+          <div style={{ fontFamily: '"JetBrains Mono", monospace', fontSize: 10, letterSpacing: 1.2, textTransform: 'uppercase', opacity: 0.7, marginBottom: 14 }}>
+            Tweaks
+          </div>
+          <div style={{ fontSize: 12, marginBottom: 8, opacity: 0.7 }}>Primary logo for site</div>
+          <div style={{ display: 'flex', gap: 6, marginBottom: 16 }}>
+            {['orbital', 'bridge', 'taegeuk'].map(v => (
+              <button key={v} onClick={() => setKey('primary_logo', v)} style={{
+                flex: 1, padding: '8px 6px', background: tweaks.primary_logo === v ? '#F4EBD9' : 'transparent',
+                color: tweaks.primary_logo === v ? '#121212' : '#F4EBD9',
+                border: '1px solid #F4EBD9', fontSize: 11, cursor: 'pointer', textTransform: 'uppercase',
+                fontFamily: '"JetBrains Mono", monospace', letterSpacing: 0.5,
+              }}>{v}</button>
+            ))}
+          </div>
+          <div style={{ fontSize: 12, marginBottom: 8, opacity: 0.7 }}>Website accent</div>
+          <div style={{ display: 'flex', gap: 6 }}>
+            {[['brick', '#B0413E'], ['blue', '#0B3D91'], ['ink', '#121212']].map(([v, c]) => (
+              <button key={v} onClick={() => setKey('website_accent', v)} style={{
+                flex: 1, padding: '8px 6px', background: tweaks.website_accent === v ? c : 'transparent',
+                color: '#F4EBD9', border: `1px solid ${c}`, fontSize: 11, cursor: 'pointer', textTransform: 'uppercase',
+                fontFamily: '"JetBrains Mono", monospace', letterSpacing: 0.5,
+              }}>{v}</button>
+            ))}
+          </div>
+        </div>
+      )}
+    </>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+</script>
+</body>
+</html>
