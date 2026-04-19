@@ -90,8 +90,7 @@ nav {
 }
 .nav-links a:hover { color: var(--w-navy); }
 
-/* ── Buttons ─────────────────────────────────────────────── */
-.btn-join, .btn-primary, .btn-outline {
+.btn-join, .btn-primary, .btn-outline, .btn-event, .btn-event-gold {
     cursor: pointer;
     font-weight: 600;
     font-family: 'Space Grotesk', -apple-system, sans-serif;
@@ -117,6 +116,15 @@ nav {
     padding: 14px 22px;
     font-size: 14px;
 }
+.btn-event {
+    background: var(--w-navy);
+    color: var(--w-cream) !important;
+}
+.btn-event-gold {
+    background: #f2a900;
+    color: white !important;
+}
+
 
 /* ── Page Hero (inner pages) ─────────────────────────────── */
 .page-hero {
@@ -395,7 +403,7 @@ nav {
     margin: 0 0 16px;
 }
 .info-section li { margin-bottom: 8px; }
-.info-section a { color: var(--w-navy); text-decoration: underline; }
+.info-section a:not([class*="btn-"]) { color: var(--w-navy); text-decoration: underline; }
 
 /* ── Recruitment Banner ──────────────────────────────────── */
 .recruit-banner {
@@ -504,15 +512,15 @@ footer a:hover { opacity: 0.7; }
 /* On dark (navy) backgrounds — invert to white */
 .philly-landmark-light {
     filter: brightness(0) invert(1);
-    opacity: 0.10;
+    opacity: 0.05;
 }
 /* On light (paper/cream) backgrounds — use ink color */
 .philly-landmark-dark {
-    opacity: 0.12;
+    opacity: 0.06;
 }
 /* Hero-strength modifier — slightly more visible anchor landmarks */
 .philly-landmark-strong {
-    opacity: 0.18;
+    opacity: 0.08;
 }
 
 /* ── Philadelphia Location Concepts ────────────────────────── */
