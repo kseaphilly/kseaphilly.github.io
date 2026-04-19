@@ -10,9 +10,11 @@ category: program
 Welcome to the KSEA Philadelphia Chapter. Membership is managed via the National KSEA portal.
 
 ### Fee Structure
-- **Regular Members**: $35
-- **Graduate Students**: $15
-- **Undergraduate Students**: Free (via National Student Discount)
+- **Undergraduate**: $0 / yr
+- **Paid Undergraduate**: $15 / yr
+- **Graduate Member**: $15 / yr
+- **Regular Member**: $35 / yr
+- **Lifetime Member**: $525 or less (accrued)
 
 ---
 
@@ -34,7 +36,7 @@ Welcome to the KSEA Philadelphia Chapter. Membership is managed via the National
 - **Selection**: "Student Discount" (Green box) or "Regular $35" (Red box).
 
 ### Step 5: Payment
-- **Action**: Complete payment process for $15 or $35.
+- **Action**: Complete payment process. $0 for Basic Undergrad, $15 for Graduate/Paid Undergrad, $35 for Regular.
 
 ### Step 6: Chapter Affiliation (Critical)
 - **Action**: Go to "KSEA Information" in "My Profile".

@@ -1,83 +1,147 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 252">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 260">
   <!--
-    Liberty Bell — accurate silhouette
-    Key features:
-      · Wide wooden yoke (beam) at top — signature feature
-      · Bell narrow at crown, dramatically flared at lip
-      · Famous crack running up right side
-      · Clapper hanging below
+    Liberty Bell — refined silhouette
+    Accurate features:
+      · Wooden yoke with two vertical iron support straps
+      · Crown with canons (the loops at the top for hanging)
+      · Bell body narrowing at the waist, flaring at the lip
+      · Distinctive decorative bands at the shoulder and above the lip
+      · The famous zig-zag crack rising from near the lip
+      · Clapper with ball hanging below the mouth
   -->
 
-  <!-- Wooden yoke: wide, thick beam with curved/tapered ends -->
+  <!-- ─── Wooden yoke: thick beam with tapered curved ends ─── -->
   <path fill="currentColor" d="
-    M26,4 L174,4
-    C179,4 183,8 183,15
-    C183,21 179,26 173,28
-    L150,36 C146,38 142,41 138,43
-    L130,47 L70,47 L62,43
-    C58,41 54,38 50,36
-    L27,28 C21,26 17,21 17,15
-    C17,8 21,4 26,4 Z
+    M22,4
+    L178,4
+    C184,4 189,9 189,16
+    C189,23 184,28 177,30
+    L146,40
+    C141,42 136,45 131,47
+    L126,50
+    L74,50
+    L69,47
+    C64,45 59,42 54,40
+    L23,30
+    C16,28 11,23 11,16
+    C11,9 16,4 22,4 Z
   "/>
 
-  <!-- Iron suspension loop: connects yoke to bell crown -->
-  <rect x="85" y="39" width="30" height="22" rx="7" fill="currentColor"/>
+  <!-- Iron strap bolts: the dark metal studs on the yoke -->
+  <circle cx="40"  cy="17" r="3" fill="#000" opacity="0.25"/>
+  <circle cx="160" cy="17" r="3" fill="#000" opacity="0.25"/>
+  <circle cx="100" cy="17" r="3.5" fill="#000" opacity="0.25"/>
 
-  <!-- Bell body: narrow crown → wide shoulder → flared lip -->
+  <!-- ─── Iron suspension hardware (canons + pin) ─── -->
+  <!-- Vertical iron straps descending from yoke into bell crown -->
+  <rect x="82" y="42" width="5" height="22" fill="currentColor"/>
+  <rect x="113" y="42" width="5" height="22" fill="currentColor"/>
+  <!-- Horizontal iron pin connecting the straps -->
+  <rect x="78" y="48" width="44" height="4" fill="currentColor"/>
+  <!-- Two round canon loops on top of the crown -->
+  <path fill="currentColor" d="
+    M86,52
+    C86,46 92,44 96,44
+    C100,44 102,46 102,52
+    L102,62
+    L86,62 Z
+  "/>
+  <path fill="currentColor" d="
+    M98,52
+    C98,46 104,44 108,44
+    C112,44 114,46 114,52
+    L114,62
+    L98,62 Z
+  "/>
+
+  <!-- ─── Bell body ─── -->
   <!--
-    Left profile: crown x=86 → shoulder x=46 at y=100 → waist x=44 at y=150
-                  → mouth x=26 at y=195 → lip edge x=18 at y=210
-    Right profile: mirrored
-    The bell has a very characteristic pronounced flare at the bottom (lip)
+    The Liberty Bell profile:
+      · Narrow crown at top (~x 80–120)
+      · Gentle shoulder curve outward
+      · Slightly concave waist
+      · Pronounced outward flare at the mouth
   -->
   <path fill="currentColor" d="
-    M86,59 L114,59
-    C120,59 126,62 131,68
-    L152,86
-    C164,97 172,112 176,128
-    C180,144 179,161 174,176
-    L165,192
-    C160,200 153,205 144,208
-    L128,212 L114,214 L86,214 L72,212
-    L56,208
-    C47,205 40,200 35,192
-    L26,176
-    C21,161 20,144 24,128
-    C28,112 36,97 48,86
-    L69,68
-    C74,62 80,59 86,59 Z
+    M80,62
+    L120,62
+    C128,62 135,66 141,73
+    L160,92
+    C172,104 180,120 183,138
+    C185,152 183,166 178,180
+    L170,198
+    C166,206 160,212 152,216
+    L140,220
+    L126,222
+    L74,222
+    L60,220
+    L48,216
+    C40,212 34,206 30,198
+    L22,180
+    C17,166 15,152 17,138
+    C20,120 28,104 40,92
+    L59,73
+    C65,66 72,62 80,62 Z
   "/>
 
-  <!-- Lip: the wide, flared bottom rim — most distinctive visual feature -->
+  <!-- Shoulder relief band: subtle darker stripe around the upper bell -->
+  <path fill="#000" opacity="0.18" d="
+    M22,132
+    C20,128 20,124 22,120
+    L178,120
+    C180,124 180,128 178,132 Z
+  "/>
+
+  <!-- Waist relief band: mid-bell decorative line -->
+  <rect x="24" y="164" width="152" height="3" fill="#000" opacity="0.18"/>
+
+  <!-- Inscription band above the lip (characteristic Liberty Bell feature) -->
+  <rect x="20" y="200" width="160" height="4" fill="#000" opacity="0.22"/>
+
+  <!-- ─── Flared lip (the wide bottom rim) ─── -->
   <path fill="currentColor" d="
-    M13,212
-    C13,205 25,200 46,198
-    L86,196 L114,196 L154,198
-    C175,200 187,205 187,212
-    L187,218
-    C187,224 167,228 100,228
-    C33,228 13,224 13,218 Z
+    M10,220
+    C10,213 24,208 48,206
+    L80,204 L120,204 L152,206
+    C176,208 190,213 190,220
+    L190,228
+    C190,234 172,238 100,238
+    C28,238 10,234 10,228 Z
   "/>
 
-  <!-- Clapper: iron bar + ball hanging below -->
-  <path fill="currentColor" d="
-    M97,228 L103,228
-    L105,242 L100,248 L95,242 Z
-  "/>
-  <ellipse cx="100" cy="250" rx="10" ry="7" fill="currentColor"/>
+  <!-- Lip lower edge highlight: a thin band underneath -->
+  <rect x="12" y="234" width="176" height="3" fill="#000" opacity="0.15"/>
 
+  <!-- ─── Clapper assembly ─── -->
+  <!-- Chain/bar from mouth of bell -->
+  <rect x="97" y="236" width="6" height="14" fill="currentColor"/>
+  <!-- Clapper ball -->
+  <ellipse cx="100" cy="254" rx="9" ry="6" fill="currentColor"/>
+
+  <!-- ─── The famous crack ─── -->
   <!--
-    The famous crack: runs from near the lip upward along the right side.
-    It zigzags — characteristic irregular fracture pattern.
-    Rendered as white over dark bell for visibility.
+    Runs from just above the lip up the right side of the bell.
+    Irregular zigzag with varying segment lengths matches the real fracture.
+    The crack actually widens — it's a repair slot, not just a line.
   -->
   <path
-    d="M116,202 L120,186 L115,170 L121,155 L117,140 L122,125 L118,110"
-    stroke="white"
-    stroke-width="2.5"
+    d="M116,208
+       L121,195
+       L115,184
+       L122,170
+       L116,158
+       L123,145
+       L118,132
+       L124,118
+       L119,104
+       L123,92"
+    stroke="#fff"
+    stroke-width="2.8"
     fill="none"
     stroke-linecap="round"
     stroke-linejoin="round"
-    opacity="0.65"
+    opacity="0.70"
   />
+  <!-- Crack widening near the lip (the drilled repair slot) -->
+  <ellipse cx="117" cy="212" rx="2.2" ry="3.2" fill="#fff" opacity="0.55"/>
 </svg>

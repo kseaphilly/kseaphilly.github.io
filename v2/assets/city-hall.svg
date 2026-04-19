@@ -1,73 +1,197 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
   <!--
-    Philadelphia City Hall — accurate silhouette
-    Key features:
-      · William Penn statue at top with outstretched arm (37ft figure)
-      · Tall multi-tiered central tower (548ft total, tallest masonry tower when built)
-      · Large quadrangular Second Empire building
-      · Corner pavilions projecting above main roofline
-      · Mansard roof character
+    Philadelphia City Hall — refined silhouette
+    More accurate silhouette with:
+      · William Penn wearing broad Quaker hat, long coat, right arm raised
+      · Belfry lantern with visible arched openings (negative space)
+      · Clock tower with round clock-face cutouts
+      · Multi-tiered tower profile (upper shaft, clock, base trumpet)
+      · Mansard roofline ridge across the main building
+      · Four peaked corner pavilions (including side projections)
+      · Main building body with central entrance archway
   -->
 
-  <!-- ── WILLIAM PENN STATUE ── -->
-  <!-- Head -->
-  <ellipse cx="200" cy="34" rx="5" ry="6" fill="currentColor"/>
-  <!-- Body / coat (tricorn silhouette) -->
-  <path fill="currentColor" d="M194,40 L206,40 L210,56 L192,56 Z"/>
-  <!-- Right arm outstretched eastward over Center City — Penn's famous pose -->
-  <path fill="currentColor" d="M205,46 L234,53 L233,57 L204,51 Z"/>
-  <!-- Left arm, slightly angled down -->
-  <path fill="currentColor" d="M194,47 L184,52 L185,56 L194,51 Z"/>
-  <!-- Legs (faint lower extension) -->
-  <rect x="196" y="56" width="4" height="10" rx="1" fill="currentColor" opacity="0.7"/>
-  <rect x="200" y="56" width="4" height="10" rx="1" fill="currentColor" opacity="0.7"/>
+  <!-- ═══ WILLIAM PENN STATUE ═══ -->
+  <!-- Quaker broad-brimmed hat (wide flat brim is his signature) -->
+  <path fill="currentColor" d="
+    M188,24
+    L212,24
+    L214,28
+    L186,28 Z
+  "/>
+  <!-- Hat crown (low rounded dome above brim) -->
+  <path fill="currentColor" d="
+    M193,18
+    C193,15 197,14 200,14
+    C203,14 207,15 207,18
+    L207,24
+    L193,24 Z
+  "/>
+  <!-- Head / face (visible below hat brim) -->
+  <ellipse cx="200" cy="32" rx="4" ry="4" fill="currentColor"/>
+  <!-- Long coat body (Quaker-style) -->
+  <path fill="currentColor" d="
+    M193,36
+    L207,36
+    L212,62
+    L188,62 Z
+  "/>
+  <!-- Right arm raised eastward: shoulder → elbow → hand (slightly bent) -->
+  <path fill="currentColor" d="
+    M206,42
+    L222,42
+    L234,48
+    L236,52
+    L232,54
+    L220,50
+    L206,48 Z
+  "/>
+  <!-- Left arm at side holding a scroll (Charter of Pennsylvania) -->
+  <path fill="currentColor" d="
+    M193,42
+    L186,52
+    L184,62
+    L188,64
+    L192,58
+    L195,48 Z
+  "/>
+  <!-- Legs -->
+  <rect x="195" y="62" width="4" height="8" fill="currentColor"/>
+  <rect x="201" y="62" width="4" height="8" fill="currentColor"/>
 
-  <!-- Statue pedestal atop belfry -->
-  <rect x="193" y="64" width="14" height="8" rx="1" fill="currentColor"/>
+  <!-- ═══ STATUE BASE / PLINTH atop belfry ═══ -->
+  <path fill="currentColor" d="
+    M188,70
+    L212,70
+    L214,74
+    L186,74 Z
+  "/>
+  <rect x="190" y="74" width="20" height="6" fill="currentColor"/>
 
-  <!-- ── BELFRY / LANTERN at very top of tower ── -->
-  <!-- Peaked cap -->
-  <path fill="currentColor" d="M182,72 L218,72 L222,84 L178,84 Z"/>
-  <!-- Belfry openings level (rendered solid for silhouette) -->
-  <rect x="183" y="84" width="34" height="20" fill="currentColor"/>
-  <!-- Belfry cornice ledge -->
-  <path fill="currentColor" d="M179,104 L221,104 L219,110 L181,110 Z"/>
+  <!-- ═══ BELFRY / LANTERN ═══ -->
+  <!-- Dome-capped lantern with four arched openings -->
+  <path fill="currentColor" d="
+    M178,80
+    L222,80
+    L222,108
+    L178,108 Z
+  "/>
+  <!-- Arched openings (negative space cut from the lantern) -->
+  <path fill="#fff" d="
+    M183,90
+    C183,86 186,84 189,84
+    C192,84 195,86 195,90
+    L195,104
+    L183,104 Z
+  "/>
+  <path fill="#fff" d="
+    M205,90
+    C205,86 208,84 211,84
+    C214,84 217,86 217,90
+    L217,104
+    L205,104 Z
+  "/>
+  <!-- Cornice below lantern -->
+  <path fill="currentColor" d="
+    M175,108 L225,108 L222,116 L178,116 Z
+  "/>
 
-  <!-- ── UPPER TOWER — slender section ── -->
-  <rect x="182" y="110" width="36" height="32" fill="currentColor"/>
+  <!-- ═══ UPPER TOWER SHAFT (slender rectangular section) ═══ -->
+  <rect x="181" y="116" width="38" height="28" fill="currentColor"/>
+  <!-- Vertical pilaster lines on the shaft -->
+  <rect x="190" y="118" width="1.5" height="24" fill="#fff" opacity="0.30"/>
+  <rect x="208" y="118" width="1.5" height="24" fill="#fff" opacity="0.30"/>
 
-  <!-- ── CLOCK TOWER — wider, four sides with large clock faces ── -->
-  <!-- Cornice at clock level top -->
-  <path fill="currentColor" d="M170,142 L230,142 L228,148 L172,148 Z"/>
-  <!-- Clock level body -->
-  <rect x="172" y="148" width="56" height="42" fill="currentColor"/>
-  <!-- Clock level base cornice -->
-  <path fill="currentColor" d="M168,190 L232,190 L230,196 L170,196 Z"/>
+  <!-- ═══ CLOCK TOWER LEVEL (wider, with round clock face) ═══ -->
+  <!-- Top cornice -->
+  <path fill="currentColor" d="
+    M168,144 L232,144 L230,150 L170,150 Z
+  "/>
+  <!-- Clock tower body -->
+  <rect x="170" y="150" width="60" height="44" fill="currentColor"/>
+  <!-- Round clock face (negative space) -->
+  <circle cx="200" cy="172" r="13" fill="#fff" opacity="0.92"/>
+  <!-- Clock hands -->
+  <rect x="199" y="161" width="2" height="12" fill="currentColor"/>
+  <rect x="200" y="171" width="10" height="2" fill="currentColor"/>
+  <!-- Clock face inner bezel -->
+  <circle cx="200" cy="172" r="13" fill="none" stroke="currentColor" stroke-width="1.2" opacity="0.5"/>
+  <!-- Base cornice of clock tower -->
+  <path fill="currentColor" d="
+    M166,194 L234,194 L232,200 L168,200 Z
+  "/>
 
-  <!-- ── TOWER BASE — widens as it descends into roofline ── -->
-  <rect x="158" y="196" width="84" height="18" fill="currentColor"/>
-  <!-- Transition to building roofline -->
-  <path fill="currentColor" d="M152,214 L248,214 L246,222 L154,222 Z"/>
+  <!-- ═══ TOWER BASE (trumpet-flare down to roofline) ═══ -->
+  <path fill="currentColor" d="
+    M154,200
+    L246,200
+    L250,218
+    L150,218 Z
+  "/>
+  <!-- Heavy cornice at roofline -->
+  <path fill="currentColor" d="
+    M148,218 L252,218 L250,226 L150,226 Z
+  "/>
 
-  <!-- ── MAIN BUILDING — Second Empire with mansard and corner pavilions ── -->
+  <!-- ═══ MANSARD ROOF RIDGE ═══ -->
+  <!-- Characteristic sloped mansard roofline across the main building -->
+  <path fill="currentColor" d="
+    M6,226
+    L150,226
+    L150,240
+    L6,240 Z
+  "/>
+  <path fill="currentColor" d="
+    M250,226
+    L394,226
+    L394,240
+    L250,240 Z
+  "/>
 
-  <!-- Left corner pavilion (projects above main roofline, slightly peaked) -->
-  <path fill="currentColor" d="M8,206 L82,206 L80,220 L10,220 Z"/>
-  <rect x="8" y="220" width="74" height="18" fill="currentColor"/>
-
-  <!-- Left inner building section roofline -->
-  <rect x="82" y="218" width="70" height="20" fill="currentColor"/>
-
-  <!-- Right inner building section roofline -->
-  <rect x="248" y="218" width="70" height="20" fill="currentColor"/>
+  <!-- ═══ CORNER PAVILIONS (peaked cupolas projecting above mansard) ═══ -->
+  <!-- Left corner pavilion with pyramidal peak -->
+  <path fill="currentColor" d="
+    M16,208
+    L36,196
+    L56,208
+    L56,228
+    L16,228 Z
+  "/>
+  <!-- Small spire on top -->
+  <rect x="35" y="186" width="2" height="12" fill="currentColor"/>
+  <circle cx="36" cy="186" r="2" fill="currentColor"/>
 
   <!-- Right corner pavilion -->
-  <path fill="currentColor" d="M318,206 L392,206 L390,220 L320,220 Z"/>
-  <rect x="318" y="220" width="74" height="18" fill="currentColor"/>
+  <path fill="currentColor" d="
+    M344,208
+    L364,196
+    L384,208
+    L384,228
+    L344,228 Z
+  "/>
+  <rect x="363" y="186" width="2" height="12" fill="currentColor"/>
+  <circle cx="364" cy="186" r="2" fill="currentColor"/>
 
-  <!-- ── MAIN BUILDING BODY — all sections unified ── -->
-  <rect x="8" y="238" width="384" height="52" fill="currentColor"/>
+  <!-- ═══ MAIN BUILDING BODY ═══ -->
+  <rect x="6" y="240" width="388" height="50" fill="currentColor"/>
 
-  <!-- ── GROUND / PLAZA ── -->
+  <!-- Central arched entrance (negative space under tower) -->
+  <path fill="#fff" d="
+    M186,268
+    C186,258 192,252 200,252
+    C208,252 214,258 214,268
+    L214,290
+    L186,290 Z
+  " opacity="0.95"/>
+
+  <!-- Subtle column lines on main facade -->
+  <rect x="50"  y="246" width="1.5" height="44" fill="#fff" opacity="0.18"/>
+  <rect x="100" y="246" width="1.5" height="44" fill="#fff" opacity="0.18"/>
+  <rect x="150" y="246" width="1.5" height="44" fill="#fff" opacity="0.18"/>
+  <rect x="248" y="246" width="1.5" height="44" fill="#fff" opacity="0.18"/>
+  <rect x="298" y="246" width="1.5" height="44" fill="#fff" opacity="0.18"/>
+  <rect x="348" y="246" width="1.5" height="44" fill="#fff" opacity="0.18"/>
+
+  <!-- ═══ GROUND / PLAZA ═══ -->
   <rect x="0" y="290" width="400" height="10" fill="currentColor"/>
 </svg>

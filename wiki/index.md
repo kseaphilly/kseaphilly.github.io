@@ -1,56 +1,41 @@
 # KSEA Philadelphia LLM-Wiki
 
-## Core Documents
-- [[_context]]: High-level project map.
-- [[purpose]]: Why this wiki exists.
-- [[schema]]: Rules for the wiki files.
-- [[GUIDELINES]]: How to operate and maintain the wiki.
-- [[Operations-Manual]]: Deployment, asset rules, and update workflows.
-- [AGENTS](../AGENTS.md): Intelligence profile and memory for AI agents.
-- [[MEMORY]]: State of the union and long-term context.
-- [[log]]: Operation history.
+## Layer 1: Navigation & Map (Global Entry)
+- [[_context]]: High-level project map and repository state.
+- [[purpose]]: Vision and organizational intent.
+- [[schema]]: Rules and patterns for wiki documentation.
+- [[Wiki-Architecture]]: Progressive disclosure and layering strategy.
+- [[GUIDELINES]]: Operational best practices.
+- [AGENTS](../AGENTS.md): Management identity and agent memory.
+- [[log]]: Chronological history of operations.
 
-## Concepts (Design & Layout)
-- [[Bio-AI-Design-System]]: Visual guidelines, colors, and CSS tokens.
-- [[Site-Architecture-Blueprint]]: Structural requirements for the site.
-- [[Template-Mapping-Rules]]: How to map Wiki data to HTML templates.
-- [[Glossary]]: Acronyms and KSEA terms definition.
-- [[Agentic-Workflows]]: Guidelines for AI-automated maintenance.
+## Layer 2: Systems & Concepts (Technical Hubs)
+- [[Bio-AI-Design-System]]: Visual identity, CSS tokens, and component logic.
+- [[Site-Architecture-Blueprint]]: Structural map of the v2 digital ecosystem.
+- [[Template-Mapping-Rules]]: Guidelines for mapping data nodes to HTML.
+- [[Agentic-Workflows]]: Rules for AI-automated site maintenance.
+- [[Operations-Manual]]: Local deployment and asset management protocols.
+- [[Glossary]]: Terminology for KSEA, Philly, and the Bio-AI domain.
 
-## Entities (Pure Content)
-### 🏛️ Organizational
-- [[About-Page-Content]]: Mission and Vision.
-- [[Leadership-Page-Content]]: Executive structure overview.
-- [[Partners]]: Central hub for all regional and professional partners.
-- [[Bylaws]]: Governance and rules.
-- [[Contact]]: Communication channels.
+## Layer 3: Contents & Entities (Domain Hubs)
+*Access point for all atomic records (Bio/Details/Dates).*
 
-### 👥 People & Leadership
-- [[People]]: Consolidated directory of members.
-  - [[Dr-Wookjin-Choi]] (President)
-  - [[Su-Chin-Heo]] (Vice President)
-  - [[Hyunmin-Cho]] (Membership Director)
-  - [[Sangin-Kim]], [[Jaeung-Ko]] (Councilors)
+### 🏛️ Organizational Hub
+- [[About-Page-Content]]: Mission, values, and organizational history.
+- [[Leadership-Page-Content]]: Mapping of current board and committees.
+- [[Bylaws]]: Official governance and operational rules.
+- [[Contact]]: Communication channels and inquiry routing.
 
-### 🤝 Regional & APS Partners
-- [[KoGSA]], [[PKSA]] (Regional)
-- [[KITEE]], [[KASBP]], [[KBMES]], [[KKYU]] (Professional/Support)
+### 👥 Community Hub
+- [[People]]: Master directory of leaders, councilors, and award winners.
+- [[Partners]]: Central directory for APS (KITEE, KASBP) and regional scholars.
 
-### 📅 Programs & Events
-- [[Events-Log]]: Complete history and master schedule.
-  - [[Specific-Events]]: [[NMSC-2026]], [[NRC-2026]], [[Symposium-2026]], [[STEP-UP-2026]]
-- [[Joint-Seminar-Series]]: Recurring academic collaborations.
-- [[Membership]]: Registration steps and membership levels.
-- [[YG]]: Young Generation program details.
-- [[Site-Content-Catalogue]]: Secondary data for Sponsors, Careers, and YG.
+### 📅 Activities Hub
+- [[Events-Log]]: Complete history and master schedule for 2025–2026.
+- [[Membership]]: Registration flows, fee structures, and tier details.
+- [[YG]]: Young Generation program overview and coordination.
 
-## Legacy & Migration
-- [[Legacy-Home-Content]]: Data from v1.
-- [[V2-Home-Content]]: Analysis of v2 homepage.
-
-## Sources (Patterns & References)
-- [[Karpathy-LLM-Wiki-Pattern]], [[Pratiyush-LLM-Wiki-Pattern]], [[Nashsu-LLM-Wiki-Pattern]]
-
-## Maintenance
-- [Migration Scripts](file:///Users/wxc151/Documents/gitRepos/kseaphilly.github.io/scripts/migration/README.md)
-- [Wiki Linter](file:///Users/wxc151/Documents/gitRepos/kseaphilly.github.io/scripts/wiki_lint.py)
+## Layer 4: Migration & History (Archival)
+- [[Legacy-Home-Content]]: Data artifacts from the v1 (legacy) ecosystem.
+- [[V2-Home-Content]]: Design analysis of the current production homepage.
+- [[Sources]]: External patterns ([[Karpathy]], [[Pratiyush]]) informing this wiki.
