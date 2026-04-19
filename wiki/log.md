@@ -7,3 +7,6 @@
 - **Node**: Added `Bio × AI Design System` concept page.
 - **Node**: Added `KSEA-Philadelphia-v2-Migration` via MCP ingest.
 - **Correction**: Finalized membership tiers: Undergrad ($0), Paid Undergrad ($15), Grad ($15), Regular ($35), Lifetime ($525 or less).
+
+## 2026-04-19
+- **Design**: Refined `city-hall.svg` silhouette, specifically the William Penn statue's hat and right arm for a more natural and iconic look.
