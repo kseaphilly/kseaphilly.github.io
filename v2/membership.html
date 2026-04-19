@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Membership - KSEA Philadelphia Chapter</title>
+    <title>Membership — KSEA Philadelphia Chapter</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Serif+KR:wght@400;500;600;700&display=swap" rel="stylesheet" />
@@ -18,7 +18,7 @@
     <nav>
         <div class="nav-left">
             <a href="index.html" class="nav-logo-link">
-                <img src="../assets/ksea_phily_logo.png" alt="KSEA Philly" style="height: 46px; width: auto; display: block;" onerror="this.src='https://ksea.org/files/ksea_logo_new.png';"/>
+                <img src="assets/ksea_phily_logo.png" alt="KSEA Philly" style="height: 46px; width: auto; display: block;" onerror="this.src='https://ksea.org/files/ksea_logo_new.png';"/>
                 <div class="nav-wordmark">
                     <div class="nav-wordmark-title">KSEA Philadelphia</div>
                 </div>
@@ -28,7 +28,7 @@
             <a href="about.html">About</a>
             <a href="leadership.html">Leadership</a>
             <a href="events.html">Events</a>
-            <a href="membership.html">Membership</a>
+            <a href="membership.html" style="color: var(--w-navy);">Membership</a>
             <a href="sponsors.html">Sponsors</a>
             <a href="yg.html">YG</a>
             <a href="careers.html">Careers</a>
@@ -36,44 +36,59 @@
         </div>
     </nav>
 
-    
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="page-hero-eyebrow">§ 01 — Join KSEA</div>
+        <h1>Membership</h1>
+        <p class="page-hero-sub">
+            Connect with a vibrant community of Korean-American scientists and engineers. As a KSEA member, you gain access to a wide range of programs, benefits, and professional networks.
+        </p>
+    </section>
 
-    <style>
-        .v1-content h1 { font-size: 48px; font-weight: 600; letter-spacing: -1px; margin-bottom: 24px; color: var(--w-navy); }
-        .v1-content h2 { font-size: 32px; font-weight: 600; letter-spacing: -0.5px; margin-top: 40px; margin-bottom: 20px; border-bottom: 1px solid var(--w-ink); padding-bottom: 10px; }
-        .v1-content h3 { font-size: 24px; font-weight: 600; margin-top: 30px; margin-bottom: 16px; }
-        .v1-content p { font-size: 16px; line-height: 1.6; margin-bottom: 16px; opacity: 0.85; }
-        .v1-content ul, .v1-content ol { font-size: 16px; line-height: 1.6; margin-bottom: 16px; opacity: 0.85; padding-left: 20px; }
-        .v1-content li { margin-bottom: 8px; }
-        .v1-content a { color: var(--w-navy); text-decoration: underline; }
-        .v1-content a.btn { text-decoration: none; display: inline-block; background: var(--w-navy); color: var(--w-cream); padding: 10px 20px; font-weight: 600; }
-        .v1-content .card { background: var(--w-paper); padding: 32px; border: 1px solid var(--w-ink); margin-bottom: 24px; }
-        .v1-content .partner-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 24px; margin-top: 24px; border-top: 1px solid var(--w-ink); border-left: 1px solid var(--w-ink); }
-        .v1-content .partner-card { border: none !important; border-bottom: 1px solid var(--w-ink) !important; border-right: 1px solid var(--w-ink) !important; padding: 32px !important; margin-bottom: 0 !important; display: flex; flex-direction: column; align-items: center; justify-content: flex-start; text-align: center; }
-        .v1-content .partner-logo-wrapper { height: 120px; display: flex; align-items: center; justify-content: center; margin-bottom: 16px; width: 100%; }
-        .v1-content .partner-logo { max-height: 90px; max-width: 90%; object-fit: contain; mix-blend-mode: multiply; }
-        .v1-content table { width: 100%; border-collapse: collapse; margin-bottom: 24px; border: 1px solid var(--w-ink); }
-        .v1-content th, .v1-content td { border: 1px solid var(--w-ink); padding: 12px; text-align: left; }
-        .v1-content th { background: var(--w-ink); color: var(--w-cream); }
-        .v1-content .members-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 24px; margin-top: 24px; }
-        .v1-content .member-card { padding: 24px; border: 1px solid var(--w-ink); background: var(--w-cream); display: flex; align-items: center; gap: 16px; }
-        .v1-content .org-chart { max-width: 100%; height: auto; border: 1px solid var(--w-ink); margin: 24px 0; }
-        .v1-content .profile-photo { width: 80px; height: 80px; object-fit: cover; border-radius: 50%; opacity: 0; } /* Fallback */
-    </style>
-    
-<section class="v1-content" style="padding: 60px 40px; max-width: 1200px; margin: 0 auto; min-height: 60vh;">
+    <!-- Navy CTA panel -->
+    <section style="background: var(--w-navy); color: var(--w-cream); border-bottom: 1px solid var(--w-ink);">
+        <div style="display: grid; grid-template-columns: 1.2fr 1fr; min-height: 260px;">
+            <div style="padding: 60px 40px; border-right: 1px solid rgba(244,235,217,0.2);">
+                <div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; opacity: 0.6; margin-bottom: 20px;">Ready to join?</div>
+                <h2 style="font-size: 36px; font-weight: 600; letter-spacing: -1px; margin: 0 0 24px; color: var(--w-cream);">Become a member of KSEA Philadelphia.</h2>
+                <div style="display: flex; gap: 14px; flex-wrap: wrap;">
+                    <a href="https://www.ksea.org/signUp" target="_blank" rel="noopener noreferrer" style="display: inline-block; background: var(--w-cream); color: var(--w-navy); padding: 12px 22px; font-size: 14px; font-weight: 600; cursor: pointer;">Quick Join at KSEA HQ →</a>
+                    <a href="membership_instruction.html" style="display: inline-block; background: transparent; color: var(--w-cream); border: 1.5px solid rgba(244,235,217,0.5); padding: 12px 22px; font-size: 14px; font-weight: 600; cursor: pointer;">Step-by-Step Guide</a>
+                </div>
+            </div>
+            <div style="padding: 60px 40px; display: flex; flex-direction: column; justify-content: center;">
+                <div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; opacity: 0.5; margin-bottom: 20px;">Membership tiers</div>
+                <div style="display: flex; flex-direction: column; gap: 12px;">
+                    <div style="display: flex; justify-content: space-between; border-bottom: 1px solid rgba(244,235,217,0.15); padding-bottom: 12px;">
+                        <span style="font-size: 15px; font-weight: 500;">Regular</span>
+                        <span style="font-family: 'JetBrains Mono', monospace; font-size: 13px; opacity: 0.7;">$30 / yr</span>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; border-bottom: 1px solid rgba(244,235,217,0.15); padding-bottom: 12px;">
+                        <span style="font-size: 15px; font-weight: 500;">Student</span>
+                        <span style="font-family: 'JetBrains Mono', monospace; font-size: 13px; opacity: 0.7;">$10 / yr</span>
+                    </div>
+                    <div style="display: flex; justify-content: space-between;">
+                        <span style="font-size: 15px; font-weight: 500;">Life</span>
+                        <span style="font-family: 'JetBrains Mono', monospace; font-size: 13px; opacity: 0.7;">$500</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        <div class="container">
-            <h1>Membership</h1>
-            <p style="text-align: center; max-width: 800px; margin: 0 auto 40px auto;">Join the KSEA Philadelphia
-                Chapter to connect with a vibrant community of Korean-American scientists and engineers. As a member of
-                KSEA, you can enjoy a wide range of activities and benefits.</p>
-
-            <div class="section">
-                <h2>Member Activities</h2>
-                <ul class="activities-list">
+    <!-- Activities & Benefits -->
+    <section style="border-bottom: 1px solid var(--w-ink);">
+        <div class="section-header">
+            <span>§ 02 — What You Get</span>
+            <span style="opacity: 0.6;">Activities &amp; Benefits</span>
+        </div>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; border-bottom: 1px solid var(--w-ink);">
+            <div class="info-section" style="border-right: 1px solid var(--w-ink);">
+                <div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; color: var(--w-navy); margin-bottom: 14px;">Member Activities</div>
+                <h2>Programs available to all members.</h2>
+                <ul>
                     <li>Annual meetings and technical conferences (UKC)</li>
-                    <li>National Mathematics Competition (for students in grades 4-11)</li>
+                    <li>National Mathematics Competition — NMSC (grades 4–11)</li>
                     <li>Young Generation programs and Katalyst</li>
                     <li>Publication of KSEA Letters</li>
                     <li>Scholarships and awards</li>
@@ -81,50 +96,40 @@
                     <li>Technical evaluation and consulting opportunities</li>
                     <li>Topical symposia and workshops</li>
                     <li>Local chapter events and joint seminars</li>
-                    <li>Science & technology programs for the general public</li>
+                    <li>Science &amp; technology programs for the general public</li>
                 </ul>
             </div>
-
-            <div class="section">
-                <h2>Membership Benefits</h2>
-                <ul class="benefits-list">
+            <div class="info-section">
+                <div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; color: var(--w-brick); margin-bottom: 14px;">Membership Benefits</div>
+                <h2>Why joining KSEA matters.</h2>
+                <ul>
                     <li>Leadership development through 13 Technical Groups and 14 Standing Committees</li>
                     <li>Networking with scientists and engineers from all fields across the U.S. and Korea</li>
                     <li>Opportunities for community service and mentoring</li>
-                    <li>Access to information on professional opportunities and job openings</li>
-                    <li>Office use at KSEA Headquarters while visiting Washington D.C.</li>
+                    <li>Access to professional opportunities and job openings</li>
+                    <li>Office use at KSEA HQ while visiting Washington D.C.</li>
                     <li>Eligibility for KSEA Awards honoring distinguished records</li>
-                    <li>Support for your local chapter (most dues go back to your own chapter)</li>
+                    <li>Support for your local chapter — most dues stay in the chapter</li>
                 </ul>
-                
-                <div style="margin-top: 30px; padding: 20px; background-color: #f5f5f5; border-radius: 8px;">
-                    <h3 style="margin-top: 0; color: #004a99;">Membership Flyer</h3>
-                    <p>View detailed information about KSEA membership benefits:</p>
-                    <a href="https://drive.google.com/file/d/1PDZM9QpjI31mAy8oMMh4EU_ofvYGI8fF/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn" style="background-color: #004a99; display: inline-block; margin-top: 10px; margin-bottom: 20px;">
-                        📄 Download Flyer
-                    </a>
-                    <iframe src="https://drive.google.com/file/d/1PDZM9QpjI31mAy8oMMh4EU_ofvYGI8fF/preview" width="100%" height="600px" style="border: 1px solid #ddd; border-radius: 4px;"></iframe>
-                </div>
-            </div>
-
-            <div class="section">
-                <h2>Join Us</h2>
-                <p>Ready to become a member? Join KSEA through the national website. We look forward to welcoming you to
-                    our chapter!</p>
-                <div style="display: flex; gap: 15px; justify-content: center; margin-top: 20px;">
-                    <a href="https://www.ksea.org/signUp" target="_blank" rel="noopener noreferrer" class="btn"
-                        style="background-color: #004a99;">Quick Join at KSEA HQ</a>
-                    <a href="membership_instruction.html" class="btn">Step-by-Step Instructions</a>
-                </div>
             </div>
         </div>
-    
-</section>
+    </section>
+
+    <!-- Membership Flyer -->
+    <section class="info-section" style="border-bottom: 1px solid var(--w-ink);">
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; opacity: 0.6; margin-bottom: 14px;">§ 03 — Membership Flyer</div>
+        <h2>Download the Membership Guide</h2>
+        <p>View detailed information about KSEA membership benefits and how to get started.</p>
+        <a href="https://drive.google.com/file/d/1PDZM9QpjI31mAy8oMMh4EU_ofvYGI8fF/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn-primary" style="display: inline-block; margin-bottom: 32px;">Download Flyer →</a>
+        <div style="border: 1px solid var(--w-ink);">
+            <iframe src="https://drive.google.com/file/d/1PDZM9QpjI31mAy8oMMh4EU_ofvYGI8fF/preview" width="100%" height="540px" style="display: block; border: none;"></iframe>
+        </div>
+    </section>
 
     <footer>
         <div>
             <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 16px;">
-                <img src="../assets/ksea_phily_logo.png" alt="" class="footer-logo" onerror="this.src='https://ksea.org/files/ksea_logo_new.png';"/>
+                <img src="assets/ksea_phily_logo.png" alt="" class="footer-logo" onerror="this.src='https://ksea.org/files/ksea_logo_new.png';"/>
                 <div style="font-size: 16px; font-weight: 700;">KSEA Philadelphia</div>
             </div>
             <div style="font-size: 12px; opacity: 0.6; line-height: 1.6; font-family: 'JetBrains Mono', monospace;">
@@ -132,21 +137,21 @@
             </div>
         </div>
         <div>
-            <div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; opacity: 0.5; margin-bottom: 14px;">Chapter</div>
-            <div style="font-size: 13px; margin-bottom: 6px;"><a href="about.html">About</a></div>
-            <div style="font-size: 13px; margin-bottom: 6px;"><a href="leadership.html">Leadership</a></div>
-            <div style="font-size: 13px; margin-bottom: 6px;"><a href="bylaws.html">Bylaws</a></div>
-            <div style="font-size: 13px; margin-bottom: 6px;"><a href="careers.html">Careers</a></div>
+            <div class="footer-col-head">Chapter</div>
+            <a href="about.html">About</a>
+            <a href="leadership.html">Leadership</a>
+            <a href="bylaws.html">Bylaws</a>
+            <a href="careers.html">Careers</a>
         </div>
         <div>
-            <div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; opacity: 0.5; margin-bottom: 14px;">Programs</div>
-            <div style="font-size: 13px; margin-bottom: 6px;"><a href="events.html">Events & Seminars</a></div>
-            <div style="font-size: 13px; margin-bottom: 6px;"><a href="nmsc.html">NMSC</a></div>
-            <div style="font-size: 13px; margin-bottom: 6px;"><a href="membership.html">Membership</a></div>
+            <div class="footer-col-head">Programs</div>
+            <a href="events.html">Events & Seminars</a>
+            <a href="nmsc.html">NMSC</a>
+            <a href="membership.html">Membership</a>
         </div>
         <div>
-            <div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; opacity: 0.5; margin-bottom: 14px;">Connect</div>
-            <div style="font-size: 13px; margin-bottom: 6px;"><a href="contact.html">Contact Us</a></div>
+            <div class="footer-col-head">Connect</div>
+            <a href="contact.html">Contact Us</a>
         </div>
     </footer>
 </body>
