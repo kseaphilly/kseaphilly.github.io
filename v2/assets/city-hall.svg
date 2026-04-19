@@ -18,13 +18,9 @@
         <path d="M207,26 L221,30 L222,33 L207,31 Z"/>
         <path d="M193,26 L189,38 L188,42 L192,42 L196,30 Z"/>
 
-        <!-- Upper Tower -->
+        <!-- Upper Tower: statue pedestal + gentle taper down to clock tier -->
         <rect x="195" y="44" width="10" height="2" rx="1"/>
-        <path d="M194,46 H206 L208,60 H192 Z"/>
-        <path d="M192,60 C192,60 190,75 190,85 C190,95 194,105 200,105 C206,105 210,95 210,85 C210,75 208,60 208,60 Z"/>
-        <path d="M170,120 L186,108 L200,92 L214,108 L230,120 Z"/>
-        <path d="M165,120 L171,112 L177,120 Z"/>
-        <path d="M223,120 L229,112 L235,120 Z"/>
+        <path d="M165,120 C170,96 184,68 195,46 L205,46 C216,68 230,96 235,120 Z"/>
 
         <!-- Tower Levels -->
         <rect x="165" y="120" width="70" height="4"/>
@@ -36,11 +32,11 @@
 
         <!-- Roof & Pavilions -->
         <path d="M6,226 H394 L394,240 H6 Z"/>
-        <path d="M10,228 V210 C10,195 25,190 35,190 C45,190 60,195 60,210 V228 Z"/>
-        <rect x="34" y="178" width="2" height="12"/>
+        <path d="M10,228 V214 L22,198 L35,188 L48,198 L60,214 V228 Z"/>
+        <rect x="34" y="178" width="2" height="10"/>
         <circle cx="35" cy="178" r="1.5"/>
-        <path d="M340,228 V210 C340,195 355,190 365,190 C375,190 390,195 390,210 V228 Z"/>
-        <rect x="364" y="178" width="2" height="12"/>
+        <path d="M340,228 V214 L352,198 L365,188 L378,198 L390,214 V228 Z"/>
+        <rect x="364" y="178" width="2" height="10"/>
         <circle cx="365" cy="178" r="1.5"/>
 
         <!-- Main Body -->

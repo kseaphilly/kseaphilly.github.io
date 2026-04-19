@@ -91,7 +91,7 @@ nav {
 .nav-links a:hover { color: var(--w-navy); }
 
 /* ── Buttons ─────────────────────────────────────────────── */
-.btn-join, .btn-primary, .btn-outline, .btn-event, .btn-event-gold, .btn-gold {
+.btn-join, .btn-primary, .btn-outline, .btn-outline-light, .btn-event, .btn-event-gold, .btn-gold {
     cursor: pointer;
     font-weight: 700;
     font-family: 'Space Grotesk', sans-serif;
@@ -139,6 +139,18 @@ nav {
 .btn-outline:hover {
     background: var(--w-ink);
     color: var(--w-cream) !important;
+    transform: translateY(-2px);
+}
+
+/* Outline Button — light variant for use on navy/dark backgrounds */
+.btn-outline-light {
+    background: transparent;
+    color: var(--w-cream) !important;
+    border: 1.5px solid var(--w-cream);
+}
+.btn-outline-light:hover {
+    background: var(--w-cream);
+    color: var(--w-navy) !important;
     transform: translateY(-2px);
 }
 
