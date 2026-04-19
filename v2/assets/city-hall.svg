@@ -16,7 +16,10 @@
   <rect x="197" y="10" width="6" height="4" fill="currentColor"/> <!-- Hat crown -->
   <circle cx="200" cy="19" r="2.5" fill="currentColor"/> <!-- Head -->
   <path fill="currentColor" d="M193,22 H207 L211,44 H189 Z"/> <!-- Body -->
-  <path fill="currentColor" d="M207,26 L224,28 C226,29 226,34 224,35 L207,31 Z"/> <!-- Right Arm -->
+  <!-- Right arm: outstretched, natural taper -->
+  <path fill="currentColor" d="M207,26 L221,30 L222,33 L207,31 Z"/>
+  <!-- Left arm at side holding scroll (Charter of Pennsylvania) -->
+  <path fill="currentColor" d="M193,26 L189,38 L188,42 L192,42 L196,30 Z"/>
 
   <!-- ═══ LANTERN & UPPER TOWER ═══ -->
   <!-- Fluted pedestal -->
@@ -25,10 +28,10 @@
   <!-- Domed Lantern profile (The 'neck' section) -->
   <path fill="currentColor" d="M192,60 C192,60 190,75 190,85 C190,95 194,105 200,105 C206,105 210,95 210,85 C210,75 208,60 208,60 Z"/>
   
-  <!-- Pointed transition directly above clock -->
-  <path fill="currentColor" d="M174,120 L188,105 L200,88 L212,105 L226,120 Z"/>
-  <path fill="currentColor" d="M170,120 L176,112 L182,120 Z"/>
-  <path fill="currentColor" d="M218,120 L224,112 L230,120 Z"/>
+  <!-- Pointed transition directly above clock (gentler slope, wider base) -->
+  <path fill="currentColor" d="M170,120 L186,108 L200,92 L214,108 L230,120 Z"/>
+  <path fill="currentColor" d="M165,120 L171,112 L177,120 Z"/>
+  <path fill="currentColor" d="M223,120 L229,112 L235,120 Z"/>
 
   <!-- ═══ CLOCK TOWER LEVEL ═══ -->
   <rect x="165" y="120" width="70" height="4" fill="currentColor"/>
