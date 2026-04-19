@@ -96,22 +96,23 @@ nav {
     font-weight: 600;
     font-family: 'Space Grotesk', -apple-system, sans-serif;
     border: none;
+    text-decoration: none !important;
 }
 .btn-join {
     background: var(--w-navy);
-    color: var(--w-cream);
+    color: var(--w-cream) !important;
     padding: 10px 18px;
     font-size: 13px;
 }
 .btn-primary {
     background: var(--w-navy);
-    color: var(--w-cream);
+    color: var(--w-cream) !important;
     padding: 14px 22px;
     font-size: 14px;
 }
 .btn-outline {
     background: transparent;
-    color: var(--w-ink);
+    color: var(--w-ink) !important;
     border: 1.5px solid var(--w-ink);
     padding: 14px 22px;
     font-size: 14px;
@@ -304,7 +305,7 @@ nav {
 /* ── People Grid (auto-fit) ──────────────────────────────── */
 .people-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     border-top: 1px solid var(--w-ink);
     border-left: 1px solid var(--w-ink);
 }
@@ -522,6 +523,8 @@ footer a:hover { opacity: 0.7; }
 /* Direction 1 + 4: Atmospheric Typography Layer */
 .philly-bg-text {
     position: absolute;
+    bottom: -0.15em;
+    right: -0.05em;
     font-family: 'Space Grotesk', sans-serif;
     font-weight: 800;
     font-size: 22vw;
@@ -575,6 +578,7 @@ footer a:hover { opacity: 0.7; }
     .events-grid,
     .labs-grid,
     .board-grid,
+    .people-grid,
     .cta-section,
     .partner-grid-3 { grid-template-columns: 1fr; }
 

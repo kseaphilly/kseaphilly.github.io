@@ -1,17 +1,73 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 130">
-    <!-- Philadelphia City Hall Silhouette - High Fidelity -->
-    <!-- Central Tower -->
-    <path fill="currentColor" d="M48.5,2 L51.5,2 L51.5,7 L48.5,7 Z" /> <!-- William Penn Statue -->
-    <path fill="currentColor" d="M47,7 H53 V15 H47 Z" /> <!-- Statue Pedestal -->
-    <path fill="currentColor" d="M44,15 H56 L54,25 H46 Z" /> <!-- Upper Tower Section -->
-    <path fill="currentColor" d="M42,25 H58 V45 H42 Z" /> <!-- Clock Section -->
-    <path fill="currentColor" d="M40,45 H60 V70 H40 Z" /> <!-- Tower Base -->
-    <path fill="currentColor" d="M36,70 H64 V85 H36 Z" /> <!-- Tower Sub-base -->
-    <!-- Main Building -->
-    <path fill="currentColor" d="M5,85 H95 V120 H5 Z" /> <!-- Main Block -->
-    <!-- Side Towers -->
-    <path fill="currentColor" d="M22,70 H28 L25,65 Z M25,65 V85 H25 Z" /> <!-- Left spire -->
-    <path fill="currentColor" d="M72,70 H78 L75,65 Z M75,65 V85 H75 Z" /> <!-- Right spire -->
-    <!-- Foundation -->
-    <path fill="currentColor" d="M0,120 H100 V125 H0 Z" />
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <!--
+    Philadelphia City Hall — accurate silhouette
+    Key features:
+      · William Penn statue at top with outstretched arm (37ft figure)
+      · Tall multi-tiered central tower (548ft total, tallest masonry tower when built)
+      · Large quadrangular Second Empire building
+      · Corner pavilions projecting above main roofline
+      · Mansard roof character
+  -->
+
+  <!-- ── WILLIAM PENN STATUE ── -->
+  <!-- Head -->
+  <ellipse cx="200" cy="34" rx="5" ry="6" fill="currentColor"/>
+  <!-- Body / coat (tricorn silhouette) -->
+  <path fill="currentColor" d="M194,40 L206,40 L210,56 L192,56 Z"/>
+  <!-- Right arm outstretched eastward over Center City — Penn's famous pose -->
+  <path fill="currentColor" d="M205,46 L234,51 L233,55 L204,51 Z"/>
+  <!-- Left arm, slightly angled down -->
+  <path fill="currentColor" d="M194,47 L184,52 L185,56 L194,51 Z"/>
+  <!-- Legs (faint lower extension) -->
+  <rect x="196" y="56" width="4" height="10" rx="1" fill="currentColor" opacity="0.7"/>
+  <rect x="200" y="56" width="4" height="10" rx="1" fill="currentColor" opacity="0.7"/>
+
+  <!-- Statue pedestal atop belfry -->
+  <rect x="193" y="64" width="14" height="8" rx="1" fill="currentColor"/>
+
+  <!-- ── BELFRY / LANTERN at very top of tower ── -->
+  <!-- Peaked cap -->
+  <path fill="currentColor" d="M182,72 L218,72 L222,84 L178,84 Z"/>
+  <!-- Belfry openings level (rendered solid for silhouette) -->
+  <rect x="183" y="84" width="34" height="20" fill="currentColor"/>
+  <!-- Belfry cornice ledge -->
+  <path fill="currentColor" d="M179,104 L221,104 L219,110 L181,110 Z"/>
+
+  <!-- ── UPPER TOWER — slender section ── -->
+  <rect x="182" y="110" width="36" height="32" fill="currentColor"/>
+
+  <!-- ── CLOCK TOWER — wider, four sides with large clock faces ── -->
+  <!-- Cornice at clock level top -->
+  <path fill="currentColor" d="M170,142 L230,142 L228,148 L172,148 Z"/>
+  <!-- Clock level body -->
+  <rect x="172" y="148" width="56" height="42" fill="currentColor"/>
+  <!-- Clock level base cornice -->
+  <path fill="currentColor" d="M168,190 L232,190 L230,196 L170,196 Z"/>
+
+  <!-- ── TOWER BASE — widens as it descends into roofline ── -->
+  <rect x="158" y="196" width="84" height="18" fill="currentColor"/>
+  <!-- Transition to building roofline -->
+  <path fill="currentColor" d="M152,214 L248,214 L246,222 L154,222 Z"/>
+
+  <!-- ── MAIN BUILDING — Second Empire with mansard and corner pavilions ── -->
+
+  <!-- Left corner pavilion (projects above main roofline, slightly peaked) -->
+  <path fill="currentColor" d="M8,206 L82,206 L80,220 L10,220 Z"/>
+  <rect x="8" y="220" width="74" height="18" fill="currentColor"/>
+
+  <!-- Left inner building section roofline -->
+  <rect x="82" y="218" width="70" height="20" fill="currentColor"/>
+
+  <!-- Right inner building section roofline -->
+  <rect x="248" y="218" width="70" height="20" fill="currentColor"/>
+
+  <!-- Right corner pavilion -->
+  <path fill="currentColor" d="M318,206 L392,206 L390,220 L320,220 Z"/>
+  <rect x="318" y="220" width="74" height="18" fill="currentColor"/>
+
+  <!-- ── MAIN BUILDING BODY — all sections unified ── -->
+  <rect x="8" y="238" width="384" height="52" fill="currentColor"/>
+
+  <!-- ── GROUND / PLAZA ── -->
+  <rect x="0" y="290" width="400" height="10" fill="currentColor"/>
 </svg>

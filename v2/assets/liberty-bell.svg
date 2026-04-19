@@ -1,18 +1,83 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-    <!-- Liberty Bell Silhouette - Final Refinement -->
-    <!-- Detailed Wooden Yoke with pegs -->
-    <path fill="currentColor" d="M10,24 h80 v10 h-10 v-4 h-60 v4 h-10 z" />
-    <path fill="currentColor" d="M28,16 h6 v8 h-6 v-8 z M47,16 h6 v8 h-6 v-8 z M66,16 h6 v8 h-6 v-8 z" />
-    
-    <!-- Supporting scrolls/brackets -->
-    <path fill="currentColor" d="M38,34 Q40,30 44,34 L46,40 L44,40 Q40,36 38,34 Z" />
-    <path fill="currentColor" d="M62,34 Q60,30 56,34 L54,40 L56,40 Q60,36 62,34 Z" />
-    
-    <!-- Bell Body -->
-    <path fill="currentColor" d="M20,40 c0,0,-2,20,-6,40 c-2,10,0,15,5,15 h62 c5,0,7,-5,5,-15 c-4,-20,-6,-40,-6,-40 z" />
-    <path fill="currentColor" d="M12,94 h76 v4 h-76 z" opacity="0.8" /> <!-- Lip detail -->
-    <path fill="currentColor" d="M48,98 a2,2 0 0,0 4,0 v-4 h-4 z" /> <!-- Clapper -->
-    
-    <!-- Distinctive Crack -->
-    <path d="M48,55 Q52,70 50,85 L52,94" stroke="white" stroke-width="1.5" fill="none" opacity="0.6" />
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 252">
+  <!--
+    Liberty Bell — accurate silhouette
+    Key features:
+      · Wide wooden yoke (beam) at top — signature feature
+      · Bell narrow at crown, dramatically flared at lip
+      · Famous crack running up right side
+      · Clapper hanging below
+  -->
+
+  <!-- Wooden yoke: wide, thick beam with curved/tapered ends -->
+  <path fill="currentColor" d="
+    M26,4 L174,4
+    C179,4 183,8 183,15
+    C183,21 179,26 173,28
+    L150,36 C146,38 142,41 138,43
+    L130,47 L70,47 L62,43
+    C58,41 54,38 50,36
+    L27,28 C21,26 17,21 17,15
+    C17,8 21,4 26,4 Z
+  "/>
+
+  <!-- Iron suspension loop: connects yoke to bell crown -->
+  <rect x="85" y="39" width="30" height="22" rx="7" fill="currentColor"/>
+
+  <!-- Bell body: narrow crown → wide shoulder → flared lip -->
+  <!--
+    Left profile: crown x=86 → shoulder x=46 at y=100 → waist x=44 at y=150
+                  → mouth x=26 at y=195 → lip edge x=18 at y=210
+    Right profile: mirrored
+    The bell has a very characteristic pronounced flare at the bottom (lip)
+  -->
+  <path fill="currentColor" d="
+    M86,59 L114,59
+    C120,59 126,62 131,68
+    L152,86
+    C164,97 172,112 176,128
+    C180,144 179,161 174,176
+    L165,192
+    C160,200 153,205 144,208
+    L128,212 L114,214 L86,214 L72,212
+    L56,208
+    C47,205 40,200 35,192
+    L26,176
+    C21,161 20,144 24,128
+    C28,112 36,97 48,86
+    L69,68
+    C74,62 80,59 86,59 Z
+  "/>
+
+  <!-- Lip: the wide, flared bottom rim — most distinctive visual feature -->
+  <path fill="currentColor" d="
+    M13,212
+    C13,205 25,200 46,198
+    L86,196 L114,196 L154,198
+    C175,200 187,205 187,212
+    L187,218
+    C187,224 167,228 100,228
+    C33,228 13,224 13,218 Z
+  "/>
+
+  <!-- Clapper: iron bar + ball hanging below -->
+  <path fill="currentColor" d="
+    M97,228 L103,228
+    L105,242 L100,248 L95,242 Z
+  "/>
+  <ellipse cx="100" cy="250" rx="10" ry="7" fill="currentColor"/>
+
+  <!--
+    The famous crack: runs from near the lip upward along the right side.
+    It zigzags — characteristic irregular fracture pattern.
+    Rendered as white over dark bell for visibility.
+  -->
+  <path
+    d="M116,202 L120,186 L115,170 L121,155 L117,140"
+    stroke="white"
+    stroke-width="2.5"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    opacity="0.65"
+  />
 </svg>

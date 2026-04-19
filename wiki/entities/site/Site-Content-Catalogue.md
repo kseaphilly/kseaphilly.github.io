@@ -7,7 +7,7 @@ date: 2026-04-18
 # Site Content Catalogue (Secondary Pages)
 
 ## Membership
-- **Categories**: Regular ($35), Graduate Student ($15), Undergraduate (Free).
+- **Categories**: Undergraduate ($0), Paid Undergraduate ($15), Graduate ($15), Regular ($35), Lifetime ($525 or less).
 - **Benefits**: Career development, 30+ APS partnerships, scholarships, UKC participation.
 - **Process**: Sign up at KSEA National -> Join Philadelphia Chapter.
 
