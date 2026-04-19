@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 120">
+    <!-- Comprehensive Philadelphia Skyline Silhouette -->
+    <!-- Based on user provided reference image 31 -->
+    
+    <!-- Left: Ben Franklin Bridge -->
+    <path fill="currentColor" d="M0,110 h80 v2 h-80 z" /> <!-- Water/Road line -->
+    <path fill="currentColor" d="M30,80 h5 v30 h-5 z M70,80 h5 v30 h-5 z" /> <!-- Towers -->
+    <path fill="currentColor" d="M5,110 Q40,40 80,110" fill="none" stroke="currentColor" stroke-width="2" /> <!-- Cable -->
+    <path fill="currentColor" d="M30,80 Q50,60 70,80" fill="none" stroke="currentColor" stroke-width="1.5" /> <!-- Inner Cable -->
+    
+    <!-- Mid-Left: Independence Hall -->
+    <path fill="currentColor" d="M90,110 h40 v-15 h-40 z" /> <!-- Base -->
+    <path fill="currentColor" d="M100,95 h20 v-15 h-20 z" /> <!-- Mid level -->
+    <path fill="currentColor" d="M105,80 h10 v-25 l-5,-5 l-5,5 z" /> <!-- Tower -->
+    <path fill="currentColor" d="M110,50 v-15" stroke="currentColor" stroke-width="1" /> <!-- Spire -->
+
+    <!-- Center: Skyscrapers -->
+    <path fill="currentColor" d="M140,110 h20 v-50 h-20 z" /> <!-- Blocky skyscraper -->
+    <path fill="currentColor" d="M165,110 h25 v-75 l-5,-5 h-15 l-5,5 z" /> <!-- One Liberty / Two Liberty style -->
+    <path fill="currentColor" d="M195,110 h20 v-90 h-10 v10 h-10 z" /> <!-- Comcast Center style -->
+    <path fill="currentColor" d="M220,110 h25 v-65 l-5,-10 h-15 l-5,10 z" /> <!-- Another pointed skyscraper -->
+    
+    <!-- Mid-Right: City Hall -->
+    <path fill="currentColor" d="M260,110 h60 v-15 h-60 z" /> <!-- Base building -->
+    <path fill="currentColor" d="M285,95 h10 v-50 h-10 z" /> <!-- Clock tower base -->
+    <path fill="currentColor" d="M288,45 h4 v-15 h-4 z" /> <!-- Upper tower -->
+    <path fill="currentColor" d="M290,30 L288,25 L290,20 L292,25 L290,30 Z" /> <!-- William Penn Statue -->
+    
+    <!-- Right side: Shorter buildings -->
+    <path fill="currentColor" d="M330,110 h20 v-30 h-20 z" />
+    <path fill="currentColor" d="M360,110 h30 v-20 h-30 z" />
+</svg>

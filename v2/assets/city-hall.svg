@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 130">
+    <!-- Philadelphia City Hall Silhouette - High Fidelity -->
+    <!-- Central Tower -->
+    <path fill="currentColor" d="M48.5,2 L51.5,2 L51.5,7 L48.5,7 Z" /> <!-- William Penn Statue -->
+    <path fill="currentColor" d="M47,7 H53 V15 H47 Z" /> <!-- Statue Pedestal -->
+    <path fill="currentColor" d="M44,15 H56 L54,25 H46 Z" /> <!-- Upper Tower Section -->
+    <path fill="currentColor" d="M42,25 H58 V45 H42 Z" /> <!-- Clock Section -->
+    <path fill="currentColor" d="M40,45 H60 V70 H40 Z" /> <!-- Tower Base -->
+    <path fill="currentColor" d="M36,70 H64 V85 H36 Z" /> <!-- Tower Sub-base -->
+    <!-- Main Building -->
+    <path fill="currentColor" d="M5,85 H95 V120 H5 Z" /> <!-- Main Block -->
+    <!-- Side Towers -->
+    <path fill="currentColor" d="M22,70 H28 L25,65 Z M25,65 V85 H25 Z" /> <!-- Left spire -->
+    <path fill="currentColor" d="M72,70 H78 L75,65 Z M75,65 V85 H75 Z" /> <!-- Right spire -->
+    <!-- Foundation -->
+    <path fill="currentColor" d="M0,120 H100 V125 H0 Z" />
+</svg>

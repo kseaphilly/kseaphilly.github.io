@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+    <!-- Liberty Bell Silhouette - Final Refinement -->
+    <!-- Detailed Wooden Yoke with pegs -->
+    <path fill="currentColor" d="M10,24 h80 v10 h-10 v-4 h-60 v4 h-10 z" />
+    <path fill="currentColor" d="M28,16 h6 v8 h-6 v-8 z M47,16 h6 v8 h-6 v-8 z M66,16 h6 v8 h-6 v-8 z" />
+    
+    <!-- Supporting scrolls/brackets -->
+    <path fill="currentColor" d="M38,34 Q40,30 44,34 L46,40 L44,40 Q40,36 38,34 Z" />
+    <path fill="currentColor" d="M62,34 Q60,30 56,34 L54,40 L56,40 Q60,36 62,34 Z" />
+    
+    <!-- Bell Body -->
+    <path fill="currentColor" d="M20,40 c0,0,-2,20,-6,40 c-2,10,0,15,5,15 h62 c5,0,7,-5,5,-15 c-4,-20,-6,-40,-6,-40 z" />
+    <path fill="currentColor" d="M12,94 h76 v4 h-76 z" opacity="0.8" /> <!-- Lip detail -->
+    <path fill="currentColor" d="M48,98 a2,2 0 0,0 4,0 v-4 h-4 z" /> <!-- Clapper -->
+    
+    <!-- Distinctive Crack -->
+    <path d="M48,55 Q52,70 50,85 L52,94" stroke="white" stroke-width="1.5" fill="none" opacity="0.6" />
+</svg>
