@@ -12,23 +12,23 @@
   -->
 
   <!-- ═══ WILLIAM PENN STATUE ═══ -->
-  <!-- Quaker broad-brimmed hat (wide flat brim is his signature) -->
+  <!-- Quaker broad-brimmed hat (scaled down for realism) -->
   <path fill="currentColor" d="
-    M188,24
-    L212,24
-    L214,28
-    L186,28 Z
+    M191,24
+    L209,24
+    L210,27
+    L190,27 Z
   "/>
-  <!-- Hat crown (low rounded dome above brim) -->
+  <!-- Hat crown -->
   <path fill="currentColor" d="
-    M193,18
-    C193,15 197,14 200,14
-    C203,14 207,15 207,18
-    L207,24
-    L193,24 Z
+    M195,19
+    C195,17 197,16 200,16
+    C203,16 205,17 205,19
+    L205,24
+    L195,24 Z
   "/>
-  <!-- Head / face (visible below hat brim) -->
-  <ellipse cx="200" cy="32" rx="4" ry="4" fill="currentColor"/>
+  <!-- Head / face -->
+  <ellipse cx="200" cy="31" rx="3.5" ry="3.5" fill="currentColor"/>
   <!-- Long coat body (Quaker-style) -->
   <path fill="currentColor" d="
     M193,36
@@ -36,15 +36,15 @@
     L212,62
     L188,62 Z
   "/>
-  <!-- Right arm raised eastward: shoulder → elbow → hand (slightly bent) -->
+  <!-- Right arm (scaled down) -->
   <path fill="currentColor" d="
     M206,42
-    L222,42
-    L234,48
-    L236,52
-    L232,54
-    L220,50
-    L206,48 Z
+    L218,42
+    L224,46
+    L225,49
+    L222,50
+    L216,47
+    L206,46 Z
   "/>
   <!-- Left arm at side holding a scroll (Charter of Pennsylvania) -->
   <path fill="currentColor" d="
