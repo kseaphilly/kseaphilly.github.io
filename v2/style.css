@@ -90,40 +90,64 @@ nav {
 }
 .nav-links a:hover { color: var(--w-navy); }
 
-.btn-join, .btn-primary, .btn-outline, .btn-event, .btn-event-gold {
+/* ── Buttons ─────────────────────────────────────────────── */
+.btn-join, .btn-primary, .btn-outline, .btn-event, .btn-event-gold, .btn-gold {
     cursor: pointer;
-    font-weight: 600;
-    font-family: 'Space Grotesk', -apple-system, sans-serif;
+    font-weight: 700;
+    font-family: 'Space Grotesk', sans-serif;
     border: none;
-    text-decoration: none !important;
-}
-.btn-join {
-    background: var(--w-navy);
-    color: var(--w-cream) !important;
-    padding: 10px 18px;
-    font-size: 13px;
-}
-.btn-primary {
-    background: var(--w-navy);
-    color: var(--w-cream) !important;
-    padding: 14px 22px;
+    padding: 12px 24px;
     font-size: 14px;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    text-decoration: none !important;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
+
+/* Primary Button (Navy) */
+.btn-primary, .btn-join, .btn-event {
+    background: var(--w-navy);
+    color: var(--w-cream) !important;
+}
+.btn-primary:hover, .btn-join:hover, .btn-event:hover {
+    background: var(--w-ink);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(46, 58, 148, 0.3);
+}
+
+/* Gold/Highlight Button (Better Contrast) */
+.btn-gold, .btn-event-gold {
+    background: #f2a900;
+    color: var(--w-navy) !important; /* Changed to Navy for high contrast */
+}
+.btn-gold:hover, .btn-event-gold:hover {
+    background: var(--w-navy);
+    color: var(--w-cream) !important;
+    transform: translateY(-2px);
+}
+
+/* Outline Button */
 .btn-outline {
     background: transparent;
     color: var(--w-ink) !important;
     border: 1.5px solid var(--w-ink);
-    padding: 14px 22px;
-    font-size: 14px;
 }
-.btn-event {
-    background: var(--w-navy);
+.btn-outline:hover {
+    background: var(--w-ink);
     color: var(--w-cream) !important;
+    transform: translateY(-2px);
 }
-.btn-event-gold {
-    background: #f2a900;
-    color: white !important;
+
+/* Special Nav Join Button */
+.btn-join {
+    padding: 10px 18px;
+    font-size: 13px;
 }
+
 
 
 /* ── Page Hero (inner pages) ─────────────────────────────── */
