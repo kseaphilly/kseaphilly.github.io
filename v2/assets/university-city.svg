@@ -1,6 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-    <!-- University City / Academic Silhouette -->
-    <path fill="currentColor" d="M10,90 h80 v-40 l-10,-10 v-15 h-10 v10 l-20,-20 l-20,20 v-10 h-10 v15 l-10,10 z" /> <!-- Gothic Collegiate Building -->
-    <path fill="currentColor" d="M45,45 h10 v10 h-10 z" /> <!-- Central Window -->
-    <path fill="currentColor" d="M48,60 h4 v20 h-4 z M40,68 h20 v4 h-20 z" opacity="0.4" /> <!-- Stylized Medical/Research Symbol (Subtle) -->
-</svg>
