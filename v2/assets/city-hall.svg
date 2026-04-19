@@ -29,31 +29,34 @@
   "/>
   <!-- Head / face -->
   <ellipse cx="200" cy="31" rx="3.5" ry="3.5" fill="currentColor"/>
-  <!-- Long coat body (Quaker-style) -->
+  <!-- Neck connecting head to shoulders -->
+  <rect x="198" y="33" width="4" height="4" fill="currentColor"/>
+  <!-- Long coat body (Quaker-style) with shoulder slope -->
   <path fill="currentColor" d="
-    M193,36
-    L207,36
+    M195,36
+    L205,36
+    L210,40
     L212,62
-    L188,62 Z
+    L188,62
+    L190,40 Z
   "/>
-  <!-- Right arm (scaled down) -->
+  <!-- Right arm: outstretched, gentle downward slope, uniform thickness -->
   <path fill="currentColor" d="
-    M206,42
-    L218,42
-    L224,46
-    L225,49
-    L222,50
-    L216,47
-    L206,46 Z
+    M207,41
+    L220,44
+    L225,48
+    L225,51
+    L220,50
+    L207,46 Z
   "/>
   <!-- Left arm at side holding a scroll (Charter of Pennsylvania) -->
   <path fill="currentColor" d="
-    M193,42
-    L186,52
-    L184,62
-    L188,64
-    L192,58
-    L195,48 Z
+    M193,41
+    L189,52
+    L187,62
+    L191,62
+    L193,52
+    L197,41 Z
   "/>
   <!-- Legs -->
   <rect x="195" y="62" width="4" height="8" fill="currentColor"/>
