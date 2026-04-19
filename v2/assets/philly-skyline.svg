@@ -79,8 +79,8 @@
   <!-- Chevron/spire -->
   <path fill="currentColor" d="M538,42 L555,6 L572,42 Z"/>
   <!-- Side spire notches (characteristic stepped top) -->
-  <path fill="currentColor" d="M538,42 L543,32 L548,42 Z" opacity="0.5"/>
-  <path fill="currentColor" d="M562,42 L567,32 L572,42 Z" opacity="0.5"/>
+  <path fill="currentColor" d="M540,42 L543,32 L546,42 Z" opacity="0.85"/>
+  <path fill="currentColor" d="M564,42 L567,32 L570,42 Z" opacity="0.85"/>
 
   <!-- ── TWO LIBERTY PLACE (similar but shorter and slightly thinner) ── -->
   <rect x="578" y="52" width="28" height="60" fill="currentColor"/>

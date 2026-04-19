@@ -72,7 +72,7 @@
     Rendered as white over dark bell for visibility.
   -->
   <path
-    d="M116,202 L120,186 L115,170 L121,155 L117,140"
+    d="M116,202 L120,186 L115,170 L121,155 L117,140 L122,125 L118,110"
     stroke="white"
     stroke-width="2.5"
     fill="none"

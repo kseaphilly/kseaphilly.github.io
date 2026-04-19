@@ -486,9 +486,18 @@ footer a:hover { opacity: 0.7; }
     bottom: -20px;
     right: -10px;
 }
-.philly-landmark-tr {
-    top: -10px;
-    right: 20px;
+.philly-landmark-bl {
+    bottom: -20px;
+    left: -10px;
+}
+.philly-landmark-strip {
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: center bottom;
 }
 /* On dark (navy) backgrounds — invert to white */
 .philly-landmark-light {
@@ -499,10 +508,9 @@ footer a:hover { opacity: 0.7; }
 .philly-landmark-dark {
     opacity: 0.12;
 }
-
-.philly-landmark-uc {
-    bottom: -10px;
-    right: 20px;
+/* Hero-strength modifier — slightly more visible anchor landmarks */
+.philly-landmark-strong {
+    opacity: 0.18;
 }
 
 /* ── Philadelphia Location Concepts ────────────────────────── */
@@ -536,14 +544,6 @@ footer a:hover { opacity: 0.7; }
     user-select: none;
     white-space: nowrap;
     z-index: 0;
-}
-
-.philly-bg-text-vertical {
-    writing-mode: vertical-rl;
-    transform: rotate(180deg);
-    top: 0;
-    left: -2vw;
-    font-size: 15vw;
 }
 
 /* Update section backgrounds to support these layers */

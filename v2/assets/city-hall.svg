@@ -15,7 +15,7 @@
   <!-- Body / coat (tricorn silhouette) -->
   <path fill="currentColor" d="M194,40 L206,40 L210,56 L192,56 Z"/>
   <!-- Right arm outstretched eastward over Center City — Penn's famous pose -->
-  <path fill="currentColor" d="M205,46 L234,51 L233,55 L204,51 Z"/>
+  <path fill="currentColor" d="M205,46 L234,53 L233,57 L204,51 Z"/>
   <!-- Left arm, slightly angled down -->
   <path fill="currentColor" d="M194,47 L184,52 L185,56 L194,51 Z"/>
   <!-- Legs (faint lower extension) -->
