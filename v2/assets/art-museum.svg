@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 120">
+  <g fill="currentColor">
+    <!-- Main Pediment (Triangle) -->
+    <path d="M40,30 l40,-15 l40,15 z"/>
+    
+    <!-- Columns Area -->
+    <rect x="40" y="30" width="80" height="30"/>
+    <!-- Individual Columns (Cutouts) -->
+    <g fill="white" opacity="0.6">
+      <rect x="45" y="32" width="4" height="26"/>
+      <rect x="55" y="32" width="4" height="26"/>
+      <rect x="65" y="32" width="4" height="26"/>
+      <rect x="75" y="32" width="4" height="26"/>
+      <rect x="85" y="32" width="4" height="26"/>
+      <rect x="95" y="32" width="4" height="26"/>
+      <rect x="105" y="32" width="4" height="26"/>
+      <rect x="115" y="32" width="4" height="26"/>
+    </g>
+
+    <!-- Side Wings -->
+    <rect x="10" y="40" width="30" height="20"/>
+    <rect x="120" y="40" width="30" height="20"/>
+    
+    <!-- The Rocky Steps -->
+    <path d="M0,110 h160 v-10 l-10,-10 l-10,-10 l-10,-10 l-10,-10 h-80 l-10,10 l-10,10 l-10,10 l-10,10 z" opacity="0.8"/>
+    <!-- Subtle step lines -->
+    <g fill="white" opacity="0.2">
+      <rect x="20" y="75" width="120" height="1"/>
+      <rect x="10" y="85" width="140" height="1"/>
+      <rect x="5" y="95" width="150" height="1"/>
+    </g>
+  </g>
+</svg>
