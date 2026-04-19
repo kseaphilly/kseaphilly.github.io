@@ -62,22 +62,23 @@ nav {
     gap: 16px;
 }
 
-.nav-logo-link { display: flex; align-items: center; gap: 16px; text-decoration: none; }
-.nav-wordmark { line-height: 1; }
-.nav-wordmark-title {
-    font-size: 19px;
-    font-weight: 700;
-    letter-spacing: -0.3px;
-    color: var(--w-navy);
+.nav-logo-link { 
+    display: flex; 
+    align-items: center; 
+    gap: 16px; 
+    text-decoration: none; 
 }
-.nav-wordmark-sub {
+
+.nav-logo-link::after {
+    content: "PHL";
     font-family: 'JetBrains Mono', monospace;
-    font-size: 11px;
+    font-size: 10px;
+    letter-spacing: 2px;
+    opacity: 0.4;
+    border-left: 1px solid var(--w-ink);
+    padding-left: 12px;
+    margin-left: -4px;
     color: var(--w-ink);
-    opacity: 0.6;
-    margin-top: 4px;
-    letter-spacing: 0.4px;
-    text-transform: uppercase;
 }
 
 .nav-links {
