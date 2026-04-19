@@ -1,94 +1,101 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
   <!--
-    Philadelphia City Hall — refined silhouette
-    More accurate silhouette with:
-      · William Penn wearing broad Quaker hat, long coat, right arm raised
-      · Belfry lantern with visible arched openings (negative space)
-      · Clock tower with round clock-face cutouts
-      · Multi-tiered tower profile (upper shaft, clock, base trumpet)
-      · Mansard roofline ridge across the main building
-      · Four peaked corner pavilions (including side projections)
-      · Main building body with central entrance archway
+    Philadelphia City Hall — Refined Silhouette with Alpha Transparency
+    Aesthetics:
+      · William Penn statue with iconic silhouette
+      · Transparency-based details (Clock, Entrance, Windows) instead of flat colors
+      · High-fidelity masonry details using SVG Masks
   -->
+  <defs>
+    <mask id="cityHallMask">
+      <!-- Opaque Base: Everything white here will be filled with the silhouette color -->
+      <g fill="white">
+        <!-- William Penn Statue -->
+        <path d="M190,14 H210 V16 H190 Z"/> <!-- Hat -->
+        <rect x="197" y="10" width="6" height="4"/>
+        <circle cx="200" cy="19" r="2.5"/>
+        <path d="M193,22 H207 L211,44 H189 Z"/>
+        <path d="M207,26 L221,30 L222,33 L207,31 Z"/>
+        <path d="M193,26 L189,38 L188,42 L192,42 L196,30 Z"/>
 
-  <!-- ═══ WILLIAM PENN STATUE (Premium Silhouette) ═══ -->
-  <path fill="currentColor" d="M190,14 H210 V16 H190 Z"/> <!-- Hat brim -->
-  <rect x="197" y="10" width="6" height="4" fill="currentColor"/> <!-- Hat crown -->
-  <circle cx="200" cy="19" r="2.5" fill="currentColor"/> <!-- Head -->
-  <path fill="currentColor" d="M193,22 H207 L211,44 H189 Z"/> <!-- Body -->
-  <!-- Right arm: outstretched, natural taper -->
-  <path fill="currentColor" d="M207,26 L221,30 L222,33 L207,31 Z"/>
-  <!-- Left arm at side holding scroll (Charter of Pennsylvania) -->
-  <path fill="currentColor" d="M193,26 L189,38 L188,42 L192,42 L196,30 Z"/>
+        <!-- Upper Tower & Lantern -->
+        <rect x="195" y="44" width="10" height="2" rx="1"/>
+        <path d="M194,46 H206 L208,60 H192 Z"/>
+        <path d="M192,60 C192,60 190,75 190,85 C190,95 194,105 200,105 C206,105 210,95 210,85 C210,75 208,60 208,60 Z"/>
+        <path d="M170,120 L186,108 L200,92 L214,108 L230,120 Z"/>
+        <path d="M165,120 L171,112 L177,120 Z"/>
+        <path d="M223,120 L229,112 L235,120 Z"/>
 
-  <!-- ═══ LANTERN & UPPER TOWER ═══ -->
-  <!-- Fluted pedestal -->
-  <rect x="195" y="44" width="10" height="2" fill="currentColor" rx="1"/>
-  <path fill="currentColor" d="M194,46 H206 L208,60 H192 Z"/>
-  <!-- Domed Lantern profile (The 'neck' section) -->
-  <path fill="currentColor" d="M192,60 C192,60 190,75 190,85 C190,95 194,105 200,105 C206,105 210,95 210,85 C210,75 208,60 208,60 Z"/>
+        <!-- Clock Level -->
+        <rect x="165" y="120" width="70" height="4"/>
+        <rect x="170" y="124" width="60" height="40"/>
+
+        <!-- Tower Shaft -->
+        <rect x="165" y="164" width="70" height="4"/>
+        <rect x="170" y="168" width="60" height="36"/>
+        <path d="M160,204 H240 L248,226 H152 Z"/>
+        <rect x="140" y="222" width="120" height="4"/>
+
+        <!-- Mansard Roof & Corner Pavilions -->
+        <path d="M6,226 H394 L394,240 H6 Z"/>
+        <path d="M10,228 V210 C10,195 25,190 35,190 C45,190 60,195 60,210 V228 Z"/>
+        <rect x="34" y="178" width="2" height="12"/>
+        <circle cx="35" cy="178" r="1.5"/>
+        <path d="M340,228 V210 C340,195 355,190 365,190 C375,190 390,195 390,210 V228 Z"/>
+        <rect x="364" y="178" width="2" height="12"/>
+        <circle cx="365" cy="178" r="1.5"/>
+
+        <!-- Main Building Body -->
+        <rect x="6" y="240" width="388" height="50"/>
+        
+        <!-- Ground Level -->
+        <rect x="0" y="290" width="400" height="10"/>
+      </g>
+
+      <!-- Transparency Details: Black = Full transparency (hole), Gray = Semi-transparent -->
+      
+      <!-- 1. FULL HOLES (Transparent) -->
+      <g fill="black">
+        <!-- Clock Face -->
+        <circle cx="200" cy="144" r="11"/>
+        <!-- Main Entrance Archway -->
+        <path d="M188,265 C188,255 194,250 200,250 C206,250 212,255 212,265 V290 H188 Z"/>
+      </g>
+
+      <!-- 2. SEMI-TRANSPARENT ACCENTS (Alpha) -->
+      <g fill="black" opacity="0.3">
+        <!-- Tower Multi-tier Accents -->
+        <rect x="180" y="174" width="6" height="24" rx="1"/>
+        <rect x="197" y="174" width="6" height="24" rx="1"/>
+        <rect x="214" y="174" width="6" height="24" rx="1"/>
+        
+        <!-- Rhythmic Windows -->
+        <g id="windows">
+          <rect x="25" y="248" width="6" height="12"/> <rect x="45" y="248" width="6" height="12"/>
+          <rect x="65" y="248" width="6" height="12"/> <rect x="85" y="248" width="6" height="12"/>
+          <rect x="105" y="248" width="6" height="12"/> <rect x="125" y="248" width="6" height="12"/>
+          <rect x="270" y="248" width="6" height="12"/> <rect x="290" y="248" width="6" height="12"/>
+          <rect x="310" y="248" width="6" height="12"/> <rect x="330" y="248" width="6" height="12"/>
+          <rect x="350" y="248" width="6" height="12"/> <rect x="370" y="248" width="6" height="12"/>
+          
+          <rect x="25" y="270" width="6" height="12"/> <rect x="45" y="270" width="6" height="12"/>
+          <rect x="65" y="270" width="6" height="12"/> <rect x="85" y="270" width="6" height="12"/>
+          <rect x="105" y="270" width="6" height="12"/> <rect x="125" y="270" width="6" height="12"/>
+          <rect x="270" y="270" width="6" height="12"/> <rect x="290" y="270" width="6" height="12"/>
+          <rect x="310" y="270" width="6" height="12"/> <rect x="330" y="270" width="6" height="12"/>
+          <rect x="350" y="270" width="6" height="12"/> <rect x="370" y="270" width="6" height="12"/>
+        </g>
+      </g>
+    </mask>
+  </defs>
+
+  <!-- Final Combined Silhouette -->
+  <rect width="400" height="300" fill="currentColor" mask="url(#cityHallMask)"/>
   
-  <!-- Pointed transition directly above clock (gentler slope, wider base) -->
-  <path fill="currentColor" d="M170,120 L186,108 L200,92 L214,108 L230,120 Z"/>
-  <path fill="currentColor" d="M165,120 L171,112 L177,120 Z"/>
-  <path fill="currentColor" d="M223,120 L229,112 L235,120 Z"/>
-
-  <!-- ═══ CLOCK TOWER LEVEL ═══ -->
-  <rect x="165" y="120" width="70" height="4" fill="currentColor"/>
-  <rect x="170" y="124" width="60" height="40" fill="currentColor"/>
-  <!-- Clock -->
-  <circle cx="200" cy="144" r="11" fill="#fff" opacity="0.98"/>
-  <rect x="199.2" y="135" width="1.6" height="9" fill="currentColor"/>
-  <rect x="200" y="143.2" width="8" height="1.6" fill="currentColor"/>
-  
-  <!-- ═══ SUB-CLOCK SHAFT (The majestic masonry tower) ═══ -->
-  <rect x="165" y="164" width="70" height="4" fill="currentColor"/>
-  <rect x="170" y="168" width="60" height="36" fill="currentColor"/>
-  <!-- Rhythmic accent cutouts indicating tiers -->
-  <g fill="#fff" opacity="0.12">
-    <rect x="180" y="174" width="6" height="24" rx="1"/>
-    <rect x="197" y="174" width="6" height="24" rx="1"/>
-    <rect x="214" y="174" width="6" height="24" rx="1"/>
+  <!-- Solid Detail Layer (Not affected by transparency) -->
+  <g fill="currentColor">
+    <!-- Clock Hands (Visible over the transparent clock face) -->
+    <rect x="199.2" y="135" width="1.6" height="9"/>
+    <rect x="200" y="143.2" width="8" height="1.6"/>
   </g>
-
-  <!-- ═══ TOWER BASE TRUMPET ═══ -->
-  <path fill="currentColor" d="M160,204 H240 L248,226 H152 Z"/>
-  <rect x="140" y="222" width="120" height="4" fill="currentColor"/>
-
-  <!-- ═══ MAIN BUILDING MANSARD ROOF ═══ -->
-  <path fill="currentColor" d="M6,226 H394 L394,240 H6 Z"/>
-
-  <!-- ═══ CORNER PAVILIONS (Bell-shaped mansard) ═══ -->
-  <path fill="currentColor" d="M10,228 V210 C10,195 25,190 35,190 C45,190 60,195 60,210 V228 Z"/>
-  <rect x="34" y="178" width="2" height="12" fill="currentColor"/>
-  <circle cx="35" cy="178" r="1.5" fill="currentColor"/>
-
-  <path fill="currentColor" d="M340,228 V210 C340,195 355,190 365,190 C375,190 390,195 390,210 V228 Z"/>
-  <rect x="364" y="178" width="2" height="12" fill="currentColor"/>
-  <circle cx="365" cy="178" r="1.5" fill="currentColor"/>
-
-  <!-- ═══ MAIN BUILDING BODY & WINDOWS ═══ -->
-  <rect x="6" y="240" width="388" height="50" fill="currentColor"/>
-  
-  <g fill="#fff" opacity="0.1">
-    <rect x="25" y="248" width="6" height="12"/> <rect x="45" y="248" width="6" height="12"/>
-    <rect x="65" y="248" width="6" height="12"/> <rect x="85" y="248" width="6" height="12"/>
-    <rect x="105" y="248" width="6" height="12"/> <rect x="125" y="248" width="6" height="12"/>
-    <rect x="270" y="248" width="6" height="12"/> <rect x="290" y="248" width="6" height="12"/>
-    <rect x="310" y="248" width="6" height="12"/> <rect x="330" y="248" width="6" height="12"/>
-    <rect x="350" y="248" width="6" height="12"/> <rect x="370" y="248" width="6" height="12"/>
-    
-    <rect x="25" y="270" width="6" height="12"/> <rect x="45" y="270" width="6" height="12"/>
-    <rect x="65" y="270" width="6" height="12"/> <rect x="85" y="270" width="6" height="12"/>
-    <rect x="105" y="270" width="6" height="12"/> <rect x="125" y="270" width="6" height="12"/>
-    <rect x="270" y="270" width="6" height="12"/> <rect x="290" y="270" width="6" height="12"/>
-    <rect x="310" y="270" width="6" height="12"/> <rect x="330" y="270" width="6" height="12"/>
-    <rect x="350" y="270" width="6" height="12"/> <rect x="370" y="270" width="6" height="12"/>
-  </g>
-
-  <!-- Central entrance -->
-  <path fill="#fff" d="M188,265 C188,255 194,250 200,250 C206,250 212,255 212,265 V290 H188 Z" opacity="0.8"/>
-
-  <!-- ═══ GROUND ═══ -->
-  <rect x="0" y="290" width="400" height="10" fill="currentColor"/>
 </svg>
