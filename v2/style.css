@@ -355,6 +355,8 @@ nav {
     color: var(--w-cream);
     padding: 60px 40px;
     border-bottom: 1px solid var(--w-ink);
+    position: relative;
+    overflow: hidden;
 }
 
 /* ── CTA Section ─────────────────────────────────────────── */
