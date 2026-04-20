@@ -22,6 +22,9 @@ This document serves as the long-term context buffer for AI agents. It tracks hi
 | 2026.04.18 | **120px Circular Crop** | Enforced for all leadership photos to maintain grid rhythm. |
 | 2026.04.18 | **Strict Facts Policy** | All wiki content must be directly verifiable in source code or by user. No hallucinations. |
 | 2026.04.18 | **Category Contexts** | Added `index.md` and `_context.md` to all entity subfolders for AI steering. |
+| 2026.04.19 | **Button contrast rule** | `.btn-outline` (ink text) is readable only on cream/paper; added `.btn-outline-light` for navy panels to fix near-invisible buttons. |
+| 2026.04.19 | **Strip-mode landmarks use `contain`** | `object-fit: cover` cropped ~78% of skyline content into a gray band; `contain` + strip-specific opacity (0.05–0.06) is the canonical pattern. |
+| 2026.04.19 | **Liberty Bell retired** | Landmark palette reduced to `city-hall`, `art-museum`, `skyline`, `placeholder`. Keeps visual language consistent with the tower-and-statue motif. |
 
 ## Pending Work (Backlog)
 - [ ] **Promotion to Root**: Move contents of `/v2/` to root once final review is complete.

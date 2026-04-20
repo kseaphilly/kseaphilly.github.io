@@ -14,7 +14,7 @@ These rules define how **Concept (Design)** and **Entity (Content)** are combine
   - `role` -> Maps to `.member-role` (rendered in JetBrains Mono).
   - `affiliation` -> Maps to `.member-org` (rendered in Space Grotesk).
   - `visual` -> Maps to `<img> src`.
-- **Layout**: Use the `Leadership Card` spec from `[[Bio-AI-Design-System]]`.
+- **Layout**: Use the `Leadership Card` spec from `[[Design-System]]`.
 
 ## 2. Events Mapping
 - **Source**: `wiki/entities/Events-Log.md` or individual event nodes.

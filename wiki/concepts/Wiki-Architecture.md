@@ -24,7 +24,7 @@ To maintain clarity and scalability, the KSEA Philadelphia LLM-Wiki follows a hi
     - `entities/people/People.md`: Master directory of leaders and members.
     - `entities/events/Events-Log.md`: History and upcoming schedule.
     - `entities/partners/Partners.md`: Hub for APS and regional collaborations.
-    - `concepts/Bio-AI-Design-System.md`: Rules for visual identity.
+    - `concepts/Design-System.md`: Rules for visual identity.
 
 ## Layer 3: The Atomic Records (Data Nodes)
 **Purpose**: Detail-dense facts.

@@ -13,7 +13,7 @@ This directory tracks the technical and operational soul of the KSEA Philadelphi
 - `log.md`: Chronological history of all wiki and codebase shifts.
 - `purpose.md`: Vision and directional intent of the chapter's digital presence.
 - `schema.md`: Structural rules for appending to this knowledge base.
-- `concepts/`: Where "how-to" and design rules live (e.g., `Bio-AI-Design-System.md`).
+- `concepts/`: Where "how-to" and design rules live (e.g., `Design-System.md`).
 - `entities/`: Where "who" and "what" live (e.g., events, people, partners).
 
 ## Design Tokens (Quick Reference)

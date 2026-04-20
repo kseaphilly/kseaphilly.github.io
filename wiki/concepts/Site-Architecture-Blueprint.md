@@ -33,5 +33,5 @@ Functional blocks that must remain stable:
 ## Re-creation Logic
 To re-generate the site in a new style:
 1. Fetch all events from `[[V2-Home-Content]]`.
-2. Apply the layout rules from `[[Bio-AI-Design-System]]` or a new design node.
+2. Apply the layout rules from `[[Design-System]]` or a new design node.
 3. Use the mapping defined in this blueprint to place content in sections.

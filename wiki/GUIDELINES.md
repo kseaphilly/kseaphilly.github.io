@@ -13,7 +13,7 @@ When adding new information:
 
 ## 2. Naming Conventions
 - **Entities**: Use PascalCase or standard names (e.g., `Wookjin-Choi.md`, `NMSC-2026.md`).
-- **Concepts**: Use kebab-case and descriptive titles (e.g., `bio-ai-design-system.md`).
+- **Concepts**: Use kebab-case and descriptive titles (e.g., `design-system.md`).
 - **Filenames**: Always lowercase except for proper nouns, using hyphens instead of spaces.
 
 ## 3. Page Structure (Yaml Frontmatter)

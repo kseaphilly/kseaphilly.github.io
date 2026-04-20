@@ -10,7 +10,7 @@
 - [[log]]: Chronological history of operations.
 
 ## Layer 2: Systems & Concepts (Technical Hubs)
-- [[Bio-AI-Design-System]]: Visual identity, CSS tokens, and component logic.
+- [[Design-System]]: Visual identity, CSS tokens, and component logic.
 - [[Site-Architecture-Blueprint]]: Structural map of the v2 digital ecosystem.
 - [[Template-Mapping-Rules]]: Guidelines for mapping data nodes to HTML.
 - [[Agentic-Workflows]]: Rules for AI-automated site maintenance.

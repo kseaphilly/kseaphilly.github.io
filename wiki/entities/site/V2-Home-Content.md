@@ -25,7 +25,7 @@ Current production text and metadata for the 2026 site.
 - **NRC Recap**: Visual card with "CONCLUDED" status.
 
 ## CSS Dependencies
-Linked Concept: [[Bio-AI-Design-System]]
+Linked Concept: [[Design-System]]
 - Primary Navy: `#2E3A94`
 - Grid: 1.4fr 1fr Hero split.
 - Badges: `JetBrains Mono` text transform uppercase.

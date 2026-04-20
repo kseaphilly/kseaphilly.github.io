@@ -1,10 +1,10 @@
 ---
-title: KSEA Philly v2 Design System
+title: Design System
 type: concept
 date: 2026-04-18
 ---
 
-# KSEA Philly v2 Design System — Complete Spec
+# KSEA Philly Design System — Complete Spec
 
 Source of truth for all v2 HTML pages. Extracted from `KSEA Philadelphia Design/website.jsx`.
 
@@ -151,13 +151,22 @@ Column headers: `font-family: JetBrains Mono; font-size: 11px; letter-spacing: 1
 
 ### 4.10 Buttons
 ```css
-/* Primary */
-.btn-primary { background: var(--w-navy); color: var(--w-cream); padding: 14px 22px; font-size: 14px; font-weight: 600; border: none; cursor: pointer; }
-/* Outline */
-.btn-outline { background: transparent; border: 1.5px solid currentColor; padding: 14px 22px; font-size: 14px; font-weight: 600; cursor: pointer; }
-/* Join (nav) */
-.btn-join { background: var(--w-navy); color: var(--w-cream); padding: 10px 18px; font-size: 13px; font-weight: 600; border: none; cursor: pointer; }
+/* Primary (navy on cream) */
+.btn-primary { background: var(--w-navy); color: var(--w-cream) !important; }
+/* Outline — for LIGHT backgrounds (cream/paper) */
+.btn-outline { background: transparent; color: var(--w-ink) !important; border: 1.5px solid var(--w-ink); }
+/* Outline LIGHT — for DARK backgrounds (navy panels) */
+.btn-outline-light { background: transparent; color: var(--w-cream) !important; border: 1.5px solid var(--w-cream); }
+/* Gold — highlight / KSEA HQ CTA */
+.btn-gold { background: #f2a900; color: var(--w-navy) !important; }
+/* Join (nav) — same as primary, smaller padding */
+.btn-join { background: var(--w-navy); color: var(--w-cream) !important; padding: 10px 18px; font-size: 13px; }
 ```
+
+**Background-contrast rule (critical)**
+- `.btn-outline` uses `--w-ink` (#121212) and is only readable on cream/paper backgrounds.
+- On any navy / dark section (e.g. `background: var(--w-navy)`), use `.btn-outline-light` instead, or the cream-on-navy contrast collapses.
+- `.btn-gold` works on both navy (primary use) and cream; its text is always `--w-navy`.
 
 ---
 
@@ -188,3 +197,69 @@ At `max-width: 1024px`:
 All v2 pages link: `<link rel="stylesheet" href="style.css">`  
 File location: `v2/style.css`  
 Do **not** duplicate styles in `<style>` blocks on individual pages.
+
+---
+
+## 8. Philadelphia Landmark SVG System
+
+Atmospheric background SVG silhouettes that reinforce the Philly identity without competing with content. Active assets: `city-hall.svg`, `art-museum.svg`, `skyline.svg`, `placeholder.svg`.
+
+### 8.1 Base class
+```css
+.philly-landmark { position: absolute; pointer-events: none; user-select: none; }
+```
+
+### 8.2 Position variants
+| Class | Anchor | Typical use |
+| :--- | :--- | :--- |
+| `.philly-landmark-br` | `bottom: -20px; right: -10px` | Hero / navy-panel corner accent |
+| `.philly-landmark-bl` | `bottom: -20px; left: -10px` | Sponsors-section mirror case |
+| `.philly-landmark-strip` | `left:0; right:0; bottom:0; width:100%; height:100%; object-fit: contain; object-position: center bottom` | Divider band between sections (`events.html`), or bottom-of-hero accent (`careers.html`) |
+
+### 8.3 Tone & opacity variants
+| Class | Effect | Opacity |
+| :--- | :--- | :--- |
+| `.philly-landmark-light` | `filter: brightness(0) invert(1)` — forces cream/white | `0.05` (default) |
+| `.philly-landmark-dark` | no filter — uses asset's native ink tone on cream/paper | `0.06` |
+| `.philly-landmark-strong` | Hero-anchor modifier (index/about hero) | `0.08` |
+| `.philly-landmark-strip.philly-landmark-dark` | Strip override | `0.06` |
+| `.philly-landmark-strip.philly-landmark-light` | Strip override | `0.05` |
+
+### 8.4 Deployment map (current)
+| Page | Asset | Variant | Size |
+| :--- | :--- | :--- | :--- |
+| `index.html` hero-right | `city-hall.svg` | `-br -light -strong` | 380px |
+| `index.html` sponsors-section | `art-museum.svg` | `-bl -light` | 200px |
+| `about.html` hero | `city-hall.svg` | `-br -dark -strong` | — |
+| `membership.html` navy CTA | `city-hall.svg` | `-br -light` | 220px |
+| `contact.html` chapter-contact panel | `art-museum.svg` | `-br -light` | 240px |
+| `sponsors.html` bronze section | `city-hall.svg` | `-br -dark` | 260px |
+| `leadership.html` hero | `city-hall.svg` | `-br -dark` | 260px |
+| `yg.html` hero | `art-museum.svg` | `-br -dark` | 220px |
+| `events.html` divider band | `skyline.svg` | `-strip -dark` | 140px |
+| `careers.html` hero bottom | `skyline.svg` | `-strip -dark` | 90px |
+
+### 8.5 Rules when adding a landmark
+1. **Parent must be `position: relative; overflow: hidden`** — hero sections already satisfy this via `.hero, .page-hero { position: relative; overflow: hidden; }`. Non-hero sections need inline `position:relative;overflow:hidden`.
+2. **Match tone to background**: navy/ink background → `-light`; cream/paper background → `-dark`.
+3. **Strip mode only for skyline** — other landmark SVGs have 1:1-ish aspect and will float oddly when `object-fit: contain` leaves large empty areas.
+4. **Never exceed opacity 0.10** in strip mode — detailed SVGs become heavy "gray bands" if too opaque.
+
+---
+
+## 9. Hero Watermark (`.philly-bg-text`)
+
+Very large uppercase word in the page-hero background (e.g. `CAREERS`, `ABOUT`, `MEMBERSHIP`).
+
+```css
+.philly-bg-text {
+  position: absolute; bottom: -0.15em; right: -0.05em;
+  font-family: 'Space Grotesk', sans-serif; font-weight: 800;
+  font-size: 22vw; line-height: 0.8; letter-spacing: -0.05em;
+  color: var(--w-ink); opacity: 0.07;
+  pointer-events: none; user-select: none; white-space: nowrap;
+  z-index: 0;
+}
+```
+
+Opacity set to `0.07` (raised from 0.03) so the page-label reads as an intentional watermark without dominating. Each page may override `font-size` inline (typical 10–22vw) to fit the word's length.
