@@ -2,11 +2,13 @@
 
 A record of significant events and their related logistics.
 
-## Upcoming
-- [[NMSC-2026]]: National Math & Science Competition.
-- [[STEP-UP-2026]]: Entrepreneurship program.
+## Upcoming & Ongoing (2026–2027)
+- [[Joint-Seminar-Series]]: Co-hosted seminar series (Fall kickoff: Sept 10, 2026).
 
-## Archive
+## Archive & Past
+- [[Fall-Membership-Drive-2026]]: Fall Membership Drive & UPenn KoGSA New Student Welcome (Concluded Sept 4, 2026).
+- [[NMSC-2026]]: National Math & Science Competition (Concluded).
+- [[STEP-UP-2026]]: Entrepreneurship program (Cancelled).
 - [[NRC-2026]]: Northeast Regional Conference.
 - [[Symposium-2026]]: Northeastern Symposium.
 

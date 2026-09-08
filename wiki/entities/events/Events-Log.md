@@ -8,16 +8,17 @@ date: 2026-04-18
 
 Complete history and upcoming schedule of the KSEA Philadelphia Chapter.
 
-## 2026 Upcoming
+## 2026–2027 Upcoming & Ongoing
 | Date | Event | Location | Status |
 | :--- | :--- | :--- | :--- |
-| Apr 18 | [[NMSC-2026]] | UPenn (3601 Spruce St) | Registration Open |
-| May 16-17 | [[STEP-UP-2026]] | Philadelphia | Planning |
-| Monthly | [[Joint-Seminar-Series]] | Various Labs | Ongoing |
+| Sep 10 | [[Joint-Seminar-Series]] | UPenn Smilow Center & Levine Hall | Fall Series Kickoff (Semester-based) |
 
-## 2026 Completed
-| Date | Event | Location | Key Highlight |
+## 2026 Completed & Status Changes
+| Date | Event | Location | Status / Key Highlight |
 | :--- | :--- | :--- | :--- |
+| Sep 04 | [[Fall-Membership-Drive-2026]] | UPenn Bodek Lounge | Completed (with KoGSA) |
+| May 16-17 | [[STEP-UP-2026]] | Philadelphia | Cancelled (Did not take place) |
+| Apr 18 | [[NMSC-2026]] | UPenn (3601 Spruce St) | Completed |
 | Mar 14 | [[NRC-2026]] | Fort Lee, NJ | Awarded 4 chapter members |
 | Feb 27 | [[Symposium-2026]] | UPenn Smilow Center | AI, Bio-Science & Eng Convergence |
 

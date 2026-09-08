@@ -11,7 +11,7 @@ Current production text and metadata for the 2026 site.
 ## Visual Metadata
 - **Hero Title**: "KSEA Philadelphia Chapter."
 - **Hero Subtitle**: "Korean-American Scientists & Engineers Association."
-- **Banner Ticker**: NMSC · April 18, 2026 · UPenn
+- **Banner Ticker**: NEXT: Joint Seminar Series · Starts Sept 10 · UPenn Smilow & Levine Hall · Fall Membership Drive Concluded (Sept 4)
 
 ## Functional Map
 ### Active Sliders / Sections
@@ -20,9 +20,9 @@ Current production text and metadata for the 2026 site.
 3. **Pillar 03 (Community)**: Cultural exchange and local chapter growth.
 
 ### Live Event Feed
-- **NMSC 2026**: Flagship / Hero Callout.
-- **Joint Seminars**: Monthly ongoing feed.
-- **NRC Recap**: Visual card with "CONCLUDED" status.
+- **Joint Seminar Series 2026**: Flagship / Hero Callout (Starts Sept 10, 2026).
+- **Fall Membership Drive**: Concluded Sept 4, 2026 at UPenn Bodek Lounge.
+- **NMSC 2026**: Concluded April 18, 2026.
 
 ## CSS Dependencies
 Linked Concept: [[Design-System]]

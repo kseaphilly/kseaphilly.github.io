@@ -16,3 +16,7 @@
 - **Landmarks (strip mode)**: Fixed skyline rendering in strip contexts (`careers.html:46`, `events.html:124`). Changed `.philly-landmark-strip` from `object-fit: cover` to `contain` — cover was cropping ~78% of the 2590×781 skyline viewBox vertically, producing a flat gray band. Added strip-specific opacity pair (`.philly-landmark-strip.philly-landmark-dark 0.06`, `-light 0.05`) distinct from corner-landmark opacities.
 - **Hero watermark**: `.philly-bg-text` opacity raised 0.03 → 0.07 for legibility of big page-label watermarks (ABOUT / LEADERSHIP / CAREERS etc.).
 - **Rename**: `concepts/Bio-AI-Design-System.md` → `concepts/Design-System.md`. The file documents the full v2 visual system (palette, typography, components, landmarks, watermark), not a Bio×AI-specific concept — consistent with the already-established stance that KSEA Philly covers all STEM disciplines. Updated 8 wiki references accordingly.
+
+## 2026-09-08
+- **Event Status**: Updated `STEP-UP-2026.md`, `Events-Log.md`, `Specific-Events.md`, and `index.md` to record that KSEA STEP-UP 2026 was cancelled and did not take place.
+- **Event Planning & Schedule**: Registered `Fall-Membership-Drive-2026` (held September 4, 2026 at UPenn Bodek Lounge, co-hosted with KoGSA, concluded). Updated `Joint-Seminar-Series` with semester-based format (Fall & Spring semesters at UPenn Smilow Center & Levine Hall) kicking off September 10, 2026.

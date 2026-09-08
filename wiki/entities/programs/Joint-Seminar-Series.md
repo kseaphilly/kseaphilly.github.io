@@ -14,9 +14,15 @@ A recurring collaboration between multiple Philadelphia-based organizations.
 - **KITEE**: [[KITEE]]
 - **KKYU**: [[KKYU]]
 
-## Schedule
-- **Frequency**: Monthly (Starting September 2025).
+## Locations
+- **UPenn Smilow Center**
+- **Levine Hall**
+
+## Schedule & Structure
 - **Format**: Hybrid (In-person at local labs + Zoom).
+- **Structure (2026–2027)**: Divided into Fall Semester and Spring Semester series.
+- **Fall 2026 Kickoff**: September 10, 2026.
+- **Initial Run**: Monthly from September 2025 – April 2026.
 
 ## Recent Topics
 - AI-Driven Diagnostics.
