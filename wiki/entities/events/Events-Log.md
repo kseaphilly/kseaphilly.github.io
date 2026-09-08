@@ -12,6 +12,7 @@ Complete history and upcoming schedule of the KSEA Philadelphia Chapter.
 | Date | Event | Location | Status |
 | :--- | :--- | :--- | :--- |
 | Sep 10 | [[Joint-Seminar-Series]] | UPenn Smilow Center 10F | Fall Kickoff #1: Sue Hyon Kim (UPenn Nursing) |
+| Sep 29 | [[NJ-Tech-Webinar-2026]] | Online (Zoom) | KSEA NJ Tech Webinar: Benji Shin (Zenerate) |
 
 ## 2026 Completed & Status Changes
 | Date | Event | Location | Status / Key Highlight |
