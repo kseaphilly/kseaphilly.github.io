@@ -11,7 +11,7 @@ Complete history and upcoming schedule of the KSEA Philadelphia Chapter.
 ## 2026–2027 Upcoming & Ongoing
 | Date | Event | Location | Status |
 | :--- | :--- | :--- | :--- |
-| Sep 10 | [[Joint-Seminar-Series]] | UPenn Smilow Center & Levine Hall | Fall Series Kickoff (Semester-based) |
+| Sep 10 | [[Joint-Seminar-Series]] | UPenn Smilow Center 10F | Fall Kickoff #1: Sue Hyon Kim (UPenn Nursing) |
 
 ## 2026 Completed & Status Changes
 | Date | Event | Location | Status / Key Highlight |

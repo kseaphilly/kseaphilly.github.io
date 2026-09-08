@@ -20,3 +20,4 @@
 ## 2026-09-08
 - **Event Status**: Updated `STEP-UP-2026.md`, `Events-Log.md`, `Specific-Events.md`, and `index.md` to record that KSEA STEP-UP 2026 was cancelled and did not take place.
 - **Event Planning & Schedule**: Registered `Fall-Membership-Drive-2026` (held September 4, 2026 at UPenn Bodek Lounge, co-hosted with KoGSA, concluded). Updated `Joint-Seminar-Series` with semester-based format (Fall & Spring semesters at UPenn Smilow Center & Levine Hall) kicking off September 10, 2026.
+- **Seminar Series #1**: Published details and RSVP for Fall 2026 Kickoff Seminar featuring Sue Hyon Kim (UPenn Nursing) on "LLMs in Liver Transplantation Selection" on September 10, 2026 at Smilow Center 10F. Downloaded flyer asset to `images/events/seminar-series/20260910-seminar.jpg`.
