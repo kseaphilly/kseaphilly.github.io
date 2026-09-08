@@ -8,13 +8,14 @@ date: 2026-04-18
 
 Complete history and upcoming schedule of the KSEA Philadelphia Chapter.
 
-## 2026–2027 Upcoming & Ongoing
+## 2026–2027 Upcoming & Ongoing (FY 2026–2027)
 | Date | Event | Location | Status |
 | :--- | :--- | :--- | :--- |
-| Sep 10 | [[Joint-Seminar-Series]] | UPenn Smilow Center 10F | Fall Kickoff #1: Sue Hyon Kim (UPenn Nursing) |
+| Sep 10 | [[Joint-Seminar-2026-09-10]] | UPenn Smilow Center 10F | Fall Kickoff #1: Sue Hyon Kim (UPenn Nursing) |
 | Sep 29 | [[NJ-Tech-Webinar-2026]] | Online (Zoom) | KSEA NJ Tech Webinar: Benji Shin (Zenerate) |
+| Ongoing | [[Joint-Seminar-Series-2026-2027]] | UPenn Smilow & Levine | Semester-based Series (Fall 2026 & Spring 2027) |
 
-## 2026 Completed & Status Changes
+## 2026 Completed
 | Date | Event | Location | Status / Key Highlight |
 | :--- | :--- | :--- | :--- |
 | Sep 04 | [[Fall-Membership-Drive-2026]] | UPenn Bodek Lounge | Completed (with KoGSA) |
@@ -23,11 +24,9 @@ Complete history and upcoming schedule of the KSEA Philadelphia Chapter.
 | Mar 14 | [[NRC-2026]] | Fort Lee, NJ | Awarded 4 chapter members |
 | Feb 27 | [[Symposium-2026]] | UPenn Smilow Center | AI, Bio-Science & Eng Convergence |
 
-## 2025 Completed
+## 2025–2026 Concluded (FY 2025–2026)
 | Date | Event | Location | Key Highlight |
 | :--- | :--- | :--- | :--- |
-| Sep 06 | Fall Membership Drive | UPenn Bodek Lounge | Co-hosted with KoGSA |
-| Aug 13-17 | UKC 2025 | Chicago, IL | National Conference |
-
-## Recurring
-- **Joint Seminar Series**: September 2025 - Present. Co-hosted by KSEA Philly, PKSA, KITEE, KKYU.
+| Sep 2025 – Apr 2026 | [[Joint-Seminar-Series-2025-2026]] | UPenn Smilow & Levine | Inaugural Monthly Seminar Series |
+| Sep 06, 2025 | Fall Membership Drive | UPenn Bodek Lounge | Inaugural (co-hosted with KoGSA) |
+| Aug 13-17, 2025 | UKC 2025 | Chicago, IL | National Conference |
