@@ -30,5 +30,5 @@
 - **Leadership Appointment**: Appointed S. Sonya Gwak as Executive Director across production pages (`leadership.html`, `v2/leadership.html`) with affiliation set to The Water Center at Penn and profile photo `assets/sonya-gwak.jpg`.
 - **Recruitment Notice**: Removed Executive Director from open position banners in `leadership.html` and `v2/leadership.html`.
 - **Wiki Sync**: Registered entity `S-Sonya-Gwak.md` and updated `Leadership-Page-Content.md`, `People.md`, and `people/index.md`.
-- **Joint Seminar #1 Concluded**: Updated Sept 10 kickoff seminar status to Concluded across production pages (`index.html`, `events.html`, `v2/index.html`, `v2/events.html`). Added 6 on-site event photos (`20260910-seminar-photo1.jpg` ~ `photo6.jpg`) with responsive lightbox viewing and updated ticker across all v2 pages.
+- **Joint Seminar #1 Concluded**: Updated Sept 10 kickoff seminar status to Concluded across production pages (`index.html`, `events.html`, `v2/index.html`, `v2/events.html`). Arranged event photos as compact 140×105px thumbnails (with lightbox zoom) so individual faces are not displayed prominently on the page layout.
 - **Wiki Sync**: Updated `Joint-Seminar-2026-09-10.md` with photo assets and moved to completed table in `Events-Log.md`.
