@@ -23,7 +23,10 @@ This initiative promotes substantive academic exchange, career mentorship, and i
 ### Article 3 (Group Scale & Eligibility)
 1. **Headcount Constraint**: **Minimum 5 to maximum 10 attendees** per session. (Groups exceeding 10 are ineligible to preserve intimate dialogue and prevent conversion into unstructured gatherings).
 2. **Membership Threshold**: **At least 50% of attendees must be active, paid KSEA Philadelphia Chapter members** at the time of application or prior to the meetup date.
-3. **Anti-Monopoly Cap**: To ensure equitable distribution across institutions (UPenn, Drexel, Temple, Jefferson, CHOP, Wistar, and local industry), **any single laboratory or group may receive a maximum of one grant per semester**.
+3. **Individual Member Cap (회원당 학기 1회 수혜 원칙)**: To ensure broad, equitable access and avoid penalizing active members from large research groups, **each active KSEA member may receive coffee chat grant support up to once per semester** (whether as lead organizer or funded attendee). There is no artificial cap per laboratory, enabling peers working under the same PI to organize distinct mentorship sessions with different mentors.
+4. **Non-Member Guest Policy & Conversion Re-eligibility (비회원 게스트 및 정회원 전환 혜택)**:
+   - Non-members may participate as guests under the 50% threshold **up to once as a non-member**.
+   - If a guest subsequently registers as an active, paid KSEA member, **they immediately unlock full membership rights to organize or attend another subsidized coffee chat within the same or subsequent semester**. This provides a natural, high-incentive conversion funnel for non-member recruitment.
 
 ### Article 4 (Mentor Scope & Multi-Tier Cascading Principle)
 1. **Core Principle — Relative Seniority ("Anyone Can Be a Mentor")**: Mentorship in KSEA is open, inclusive, and multi-tiered. **Anyone with relative seniority or advanced domain experience compared to the mentee group qualifies as a mentor**:

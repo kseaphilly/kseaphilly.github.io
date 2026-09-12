@@ -46,6 +46,8 @@
 - **Bilingual English-First Standard (coffee_chat.html)**: Refactored `coffee_chat.html` and `v2/coffee_chat.html` into English-primary default with Korean paired in-place across all headers, summary cards, 5-article operating regulations, and email templates, adhering to KSEA's institutional bilingual standard.
 - **Multi-Tier Cascading Mentorship Standard**: Integrated "Anyone Can Be a Mentor" principle across `coffee_chat.html`, `v2/coffee_chat.html`, and `Coffee-Chat-Grants-2026.md`, formally establishing 3 operational tiers: Graduate Student ➔ Undergrad, Postdoc ➔ Graduate Student, and Faculty/Industry ➔ Postdoc/Junior.
 - **Relative Seniority Principle Refinement**: Clarified the Golden Rule across `coffee_chat.html`, `v2/coffee_chat.html`, and `Coffee-Chat-Grants-2026.md` establishing that any individual with relative seniority or advanced domain experience compared to the mentee cohort qualifies as a mentor.
+- **Individual Member Cap & Guest Conversion Incentive**: Replaced per-lab constraint with individual member cap (1 grant per member per semester) to avoid penalizing large labs. Formalized guest conversion incentive where non-members attending once as guests immediately unlock full member grant eligibility upon registering as active KSEA members.
+
 
 
 
