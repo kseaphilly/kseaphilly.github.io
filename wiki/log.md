@@ -27,6 +27,6 @@
 - **Fiscal Year Card Separation & Seminar Decoupling**: Converted previous fiscal year (FY 2025–2026) events on `index.html` into compact small cards (`.card-sm`), while keeping `events.html` fully detailed. Disentangled the semester-based Joint Seminar Series into distinct event entities: active `Joint-Seminar-Series-2026-2027`, individual kickoff `Joint-Seminar-2026-09-10`, and concluded `Joint-Seminar-Series-2025-2026` with 2025 schedule/collage assets.
 
 ## 2026-09-12
-- **Leadership Appointment**: Appointed S. Sonya Gwak as Executive Director across production pages (`leadership.html`, `v2/leadership.html`) with affiliation set to The Water Center at Penn.
+- **Leadership Appointment**: Appointed S. Sonya Gwak as Executive Director across production pages (`leadership.html`, `v2/leadership.html`) with affiliation set to The Water Center at Penn and profile photo `assets/sonya-gwak.jpg`.
 - **Recruitment Notice**: Removed Executive Director from open position banners in `leadership.html` and `v2/leadership.html`.
 - **Wiki Sync**: Registered entity `S-Sonya-Gwak.md` and updated `Leadership-Page-Content.md`, `People.md`, and `people/index.md`.
