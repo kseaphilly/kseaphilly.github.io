@@ -42,6 +42,8 @@
 - **Coffee Chat Mentor Fast-Track & Pairing**: Integrated expedited pre-approval (Fast-Track) for meetups including chapter member mentors (professors/PIs/industry seniors) and mentor pairing support for junior groups across site cards and wiki spec.
 - **Mentor Coffee Chat Formal Regulations**: Formalized comprehensive 7-article operating regulations in `Coffee-Chat-Grants-2026.md` establishing Fall 2026 as a $500 pilot phase (with Spring 2027 $500 expansion option), incorporating external/international mentor eligibility, enforcing anti-monopoly caps (1 grant/lab/semester), and standardizing pre-approval and disbursement workflows.
 - **Zelle Direct Bank Disbursement**: Updated production event cards and wiki Article 7 designating direct Zelle transfer from the official chapter bank account as the primary, instant, fee-free reimbursement mechanism.
+- **Unlisted Internal Review Deployment (coffee_chat.html)**: Removed Coffee Chat cards and benefits from public pages (`index.html`, `events.html`, `membership.html`) pending chapter executive officer consensus. Created unlisted standalone review page at `coffee_chat.html` (and `v2/coffee_chat.html`) with `robots: noindex, nofollow` for private officer review.
+
 
 
 
