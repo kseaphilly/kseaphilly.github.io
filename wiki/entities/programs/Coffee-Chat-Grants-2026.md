@@ -13,22 +13,28 @@ A chapter-subsidized micro-grant program established by the KSEA Philadelphia Ch
 
 ## Operating Regulations & Guidelines (Fall 2026 Pilot)
 
-### Article 1 (Purpose)
-This initiative promotes substantive academic exchange, career mentorship, and inter-generational community building between early-career researchers and established senior scientists, fostering long-term member retention and organic chapter activation in the Greater Philadelphia region.
+### Article 1 (Purpose & Core Mission)
+1. **General Objective**: This initiative promotes substantive academic exchange, peer mentorship, and inter-generational networking between early-career researchers and established senior scientists, fostering long-term member retention and chapter activation across Greater Philadelphia.
+2. **Primary Operational Paradigm — The Chapter Bridge Model (지부 브릿지 멘토링 모델)**:
+   - The foremost strategic mission of this micro-grant program is to empower **active KSEA members (Lead Organizers)** to act as chapter ambassadors by bridging **active KSEA senior mentors** with **non-member junior peers, labmates, and students**.
+   - By fully funding the coffee chat ($10/person), KSEA provides tangible community value to prospective members, creates an intimate onboarding touchpoint, and naturally inspires non-member participants to register as active KSEA members.
 
 ### Article 2 (Phased Timeline & Budget)
 1. **Pilot Phase (Fall 2026)**: Operates with an initial designated pilot fund of **$500** (covering approximately 50 attendee-sessions on a first-come, first-served basis).
 2. **Review & Expansion (Spring 2027)**: Following evaluation of participant feedback, participation diversity, and conversion metrics, a second allocation of **$500** may be approved for the Spring 2027 semester.
 
-### Article 3 (Group Scale & Eligibility)
+### Article 3 (Group Scale & Eligibility Tracks)
 1. **Headcount Constraint**: **Minimum 5 to maximum 10 attendees** per session. (Groups exceeding 10 are ineligible to preserve intimate dialogue and prevent conversion into unstructured gatherings).
-2. **Membership Threshold & Chapter Senior Mentor Waiver**:
-   - **General Standard**: At least 50% of attendees must be active, paid KSEA Philadelphia Chapter members at the time of application or prior to the meetup date.
-   - **Chapter Senior Mentor Exemption (챕터 시니어 멘토 특례)**: When an active KSEA Philadelphia senior member (faculty professor, principal investigator, corporate senior leader, or chapter officer/councillor) serves as the mentor, **the 50% member threshold may be waived or relaxed upon Chapter Executive approval**. This exception is designed to empower senior chapter members to conduct outreach and onboard prospective members.
-3. **Individual Member Cap (회원당 학기 1회 수혜 원칙)**: To ensure broad, equitable access and avoid penalizing active members from large research groups, **each active KSEA member may receive coffee chat grant support up to once per semester** (whether as lead organizer or funded attendee). There is no artificial cap per laboratory, enabling peers working under the same PI to organize distinct mentorship sessions with different mentors.
-4. **Non-Member Guest Policy & Conversion Re-eligibility (비회원 게스트 및 정회원 전환 혜택)**:
-   - Non-members may participate as guests under the 50% threshold **up to once as a non-member**.
-   - If a guest subsequently registers as an active, paid KSEA member, **they immediately unlock full membership rights to organize or attend another subsidized coffee chat within the same or subsequent semester**. This provides a natural, high-incentive conversion funnel for non-member recruitment.
+2. **Track 1: Chapter Bridge Model (지부 브릿지 모델 · 최우선 지원 트랙)**:
+   - **Structure**: 1 Active KSEA Member (Lead Organizer) + 1 Active KSEA Senior Member (Mentor) + Non-Member Mentees (3 to 8 prospective members).
+   - **Full Ratio Waiver**: **The 50% member threshold is 100% waived for Track 1.** All non-member attendees are fully subsidized ($10/person) from chapter funds to drive community outreach and membership conversion.
+3. **Track 2: General & External Mentor Track (일반 및 외부 멘토 트랙)**:
+   - **Structure**: Peer-to-peer student/postdoc study circles or sessions inviting external guest mentors (non-KSEA industry leaders or international PIs).
+   - **Membership Threshold**: **At least 50% of attendees must be active, paid KSEA members** at the time of application.
+4. **Individual Member Cap (회원당 학기 1회 수혜 원칙)**: To ensure broad, equitable access across the entire membership base, **each active KSEA member may receive coffee chat grant support up to once per semester** (whether as lead organizer or funded attendee). There is no artificial cap per laboratory, enabling peers working under the same PI to organize distinct mentorship circles with different mentors.
+5. **Non-Member Guest Policy & Conversion Re-eligibility (비회원 게스트 및 정회원 전환 혜택)**:
+   - Non-members may participate as guests in subsidized sessions **up to once as a non-member**.
+   - If a guest subsequently registers as an active, paid KSEA member, **they immediately unlock full membership rights to organize or attend another subsidized coffee chat within the same or subsequent semester**, completing the member acquisition flywheel.
 
 ### Article 4 (Mentor Scope & Multi-Tier Cascading Principle)
 1. **Core Principle — Relative Seniority ("Anyone Can Be a Mentor")**: Mentorship in KSEA is open, inclusive, and multi-tiered. **Anyone with relative seniority or advanced domain experience compared to the mentee group qualifies as a mentor**:
