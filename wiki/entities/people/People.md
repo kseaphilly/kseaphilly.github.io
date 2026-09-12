@@ -8,6 +8,7 @@ type: entity
 ## Officers
 - [[Dr-Wookjin-Choi]] (President)
 - [[Su-Chin-Heo]] (Vice President)
+- [[S-Sonya-Gwak]] (Executive Director)
 - **Hyunmin Cho** (Membership Director)
 - **Wookjae Lee** (Former President / Support)
 

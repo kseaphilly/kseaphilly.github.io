@@ -10,8 +10,9 @@ date: 2026-04-18
 The core team managing daily operations.
 - **President**: [[Dr-Wookjin-Choi]]
 - **Vice President**: [[Su-Chin-Heo]]
+- **Executive Director**: [[S-Sonya-Gwak]]
 - **Membership Director**: [[Hyunmin-Cho]]
-- **Open Positions**: Executive Director, Finance Director, General Director.
+- **Open Positions**: Finance Director, General Director.
 
 ## Councilors
 Liaisons from local scholarship and student associations.
@@ -22,4 +23,4 @@ Liaisons from local scholarship and student associations.
 - **Status**: Currently recruiting auditors to oversee chapter finances and governance.
 
 ## Recruitment Message
-KSEA Philadelphia is actively recruiting for Executive Director, Finance Director, General Director, and Auditors. Open to Postdocs, Senior PhD Students, and Early Career Professionals.
+KSEA Philadelphia is actively recruiting for Finance Director, General Director, and Auditors. Open to Postdocs, Senior PhD Students, and Early Career Professionals.

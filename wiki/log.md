@@ -25,3 +25,8 @@
 - **KSEA NJ Tech Webinar**: Added cross-promoted Tech Webinar featuring Benji Shin (CEO, Zenerate) on "AI in Architecture & Real Estate" (Sept 29, 2026) with Zoom link to root `index.html`, root `events.html`, and registered `NJ-Tech-Webinar-2026.md`.
 - **Card Ordering**: Reordered root `index.html` event cards so upcoming events (Joint Seminar #1, KSEA NJ Tech Webinar) take priority at the top, moving concluded 2026 Election Results card down after NMSC 2026 in reverse chronological order.
 - **Fiscal Year Card Separation & Seminar Decoupling**: Converted previous fiscal year (FY 2025–2026) events on `index.html` into compact small cards (`.card-sm`), while keeping `events.html` fully detailed. Disentangled the semester-based Joint Seminar Series into distinct event entities: active `Joint-Seminar-Series-2026-2027`, individual kickoff `Joint-Seminar-2026-09-10`, and concluded `Joint-Seminar-Series-2025-2026` with 2025 schedule/collage assets.
+
+## 2026-09-12
+- **Leadership Appointment**: Appointed S. Sonya Gwak as Executive Director across production pages (`leadership.html`, `v2/leadership.html`) with affiliation left omitted as requested.
+- **Recruitment Notice**: Removed Executive Director from open position banners in `leadership.html` and `v2/leadership.html`.
+- **Wiki Sync**: Registered entity `S-Sonya-Gwak.md` and updated `Leadership-Page-Content.md`, `People.md`, and `people/index.md`.

@@ -10,6 +10,7 @@ This directory contains records for all chapter leaders, councilors, and award w
 ## Primary Officers
 - [[Dr-Wookjin-Choi]] (President)
 - [[Su-Chin-Heo]] (Vice President)
+- [[S-Sonya-Gwak]] (Executive Director)
 - [[Hyunmin-Cho]] (Membership Director)
 
 ## Regional Councilors
