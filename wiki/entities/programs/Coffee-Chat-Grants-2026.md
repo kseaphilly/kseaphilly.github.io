@@ -18,7 +18,10 @@ A chapter-subsidized micro-grant initiative launched by the KSEA Philadelphia Ch
 - **Group Size**: 5 to 10 participants (small group constraint to ensure intimate, high-quality dialogue).
 - **Membership Requirement**: At least 50% of attendees must be active, paid KSEA Philadelphia Chapter members.
 - **Subsidy Rate**: **$10 per person** (up to $50–$100 reimbursement per meetup for coffee and pastries).
+- **Mentor Fast-Track**: Meetups that include a verified KSEA Philadelphia Chapter member serving as a senior mentor (faculty professor, PI, or senior corporate scientist) receive **immediate expedited pre-approval (Fast-Track)**.
+- **Mentor Matching Assistance**: Student or postdoc groups seeking career/academic mentors may request mentor pairing directly in their initial application, and chapter officers will facilitate introductions.
 - **Target Venues**: University City (UPenn, Drexel), Center City (Thomas Jefferson, Temple), and Greater Philadelphia suburban hubs (King of Prussia / Fort Washington).
+
 
 ## Application & Reimbursement Flow
 1. **Pre-Approval**: Host submits meetup proposal via email (`ksea.philly.chapter@gmail.com`) including meetup title, topic, estimated date/time/location, attendee roster with KSEA membership status, and projected headcount.
