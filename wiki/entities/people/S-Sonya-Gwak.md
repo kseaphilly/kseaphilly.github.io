@@ -8,5 +8,5 @@ affiliation: The Water Center at Penn
 # S. Sonya Gwak
 
 - **Role**: Executive Director, KSEA Philadelphia Chapter.
-- **Affiliation**: The Water Center at Penn.
+- **Affiliation**: The Water Center at Penn (Senior Advisor).
 - **Visual**: `assets/placeholder.svg`.
