@@ -47,6 +47,8 @@
 - **Multi-Tier Cascading Mentorship Standard**: Integrated "Anyone Can Be a Mentor" principle across `coffee_chat.html`, `v2/coffee_chat.html`, and `Coffee-Chat-Grants-2026.md`, formally establishing 3 operational tiers: Graduate Student ➔ Undergrad, Postdoc ➔ Graduate Student, and Faculty/Industry ➔ Postdoc/Junior.
 - **Relative Seniority Principle Refinement**: Clarified the Golden Rule across `coffee_chat.html`, `v2/coffee_chat.html`, and `Coffee-Chat-Grants-2026.md` establishing that any individual with relative seniority or advanced domain experience compared to the mentee cohort qualifies as a mentor.
 - **Individual Member Cap & Guest Conversion Incentive**: Replaced per-lab constraint with individual member cap (1 grant per member per semester) to avoid penalizing large labs. Formalized guest conversion incentive where non-members attending once as guests immediately unlock full member grant eligibility upon registering as active KSEA members.
+- **Chapter Senior Mentor Threshold Waiver**: Established executive waiver policy across `coffee_chat.html`, `v2/coffee_chat.html`, and `Coffee-Chat-Grants-2026.md` exempting sessions mentored by active KSEA Philadelphia Chapter senior members (professors, industry leaders, officers) from the strict 50% member ratio to empower targeted new member outreach and onboarding.
+
 
 
 

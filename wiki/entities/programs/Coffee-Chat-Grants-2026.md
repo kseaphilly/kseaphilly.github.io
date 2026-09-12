@@ -22,7 +22,9 @@ This initiative promotes substantive academic exchange, career mentorship, and i
 
 ### Article 3 (Group Scale & Eligibility)
 1. **Headcount Constraint**: **Minimum 5 to maximum 10 attendees** per session. (Groups exceeding 10 are ineligible to preserve intimate dialogue and prevent conversion into unstructured gatherings).
-2. **Membership Threshold**: **At least 50% of attendees must be active, paid KSEA Philadelphia Chapter members** at the time of application or prior to the meetup date.
+2. **Membership Threshold & Chapter Senior Mentor Waiver**:
+   - **General Standard**: At least 50% of attendees must be active, paid KSEA Philadelphia Chapter members at the time of application or prior to the meetup date.
+   - **Chapter Senior Mentor Exemption (챕터 시니어 멘토 특례)**: When an active KSEA Philadelphia senior member (faculty professor, principal investigator, corporate senior leader, or chapter officer/councillor) serves as the mentor, **the 50% member threshold may be waived or relaxed upon Chapter Executive approval**. This exception is designed to empower senior chapter members to conduct outreach and onboard prospective members.
 3. **Individual Member Cap (회원당 학기 1회 수혜 원칙)**: To ensure broad, equitable access and avoid penalizing active members from large research groups, **each active KSEA member may receive coffee chat grant support up to once per semester** (whether as lead organizer or funded attendee). There is no artificial cap per laboratory, enabling peers working under the same PI to organize distinct mentorship sessions with different mentors.
 4. **Non-Member Guest Policy & Conversion Re-eligibility (비회원 게스트 및 정회원 전환 혜택)**:
    - Non-members may participate as guests under the 50% threshold **up to once as a non-member**.
@@ -33,7 +35,7 @@ This initiative promotes substantive academic exchange, career mentorship, and i
    - **Graduate Students ➔ Undergraduates**: Laboratory orientation, graduate school admissions, SOP preparation, coursework.
    - **Postdoctoral Scholars ➔ Graduate Students**: Qualifying exams, thesis defense, high-impact paper publications, fellowship applications.
    - **Faculty Professors & Senior Industry Scientists ➔ Postdocs & Students**: Faculty job market, industry R&D transition, grant proposals (K99/R00), immigration/visa navigation (NIW, O-1).
-2. **Chapter Senior Mentors (Fast-Track)**: Active KSEA Philadelphia members serving as mentors receive **immediate priority pre-approval**.
+2. **Chapter Senior Mentors (Fast-Track & Threshold Exemption)**: Active KSEA Philadelphia members serving as mentors receive **immediate priority pre-approval**, and their sessions are eligible for the **50% membership threshold waiver** to support chapter recruitment.
 3. **External Mentors (Fully Supported)**:
    - Regional industry professionals (e.g., GSK, Merck, J&J, Spark Therapeutics, Incyte).
    - University academic advisors and faculty mentors (including non-Korean / international PIs).
