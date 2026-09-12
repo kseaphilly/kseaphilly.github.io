@@ -26,7 +26,7 @@ This initiative promotes substantive academic exchange, career mentorship, and i
 3. **Anti-Monopoly Cap**: To ensure equitable distribution across institutions (UPenn, Drexel, Temple, Jefferson, CHOP, Wistar, and local industry), **any single laboratory or group may receive a maximum of one grant per semester**.
 
 ### Article 4 (Mentor Scope & Multi-Tier Cascading Principle)
-1. **Multi-Tier Mentorship Principle ("Anyone Can Be a Mentor")**: Mentorship in KSEA is open, inclusive, and multi-tiered. Anyone with relative experience may serve as a mentor relative to the attendee group:
+1. **Core Principle — Relative Seniority ("Anyone Can Be a Mentor")**: Mentorship in KSEA is open, inclusive, and multi-tiered. **Anyone with relative seniority or advanced domain experience compared to the mentee group qualifies as a mentor**:
    - **Graduate Students ➔ Undergraduates**: Laboratory orientation, graduate school admissions, SOP preparation, coursework.
    - **Postdoctoral Scholars ➔ Graduate Students**: Qualifying exams, thesis defense, high-impact paper publications, fellowship applications.
    - **Faculty Professors & Senior Industry Scientists ➔ Postdocs & Students**: Faculty job market, industry R&D transition, grant proposals (K99/R00), immigration/visa navigation (NIW, O-1).
