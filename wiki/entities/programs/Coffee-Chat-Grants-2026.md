@@ -25,13 +25,18 @@ This initiative promotes substantive academic exchange, career mentorship, and i
 2. **Membership Threshold**: **At least 50% of attendees must be active, paid KSEA Philadelphia Chapter members** at the time of application or prior to the meetup date.
 3. **Anti-Monopoly Cap**: To ensure equitable distribution across institutions (UPenn, Drexel, Temple, Jefferson, CHOP, Wistar, and local industry), **any single laboratory or group may receive a maximum of one grant per semester**.
 
-### Article 4 (Mentor Qualifications & Scope)
-1. **Chapter Senior Mentors**: Active KSEA Philadelphia members who are faculty professors, PIs, or senior corporate researchers/directors.
-2. **External Mentors (Fully Supported)**:
+### Article 4 (Mentor Scope & Multi-Tier Cascading Principle)
+1. **Multi-Tier Mentorship Principle ("Anyone Can Be a Mentor")**: Mentorship in KSEA is open, inclusive, and multi-tiered. Anyone with relative experience may serve as a mentor relative to the attendee group:
+   - **Graduate Students ➔ Undergraduates**: Laboratory orientation, graduate school admissions, SOP preparation, coursework.
+   - **Postdoctoral Scholars ➔ Graduate Students**: Qualifying exams, thesis defense, high-impact paper publications, fellowship applications.
+   - **Faculty Professors & Senior Industry Scientists ➔ Postdocs & Students**: Faculty job market, industry R&D transition, grant proposals (K99/R00), immigration/visa navigation (NIW, O-1).
+2. **Chapter Senior Mentors (Fast-Track)**: Active KSEA Philadelphia members serving as mentors receive **immediate priority pre-approval**.
+3. **External Mentors (Fully Supported)**:
    - Regional industry professionals (e.g., GSK, Merck, J&J, Spark Therapeutics, Incyte).
    - University academic advisors and faculty mentors (including non-Korean / international PIs).
    - Mentors from neighboring KSEA chapters.
    - *Note*: As long as the 50% chapter membership ratio across the total attendee group is satisfied, external mentors are fully eligible, with their refreshments subsidized under the $10/person allocation.
+
 
 ### Article 5 (Approval Pathways & Matching)
 1. **Fast-Track (Expedited Pre-Approval)**: Meetups featuring an active KSEA Philadelphia member as the mentor receive **immediate priority pre-approval**.

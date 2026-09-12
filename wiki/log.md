@@ -44,6 +44,8 @@
 - **Zelle Direct Bank Disbursement**: Updated production event cards and wiki Article 7 designating direct Zelle transfer from the official chapter bank account as the primary, instant, fee-free reimbursement mechanism.
 - **Unlisted Internal Review Deployment (coffee_chat.html)**: Removed Coffee Chat cards and benefits from public pages (`index.html`, `events.html`, `membership.html`) pending chapter executive officer consensus. Created unlisted standalone review page at `coffee_chat.html` (and `v2/coffee_chat.html`) with `robots: noindex, nofollow` for private officer review.
 - **Bilingual English-First Standard (coffee_chat.html)**: Refactored `coffee_chat.html` and `v2/coffee_chat.html` into English-primary default with Korean paired in-place across all headers, summary cards, 5-article operating regulations, and email templates, adhering to KSEA's institutional bilingual standard.
+- **Multi-Tier Cascading Mentorship Standard**: Integrated "Anyone Can Be a Mentor" principle across `coffee_chat.html`, `v2/coffee_chat.html`, and `Coffee-Chat-Grants-2026.md`, formally establishing 3 operational tiers: Graduate Student ➔ Undergrad, Postdoc ➔ Graduate Student, and Faculty/Industry ➔ Postdoc/Junior.
+
 
 
 
