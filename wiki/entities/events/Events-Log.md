@@ -11,8 +11,11 @@ Complete history and upcoming schedule of the KSEA Philadelphia Chapter.
 ## 2026–2027 Upcoming & Ongoing (FY 2026–2027)
 | Date | Event | Location | Status |
 | :--- | :--- | :--- | :--- |
-| Sep 29 | [[NJ-Tech-Webinar-2026]] | Online (Zoom) | KSEA NJ Tech Webinar: Benji Shin (Zenerate) |
-| Ongoing | [[Joint-Seminar-Series-2026-2027]] | UPenn Smilow & Levine | Semester-based Series (Fall 2026 & Spring 2027) |
+| Sep 29, 2026 | [[NJ-Tech-Webinar-2026]] | Online (Zoom) | KSEA NJ Tech Webinar: Benji Shin (Zenerate) |
+| Ongoing | [[Joint-Seminar-Series-2026-2027]] | UPenn Smilow & Levine | Semester-based Series (Bi-weekly Thursdays at 6 PM) |
+| Dec 2026 | End-of-Year Party | Philadelphia | Annual Year-End Celebration & Networking |
+| Jan–Feb 2027 | Chapter Symposium 2027 | Greater Philadelphia | Annual Multidisciplinary Research Symposium |
+| Apr 2027 | NRC 2027 (Northeast Regional Conference) | Regional | 36th NRC with NY & NJ Chapters |
 
 ## 2026 Completed
 | Date | Event | Location | Status / Key Highlight |
