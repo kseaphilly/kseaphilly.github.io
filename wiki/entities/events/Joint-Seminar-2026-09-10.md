@@ -22,6 +22,8 @@ Individual kickoff seminar event for the Fall 2026 semester series. Successfully
   - `images/events/seminar-series/20260910-seminar-photo2.jpg`
   - `images/events/seminar-series/20260910-seminar-photo3.jpg`
   - `images/events/seminar-series/20260910-seminar-photo4.jpg`
+  - `images/events/seminar-series/20260910-seminar-photo5.jpg`
+  - `images/events/seminar-series/20260910-seminar-photo6.jpg`
 
 ## Relations
 - Series: [[Joint-Seminar-Series-2026-2027]]
