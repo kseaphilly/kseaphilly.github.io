@@ -11,13 +11,13 @@ Complete history and upcoming schedule of the KSEA Philadelphia Chapter.
 ## 2026–2027 Upcoming & Ongoing (FY 2026–2027)
 | Date | Event | Location | Status |
 | :--- | :--- | :--- | :--- |
-| Sep 10 | [[Joint-Seminar-2026-09-10]] | UPenn Smilow Center 10F | Fall Kickoff #1: Sue Hyon Kim (UPenn Nursing) |
 | Sep 29 | [[NJ-Tech-Webinar-2026]] | Online (Zoom) | KSEA NJ Tech Webinar: Benji Shin (Zenerate) |
 | Ongoing | [[Joint-Seminar-Series-2026-2027]] | UPenn Smilow & Levine | Semester-based Series (Fall 2026 & Spring 2027) |
 
 ## 2026 Completed
 | Date | Event | Location | Status / Key Highlight |
 | :--- | :--- | :--- | :--- |
+| Sep 10 | [[Joint-Seminar-2026-09-10]] | UPenn Smilow Center 10F | Completed (Fall Kickoff #1: Sue Hyon Kim) |
 | Sep 04 | [[Fall-Membership-Drive-2026]] | UPenn Bodek Lounge | Completed (with KoGSA) |
 | May 16-17 | [[STEP-UP-2026]] | Philadelphia | Cancelled (Did not take place) |
 | Apr 18 | [[NMSC-2026]] | UPenn (3601 Spruce St) | Completed |
