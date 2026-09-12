@@ -38,4 +38,6 @@
 - **Canonical Address & Footer Alignment**: Reinforced official domain `philly.ksea.org` across all page footers in both root and `v2/`.
 - **Search Engine Discovery**: Deployed `robots.txt` and updated `sitemap.xml` with 2026-09-12 modification timestamps, adding `membership_instruction.html` and `nmsc.html`.
 - **Bilingual In-Place Membership Pages**: Refactored `membership.html`, `membership_instruction.html`, `v2/membership.html`, and `v2/membership_instruction.html` to place Korean as the primary language with English sub-captions inside the exact same container/card, removing separate fragmentation and maximizing readability for Korean members.
+- **Coffee Chat Micro-Grants Program (2026–2027)**: Launched $500 chapter-subsidized micro-grant initiative ($10/person, capped at 5–10 members, max $100/meetup) to promote intimate networking across Bio/Pharma, AI/Tech, and Career tracks. Published featured announcement cards across `index.html`, `events.html`, `membership.html` (both root and `v2/`), registered `Coffee-Chat-Grants-2026.md` in wiki.
+
 
