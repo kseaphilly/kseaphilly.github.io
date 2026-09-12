@@ -1,18 +1,19 @@
 ---
-title: Coffee Chat Micro-Grants 2026–2027
+title: Mentor Coffee Chat Micro-Grants 2026–2027
 type: entity
 category: program
-tags: [program, networking, grant, micro-community, membership]
+tags: [program, networking, mentorship, grant, micro-community, membership]
 ---
 
-# Coffee Chat Micro-Grants (2026–2027)
+# Mentor Coffee Chat Micro-Grants (2026–2027)
 
-A chapter-subsidized micro-grant initiative launched by the KSEA Philadelphia Chapter to foster intimate peer networking, academic collaboration, and career development across local universities and research hubs.
+A chapter-subsidized micro-grant initiative launched by the KSEA Philadelphia Chapter to connect students, postdocs, and junior researchers with senior mentors (faculty professors, PIs, and corporate industry scientists) over coffee and pastries.
 
 ## Overview
-- **Slogan**: "필라델피아 챕터의 활성화를 위한 새로운 시작에 함께하세요!"
-- **Goal**: Chapter activation and close member networking through small-group meetups.
+- **Slogan**: "시니어 멘토와 함께하는 연구·커리어 네트워킹! (1인당 $10 지원)"
+- **Goal**: Facilitate intimate, impactful mentoring and career navigation between experienced Korean-American scientists and early-career researchers in Greater Philadelphia.
 - **Total Budget**: $500 (covers approximately 50 attendee-sessions on a first-come, first-served basis).
+
 
 ## Grant Structure & Criteria
 - **Group Size**: 5 to 10 participants (small group constraint to ensure intimate, high-quality dialogue).
