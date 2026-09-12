@@ -40,6 +40,8 @@
 - **Bilingual In-Place Membership Pages**: Refactored `membership.html`, `membership_instruction.html`, `v2/membership.html`, and `v2/membership_instruction.html` to place Korean as the primary language with English sub-captions inside the exact same container/card, removing separate fragmentation and maximizing readability for Korean members.
 - **Coffee Chat Micro-Grants Program (2026–2027)**: Launched $500 chapter-subsidized micro-grant initiative ($10/person, capped at 5–10 members, max $100/meetup) to promote intimate networking across Bio/Pharma, AI/Tech, and Career tracks. Published featured announcement cards across `index.html`, `events.html`, `membership.html` (both root and `v2/`), registered `Coffee-Chat-Grants-2026.md` in wiki.
 - **Coffee Chat Mentor Fast-Track & Pairing**: Integrated expedited pre-approval (Fast-Track) for meetups including chapter member mentors (professors/PIs/industry seniors) and mentor pairing support for junior groups across site cards and wiki spec.
+- **Mentor Coffee Chat Formal Regulations**: Formalized comprehensive 7-article operating regulations in `Coffee-Chat-Grants-2026.md` establishing Fall 2026 as a $500 pilot phase (with Spring 2027 $500 expansion option), incorporating external/international mentor eligibility, enforcing anti-monopoly caps (1 grant/lab/semester), and standardizing pre-approval and disbursement workflows.
+
 
 
 
