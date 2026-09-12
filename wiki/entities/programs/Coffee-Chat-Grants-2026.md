@@ -54,8 +54,8 @@ This initiative promotes substantive academic exchange, career mentorship, and i
 3. **Documentation Submission**: Within 7 calendar days after the meetup, the organizer submits:
    - **One clear group photo showing all attendees together**.
    - **Itemized sales receipt** showing purchased items and timestamp.
-   - Payment destination (Zelle, Venmo, or check payee information).
-4. **Disbursement**: Chapter treasurer executes reimbursement within 5 business days of document verification.
+   - **Payment destination**: **Zelle account information** (email or phone number enrolled in Zelle) for direct transfer from the official chapter bank account. (Check issuance available only if Zelle is unavailable).
+4. **Disbursement**: Chapter treasurer executes direct reimbursement via Zelle from the official chapter bank account within 3 to 5 business days of document verification.
 
 ---
 
