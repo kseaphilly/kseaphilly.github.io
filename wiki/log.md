@@ -37,3 +37,5 @@
 - **Annual Milestones Roadmap (2026–2027)**: Added roadmap cards to `events.html` and `v2/events.html` for December 2026 End-of-Year Party, Late Jan/Early Feb 2027 Chapter Symposium, and Mid/Late April 2027 NRC, along with Chapter Council recruitment CTA. Synchronized `Events-Log.md`.
 - **Canonical Address & Footer Alignment**: Reinforced official domain `philly.ksea.org` across all page footers in both root and `v2/`.
 - **Search Engine Discovery**: Deployed `robots.txt` and updated `sitemap.xml` with 2026-09-12 modification timestamps, adding `membership_instruction.html` and `nmsc.html`.
+- **Bilingual In-Place Membership Pages**: Refactored `membership.html`, `membership_instruction.html`, `v2/membership.html`, and `v2/membership_instruction.html` to place Korean as the primary language with English sub-captions inside the exact same container/card, removing separate fragmentation and maximizing readability for Korean members.
+
