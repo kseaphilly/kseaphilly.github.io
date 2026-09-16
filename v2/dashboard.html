@@ -131,7 +131,7 @@ body {
 
 .status-row, .bar-row {
   display: grid;
-  grid-template-columns: 160px 1fr 64px;
+  grid-template-columns: 150px 1fr 90px;
   gap: 14px;
   align-items: center;
   margin: 14px 0;
@@ -188,19 +188,6 @@ body {
   margin-right: 8px;
 }
 
-table { width: 100%; border-collapse: collapse; font-size: 14px; }
-th {
-  text-align: left;
-  font-family: 'JetBrains Mono', monospace;
-  color: var(--muted);
-  font-size: 11px;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  border-bottom: 1px solid var(--ink);
-  padding: 10px 8px;
-}
-td { padding: 12px 8px; border-bottom: 1px dashed var(--line); }
-td.num { text-align: right; font-family: 'JetBrains Mono', monospace; font-weight: 600; }
 .tag-chip {
   display: inline-block;
   padding: 3px 10px;
@@ -249,60 +236,85 @@ td.num { text-align: right; font-family: 'JetBrains Mono', monospace; font-weigh
     <article class="card kpi">
       <div class="label">Active Members</div>
       <div class="num" style="color: var(--teal)">76</div>
-      <div class="note">71 term members + 5 lifetime members</div>
+      <div class="note">71 term + 5 lifetime members</div>
     </article>
     <article class="card kpi">
-      <div class="label">Voting Members (2-Yr Active)</div>
+      <div class="label">Voting Qualification Pool</div>
       <div class="num" style="color: var(--navy)">106</div>
-      <div class="note">Active, expired &amp; lifetime member records</div>
+      <div class="note">Active in last 2 yrs (71 term + 30 exp + 5 life)</div>
     </article>
     <article class="card kpi">
-      <div class="label">Expired Members</div>
+      <div class="label">Expired Members (2-Yr)</div>
       <div class="num" style="color: var(--red)">30</div>
       <div class="note">Renewal &amp; re-engagement target pool</div>
     </article>
     <article class="card kpi">
       <div class="label">Incomplete Registrations</div>
       <div class="num" style="color: var(--orange)">42</div>
-      <div class="note">Email-verified users without finished payment</div>
+      <div class="note">Email-verified without finished payment</div>
     </article>
   </section>
 
-  <!-- Membership Status & Pipeline -->
+  <!-- Streamlined Membership Composition & Status -->
   <div class="section-title">
-    <h2>Membership Status Distribution</h2>
-    <p>148 Unique People (deduplicated)</p>
+    <h2>Membership Structure &amp; Status</h2>
+    <p>Current Active Roster Snapshot</p>
   </div>
   <section class="grid two">
+    <!-- Member Type Composition -->
     <article class="card">
-      <div class="donut-wrap">
-        <div class="donut"></div>
-        <div class="legend">
-          <div><span class="dot" style="background: var(--teal)"></span><b>71</b> Active Term Members (48.0%)</div>
-          <div><span class="dot" style="background: var(--purple)"></span><b>5</b> Lifetime Members (3.4%)</div>
-          <div><span class="dot" style="background: var(--red)"></span><b>30</b> Expired Members (20.3%)</div>
-          <div><span class="dot" style="background: var(--orange)"></span><b>42</b> Incomplete Registrations (28.4%)</div>
-        </div>
+      <h3 style="margin-top:0; font-family:'EB Garamond',serif; font-size:22px;">Member Type Composition</h3>
+      <p class="small" style="margin-bottom: 20px;">Breakdown of 106 active, 2-yr expired &amp; lifetime member records.</p>
+      
+      <div class="bar-row">
+        <div>Regular</div>
+        <div class="track"><div class="fill" style="width:53.8%; background:var(--navy)"></div></div>
+        <div class="value">57 (53.8%)</div>
+      </div>
+      <div class="bar-row">
+        <div>Graduate</div>
+        <div class="track"><div class="fill" style="width:25.5%; background:var(--blue)"></div></div>
+        <div class="value">27 (25.5%)</div>
+      </div>
+      <div class="bar-row">
+        <div>Undergraduate</div>
+        <div class="track"><div class="fill" style="width:15.1%; background:var(--teal)"></div></div>
+        <div class="value">16 (15.1%)</div>
+      </div>
+      <div class="bar-row">
+        <div>Lifetime</div>
+        <div class="track"><div class="fill" style="width:4.7%; background:var(--purple)"></div></div>
+        <div class="value">5 (4.7%)</div>
+      </div>
+      <div class="bar-row">
+        <div>Paid Undergrad</div>
+        <div class="track"><div class="fill" style="width:0.9%; min-width:4px; background:var(--orange)"></div></div>
+        <div class="value">1 (0.9%)</div>
+      </div>
+
+      <div style="margin-top:24px; padding:14px 16px; border-left:4px solid var(--teal); background:#EEF8F6; font-size:13px;">
+        <b>Student Membership Summary:</b> 44 total students (<b>41.5%</b>), combining Undergraduate (16), Paid Undergrad (1), and Graduate (27) categories.
       </div>
     </article>
+
+    <!-- Current Membership Status -->
     <article class="card">
-      <h3 style="margin-top:0; font-family: 'EB Garamond', serif; font-size: 22px;">Registration Pipeline Breakdown</h3>
-      <div class="status-row">
-        <div>Active Members</div>
-        <div class="track"><div class="fill" style="width: 51.4%; background: var(--teal)"></div></div>
-        <div class="value">51.4%</div>
+      <h3 style="margin-top:0; font-family:'EB Garamond',serif; font-size:22px;">Current Database Roster Snapshot</h3>
+      <p class="small" style="margin-bottom: 20px;">Total 148 unique people in active snapshot pool.</p>
+
+      <div class="donut-wrap" style="margin: 10px 0 20px;">
+        <div class="donut"></div>
+        <div class="legend">
+          <div><span class="dot" style="background:var(--teal)"></span><b>71</b> Active Term (48.0%)</div>
+          <div><span class="dot" style="background:var(--purple)"></span><b>5</b> Lifetime (3.4%)</div>
+          <div><span class="dot" style="background:var(--red)"></span><b>30</b> Expired in 2-Yrs (20.3%)</div>
+          <div><span class="dot" style="background:var(--orange)"></span><b>42</b> Incomplete Registrations (28.4%)</div>
+        </div>
       </div>
-      <div class="status-row">
-        <div>Expired Members</div>
-        <div class="track"><div class="fill" style="width: 20.3%; background: var(--red)"></div></div>
-        <div class="value">20.3%</div>
+
+      <div style="margin-top:20px; padding:14px 16px; border-left:4px solid var(--navy); background:#F0F4F8; font-size:13px; line-height: 1.55;">
+        <b>Roster Snapshot Context:</b> The <b>148 unique people</b> snapshot represents current database members, combining <b>106 Voting Qualification Members</b> (active term, 2-year expired, and lifetime members) plus <b>42 Incomplete Registrations</b> (email-verified accounts pending checkout). Additional historical alumni or past affiliates exist beyond this 2-year active roster window.
       </div>
-      <div class="status-row">
-        <div>Incomplete</div>
-        <div class="track"><div class="fill" style="width: 28.4%; background: var(--orange)"></div></div>
-        <div class="value">28.4%</div>
-      </div>
-      <p class="small" style="margin-top: 18px;">Percentages represent current database records status, rather than a single cohort conversion rate.</p>
     </article>
   </section>
 
