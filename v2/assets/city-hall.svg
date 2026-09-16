@@ -1,87 +1,81 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
-  <!--
-    Philadelphia City Hall — Refined Silhouette with Targeted Alpha
-    Logic:
-      · Mask White (#fff) = Opaque building color
-      · Mask Black (#000) = Full transparency (Background shows through)
-      · Mask Gray (#888, #444, etc.) = Semi-transparency (Adjustable Alpha)
-  -->
+  
   <defs>
     <mask id="cityHallMask">
-      <!-- 1. BASE BODY (Opaque) -->
+      
       <g fill="#fff">
-        <!-- William Penn Statue -->
-        <path d="M190,14 H210 V16 H190 Z"/>
-        <rect x="197" y="10" width="6" height="4"/>
-        <circle cx="200" cy="19" r="2.5"/>
-        <path d="M193,22 H207 L211,44 H189 Z"/>
-        <path d="M207,26 L221,30 L222,33 L207,31 Z"/>
-        <path d="M193,26 L189,38 L188,42 L192,42 L196,30 Z"/>
+        
+        <path d="M190,14 H210 V16 H190 Z"></path>
+        <rect x="197" y="10" width="6" height="4"></rect>
+        <circle cx="200" cy="19" r="2.5"></circle>
+        <path d="M193,22 H207 L211,44 H189 Z"></path>
+        <path d="M207,26 L221,30 L222,33 L207,31 Z"></path>
+        <path d="M193,26 L189,38 L188,42 L192,42 L196,30 Z"></path>
 
-        <!-- Upper Tower: statue pedestal + gentle taper down to clock tier -->
-        <rect x="195" y="44" width="10" height="2" rx="1"/>
-        <path d="M165,120 C170,96 184,68 195,46 L205,46 C216,68 230,96 235,120 Z"/>
+        
+        <rect x="195" y="44" width="10" height="2" rx="1"></rect>
+        <path d="M165,120 C170,96 184,68 195,46 L205,46 C216,68 230,96 235,120 Z"></path>
 
-        <!-- Tower Levels -->
-        <rect x="165" y="120" width="70" height="4"/>
-        <rect x="170" y="124" width="60" height="40"/>
-        <rect x="165" y="164" width="70" height="4"/>
-        <rect x="170" y="168" width="60" height="36"/>
-        <path d="M160,204 H240 L248,226 H152 Z"/>
-        <rect x="140" y="222" width="120" height="4"/>
+        
+        <rect x="165" y="120" width="70" height="4"></rect>
+        <rect x="170" y="124" width="60" height="40"></rect>
+        <rect x="165" y="164" width="70" height="4"></rect>
+        <rect x="170" y="168" width="60" height="36"></rect>
+        <path d="M160,204 H240 L248,226 H152 Z"></path>
+        <rect x="140" y="222" width="120" height="4"></rect>
 
-        <!-- Roof & Pavilions -->
-        <path d="M6,226 H394 L394,240 H6 Z"/>
-        <path d="M10,228 V214 L22,198 L35,188 L48,198 L60,214 V228 Z"/>
-        <rect x="34" y="178" width="2" height="10"/>
-        <circle cx="35" cy="178" r="1.5"/>
-        <path d="M340,228 V214 L352,198 L365,188 L378,198 L390,214 V228 Z"/>
-        <rect x="364" y="178" width="2" height="10"/>
-        <circle cx="365" cy="178" r="1.5"/>
+        
+        <path d="M6,226 H394 L394,240 H6 Z"></path>
+        <path d="M10,228 V214 L22,198 L35,188 L48,198 L60,214 V228 Z"></path>
+        <rect x="34" y="178" width="2" height="10"></rect>
+        <circle cx="35" cy="178" r="1.5"></circle>
+        <path d="M340,228 V214 L352,198 L365,188 L378,198 L390,214 V228 Z"></path>
+        <rect x="364" y="178" width="2" height="10"></rect>
+        <circle cx="365" cy="178" r="1.5"></circle>
 
-        <!-- Main Body -->
-        <rect x="6" y="240" width="388" height="50"/>
-        <rect x="0" y="290" width="400" height="10"/>
+        
+        <rect x="6" y="240" width="388" height="50"></rect>
+        <rect x="0" y="290" width="400" height="10"></rect>
       </g>
 
-      <!-- 2. ALPHA ADJUSTMENTS (Subtractive) -->
       
-      <!-- 입구 (Entrance): FULL HOLE (Background 100% visible) -->
-      <path d="M188,265 C188,255 194,250 200,250 C206,250 212,255 212,265 V290 H188 Z" fill="#000"/>
       
-      <!-- 시계 (Clock): SEMI-TRANSPARENT (Lighter gray = more opaque silhouette) -->
-      <circle cx="200" cy="144" r="11" fill="#888"/>
       
-      <!-- 창문 & 장식 (Windows): SEMI-TRANSPARENT (Darker gray = more background visible) -->
-      <!-- Adjusted to #333 for deeper contrast, making them clearly visible as 'holes' -->
+      <path d="M188,265 C188,255 194,250 200,250 C206,250 212,255 212,265 V290 H188 Z" fill="#000"></path>
+      
+      
+      <circle cx="200" cy="144" r="11" fill="#888"></circle>
+      
+      
+      
       <g fill="#333">
-        <rect x="180" y="174" width="6" height="24" rx="1"/>
-        <rect x="197" y="174" width="6" height="24" rx="1"/>
-        <rect x="214" y="174" width="6" height="24" rx="1"/>
+        <rect x="180" y="174" width="6" height="24" rx="1"></rect>
+        <rect x="197" y="174" width="6" height="24" rx="1"></rect>
+        <rect x="214" y="174" width="6" height="24" rx="1"></rect>
         
-        <rect x="25" y="248" width="6" height="12"/> <rect x="45" y="248" width="6" height="12"/>
-        <rect x="65" y="248" width="6" height="12"/> <rect x="85" y="248" width="6" height="12"/>
-        <rect x="105" y="248" width="6" height="12"/> <rect x="125" y="248" width="6" height="12"/>
-        <rect x="270" y="248" width="6" height="12"/> <rect x="290" y="248" width="6" height="12"/>
-        <rect x="310" y="248" width="6" height="12"/> <rect x="330" y="248" width="6" height="12"/>
-        <rect x="350" y="248" width="6" height="12"/> <rect x="370" y="248" width="6" height="12"/>
+        <rect x="25" y="248" width="6" height="12"></rect> <rect x="45" y="248" width="6" height="12"></rect>
+        <rect x="65" y="248" width="6" height="12"></rect> <rect x="85" y="248" width="6" height="12"></rect>
+        <rect x="105" y="248" width="6" height="12"></rect> <rect x="125" y="248" width="6" height="12"></rect>
+        <rect x="270" y="248" width="6" height="12"></rect> <rect x="290" y="248" width="6" height="12"></rect>
+        <rect x="310" y="248" width="6" height="12"></rect> <rect x="330" y="248" width="6" height="12"></rect>
+        <rect x="350" y="248" width="6" height="12"></rect> <rect x="370" y="248" width="6" height="12"></rect>
         
-        <rect x="25" y="270" width="6" height="12"/> <rect x="45" y="270" width="6" height="12"/>
-        <rect x="65" y="270" width="6" height="12"/> <rect x="85" y="270" width="6" height="12"/>
-        <rect x="105" y="270" width="6" height="12"/> <rect x="125" y="270" width="6" height="12"/>
-        <rect x="270" y="270" width="6" height="12"/> <rect x="290" y="270" width="6" height="12"/>
-        <rect x="310" y="270" width="6" height="12"/> <rect x="330" y="270" width="6" height="12"/>
-        <rect x="350" y="270" width="6" height="12"/> <rect x="370" y="270" width="6" height="12"/>
+        <rect x="25" y="270" width="6" height="12"></rect> <rect x="45" y="270" width="6" height="12"></rect>
+        <rect x="65" y="270" width="6" height="12"></rect> <rect x="85" y="270" width="6" height="12"></rect>
+        <rect x="105" y="270" width="6" height="12"></rect> <rect x="125" y="270" width="6" height="12"></rect>
+        <rect x="270" y="270" width="6" height="12"></rect> <rect x="290" y="270" width="6" height="12"></rect>
+        <rect x="310" y="270" width="6" height="12"></rect> <rect x="330" y="270" width="6" height="12"></rect>
+        <rect x="350" y="270" width="6" height="12"></rect> <rect x="370" y="270" width="6" height="12"></rect>
       </g>
     </mask>
   </defs>
 
-  <!-- Final silhouette with mask applied -->
-  <rect width="400" height="300" fill="currentColor" mask="url(#cityHallMask)"/>
   
-  <!-- Solid layers unaffected by mask (Clock Hands) -->
+  <rect width="400" height="300" fill="currentColor" mask="url(#cityHallMask)"></rect>
+  
+  
   <g fill="currentColor">
-    <rect x="199.2" y="135" width="1.6" height="9"/>
-    <rect x="200" y="143.2" width="8" height="1.6"/>
+    <rect x="199.2" y="135" width="1.6" height="9"></rect>
+    <rect x="200" y="143.2" width="8" height="1.6"></rect>
   </g>
 </svg>
