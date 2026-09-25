@@ -21,10 +21,12 @@ date: 2026-09-25
   5. Community Service: Serve Korean-American communities.
 
 ## Member Demographics (September 2026)
-- **Technical Expertise**: Bio (20%), Medical (11%), CS/IT (10%), Civil Eng (10%), Mech Eng (10%), Electrical Eng (9%), Chemistry & Math (12%), Chemical Eng (5%), Others (12%).
-- **Career Breakdown**: Academia (63%), Industry (19%), Research Institutes (12%), Others (6%).
-- **Degree Distribution**: Master's MS (31%), Bachelor's BS (24%), Doctorate PhD (23%), Students/Others (22%).
-- **Geographic Distribution**: East (37%), West (28%), South (14%), Midwest (12%).
+- **National Technical Expertise**: Bio (20%), Medical (11%), CS/IT (10%), Civil Eng (10%), Mech Eng (10%), Electrical Eng (9%), Chemistry & Math (12%), Chemical Eng (5%), Others (12%).
+- **National Career Breakdown**: Academia (63%), Industry (19%), Research Institutes (12%), Others (6%).
+- **National Degree Distribution**: Master's MS (31%), Bachelor's BS (24%), Doctorate PhD (23%), Students/Others (22%).
+- **National Geographic Distribution**: East (37%), West (28%), South (14%), Midwest (12%).
+- **Philadelphia Chapter Composition**: Regular/Professional Members (54%), Graduate Student Members (21%), Undergraduate Student Members (15%), Lifetime Members (10%).
+- **Chapter Ecosystem**: Penn Medicine, CHOP, Jefferson, Drexel, Temple, Swarthmore, UDel, Wistar Institute, Fox Chase Cancer Center, and Delaware Valley biotech corridor.
 
 ## Flagship National Programs
 - **UKC**: US-Korea Conference on Science, Technology & Entrepreneurship (39th UKC 2026 in Florida, UKC 2027 in Las Vegas).
