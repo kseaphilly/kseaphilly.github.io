@@ -8,7 +8,7 @@
     <!-- OpenGraph / Social Sharing -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://kseaphilly.github.io/v2/events.html">
-    <meta property="og:title" content="Events & Seminars | KSEA Philadelphia Chapter">
+    <meta property="og:title" content="Events &amp; Seminars | KSEA Philadelphia Chapter">
     <meta property="og:description" content="KSEA 필라델피아 챕터 주요 학술 세미나, 기술 웨비나, 챕터 심포지엄 및 연간 행사 안내">
     <meta property="og:image" content="https://kseaphilly.github.io/assets/ksea_phily_logo.png">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -16,24 +16,20 @@
     <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter+Tight:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Serif+KR:wght@400;500;600&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
     <style>
-        /* Events-page-only styles */
-        .past-event-block { padding: 40px; margin-bottom: 0; background: var(--w-paper); border-bottom: 1px solid var(--w-ink); }
+        /* Events page custom styles */
+        .past-event-block { padding: 40px; background: var(--w-paper); border-bottom: 1px solid var(--w-ink); }
         .past-event-block h2 { font-size: 28px; font-weight: 600; letter-spacing: -0.5px; margin: 0 0 16px; }
         .past-event-block p { font-size: 15px; line-height: 1.6; opacity: 0.85; margin: 0 0 12px; }
         .past-event-block ul { font-size: 15px; line-height: 1.7; opacity: 0.85; padding-left: 20px; }
         .past-event-block li { margin-bottom: 6px; }
         .past-event-block a:not([class*="btn-"]) { color: var(--w-navy); text-decoration: underline; }
-        .past-event-block .btn-event, .past-event-block .btn-event-gold { color: var(--w-cream) !important; text-decoration: none; }
-        .award-box { margin-top: 20px; padding: 16px 20px; background: #eef4ff; border-left: 4px solid var(--w-navy); }
+        .award-box { margin-top: 20px; padding: 18px 22px; background: #eef4ff; border-left: 4px solid var(--w-navy); }
         .award-box h3 { margin: 0 0 10px; font-size: 16px; color: var(--w-navy); }
         .photo-grid { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 20px; }
-        .photo-grid img { width: 23%; min-width: 150px; cursor: pointer; }
-        .photo-pair { display: flex; gap: 15px; margin-top: 20px; flex-wrap: wrap; }
-        .photo-pair > div { flex: 1; min-width: 250px; }
-        .photo-pair img { width: 100%; margin-bottom: 5px; }
-        .video-embed { margin-top: 20px; position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; }
+        .photo-grid img { width: 23%; min-width: 140px; cursor: pointer; border: 1px solid var(--w-ink); box-shadow: 2px 2px 0 var(--w-ink); }
+        .video-embed { margin-top: 20px; position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border: 1px solid var(--w-ink); }
         .video-embed iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
-        .event-cta { margin-top: 20px; text-align: center; display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
+        
         /* Lightbox */
         #lightbox { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.85); z-index: 9999; align-items: center; justify-content: center; }
         #lightbox.active { display: flex; }
@@ -65,26 +61,24 @@
         </div>
     </nav>
 
-    <!-- Philadelphia location strip -->
-    <!-- Removed literal philly-strip as per concept evolution -->
-
-    
-
-
     <section class="page-hero">
-        <div class="street-grid"></div>
         <div class="philly-bg-text" style="bottom: -0.2em; right: -0.05em; top: auto; left: auto; font-size: 13vw;">EVENTS</div>
-        <div class="page-hero-eyebrow">§ 01 — Schedule</div>
-        <h1>Events</h1>
-        <p class="page-hero-sub">Join us for upcoming competitions, networking sessions, and symposiums. Explore our past gatherings below.</p>
+        <img src="assets/city-hall.svg" class="philly-landmark philly-landmark-br philly-landmark-dark" style="height: 260px;"/>
+        <div class="hero-content">
+            <div class="eyebrow">§ 01 — Calendar &amp; History</div>
+            <h1>Events &amp; <em style="font-style:italic;color:var(--w-navy);">Seminars</em>.</h1>
+            <p class="page-hero-sub">Explore upcoming webinars, joint monthly seminar series, regional symposia, and complete chapter event archives.</p>
+        </div>
     </section>
 
+    <!-- Section 02: Active & Recent Events Grid -->
     <section style="border-bottom: 1px solid var(--w-ink);">
         <div class="section-header">
-            <span>§ 02 — Upcoming & Recent Events</span>
+            <span>§ 02 — Upcoming &amp; Active Events</span>
             <span style="opacity: 0.6;">Fall 2026 → Spring 2027</span>
         </div>
         <div class="events-grid single-row" style="border-left: 1px solid var(--w-ink);">
+            <!-- KSEA NJ Tech Webinar -->
             <div class="event-card" id="nj-webinar-2026" style="border-bottom: 1px solid var(--w-ink); border-right: 1px solid var(--w-ink); padding: 32px 32px 28px; background: var(--w-paper); display: flex; flex-direction: column;">
                 <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 24px;">
                     <div style="display: inline-block; padding: 4px 10px; background: var(--w-navy); color: var(--w-cream); font-size: 10px; font-family: 'JetBrains Mono', monospace; letter-spacing: 1px; text-transform: uppercase;">Upcoming · Tech Webinar</div>
@@ -97,14 +91,15 @@
                 <div style="margin: 14px 0 10px 0;">
                     <img src="images/events/tech-webinar-2026/flyer.jpg" alt="Webinar Flyer - Benji Shin" style="width: 100%; border: 1px solid var(--w-ink); box-shadow: 2px 2px 0 var(--w-ink); cursor: pointer;" onclick="openLightbox(this.src)" />
                 </div>
-                <p style="font-size: 13px; line-height: 1.5; margin-top: 6px; opacity: 0.8; flex: 1;">Host: KSEA NJ Chapter (Co-promoted). Speaker: Benji Shin (Co-Founder & CTO, Zenerate). Discover how AI, data, and intelligent platforms transform ideas into real-world impact.</p>
+                <p style="font-size: 13px; line-height: 1.5; margin-top: 6px; opacity: 0.8; flex: 1;">Host: KSEA NJ Chapter (Co-promoted). Speaker: Benji Shin (Co-Founder &amp; CTO, Zenerate). Discover how AI, data, and intelligent platforms transform ideas into real-world impact.</p>
                 <div style="border-top: 1px dashed rgba(18,18,18,0.3); padding-top: 14px; display: flex; justify-content: space-between; font-size: 12px; font-family: 'JetBrains Mono', monospace; align-items: center;">
                     <span style="opacity: 0.7;">▸ ONLINE · ZOOM</span>
                     <a href="https://njit-edu.zoom.us/j/94693222554?pwd=CRPStpNRsDTxpbMsBksIf7qb4YcY31.1" target="_blank" class="btn-join" style="padding: 6px 12px; font-size: 11px; text-decoration: none;">Join Zoom ↗</a>
                 </div>
             </div>
 
-            <div class="event-card" id="seminar-series-card" style="border-bottom: 1px solid var(--w-ink); border-right: 1px solid var(--w-ink); padding: 32px 32px 28px; background: var(--w-paper); display: flex; flex-direction: column;">
+            <!-- Joint Seminar #1 -->
+            <div class="event-card" id="seminar-2026-09-10" style="border-bottom: 1px solid var(--w-ink); border-right: 1px solid var(--w-ink); padding: 32px 32px 28px; background: var(--w-paper); display: flex; flex-direction: column;">
                 <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 24px;">
                     <div style="display: inline-block; padding: 4px 10px; background: var(--w-ink); color: var(--w-cream); font-size: 10px; font-family: 'JetBrains Mono', monospace; letter-spacing: 1px; text-transform: uppercase;">Concluded</div>
                     <div style="text-align: right;">
@@ -116,11 +111,12 @@
                 <p style="font-size: 14px; line-height: 1.55; margin-top: 14px; opacity: 0.8; flex: 1;">Using Large Language Models (LLMs) to examine selection practices for Liver transplantation (LT). Successfully held at Smilow Center 10F.</p>
                 <div style="border-top: 1px dashed rgba(18,18,18,0.3); padding-top: 14px; display: flex; justify-content: space-between; font-size: 12px; font-family: 'JetBrains Mono', monospace; align-items: center;">
                     <span style="opacity: 0.7;">▸ SMILOW 10F</span>
-                    <a href="#seminar-series" class="btn-outline" style="padding: 6px 12px; font-size: 11px;">Recap & Photos ↓</a>
+                    <a href="#seminar-series" class="btn-outline" style="padding: 6px 12px; font-size: 11px;">Recap &amp; Photos ↓</a>
                 </div>
             </div>
 
-            <div class="event-card" id="fall-membership-drive-card" style="border-bottom: 1px solid var(--w-ink); border-right: 1px solid var(--w-ink); padding: 32px 32px 28px; background: var(--w-paper); display: flex; flex-direction: column; opacity: 0.85;">
+            <!-- Fall Membership Drive -->
+            <div class="event-card" id="membership-drive-2026-card" style="border-bottom: 1px solid var(--w-ink); border-right: 1px solid var(--w-ink); padding: 32px 32px 28px; background: var(--w-paper); display: flex; flex-direction: column; opacity: 0.85;">
                 <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 24px;">
                     <div style="display: inline-block; padding: 4px 10px; background: var(--w-ink); color: var(--w-cream); font-size: 10px; font-family: 'JetBrains Mono', monospace; letter-spacing: 1px; text-transform: uppercase;">Concluded</div>
                     <div style="text-align: right;">
@@ -128,445 +124,283 @@
                         <div style="font-size: 11px; font-family: 'JetBrains Mono', monospace; opacity: 0.6; margin-top: 4px;">Completed</div>
                     </div>
                 </div>
-                <h3 style="font-size: 26px; font-weight: 600; letter-spacing: -0.5px; margin: 0; line-height: 1.1;">Fall Membership Drive ✓</h3>
-                <p style="font-size: 14px; line-height: 1.55; margin-top: 14px; opacity: 0.8; flex: 1;">Annual membership drive & UPenn KoGSA new student welcome held at UPenn Bodek Lounge.</p>
+                <h3 style="font-size: 24px; font-weight: 600; letter-spacing: -0.5px; margin: 0; line-height: 1.15;">Fall Membership Drive 2026 ✓</h3>
+                <p style="font-size: 14px; line-height: 1.55; margin-top: 14px; opacity: 0.8; flex: 1;">Annual membership drive &amp; UPenn KoGSA new student welcome held at UPenn Bodek Lounge.</p>
                 <div style="border-top: 1px dashed rgba(18,18,18,0.3); padding-top: 14px; display: flex; justify-content: space-between; font-size: 12px; font-family: 'JetBrains Mono', monospace; align-items: center;">
                     <span style="opacity: 0.7;">▸ UPENN BODEK LOUNGE</span>
                     <a href="#fall-membership-drive" style="text-decoration: underline; opacity: 0.8;">Recap ↓</a>
                 </div>
             </div>
+        </div>
+    </section>
 
-            <div class="event-card" id="nmsc-2026" style="opacity: 0.6;">
-                <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 24px;">
-                    <div style="display: inline-block; padding: 4px 10px; background: var(--w-ink); color: var(--w-cream); font-size: 10px; font-family: 'JetBrains Mono', monospace; letter-spacing: 1px; text-transform: uppercase;">Concluded</div>
-                    <div style="text-align: right;">
-                        <div style="font-size: 24px; font-weight: 600; letter-spacing: -0.5px; line-height: 1;">APR 18</div>
-                        <div style="font-size: 11px; font-family: 'JetBrains Mono', monospace; opacity: 0.6; margin-top: 4px;">Completed</div>
+    <!-- Section 03: Active Joint Seminar Series Spotlight -->
+    <div style="padding: 40px; background: var(--w-paper); border-bottom: 1px solid var(--w-ink);" id="seminar-series">
+        <div style="display: inline-block; padding: 4px 10px; background: var(--w-navy); color: var(--w-cream); font-size: 10px; font-family: 'JetBrains Mono', monospace; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 12px;">Active Program · 2026–2027 Academic Year</div>
+        <h2 style="font-size: 28px; font-weight: 600; letter-spacing: -0.5px; margin: 0 0 12px;">Philadelphia Chapter Joint Monthly Seminar Series (2026–2027)</h2>
+        <p style="font-size: 15px; line-height: 1.6; opacity: 0.85; margin: 0 0 16px;">
+            Co-hosted by <strong>KSEA Philadelphia Chapter</strong>, <a href="https://www.facebook.com/groups/PKSAScholars/" target="_blank">PKSA</a>, <a href="https://kitee.org/" target="_blank">KITEE</a>, and <a href="https://kkyu.qshop.ai/" target="_blank">KKYU</a> across UPenn Smilow Center and Levine Hall.
+        </p>
+
+        <!-- Fall 2026 Seminar 1 Recap Spotlight -->
+        <div style="background: var(--w-cream); border: 1.5px solid var(--w-navy); padding: 28px; margin: 28px 0;">
+            <div style="display: flex; gap: 28px; flex-wrap: wrap; align-items: flex-start;">
+                <div style="flex: 0 0 240px; max-width: 260px;">
+                    <img src="images/events/seminar-series/20260910-seminar.jpg" alt="Seminar Flyer - Sue Hyon Kim" style="width: 100%; border: 1px solid var(--w-ink); box-shadow: 3px 3px 0 var(--w-ink); cursor: pointer;" onclick="openLightbox(this.src)" />
+                </div>
+                <div style="flex: 1; min-width: 280px;">
+                    <div style="display: inline-block; padding: 4px 10px; background: var(--w-ink); color: var(--w-cream); font-size: 10px; font-family: 'JetBrains Mono', monospace; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 10px;">Concluded · Fall 2026 Kickoff</div>
+                    <h3 style="font-size: 22px; font-weight: 600; margin: 0 0 10px; line-height: 1.25;">Using Large Language Models (LLMs) to examine selection practices for Liver transplantation (LT): an Accelerated-pace study</h3>
+                    <p style="margin: 0 0 6px; font-size: 14px;"><strong>Speaker:</strong> Sue Hyon Kim (김수현), Ph.D. candidate (University of Pennsylvania, School of Nursing)</p>
+                    <p style="margin: 0 0 6px; font-size: 14px;"><strong>Date:</strong> Thursday, September 10, 2026 · 6:00 PM – 7:00 PM EDT</p>
+                    <p style="margin: 0 0 6px; font-size: 14px;"><strong>Location:</strong> Smilow Center for Translational Research 10th Floor Seminar Room</p>
+                    <p style="margin: 0 0 16px; font-size: 13px; opacity: 0.85;">Successfully concluded on September 10, 2026! We had an engaging, high-turnout session kicking off the Fall 2026 joint seminar series with lively discussions on LLM applications in organ transplantation selection.</p>
+                    <div style="display: flex; gap: 12px; align-items: center; flex-wrap: wrap;">
+                        <a href="https://www.facebook.com/photo/?fbid=4426308667583204&amp;set=gm.28074924125462969&amp;idorvanity=169144909800932" target="_blank" style="font-size: 12px; font-family: 'JetBrains Mono', monospace; text-decoration: underline; opacity: 0.75;">PKSA Announcement ↗</a>
                     </div>
                 </div>
-                <h3 style="font-size: 26px; font-weight: 600; letter-spacing: -0.5px; margin: 0; line-height: 1.1;">NMSC 2026 ✓</h3>
-                <p style="font-size: 14px; line-height: 1.55; margin-top: 14px; opacity: 0.8; flex: 1;">National Math and Science Competition hosted by KSEA Philadelphia at UPenn. Successfully concluded April 18, 2026.</p>
-                <div style="border-top: 1px dashed rgba(18,18,18,0.3); padding-top: 14px; display: flex; justify-content: space-between; font-size: 12px; font-family: 'JetBrains Mono', monospace; align-items: center;">
-                    <span style="opacity: 0.7;">▸ UPENN · 3601 SPRUCE ST</span>
-                    <a href="nmsc.html" style="text-decoration: underline; opacity: 0.7;">Details</a>
+            </div>
+
+            <!-- Seminar Event Photos -->
+            <div style="margin-top: 24px; border-top: 1px solid rgba(18,18,18,0.15); padding-top: 18px;">
+                <h4 style="margin: 0 0 12px; font-size: 13px; font-family: 'JetBrains Mono', monospace; text-transform: uppercase; letter-spacing: 1px; color: var(--w-navy);">▸ Event Photo Gallery <span style="opacity: 0.6; font-size: 11px; text-transform: none;">(Click thumbnail to expand)</span></h4>
+                <div style="display: flex; gap: 12px; flex-wrap: wrap; align-items: center;">
+                    <img src="images/events/seminar-series/20260910-seminar-photo2.jpg" alt="Speaker Presentation" title="Speaker Presentation" style="width: 140px; height: 105px; object-fit: cover; border: 1px solid var(--w-ink); box-shadow: 2px 2px 0 var(--w-ink); cursor: pointer;" onclick="openLightbox(this.src)" />
+                    <img src="images/events/seminar-series/20260910-seminar-photo3.jpg" alt="Seminar Room Discussion" title="Seminar Room Discussion" style="width: 140px; height: 105px; object-fit: cover; border: 1px solid var(--w-ink); box-shadow: 2px 2px 0 var(--w-ink); cursor: pointer;" onclick="openLightbox(this.src)" />
+                    <img src="images/events/seminar-series/20260910-seminar-photo4.jpg" alt="Presentation Slides" title="Presentation Slides" style="width: 140px; height: 105px; object-fit: cover; border: 1px solid var(--w-ink); box-shadow: 2px 2px 0 var(--w-ink); cursor: pointer;" onclick="openLightbox(this.src)" />
+                    <img src="images/events/seminar-series/20260910-seminar-photo1.jpg" alt="Group Commemorative Photo" title="Group Photo" style="width: 140px; height: 105px; object-fit: cover; border: 1px solid var(--w-ink); box-shadow: 2px 2px 0 var(--w-ink); cursor: pointer;" onclick="openLightbox(this.src)" />
+                    <img src="images/events/seminar-series/20260910-seminar-photo6.jpg" alt="Networking Dinner Gathering" title="Dinner Gathering" style="width: 140px; height: 105px; object-fit: cover; border: 1px solid var(--w-ink); box-shadow: 2px 2px 0 var(--w-ink); cursor: pointer;" onclick="openLightbox(this.src)" />
                 </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Section 04: Annual Milestones & Roadmap (2026-2027) -->
+    <div style="padding: 40px; background: var(--w-paper); border-bottom: 1px solid var(--w-ink);" id="annual-schedule-2026-2027">
+        <div style="display: inline-block; padding: 4px 10px; background: var(--w-navy); color: var(--w-cream); font-size: 10px; font-family: 'JetBrains Mono', monospace; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 12px;">Roadmap · 2026–2027 Calendar</div>
+        <h2 style="font-size: 28px; font-weight: 600; letter-spacing: -0.5px; margin: 0 0 12px;">Key Annual Events &amp; Milestones (2026–2027)</h2>
+        <p style="font-size: 15px; line-height: 1.6; opacity: 0.85; margin: 0 0 24px;">Mark your calendars for our major chapter initiatives planned for the 2026–2027 academic year.</p>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-bottom: 30px;">
+            <div style="border: 1px solid var(--w-ink); padding: 24px; background: var(--w-cream);">
+                <div style="font-size: 11px; font-family: 'JetBrains Mono', monospace; font-weight: 600; color: #b45309; text-transform: uppercase; margin-bottom: 8px;">DECEMBER 2026</div>
+                <h3 style="margin: 0 0 10px; font-size: 20px; font-weight: 600;">End-of-Year Party (연말 송년회)</h3>
+                <p style="font-size: 14px; line-height: 1.55; opacity: 0.85; margin: 0;">A celebratory year-end gathering to wrap up the fall semester, celebrate achievements, and network across our community.</p>
+            </div>
+
+            <div style="border: 1px solid var(--w-ink); padding: 24px; background: var(--w-cream);">
+                <div style="font-size: 11px; font-family: 'JetBrains Mono', monospace; font-weight: 600; color: var(--w-navy); text-transform: uppercase; margin-bottom: 8px;">LATE JAN – EARLY FEB 2027</div>
+                <h3 style="margin: 0 0 10px; font-size: 20px; font-weight: 600;">Chapter Symposium (챕터 심포지엄)</h3>
+                <p style="font-size: 14px; line-height: 1.55; opacity: 0.85; margin: 0;">Annual multidisciplinary research symposium gathering scholars, professionals, and graduate students across Greater Philadelphia.</p>
+            </div>
+
+            <div style="border: 1px solid var(--w-ink); padding: 24px; background: var(--w-cream);">
+                <div style="font-size: 11px; font-family: 'JetBrains Mono', monospace; font-weight: 600; color: #4338ca; text-transform: uppercase; margin-bottom: 8px;">MID / LATE APRIL 2027</div>
+                <h3 style="margin: 0 0 10px; font-size: 20px; font-weight: 600;">Northeast Regional Conference (NRC)</h3>
+                <p style="font-size: 14px; line-height: 1.55; opacity: 0.85; margin: 0 0 10px;">Participation in the annual NRC conference together with NY and NJ chapters to expand regional research networks.</p>
+                <a href="https://nrc.kseany.org/" target="_blank" style="font-size: 12px; font-family: 'JetBrains Mono', monospace; text-decoration: underline;">nrc.kseany.org ↗</a>
+            </div>
+        </div>
+
+        <div style="padding: 20px 24px; background: var(--w-cream); border-left: 4px solid var(--w-navy); display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 16px;">
+            <div style="flex: 1; min-width: 260px;">
+                <strong style="font-size: 15px; color: var(--w-navy);">🤝 Join the Chapter Council!</strong>
+                <p style="margin: 4px 0 0 0; font-size: 13px; opacity: 0.85;">We are actively recruiting enthusiastic members to plan and lead our 2026–2027 programs. Interested in serving the community?</p>
+            </div>
+            <a href="mailto:ksea.philly.chapter@gmail.com?subject=[Chapter Council Application]" class="btn-join" style="padding: 8px 16px; font-size: 12px; text-decoration: none;">Contact to Join ↗</a>
+        </div>
+    </div>
+
+    <!-- Section 05: Past Events Archive (Chronological: 2026 -> 2023) -->
+    <section>
+        <div class="section-header">
+            <span>§ 05 — Past Events Archive</span>
+            <span style="opacity: 0.6;">2026 · 2025 · 2024 · 2023</span>
+        </div>
+
+        <!-- NMSC 2026 -->
+        <div class="past-event-block" id="nmsc-2026">
+            <h2>National Math and Science Competition (NMSC 2026)</h2>
+            <p><strong>Date:</strong> April 18, 2026</p>
+            <p><strong>Location:</strong> UPenn, 3601 Spruce St, Philadelphia, PA</p>
+            <p>NMSC 2026 successfully concluded on April 18, 2026! We thank all participants, parents, and dedicated volunteers for making this event a great success.</p>
+            <div style="margin-top: 16px;">
+                <a href="nmsc.html" class="btn-primary" style="font-size: 12px;">View NMSC Details &amp; Photos →</a>
+            </div>
+        </div>
+
+        <!-- 35th NRC 2026 -->
+        <div class="past-event-block" id="nrc-2026">
+            <h2>35th Northeast Regional Conference (NRC 2026)</h2>
+            <p><strong>Date:</strong> March 14, 2026</p>
+            <p><strong>Location:</strong> DoubleTree by Hilton Hotel, Fort Lee, NJ</p>
+            <p><strong>Theme:</strong> "Science And Technology For Human Potential: Shaping Our World And Beyond."</p>
+            <p>The 35th NRC was successfully held on March 14, 2026, bringing together experts and researchers from the Northeast region. Our chapter members were honored with several prestigious awards.</p>
+
+            <div class="award-box">
+                <h3>NRC 2026 Award Winners from Philadelphia Chapter</h3>
+                <ul>
+                    <li><strong>Prof. Chin Ok Lee &amp; Ms. Kwanghee Kim Award (Excellence Award):</strong> Dr. Se-Hwan Lee (UPenn)</li>
+                    <li><strong>Andrew Kim Memorial Foundation (AKF) Scholarship:</strong> Dr. Bumsik Cho (UPenn), Ms. Sue Hyon Kim (UPenn)</li>
+                    <li><strong>Poster Award:</strong> Dr. Jeonghwa Kim (UDel)</li>
+                </ul>
+            </div>
+
+            <div class="photo-grid">
+                <img src="images/events/nrc2026/DSC09501-1.jpg" alt="NRC 2026 Photo 1" onclick="openLightbox(this.src)" />
+                <img src="images/events/nrc2026/DSC09424-1-768x512.jpg" alt="NRC 2026 Photo 2" onclick="openLightbox(this.src)" />
+                <img src="images/events/nrc2026/DSC09610-1.jpg" alt="NRC 2026 Photo 3" onclick="openLightbox(this.src)" />
+                <img src="images/events/nrc2026/DSC09649-1.jpg" alt="NRC 2026 Photo 4" onclick="openLightbox(this.src)" />
+                <img src="images/events/nrc2026/DSC09804-1.jpg" alt="NRC 2026 Photo 5" onclick="openLightbox(this.src)" />
+                <img src="images/events/nrc2026/DSC09849-1.jpg" alt="NRC 2026 Photo 6" onclick="openLightbox(this.src)" />
+                <img src="images/events/nrc2026/DSC09878-1.jpg" alt="NRC 2026 Photo 7" onclick="openLightbox(this.src)" />
+                <img src="images/events/nrc2026/DSC09912-1.JPG" alt="NRC 2026 Photo 8" onclick="openLightbox(this.src)" />
+            </div>
+
+            <div style="margin-top: 18px;">
+                <a href="https://nrc.kseany.org/thanks-to-2026/" target="_blank" class="btn-primary" style="font-size: 12px;">View More Event Photos ↗</a>
+            </div>
+        </div>
+
+        <!-- 2026 Symposium -->
+        <div class="past-event-block" id="symposium-2026">
+            <h2>2026 US-Korea Northeastern Symposium</h2>
+            <p><strong>Date:</strong> February 27, 2026</p>
+            <p><strong>Location:</strong> UPenn Smilow Center, Arthur H. Rubenstein Auditorium, Philadelphia, PA</p>
+            <p><strong>Theme:</strong> "Pioneering the Future: The Convergence of AI, Bio-Science, &amp; Engineering"</p>
+            <p>The 2026 US-Korea Northeastern Symposium successfully concluded on February 27, bringing together researchers, professionals, and students for engaging discussions on AI, biomedical sciences, and engineering.</p>
+
+            <div class="photo-grid" style="grid-template-columns: 1fr 1fr;">
+                <img src="images/events/symposium2026/20260227_165638.jpg" alt="Symposium 2026 Group Photo 1" style="width: 48%; min-width: 250px;" onclick="openLightbox(this.src)" />
+                <img src="images/events/symposium2026/20260227_165708.jpg" alt="Symposium 2026 Group Photo 2" style="width: 48%; min-width: 250px;" onclick="openLightbox(this.src)" />
+            </div>
+
+            <div style="margin-top: 18px; display: flex; gap: 12px; flex-wrap: wrap;">
+                <a href="symposium/2026.html" class="btn-primary" style="font-size: 12px;">Symposium Details →</a>
+                <a href="symposium/2026_recap.html" class="btn-gold" style="font-size: 12px;">Event Recap &amp; Photos →</a>
+            </div>
+        </div>
+
+        <!-- Fall Membership Drive 2025 -->
+        <div class="past-event-block" id="fall-membership-drive">
+            <h2>Fall Membership Drive &amp; UPenn KoGSA Welcome (2025)</h2>
+            <p><strong>Date:</strong> September 6, 2025</p>
+            <p><strong>Location:</strong> UPenn Bodek Lounge</p>
+            <p>Annual membership drive welcoming new graduate students and scholars, introducing KSEA benefits and networking opportunities.</p>
+
+            <div class="photo-grid">
+                <img src="images/events/fall-membership-2025/group-photo.jpg" alt="Group Photo" onclick="openLightbox(this.src)" />
+                <img src="images/events/fall-membership-2025/welcome-screen.jpg" alt="Welcome Screen" onclick="openLightbox(this.src)" />
+                <img src="images/events/fall-membership-2025/presentation.jpg" alt="KSEA Presentation" onclick="openLightbox(this.src)" />
+            </div>
+        </div>
+
+        <!-- Joint Seminar Series (2025-2026) -->
+        <div class="past-event-block" id="seminar-series-2025-2026">
+            <h2>Philadelphia Chapter Joint Monthly Seminar Series (2025–2026)</h2>
+            <p><strong>Dates:</strong> September 2025 – April 2026</p>
+            <p><strong>Locations:</strong> UPenn Smilow Center &amp; Levine Hall</p>
+            <p>Inaugural collaborative monthly seminar series co-hosted by KSEA Philadelphia, PKSA, KITEE, and KKYU, featuring talks across AI, biomedical engineering, and physical sciences.</p>
+
+            <div class="photo-grid">
+                <img src="images/events/seminar-series/collage.jpg" alt="Seminar Series Events" onclick="openLightbox(this.src)" />
+                <img src="images/events/seminar-series/schedule.jpg" alt="Fall 2025 Schedule" onclick="openLightbox(this.src)" />
+                <img src="images/events/seminar-series/topics.png" alt="Seminar Topics" onclick="openLightbox(this.src)" />
+            </div>
+        </div>
+
+        <!-- 34th NRC 2025 -->
+        <div class="past-event-block" id="nrc-2025">
+            <h2>34th Northeast Regional Conference (NRC 2025)</h2>
+            <p><strong>Date:</strong> April 26, 2025</p>
+            <p><strong>Location:</strong> DoubleTree Hotel, Fort Lee, NJ</p>
+            <p><strong>Theme:</strong> "Innovating the Future: AI, Healthcare, and Digital Transformation"</p>
+            <p>Interdisciplinary dialogue among leaders from academia, industry, and government across the Northeast region.</p>
+
+            <div style="margin-top: 16px;">
+                <img src="images/events/nrc2025/nrc2025-main.png" alt="NRC 2025 Group Photo" style="width: 100%; max-width: 800px; border: 1px solid var(--w-ink); box-shadow: 3px 3px 0 var(--w-ink); cursor: pointer;" onclick="openLightbox(this.src)" />
+            </div>
+
+            <div class="video-embed">
+                <iframe src="https://www.youtube.com/embed/_ajqaO4Ka_0" title="NRC 2025 Recap" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+
+        <!-- 33rd NRC 2024 -->
+        <div class="past-event-block" id="nrc-2024">
+            <h2>33rd Northeast Regional Conference (NRC 2024)</h2>
+            <p><strong>Date:</strong> April 13, 2024</p>
+            <p><strong>Location:</strong> Montclair State University, NJ</p>
+            <p><strong>Theme:</strong> "Toward a Resilient Future: Uniting Science, Technology, and Sustainability"</p>
+
+            <div style="margin-top: 16px;">
+                <img src="images/events/nrc2024/nrc2024-1.png" alt="NRC 2024 Group Photo" style="width: 100%; max-width: 800px; border: 1px solid var(--w-ink); box-shadow: 3px 3px 0 var(--w-ink); cursor: pointer;" onclick="openLightbox(this.src)" />
+            </div>
+
+            <div class="video-embed">
+                <iframe src="https://www.youtube.com/embed/XfDL_bUdP_A" title="NRC 2024 Recap" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+
+        <!-- 32nd NRC 2023 -->
+        <div class="past-event-block" id="nrc-2023">
+            <h2>32nd Northeast Regional Conference (NRC 2023)</h2>
+            <p><strong>Date:</strong> April 29, 2023</p>
+            <p><strong>Location:</strong> Montclair State University, NJ</p>
+            <p><strong>Theme:</strong> "Rebuilding with Resilience"</p>
+
+            <div style="margin-top: 16px;">
+                <img src="images/events/nrc2023/nrc2023-group.jpg" alt="NRC 2023 Group Photo" style="width: 100%; max-width: 800px; border: 1px solid var(--w-ink); box-shadow: 3px 3px 0 var(--w-ink); cursor: pointer;" onclick="openLightbox(this.src)" />
+            </div>
+        </div>
+
+        <!-- KSEA-KITEE Networking 2023 -->
+        <div class="past-event-block" id="kitee-networking-2023">
+            <h2>KSEA Philadelphia and New Jersey – KITEE Networking Event</h2>
+            <p><strong>Date:</strong> February 22, 2023</p>
+            <p><strong>Location:</strong> Han Dynasty, Cherry Hill, NJ</p>
+            <p>Joint networking event connecting KSEA members and KITEE entrepreneurs across the Philadelphia and South/Central NJ area.</p>
+
+            <div style="margin-top: 16px;">
+                <img src="assets/event-networking-2023.jpg" alt="Networking Dinner Group Photo" style="width: 100%; max-width: 800px; border: 1px solid var(--w-ink); box-shadow: 3px 3px 0 var(--w-ink); cursor: pointer;" onclick="openLightbox(this.src)" />
             </div>
         </div>
     </section>
 
-    <!-- Skyline divider strip -->
-    <div style="position: relative; height: 140px; overflow: hidden; border-bottom: 1px solid var(--w-ink);">
-        <img src="assets/skyline.svg" class="philly-landmark philly-landmark-strip philly-landmark-dark" style="height: 140px;"/>
-=======
-<html lang="en"><head>
-<meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
-<title>Events — KSEA Philadelphia</title>
-<link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter+Tight:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Serif+KR:wght@400;500;600&display=swap" rel="stylesheet"/>
-<link rel="stylesheet" href="style.css"/>
-<style>
-  .event-list { border-top: 1px solid var(--w-rule); }
-  .event-row { display: grid; grid-template-columns: 120px 1fr 220px 140px; gap: 32px; align-items: start; padding: 28px 40px; border-bottom: 1px solid var(--w-rule); }
-  .event-row:hover { background: var(--w-cream); }
-  .event-date { font-family: var(--f-mono); font-size: 12px; letter-spacing: 1px; text-transform: uppercase; opacity: 0.7; padding-top: 4px; }
-  .event-title { font-family: var(--f-display); font-weight: 500; font-size: 22px; letter-spacing: -0.2px; margin: 0 0 6px; }
-  .event-sub { font-size: 14px; opacity: 0.75; line-height: 1.55; }
-  .event-venue { font-size: 13px; opacity: 0.75; line-height: 1.55; }
-  .event-tag { font-family: var(--f-mono); font-size: 10px; letter-spacing: 1px; text-transform: uppercase; padding: 4px 8px; border: 1px solid var(--w-rule); display: inline-block; margin-bottom: 6px; }
-  .event-tag.past { opacity: 0.5; }
-  .event-tag.upcoming { background: var(--w-navy); color: var(--w-cream); border-color: var(--w-navy); }
-  @media (max-width: 820px) { .event-row { grid-template-columns: 1fr; gap: 6px; padding: 24px 24px; } }
-</style>
-</head><body>
-<div class="ticker"><div class="ticker-headline"><span>Vol. XIV · Issue 04 — Upcoming: STEP-UP symposium · May 16–17</span></div><div class="ticker-issue"><span class="ticker-kr">필라델피아 지부</span> · Philadelphia Chapter · EST. 1971</div></div>
-<nav class="site-nav" id="siteNav">
-  <a href="index.html" class="nav-brand"><img src="assets/ksea_phily_logo.png" alt=""/><div><div class="nav-wordmark">KSEA Philadelphia</div><div class="nav-sub">Chapter Record · Vol. XIV</div></div></a>
-  <button class="nav-toggle" onclick="document.getElementById('siteNav').classList.toggle('is-open')">Menu</button>
-  <div class="nav-links"><a href="about.html">About</a><a href="leadership.html">Leadership</a><a href="events.html" class="is-active">Events</a><a href="membership.html">Membership</a><a href="sponsors.html">Sponsors</a><a href="yg.html">YG</a><a href="careers.html">Careers</a><a href="membership.html" class="btn-join">Join →</a></div>
-</nav>
+    <!-- Footer -->
+    <footer class="site-foot">
+        <div class="foot-grid">
+            <div class="foot-brand">
+                <div class="foot-brand-row">
+                    <img src="assets/ksea_phily_logo.png" alt="KSEA Philadelphia"/>
+                    <div class="foot-brand-name">KSEA Philadelphia</div>
+                </div>
+                <div class="foot-brand-meta">Philadelphia chapter of the Korean‑American<br/>Scientists &amp; Engineers Association<br/>Est. 1971 · 501(c)(3) non‑profit</div>
+            </div>
+            <div><div class="foot-col-head">Chapter</div><a href="about.html">About</a><a href="leadership.html">Leadership</a><a href="bylaws.html">Bylaws</a><a href="careers.html">Careers</a></div>
+            <div><div class="foot-col-head">Programs</div><a href="events.html">Events &amp; Seminars</a><a href="nmsc.html">NMSC</a><a href="membership.html">Membership</a><a href="yg.html">Young Generation</a></div>
+            <div><div class="foot-col-head">Connect</div><a href="contact.html">Contact</a><a href="https://philly.ksea.org" target="_blank" style="font-weight: 600;">philly.ksea.org ↗</a><a href="https://ksea.org" target="_blank">KSEA HQ ↗</a></div>
+        </div>
+        <div class="foot-colophon"><span>© 2026 KSEA Philadelphia Chapter</span><span>Colophon: EB Garamond · Inter Tight · JetBrains Mono</span><span>Set &amp; composed in Philadelphia, PA</span></div>
+    </footer>
 
-<section class="page-hero">
-  <div class="philly-bg-text" style="font-size: 11vw;">EVENTS</div>
-  <img src="assets/city-hall.svg" class="philly-landmark philly-landmark-br philly-landmark-dark" style="height: 260px;"/>
-  <div class="hero-content">
-    <div class="eyebrow">§ 01 — Calendar of record</div>
-    <h1>Events &amp; <em style="font-style:italic;color:var(--w-navy);">seminars</em>.</h1>
-    <p class="page-hero-sub">Chapter-hosted symposia, joint seminars with PKSA / KoGSA / KKYU, and Young Generation events across the Delaware Valley.</p>
-  </div>
-</section>
-
-<section>
-  <div class="section-header"><span class="sh-title">§ 02 — Featured: 2026 STEP-UP Symposium</span><span class="sh-meta">May 16–17 · Philadelphia</span></div>
-  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0; border-top: 1px solid var(--w-rule); border-bottom: 1px solid var(--w-rule);">
-    <div style="padding: 56px 40px; border-right: 1px solid var(--w-rule);">
-      <div class="eyebrow eyebrow--brick" style="margin-bottom: 14px;">▸ Flagship program</div>
-      <h2 style="font-family: var(--f-display); font-weight: 500; font-size: 42px; letter-spacing: -0.8px; margin: 0 0 14px; line-height: 1.05;">STEP-UP 2026.</h2>
-      <p style="font-style: italic; opacity: 0.9; margin-bottom: 18px; font-family: var(--f-display); font-size: 20px;">Science, Technology, Entrepreneurship &amp; Professional development — Unified Philadelphia.</p>
-      <p style="opacity: 0.85; line-height: 1.65;">Two days of invited talks, poster sessions, and career roundtables at the intersection of biotech, AI, and translational science. Hosted jointly with PKSA and KoGSA.</p>
-      <div style="display:flex; gap: 12px; margin-top: 24px; flex-wrap: wrap;">
-        <a href="#" class="btn-primary">Register →</a>
-        <a href="#" class="btn-outline">View program</a>
-      </div>
+    <!-- Lightbox Modal -->
+    <div id="lightbox" onclick="closeLightbox()">
+        <span id="lightbox-close">&times;</span>
+        <img id="lightbox-img" src="" alt="Expanded View" />
     </div>
-    <div style="padding: 56px 40px; background: var(--w-cream);">
-      <div class="eyebrow" style="margin-bottom: 14px;">Details</div>
-      <dl style="display:grid; grid-template-columns: 120px 1fr; gap: 12px 20px; font-size: 15px;">
-        <dt style="opacity:0.6; font-family: var(--f-mono); font-size: 12px; text-transform: uppercase;">Dates</dt><dd>May 16–17, 2026</dd>
-        <dt style="opacity:0.6; font-family: var(--f-mono); font-size: 12px; text-transform: uppercase;">Venue</dt><dd>University of Pennsylvania<br/>Philadelphia, PA</dd>
-        <dt style="opacity:0.6; font-family: var(--f-mono); font-size: 12px; text-transform: uppercase;">Format</dt><dd>In-person, 2 days</dd>
-        <dt style="opacity:0.6; font-family: var(--f-mono); font-size: 12px; text-transform: uppercase;">Audience</dt><dd>Researchers, graduate students, postdocs, industry</dd>
-        <dt style="opacity:0.6; font-family: var(--f-mono); font-size: 12px; text-transform: uppercase;">Sponsor</dt><dd>Meta Biomed (title) · KUSCO</dd>
-      </dl>
->>>>>>> Stashed changes
-    </div>
-  </div>
-</section>
 
-<section>
-  <div class="section-header"><span class="sh-title">§ 03 — Upcoming seminars</span><span class="sh-meta">2026 program</span></div>
-  <div class="event-list">
-    <div class="event-row">
-      <div class="event-date">2026 · 06 · 12</div>
-      <div><span class="event-tag upcoming">Upcoming · Seminar</span><h3 class="event-title">Generative AI in drug discovery.</h3><p class="event-sub">Joint KKYU × KSEA-Philly seminar. Invited speakers from Penn, Spark Therapeutics, and industry.</p></div>
-      <div class="event-venue">Penn Medicine<br/>Smilow Center · Rubenstein Auditorium</div>
-      <div><a href="#" class="btn-outline" style="font-size: 12px; padding: 8px 14px;">RSVP →</a></div>
-    </div>
-    <div class="event-row">
-      <div class="event-date">2026 · 07 · 19</div>
-      <div><span class="event-tag upcoming">Upcoming · Workshop</span><h3 class="event-title">Career roundtable — industry vs. academia.</h3><p class="event-sub">Young Generation event. Panel with PIs, medical directors, and biotech founders.</p></div>
-      <div class="event-venue">Drexel University<br/>LeBow Hall</div>
-      <div><a href="#" class="btn-outline" style="font-size: 12px; padding: 8px 14px;">RSVP →</a></div>
-    </div>
-    <div class="event-row">
-      <div class="event-date">2026 · 09 · 05</div>
-      <div><span class="event-tag upcoming">Upcoming · Competition</span><h3 class="event-title">NMSC 2026 — regional qualifier.</h3><p class="event-sub">Mathematics &amp; Science Competition for grades 4–11. Registration opens June 1.</p></div>
-      <div class="event-venue">Temple University<br/>Mitten Hall</div>
-      <div><a href="nmsc.html" class="btn-outline" style="font-size: 12px; padding: 8px 14px;">Details →</a></div>
-    </div>
-  </div>
-</section>
+    <script>
+        function openLightbox(src) {
+            const lightbox = document.getElementById('lightbox');
+            const img = document.getElementById('lightbox-img');
+            img.src = src;
+            lightbox.classList.add('active');
+        }
 
-<section>
-  <div class="section-header"><span class="sh-title">§ 04 — Past events</span><span class="sh-meta">2024–2025</span></div>
-  <div class="event-list">
-    <div class="event-row">
-      <div class="event-date">2025 · 10 · 18</div>
-      <div><span class="event-tag past">Past · Symposium</span><h3 class="event-title">Fall Research Symposium 2025.</h3><p class="event-sub">Joint symposium with PKSA. 14 invited talks, 42 posters, 180 attendees.</p></div>
-      <div class="event-venue">Penn · Houston Hall</div>
-      <div><a href="#" class="btn-outline" style="font-size: 12px; padding: 8px 14px;">Archive →</a></div>
-    </div>
-    <div class="event-row">
-      <div class="event-date">2025 · 06 · 07</div>
-      <div><span class="event-tag past">Past · Seminar</span><h3 class="event-title">Korean biotech landscape — CHOP perspective.</h3><p class="event-sub">Keynote by industry director; reception to follow.</p></div>
-      <div class="event-venue">CHOP · Roberts Center</div>
-      <div><a href="#" class="btn-outline" style="font-size: 12px; padding: 8px 14px;">Archive →</a></div>
-    </div>
-    <div class="event-row">
-      <div class="event-date">2024 · 11 · 15</div>
-      <div><span class="event-tag past">Past · Networking</span><h3 class="event-title">Year-end networking dinner.</h3><p class="event-sub">Annual gathering with 85 attendees across universities and industry partners.</p></div>
-      <div class="event-venue">Center City Philadelphia</div>
-      <div><a href="#" class="btn-outline" style="font-size: 12px; padding: 8px 14px;">Archive →</a></div>
-    </div>
-  </div>
-</section>
-
-
-        <div class="past-event-block" id="nrc-2026">
-                <h2>35th Northeast Regional Conference (NRC)</h2>
-                <p><strong>Date:</strong> March 14, 2026</p>
-                <p><strong>Location:</strong> DoubleTree by Hilton Hotel, Fort Lee, NJ</p>
-                <p><strong>Theme:</strong> "Science And Technology For Human Potential: Shaping Our World And Beyond."</p>
-
-                <p>The 35th NRC was successfully held on March 14, 2026, bringing together experts and researchers from the Northeast region. Our chapter members were honored with several prestigious awards.</p>
-
-                <div style="margin-top: 20px; padding: 15px; background: #eef4ff; border-left: 4px solid #003478; border-radius: 4px;">
-                    <h3 style="margin-top: 0; margin-bottom: 10px; color: var(--w-navy);">NRC 2026 Award Winners from Philadelphia Chapter</h3>
-                    <ul style="margin: 0; padding-left: 20px;">
-                        <li><strong>Prof. Chin Ok Lee & Ms. Kwanghee Kim Award (Excellence Award):</strong> Dr. Se-Hwan Lee (UPenn)</li>
-                        <li><strong>Andrew Kim Memorial Foundation (AKF) Scholarship:</strong> Dr. Bumsik Cho (UPenn), Ms. Sue Hyon Kim (UPenn)</li>
-                        <li><strong>Poster Award:</strong> Dr. Jeonghwa Kim (UDel)</li>
-                    </ul>
-                </div>
-
-                <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-top: 25px; justify-content: center;">
-                    <img src="images/events/nrc2026/DSC09501-1.jpg" alt="NRC 2026 Photo" style="width: 23%; min-width: 150px; border-radius: 4px; cursor: pointer;" onclick="openLightbox(this.src)">
-                    <img src="images/events/nrc2026/DSC09424-1-768x512.jpg" alt="NRC 2026 Photo" style="width: 23%; min-width: 150px; border-radius: 4px; cursor: pointer;" onclick="openLightbox(this.src)">
-                    <img src="images/events/nrc2026/DSC09610-1.jpg" alt="NRC 2026 Photo" style="width: 23%; min-width: 150px; border-radius: 4px; cursor: pointer;" onclick="openLightbox(this.src)">
-                    <img src="images/events/nrc2026/DSC09649-1.jpg" alt="NRC 2026 Photo" style="width: 23%; min-width: 150px; border-radius: 4px; cursor: pointer;" onclick="openLightbox(this.src)">
-                    <img src="images/events/nrc2026/DSC09804-1.jpg" alt="NRC 2026 Photo" style="width: 23%; min-width: 150px; border-radius: 4px; cursor: pointer;" onclick="openLightbox(this.src)">
-                    <img src="images/events/nrc2026/DSC09849-1.jpg" alt="NRC 2026 Photo" style="width: 23%; min-width: 150px; border-radius: 4px; cursor: pointer;" onclick="openLightbox(this.src)">
-                    <img src="images/events/nrc2026/DSC09878-1.jpg" alt="NRC 2026 Photo" style="width: 23%; min-width: 150px; border-radius: 4px; cursor: pointer;" onclick="openLightbox(this.src)">
-                    <img src="images/events/nrc2026/DSC09912-1.JPG" alt="NRC 2026 Photo" style="width: 23%; min-width: 150px; border-radius: 4px; cursor: pointer;" onclick="openLightbox(this.src)">
-                </div>
-
-                    <a href="https://nrc.kseany.org/thanks-to-2026/" target="_blank" class="btn-primary">View More Event Photos</a>
-            </div>
-
-            <div style="padding: 40px; margin-bottom: 40px; background: var(--w-paper); border: 1px solid var(--w-ink);" id="symposium-2026">
-                <h2>2026 US-Korea Northeastern Symposium</h2>
-                <p><strong>Date:</strong> February 27, 2026</p>
-                <p><strong>Location:</strong> UPenn Smilow Center, Arthur H. Rubenstein Auditorium, Philadelphia, PA</p>
-                <p><strong>Theme:</strong> "Pioneering the Future: The Convergence of AI, Bio-Science, & Engineering"
-                </p>
-
-                <p>The 2026 US-Korea Northeastern Symposium successfully concluded on February 27. The event brought
-                    together researchers, professionals, and students for engaging discussions on the integration of
-                    artificial intelligence in biomedical sciences and engineering. More detailed updates and materials
-                    will be posted soon. Thank you to everyone who made this event a great success!</p>
-
-                <div style="display: flex; gap: 15px; margin-top: 20px; flex-wrap: wrap;">
-                    <div style="flex: 1; min-width: 250px;">
-                        <img src="images/events/symposium2026/20260227_165638.jpg" alt="Symposium 2026 Group Photo 1"
-                            style="width: 100%; border-radius: 8px; margin-bottom: 5px; cursor: pointer;"
-                            onclick="openLightbox(this.src)">
-                    </div>
-                    <div style="flex: 1; min-width: 250px;">
-                        <img src="images/events/symposium2026/20260227_165708.jpg" alt="Symposium 2026 Group Photo 2"
-                            style="width: 100%; border-radius: 8px; margin-bottom: 5px; cursor: pointer;"
-                            onclick="openLightbox(this.src)">
-                    </div>
-                </div>
-
-                <div style="margin-top: 20px; text-align: center;">
-                    <a href="symposium/2026.html" class="btn-primary" style="margin-right: 10px;">View Symposium Details</a>
-                    <a href="symposium/2026_recap.html" class="btn-gold">Event Recap & Photos</a>
-                </div>
-            </div>
-
-            <div style="padding: 40px; margin-bottom: 40px; background: var(--w-paper); border: 1px solid var(--w-ink);" id="fall-membership-drive">
-                <h2>KSEA Philadelphia Chapter Fall Membership Drive & UPenn KoGSA New Student Welcome</h2>
-                <p><strong>Date:</strong> September 4, 2026 (Annual event; previous held September 6, 2025)</p>
-                <p><strong>Location:</strong> UPenn Bodek Lounge</p>
-                <p>This annual membership drive welcomed new members while actively engaging with our existing
-                    community.
-                    We introduced KSEA and highlighted the unique benefits and opportunities available through the
-                    Philadelphia chapter,
-                    with a focus on increasing active student membership by showcasing upcoming events and the value of
-                    joining our professional network.</p>
-
-
-                <div style="display: flex; gap: 15px; margin-top: 20px; flex-wrap: wrap;">
-                    <div style="flex: 1; min-width: 250px;">
-                        <img src="images/events/fall-membership-2025/group-photo.jpg" alt="Group Photo"
-                            style="width: 100%; border-radius: 8px; margin-bottom: 5px;">
-                        <p style="font-size: 0.9em; margin: 0;"><em>Group photo with attendees</em></p>
-                    </div>
-                    <div style="flex: 1; min-width: 250px;">
-                        <img src="images/events/fall-membership-2025/welcome-screen.jpg" alt="Welcome Screen"
-                            style="width: 100%; border-radius: 8px; margin-bottom: 5px;">
-                        <p style="font-size: 0.9em; margin: 0;"><em>KoGSA welcome orientation</em></p>
-                    </div>
-                    <div style="flex: 1; min-width: 250px;">
-                        <img src="images/events/fall-membership-2025/presentation.jpg" alt="KSEA Presentation"
-                            style="width: 100%; border-radius: 8px; margin-bottom: 5px;">
-                        <p style="font-size: 0.9em; margin: 0;"><em>KSEA presentation at the event</em></p>
-                    </div>
-                </div>
-            </div>
-
-            <div style="padding: 40px; margin-bottom: 40px; background: var(--w-paper); border: 1px solid var(--w-ink);" id="seminar-series">
-                <h2>Philadelphia Chapter Joint Monthly Seminar Series</h2>
-                <p><strong>Dates:</strong> Fall 2026 Kickoff: September 10, 2026 (Semester-based: Fall 2026 & Spring 2027) · Previously September 2025 – April 2026</p>
-                <p><strong>Locations:</strong> UPenn Smilow Center & Levine Hall</p>
-                <p>A collaborative monthly seminar series co-hosted by KSEA Philadelphia, <a
-                        href="https://www.facebook.com/groups/PKSAScholars/" target="_blank">PKSA (Philadelphia Korean
-                        Scholars Association)</a>,
-                    <a href="https://kitee.org/" target="_blank">KITEE (Korean-American Innovative Technology Engineers
-                        and Entrepreneurs)</a>, and <a href="https://kkyu.qshop.ai/" target="_blank">KKYU (Knowledge
-                        Knocking for Your Universe)</a>.
-                    This series provides a platform for knowledge exchange among students and researchers, featuring
-                    speakers from various scientific and technological fields to promote interdisciplinary learning and
-                    professional networking.
-                </p>
-
-                <!-- Fall 2026 Seminar 1 Recap Spotlight -->
-                <div style="background: var(--w-cream); border: 1.5px solid var(--w-navy); padding: 28px; margin: 28px 0;">
-                    <div style="display: flex; gap: 28px; flex-wrap: wrap; align-items: flex-start;">
-                        <div style="flex: 0 0 240px; max-width: 260px;">
-                            <img src="images/events/seminar-series/20260910-seminar.jpg" alt="Seminar Flyer - Sue Hyon Kim" style="width: 100%; border: 1px solid var(--w-ink); box-shadow: 3px 3px 0 var(--w-ink); cursor: pointer;" onclick="openLightbox(this.src)" />
-                        </div>
-                        <div style="flex: 1; min-width: 280px;">
-                            <div style="display: inline-block; padding: 4px 10px; background: var(--w-ink); color: var(--w-cream); font-size: 10px; font-family: 'JetBrains Mono', monospace; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 10px;">Concluded · Fall 2026 Kickoff</div>
-                            <h3 style="font-size: 22px; font-weight: 600; margin: 0 0 10px; line-height: 1.25;">Using Large Language Models (LLMs) to examine selection practices for Liver transplantation (LT): an Accelerated-pace study</h3>
-                            <p style="margin: 0 0 6px; font-size: 14px;"><strong>Speaker:</strong> Sue Hyon Kim (김수현), Ph.D. candidate (University of Pennsylvania, School of Nursing)</p>
-                            <p style="margin: 0 0 6px; font-size: 14px;"><strong>Date:</strong> Thursday, September 10, 2026 · 6:00 PM – 7:00 PM EDT</p>
-                            <p style="margin: 0 0 6px; font-size: 14px;"><strong>Location:</strong> Smilow Center for Translational Research 10th Floor Seminar Room</p>
-                            <p style="margin: 0 0 16px; font-size: 13px; opacity: 0.85;">Successfully concluded on September 10, 2026! We had a high-engagement session kicking off the Fall 2026 joint seminar series.</p>
-                            <div style="display: flex; gap: 12px; align-items: center; flex-wrap: wrap;">
-                                <a href="https://www.facebook.com/photo/?fbid=4426308667583204&set=gm.28074924125462969&idorvanity=169144909800932" target="_blank" style="font-size: 12px; font-family: 'JetBrains Mono', monospace; text-decoration: underline; opacity: 0.75;">PKSA Announcement ↗</a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Seminar Event Photos (Compact Thumbnails) -->
-                    <div style="margin-top: 24px; border-top: 1px solid rgba(18,18,18,0.15); padding-top: 18px;">
-                        <h4 style="margin: 0 0 12px; font-size: 13px; font-family: 'JetBrains Mono', monospace; text-transform: uppercase; letter-spacing: 1px; color: var(--w-navy);">▸ Event Photo Gallery <span style="opacity: 0.6; font-size: 11px; text-transform: none;">(Click thumbnail to expand)</span></h4>
-                        <div style="display: flex; gap: 12px; flex-wrap: wrap; align-items: center;">
-                            <img src="images/events/seminar-series/20260910-seminar-photo2.jpg" alt="Speaker Presentation" title="Speaker Presentation" style="width: 140px; height: 105px; object-fit: cover; border: 1px solid var(--w-ink); box-shadow: 2px 2px 0 var(--w-ink); cursor: pointer;" onclick="openLightbox(this.src)" />
-                            <img src="images/events/seminar-series/20260910-seminar-photo3.jpg" alt="Seminar Room Discussion" title="Seminar Room Discussion" style="width: 140px; height: 105px; object-fit: cover; border: 1px solid var(--w-ink); box-shadow: 2px 2px 0 var(--w-ink); cursor: pointer;" onclick="openLightbox(this.src)" />
-                            <img src="images/events/seminar-series/20260910-seminar-photo4.jpg" alt="Presentation Slides" title="Presentation Slides" style="width: 140px; height: 105px; object-fit: cover; border: 1px solid var(--w-ink); box-shadow: 2px 2px 0 var(--w-ink); cursor: pointer;" onclick="openLightbox(this.src)" />
-                            <img src="images/events/seminar-series/20260910-seminar-photo1.jpg" alt="Group Commemorative Photo" title="Group Photo" style="width: 140px; height: 105px; object-fit: cover; border: 1px solid var(--w-ink); box-shadow: 2px 2px 0 var(--w-ink); cursor: pointer;" onclick="openLightbox(this.src)" />
-                            <img src="images/events/seminar-series/20260910-seminar-photo6.jpg" alt="Networking Dinner Gathering" title="Dinner Gathering" style="width: 140px; height: 105px; object-fit: cover; border: 1px solid var(--w-ink); box-shadow: 2px 2px 0 var(--w-ink); cursor: pointer;" onclick="openLightbox(this.src)" />
-                        </div>
-                    </div>
-                </div>
-
-                <div style="display: flex; gap: 15px; margin-top: 20px; flex-wrap: wrap;">
-                    <div style="flex: 1; min-width: 250px;">
-                        <img src="images/events/seminar-series/collage.jpg" alt="Seminar Series Events"
-                            style="width: 100%; border-radius: 8px; margin-bottom: 5px;">
-                        <p style="font-size: 0.9em; margin: 0;"><em>Seminar series events and networking</em></p>
-                    </div>
-                    <div style="flex: 1; min-width: 250px;">
-                        <img src="images/events/seminar-series/schedule.jpg" alt="Fall 2025 Seminar Schedule"
-                            style="width: 100%; border-radius: 8px; margin-bottom: 5px;">
-                        <p style="font-size: 0.9em; margin: 0;"><em>Fall 2025 seminar schedule</em></p>
-                    </div>
-                    <div style="flex: 1; min-width: 250px;">
-                        <img src="images/events/seminar-series/topics.png" alt="Seminar Topics"
-                            style="width: 100%; border-radius: 8px; margin-bottom: 5px;">
-                        <p style="font-size: 0.9em; margin: 0;"><em>Featured seminar topics</em></p>
-                    </div>
-                </div>
-
-            </div>
-
-            <!-- 2026-2027 Key Annual Events & Milestones -->
-            <div style="padding: 40px; margin-bottom: 40px; background: var(--w-paper); border: 1px solid var(--w-ink);" id="annual-schedule-2026-2027">
-                <div style="display: inline-block; padding: 4px 10px; background: var(--w-navy); color: var(--w-cream); font-size: 10px; font-family: 'JetBrains Mono', monospace; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 12px;">Roadmap · 2026–2027 Calendar</div>
-                <h2 style="font-size: 28px; font-weight: 600; letter-spacing: -0.5px; margin: 0 0 12px;">Key Annual Events & Milestones (2026–2027)</h2>
-                <p style="font-size: 15px; line-height: 1.6; opacity: 0.85; margin: 0 0 24px;">Mark your calendars for our upcoming major chapter initiatives planned for the 2026–2027 academic year.</p>
-
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-bottom: 30px;">
-                    <div style="border: 1px solid var(--w-ink); padding: 24px; background: var(--w-cream);">
-                        <div style="font-size: 11px; font-family: 'JetBrains Mono', monospace; font-weight: 600; color: #b45309; text-transform: uppercase; margin-bottom: 8px;">DECEMBER 2026</div>
-                        <h3 style="margin: 0 0 10px; font-size: 20px; font-weight: 600;">End-of-Year Party (연말 송년회)</h3>
-                        <p style="font-size: 14px; line-height: 1.55; opacity: 0.85; margin: 0;">A celebratory year-end gathering to wrap up the fall semester, celebrate achievements, and network across our community.</p>
-                    </div>
-
-                    <div style="border: 1px solid var(--w-ink); padding: 24px; background: var(--w-cream);">
-                        <div style="font-size: 11px; font-family: 'JetBrains Mono', monospace; font-weight: 600; color: var(--w-navy); text-transform: uppercase; margin-bottom: 8px;">LATE JAN – EARLY FEB 2027</div>
-                        <h3 style="margin: 0 0 10px; font-size: 20px; font-weight: 600;">Chapter Symposium (챕터 심포지엄)</h3>
-                        <p style="font-size: 14px; line-height: 1.55; opacity: 0.85; margin: 0;">Annual multidisciplinary research symposium gathering scholars, professionals, and graduate students across Greater Philadelphia.</p>
-                    </div>
-
-                    <div style="border: 1px solid var(--w-ink); padding: 24px; background: var(--w-cream);">
-                        <div style="font-size: 11px; font-family: 'JetBrains Mono', monospace; font-weight: 600; color: #4338ca; text-transform: uppercase; margin-bottom: 8px;">MID / LATE APRIL 2027</div>
-                        <h3 style="margin: 0 0 10px; font-size: 20px; font-weight: 600;">Northeast Regional Conference (NRC)</h3>
-                        <p style="font-size: 14px; line-height: 1.55; opacity: 0.85; margin: 0 0 10px;">Participation in the annual NRC conference together with NY and NJ chapters to expand regional research networks.</p>
-                        <a href="https://nrc.kseany.org/" target="_blank" style="font-size: 12px; font-family: 'JetBrains Mono', monospace; text-decoration: underline;">nrc.kseany.org ↗</a>
-                    </div>
-                </div>
-
-                <div style="padding: 20px 24px; background: var(--w-cream); border-left: 4px solid var(--w-navy); display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 16px;">
-                    <div style="flex: 1; min-width: 260px;">
-                        <strong style="font-size: 15px; color: var(--w-navy);">🤝 Join the Chapter Council!</strong>
-                        <p style="margin: 4px 0 0 0; font-size: 13px; opacity: 0.85;">We are actively recruiting enthusiastic members to plan and lead our 2026–2027 programs. Interested in serving the community?</p>
-                    </div>
-                    <a href="mailto:ksea.philly.chapter@gmail.com?subject=[Chapter Council Application]" class="btn-join" style="padding: 8px 16px; font-size: 12px; text-decoration: none;">Contact to Join ↗</a>
-                </div>
-            </div>
-
-            <div style="padding: 40px; margin-bottom: 40px; background: var(--w-paper); border: 1px solid var(--w-ink);" id="nrc-2025">
-                <h2>34th Northeast Regional Conference (NRC)</h2>
-                <p><strong>Date:</strong> April 26, 2025</p>
-                <p><strong>Location:</strong> DoubleTree Hotel, Fort Lee, NJ</p>
-                <p><strong>Theme:</strong> "Innovating the Future: AI, Healthcare, and Digital Transformation"</p>
-
-                <p>The NRC 2025 provided a vibrant forum for knowledge sharing, collaboration, and innovation,
-                    encouraging interdisciplinary dialogue among leaders from academia, industry, and government. The
-                    event featured keynote addresses by distinguished speakers, technical sessions, panel discussions,
-                    and networking opportunities, promoting research and professional advancement between the USA and
-                    Korea.</p>
-
-                <div style="margin-top: 20px; margin-bottom: 20px;">
-                    <img src="images/events/nrc2025/nrc2025-main.png" alt="NRC 2025 Group Photo"
-                        style="width: 100%; border-radius: 8px; margin-bottom: 10px;">
-                    <p><em>Group photo of the 34th Northeast Regional Conference (NRC) on April 26, 2025.</em></p>
-                </div>
-
-                <div
-                    style="margin-top: 20px; position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%;">
-                    <iframe src="https://www.youtube.com/embed/_ajqaO4Ka_0" title="NRC 2025 Recap"
-                        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        allowfullscreen></iframe>
-                </div>
-            </div>
-            <div style="padding: 40px; margin-bottom: 40px; background: var(--w-paper); border: 1px solid var(--w-ink);">
-                <h2>33rd Northeast Regional Conference (NRC)</h2>
-                <p><strong>Date:</strong> April 13, 2024</p>
-                <p><strong>Location:</strong> Montclair State University, NJ</p>
-                <p><strong>Theme:</strong> "Toward a Resilient Future: Uniting Science, Technology, and Sustainability"
-                </p>
-
-                <p>The 33rd Northeast Regional Conference (NRC) 2024 was jointly organized by the New Jersey, New York
-                    Metropolitan, and Philadelphia Chapters of KSEA. The conference focused on harmonizing scientific
-                    advancement, technological prowess, and sustainable practices. It was held in collaboration with
-                    local societies and KSEA-affiliated professional societies (APSs), including KASBP, KITEE, KWiSE,
-                    NYKB, and PKSA.</p>
-
-                <div style="margin-top: 20px; margin-bottom: 20px;">
-                    <img src="images/events/nrc2024/nrc2024-1.png" alt="NRC 2024 Group Photo"
-                        style="width: 100%; border-radius: 8px; margin-bottom: 10px;">
-                    <p><em>Group photo of the 33th Northeast Regional Conference (NRC) on April 13, 2024.</em></p>
-                </div>
-
-                <div
-                    style="margin-top: 20px; position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%;">
-                    <iframe src="https://www.youtube.com/embed/XfDL_bUdP_A" title="NRC 2024 Recap"
-                        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        allowfullscreen></iframe>
-                </div>
-            </div>
-
-            <div style="padding: 40px; margin-bottom: 40px; background: var(--w-paper); border: 1px solid var(--w-ink);">
-                <h2>32nd Northeast Regional Conference (NRC)</h2>
-                <p><strong>Date:</strong> April 29, 2023</p>
-                <p><strong>Location:</strong> Montclair State University, NJ</p>
-                <p><strong>Theme:</strong> "Rebuilding with Resilience"</p>
-
-                <p>The 32nd NRC was jointly hosted by the KSEA New York Metropolitan, New Jersey, and Philadelphia
-                    chapters. The conference focused on promoting the spirit of service in pursuing technical excellence
-                    by exemplifying those who have led such a life of service. The theme championed the future of
-                    Biotech & Healthcare, D.N.A (Data, Network, and A.I.), Smart Science & Engineering,
-                    Entrepreneurship, and Young Generation.</p>
-
-                <p>The event featured plenary speakers Dr. Chang-Yong Nam (Brookhaven National Laboratory) and Dr.
-                    Young-Kee Kim (The University of Chicago), who shared insights on semiconductor devices and
-                    fundamental
-                    laws of nature, respectively. The conference was highly successful with 119 attendees, fostering
-                    networking and career opportunities.</p>
-
-                <div style="margin-top: 20px; margin-bottom: 20px;">
-                    <img src="images/events/nrc2023/nrc2023-group.jpg" alt="NRC 2023 Group Photo"
-                        style="width: 100%; border-radius: 8px; margin-bottom: 10px;">
-                    <p><em>Figure 4. NRC 2023 Group Photo</em></p>
-                </div>
-            </div>
-
-            <div style="padding: 40px; margin-bottom: 40px; background: var(--w-paper); border: 1px solid var(--w-ink);">
-                <h2>KSEA Philadelphia and New Jersey – KITEE Networking Event</h2>
-                <p><strong>Date:</strong> February 22, 2023</p>
-                <p><strong>Location:</strong> Han Dynasty, Cherry Hill, NJ</p>
-                <p>KSEA Philadelphia Chapter, New Jersey Chapter, and KITEE (Korean-American Innovative Technology
-                    Engineers and Entrepreneurs), an APS of KSEA, jointly held a networking event. The event aimed to
-                    promote networking and collaboration among KSEA and KITEE members in the Philadelphia and
-                    South/Central NJ area, and to recruit new members and bring out inactive members to connect with
-                    KSEA again.</p>
-                <img src="assets/event-networking-2023.jpg" alt="Group photo of the KSEA-KITEE Networking Dinner"
-                    style="max-width: 100%; height: auto; border-radius: 0;">
-                <p><em>A group photo of the KSEA-KITEE Networking Dinner on February 22, 2023.</em></p>
-            </div>
-    </section>
-
-<footer class="site-foot">
-  <div class="foot-grid">
-    <div class="foot-brand"><div class="foot-brand-row"><img src="assets/ksea_phily_logo.png" alt=""/><div class="foot-brand-name">KSEA Philadelphia</div></div><div class="foot-brand-meta">Philadelphia chapter of the Korean‑American<br/>Scientists &amp; Engineers Association<br/>Est. 1971 · 501(c)(3) non‑profit</div></div>
-    <div><div class="foot-col-head">Chapter</div><a href="about.html">About</a><a href="leadership.html">Leadership</a><a href="bylaws.html">Bylaws</a><a href="careers.html">Careers</a></div>
-    <div><div class="foot-col-head">Programs</div><a href="events.html">Events &amp; Seminars</a><a href="nmsc.html">NMSC</a><a href="membership.html">Membership</a><a href="yg.html">Young Generation</a></div>
-    <div><div class="foot-col-head">Connect</div><a href="contact.html">Contact</a><a href="https://philly.ksea.org" target="_blank" style="font-weight: 600;">philly.ksea.org ↗</a><a href="https://ksea.org" target="_blank">KSEA HQ ↗</a><a href="https://www.kusco.org" target="_blank">KUSCO ↗</a></div>
-  </div>
-  <div class="foot-colophon"><span>© 2026 KSEA Philadelphia Chapter</span><span>Colophon: EB Garamond · Inter Tight · JetBrains Mono</span><span>Set &amp; composed in Philadelphia, PA</span></div>
-</footer>
-</body></html>
+        function closeLightbox() {
+            document.getElementById('lightbox').classList.remove('active');
+        }
+    </script>
+</body>
+</html>
