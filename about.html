@@ -5,14 +5,107 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About - KSEA Philadelphia Chapter</title>
-    <meta name="description" content="History, mission, and objectives of the Korean-American Scientists and Engineers Association (KSEA) Philadelphia Chapter.">
+    <meta name="description" content="History, mission, demographics, and flagship programs of the Korean-American Scientists and Engineers Association (KSEA) and the Philadelphia Chapter.">
     <!-- OpenGraph / Social Sharing -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://kseaphilly.github.io/about.html">
     <meta property="og:title" content="About | KSEA Philadelphia Chapter">
-    <meta property="og:description" content="KSEA 필라델피아 지부 소개, 역사 및 비전">
+    <meta property="og:description" content="KSEA 필라델피아 지부 및 재미한인과학기술자협회(KSEA) 소개, 비전, 통계 및 학술 네트워크">
     <meta property="og:image" content="https://kseaphilly.github.io/assets/ksea_phily_logo.png">
     <link rel="stylesheet" href="css/style.css">
+    <style>
+        .stats-grid-6 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 16px;
+            margin: 24px 0 40px;
+        }
+        .stat-card-sm {
+            background: #f8f9fa;
+            border: 1px solid #e9ecef;
+            border-left: 4px solid #004a99;
+            padding: 16px;
+            border-radius: 4px;
+            text-align: center;
+        }
+        .stat-card-sm .stat-num {
+            font-size: 32px;
+            font-weight: 700;
+            color: #004a99;
+            line-height: 1;
+        }
+        .stat-card-sm .stat-lbl {
+            font-size: 12px;
+            text-transform: uppercase;
+            color: #6c757d;
+            margin-top: 8px;
+            font-weight: 600;
+        }
+        .grid-4-col {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+        .demo-box {
+            background: #ffffff;
+            border: 1px solid #e0e0e0;
+            border-radius: 6px;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+        }
+        .demo-box h3 {
+            font-size: 18px;
+            margin-top: 0;
+            border-bottom: 2px solid #f0ad4e;
+            padding-bottom: 6px;
+        }
+        .prog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+        .prog-card-item {
+            background: #f8f9fa;
+            border: 1px solid #e0e0e0;
+            padding: 20px;
+            border-radius: 6px;
+        }
+        .prog-card-item h3 {
+            font-size: 20px;
+            margin-top: 0;
+            color: #004a99;
+        }
+        .prog-tag {
+            display: inline-block;
+            background: #004a99;
+            color: #ffffff;
+            font-size: 11px;
+            padding: 2px 8px;
+            border-radius: 3px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+        .tg-grid-4 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 16px;
+            margin: 20px 0;
+        }
+        .tg-card {
+            background: #fdfdfd;
+            border: 1px solid #e5e5e5;
+            padding: 16px;
+            border-radius: 4px;
+        }
+        .tg-card h4 {
+            margin-top: 0;
+            color: #004a99;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 6px;
+        }
+    </style>
 </head>
 
 <body>
@@ -37,15 +130,43 @@
     <main>
         <div class="container">
             <h1>About Us</h1>
-            <p>The KSEA Philadelphia Chapter is a local chapter of the <a href="https://www.ksea.org/"
-                    target="_blank">Korean-American
-                    Scientists and Engineers Association (KSEA)</a>. We are dedicated to serving Korean-American
-                scientists and engineers in the Philadelphia metropolitan area.</p>
+            <p>Established on December 11, 1971 in Washington D.C., the <strong>Korean-American Scientists and Engineers Association (KSEA)</strong> is a 501(c)(3) non-profit national professional organization. The <strong>KSEA Philadelphia Chapter</strong> serves Korean-American scientists, engineers, and researchers across the Greater Philadelphia metropolitan area and Delaware Valley corridor (Penn Medicine, CHOP, Jefferson, Drexel, Temple, Wistar Institute, and regional biotech hubs).</p>
 
+            <!-- KSEA by Numbers -->
+            <div class="section">
+                <h2>KSEA by the Numbers</h2>
+                <div class="stats-grid-6">
+                    <div class="stat-card-sm">
+                        <div class="stat-num">8,000+</div>
+                        <div class="stat-lbl">Paid Active Members (30k Reg.)</div>
+                    </div>
+                    <div class="stat-card-sm">
+                        <div class="stat-num">70+</div>
+                        <div class="stat-lbl">Local Chapters</div>
+                    </div>
+                    <div class="stat-card-sm">
+                        <div class="stat-num">31</div>
+                        <div class="stat-lbl">YG Campus Groups</div>
+                    </div>
+                    <div class="stat-card-sm">
+                        <div class="stat-num">16</div>
+                        <div class="stat-lbl">Technical Groups</div>
+                    </div>
+                    <div class="stat-card-sm">
+                        <div class="stat-num">37</div>
+                        <div class="stat-lbl">Affiliated Societies (APS)</div>
+                    </div>
+                    <div class="stat-card-sm">
+                        <div class="stat-num">150+</div>
+                        <div class="stat-lbl">Annual Programs</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Vision & Mission -->
             <div class="section">
                 <h2>Our Vision</h2>
-                <p>To excel as a leading Korean-American scientific, engineering, and industrial organization, we will:
-                </p>
+                <p>To excel as a leading Korean-American scientific, engineering, and industrial organization, contributing to social welfare and technological innovation in the U.S. and Korea:</p>
                 <ul>
                     <li>Promote the application of science and technology for the general welfare of society.</li>
                     <li>Foster international cooperation especially between the U.S. and Korea.</li>
@@ -58,26 +179,153 @@
                 <h2>Our Mission</h2>
                 <p>To provide, in the areas of science, technology and entrepreneurship, opportunities for:</p>
                 <ul>
-                    <li>International Cooperation</li>
-                    <li>Career Development</li>
-                    <li>Community Service</li>
+                    <li><strong>Societal Welfare:</strong> Application of science and technology for public benefit.</li>
+                    <li><strong>Professional Networking:</strong> Enhancing collaboration among Korean-American professionals.</li>
+                    <li><strong>Bilateral Cooperation:</strong> Fostering international cooperation between the U.S. and Korea.</li>
+                    <li><strong>Career Cultivation:</strong> Assisting scientists and engineers to reach their full potential.</li>
+                    <li><strong>Community Service:</strong> Dedication to serving Korean-American communities.</li>
                 </ul>
             </div>
 
+            <!-- Member Demographics -->
+            <div class="section">
+                <h2>Member Demographics</h2>
+                <p>National membership breakdown across disciplines, career tracks, and education levels:</p>
+                <div class="grid-4-col">
+                    <div class="demo-box">
+                        <h3>Technical Expertise</h3>
+                        <ul>
+                            <li><strong>Bio &amp; Life Sciences:</strong> 20%</li>
+                            <li><strong>Medical Sciences:</strong> 11%</li>
+                            <li><strong>Computer Science &amp; IT:</strong> 10%</li>
+                            <li><strong>Civil Engineering:</strong> 10%</li>
+                            <li><strong>Mechanical Engineering:</strong> 10%</li>
+                            <li><strong>Electrical Engineering:</strong> 9%</li>
+                            <li><strong>Chemistry &amp; Math:</strong> 12%</li>
+                        </ul>
+                    </div>
+                    <div class="demo-box">
+                        <h3>Career Status</h3>
+                        <ul>
+                            <li><strong>Academia:</strong> 63%</li>
+                            <li><strong>Industry:</strong> 19%</li>
+                            <li><strong>Research Institutes:</strong> 12%</li>
+                            <li><strong>Others:</strong> 6%</li>
+                        </ul>
+                    </div>
+                    <div class="demo-box">
+                        <h3>Education Level</h3>
+                        <ul>
+                            <li><strong>Master's (MS):</strong> 31%</li>
+                            <li><strong>Bachelor's (BS):</strong> 24%</li>
+                            <li><strong>Doctorate (PhD):</strong> 23%</li>
+                            <li><strong>Students / Other:</strong> 22%</li>
+                        </ul>
+                    </div>
+                    <div class="demo-box">
+                        <h3>Geographic Region</h3>
+                        <ul>
+                            <li><strong>East Region:</strong> 37%</li>
+                            <li><strong>West Region:</strong> 28%</li>
+                            <li><strong>South Region:</strong> 14%</li>
+                            <li><strong>Midwest Region:</strong> 12%</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Technical Groups -->
+            <div class="section">
+                <h2>16 Technical Groups</h2>
+                <div class="tg-grid-4">
+                    <div class="tg-card">
+                        <h4>A. Physical Science</h4>
+                        <ul>
+                            <li>A-1: Physics</li>
+                            <li>A-2: Chemistry</li>
+                            <li>A-3: Math, Stats, Ocean &amp; Atmos</li>
+                        </ul>
+                    </div>
+                    <div class="tg-card">
+                        <h4>B. Life Science</h4>
+                        <ul>
+                            <li>B-1: Health &amp; Med Sciences</li>
+                            <li>B-2: Agricultural &amp; Food</li>
+                            <li>B-3: Biological &amp; Biomedical</li>
+                        </ul>
+                    </div>
+                    <div class="tg-card">
+                        <h4>C. Engineering</h4>
+                        <ul>
+                            <li>C-1: Bio &amp; Biomedical Eng</li>
+                            <li>C-2: Chem &amp; Energy Eng</li>
+                            <li>C-3: Mech &amp; Aerospace Eng</li>
+                            <li>C-4: Materials &amp; Nano</li>
+                            <li>C-5: Civil &amp; Environmental</li>
+                            <li>C-6: Electrical &amp; Computer</li>
+                            <li>C-7: Computer &amp; Info Sci</li>
+                            <li>C-8: Industrial &amp; Systems</li>
+                        </ul>
+                    </div>
+                    <div class="tg-card">
+                        <h4>D. Art &amp; Humanity</h4>
+                        <ul>
+                            <li>D-1: Social Sci, Arts &amp; STEM Ed</li>
+                            <li>D-2: Tech Entrepreneurship &amp; Law</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Flagship Programs -->
+            <div class="section">
+                <h2>Flagship National Programs</h2>
+                <div class="prog-grid">
+                    <div class="prog-card-item">
+                        <span class="prog-tag">Annual Conference</span>
+                        <h3>UKC (US-Korea Conference)</h3>
+                        <p>Annual US-Korea Conference on Science, Technology &amp; Entrepreneurship gathering 1,000+ researchers, academic leaders, and industry executives. (UKC 2026: Florida; UKC 2027: Las Vegas).</p>
+                    </div>
+                    <div class="prog-card-item">
+                        <span class="prog-tag">Career Development</span>
+                        <h3>SEED Workshop</h3>
+                        <p>Scientists &amp; Engineers Early-Career Development Workshop offering grant writing, tenure strategies, and career mentorship for postdocs and junior faculty.</p>
+                    </div>
+                    <div class="prog-card-item">
+                        <span class="prog-tag">Leadership Development</span>
+                        <h3>IMPACTs &amp; KATALYST</h3>
+                        <p>National leadership immersion: <em>IMPACTs</em> for young professionals; <em>KATALYST</em> for undergraduate STEM mentorship and leadership.</p>
+                    </div>
+                    <div class="prog-card-item">
+                        <span class="prog-tag">Youth Competitions</span>
+                        <h3>NMSC &amp; STEM Art Contest</h3>
+                        <p>National Math &amp; Science Competition (Grades 3–11), High School Physics Contest (with AKPA), and K-12 STEM Art Contest.</p>
+                    </div>
+                    <div class="prog-card-item">
+                        <span class="prog-tag">Grants &amp; Awards</span>
+                        <h3>Young Investigator Grants (YIG)</h3>
+                        <p>KSEA's highest honor for early-career researchers (&le; 6 yrs post-PhD), awarding two $10,000 grants annually in Science and Engineering.</p>
+                    </div>
+                    <div class="prog-card-item">
+                        <span class="prog-tag">Scholarships</span>
+                        <h3>Student &amp; Postdoc Fellowships</h3>
+                        <p>Undergrad Scholarships ($1,500 x 20), Graduate KUSCO Scholarships ($2,000 x 20), and Postdoctoral Fellowships ($2,500 x 5).</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Regional Partners -->
             <div class="section">
                 <h2>Regional Partners</h2>
-                <p>We collaborate with local student and scholar
-                    associations to strengthen the regional scientific community and foster networking.</p>
+                <p>We collaborate with local student and scholar associations to strengthen the regional scientific community and foster networking.</p>
                 <div class="partner-grid">
                     <div class="card partner-card">
                         <div class="partner-logo-wrapper">
-                            <a href="https://www.facebook.com/groups/PKSAScholars/" target="_blank"
-                                class="partner-link">
+                            <a href="https://www.facebook.com/groups/PKSAScholars/" target="_blank" class="partner-link">
                                 <img src="images/partners/PKSA.jpg" alt="PKSA Logo" class="partner-logo">
                             </a>
                         </div>
-                        <h3><a href="https://www.facebook.com/groups/PKSAScholars/" target="_blank"
-                                class="partner-link">PKSA</a></h3>
+                        <h3><a href="https://www.facebook.com/groups/PKSAScholars/" target="_blank" class="partner-link">PKSA</a></h3>
                         <p>Philadelphia Korean Scholars Association</p>
                     </div>
                     <div class="card partner-card">
@@ -86,10 +334,8 @@
                                 <img src="images/partners/upenn-kogsa.png" alt="UPenn KoGSA Logo" class="partner-logo">
                             </a>
                         </div>
-                        <h3><a href="https://www.instagram.com/upennkogsa" target="_blank" class="partner-link">UPenn
-                                KoGSA</a></h3>
-                        <p style="font-size: 0.9em; margin-bottom: 5px;">University of Pennsylvania<br>Korean Graduate
-                            Student Association</p>
+                        <h3><a href="https://www.instagram.com/upennkogsa" target="_blank" class="partner-link">UPenn KoGSA</a></h3>
+                        <p style="font-size: 0.9em; margin-bottom: 5px;">University of Pennsylvania<br>Korean Graduate Student Association</p>
                     </div>
                     <div class="card partner-card">
                         <div class="partner-logo-wrapper">
@@ -98,16 +344,15 @@
                             </a>
                         </div>
                         <h3><a href="https://kkyu.qshop.ai/" target="_blank" class="partner-link">KKYU</a></h3>
-                        <p style="font-size: 0.9em; margin-bottom: 5px;">Knowledge
-                            Knocking for Your Universe</p>
+                        <p style="font-size: 0.9em; margin-bottom: 5px;">Knowledge Knocking for Your Universe</p>
                     </div>
                 </div>
             </div>
 
+            <!-- APS Partners -->
             <div class="section">
                 <h2>APS Partners</h2>
-                <p>We work closely with KSEA Affiliated Professional
-                    Societies (APS) to provide specialized professional development and industry connections.</p>
+                <p>We work closely with KSEA Affiliated Professional Societies (APS) to provide specialized professional development and industry connections.</p>
                 <div class="partner-grid">
                     <div class="card partner-card">
                         <div class="partner-logo-wrapper">
@@ -133,8 +378,7 @@
                                 <img src="images/partners/kbmes.jpg" alt="KBMES Logo" class="partner-logo">
                             </a>
                         </div>
-                        <h3><a href="https://www.facebook.com/kbmesksea/" target="_blank" class="partner-link">KBMES</a>
-                        </h3>
+                        <h3><a href="https://www.facebook.com/kbmesksea/" target="_blank" class="partner-link">KBMES</a></h3>
                         <p>Korean American Biomedical Engineering Society</p>
                     </div>
                 </div>

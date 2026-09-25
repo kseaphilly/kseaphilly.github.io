@@ -957,6 +957,138 @@ footer a:hover { opacity: 1; color: #E5B87A; }
     max-width: 680px;
 }
 
+/* ── Demographics & Data Display ────────────────────────────────── */
+.demo-grid-4 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border-top: 1px solid var(--w-rule);
+    border-left: 1px solid var(--w-rule);
+}
+.demo-card {
+    padding: 32px 24px;
+    border-right: 1px solid var(--w-rule);
+    border-bottom: 1px solid var(--w-rule);
+    background: var(--w-bg);
+}
+.demo-card h3 {
+    font-family: var(--f-display);
+    font-size: 22px;
+    font-weight: 500;
+    margin: 0 0 18px;
+    color: var(--w-navy);
+    letter-spacing: -0.3px;
+}
+.demo-item {
+    margin-bottom: 12px;
+}
+.demo-item-label {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    margin-bottom: 4px;
+}
+.demo-item-name { opacity: 0.85; }
+.demo-item-val { font-family: var(--f-mono); font-weight: 600; font-size: 12px; }
+.demo-bar-track {
+    height: 6px;
+    background: rgba(18,18,18,0.08);
+    border-radius: 3px;
+    overflow: hidden;
+}
+.demo-bar-fill {
+    height: 100%;
+    background: var(--w-navy);
+    border-radius: 3px;
+}
+.demo-bar-fill--bio { background: var(--w-bio); }
+.demo-bar-fill--gold { background: var(--w-gold); }
+.demo-bar-fill--brick { background: var(--w-brick); }
+
+/* ── Technical Groups Grid ──────────────────────────────────────── */
+.tech-groups-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border-top: 1px solid var(--w-rule);
+    border-left: 1px solid var(--w-rule);
+}
+.tg-cell {
+    padding: 30px 24px;
+    border-right: 1px solid var(--w-rule);
+    border-bottom: 1px solid var(--w-rule);
+    background: var(--w-bg);
+}
+.tg-head {
+    font-family: var(--f-display);
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0 0 14px;
+    color: var(--w-navy);
+    border-bottom: 1px solid var(--w-rule-soft);
+    padding-bottom: 10px;
+}
+.tg-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 13px;
+    line-height: 1.6;
+    opacity: 0.85;
+}
+.tg-list li {
+    margin-bottom: 8px;
+    position: relative;
+    padding-left: 14px;
+}
+.tg-list li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--w-navy);
+}
+
+/* ── Flagship Programs Grid ─────────────────────────────────────── */
+.prog-grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border-top: 1px solid var(--w-rule);
+    border-left: 1px solid var(--w-rule);
+}
+.prog-card {
+    padding: 32px 28px;
+    border-right: 1px solid var(--w-rule);
+    border-bottom: 1px solid var(--w-rule);
+    background: var(--w-bg);
+    display: flex;
+    flex-direction: column;
+}
+.prog-card h3 {
+    font-family: var(--f-display);
+    font-size: 24px;
+    font-weight: 500;
+    margin: 10px 0 10px;
+    color: var(--w-ink);
+    letter-spacing: -0.4px;
+}
+.prog-card p {
+    font-size: 14px;
+    line-height: 1.55;
+    opacity: 0.78;
+    margin: 0 0 16px;
+    flex: 1;
+}
+.prog-badge {
+    display: inline-block;
+    padding: 3px 8px;
+    font-family: var(--f-mono);
+    font-size: 10px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    background: var(--w-cream);
+    color: var(--w-navy);
+    align-self: flex-start;
+    border: 1px solid rgba(31,42,110,0.2);
+}
+
 /* ── Print ──────────────────────────────────────────────────────── */
 @media print {
     .ticker, nav.site-nav, .btn, .btn-primary, .btn-outline { display: none; }
@@ -967,13 +1099,14 @@ footer a:hover { opacity: 1; color: #E5B87A; }
 @media (max-width: 1024px) {
     :root { --pad-x: 28px; --pad-y: 44px; }
     .home-hero, .events-grid, .partner-grid-3, .people-grid,
-    .info-split, .home-stats, .mobile-step, .step-grid-2 {
+    .info-split, .home-stats, .mobile-step, .step-grid-2,
+    .demo-grid-4, .tech-groups-grid, .prog-grid-3 {
         grid-template-columns: 1fr;
     }
     .home-hero-left { border-right: none; border-bottom: 1px solid var(--w-rule); }
     .home-stats .stat-box { border-right: none; border-bottom: 1px solid var(--w-rule); }
     .home-stats .stat-box:last-child { border-bottom: none; }
-    .event-card, .partner-cell, .people-card {
+    .event-card, .partner-cell, .people-card, .demo-card, .tg-cell, .prog-card {
         border-right: none !important;
     }
     .info-split > .info-section:first-child { border-right: none; border-bottom: 1px solid var(--w-rule); }
@@ -1002,3 +1135,4 @@ footer a:hover { opacity: 1; color: #E5B87A; }
     .ticker { flex-direction: column; align-items: flex-start; gap: 6px; }
     .sponsors-strip-logos { gap: 28px; }
 }
+
