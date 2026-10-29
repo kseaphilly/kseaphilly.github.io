@@ -11,7 +11,7 @@ Complete history and upcoming schedule of the KSEA Philadelphia Chapter.
 ## 2026–2027 Upcoming & Ongoing (FY 2026–2027)
 | Date | Event | Location | Status |
 | :--- | :--- | :--- | :--- |
-| Sep 29, 2026 | [[NJ-Tech-Webinar-2026]] | Online (Zoom) | KSEA NJ Tech Webinar: Benji Shin (Zenerate) |
+| Ongoing (Fall 2026 Pilot) | [[Coffee-Chat-Grants-2026]] | Greater Philadelphia | Active ($10/person micro-grants, $500 Fall Pilot, Bridge Model open) |
 | Ongoing | [[Joint-Seminar-Series-2026-2027]] | UPenn Smilow & Levine | Semester-based Series (Bi-weekly Thursdays at 6 PM) |
 | Dec 2026 | End-of-Year Party | Philadelphia | Annual Year-End Celebration & Networking |
 | Jan–Feb 2027 | Chapter Symposium 2027 | Greater Philadelphia | Annual Multidisciplinary Research Symposium |
@@ -20,6 +20,7 @@ Complete history and upcoming schedule of the KSEA Philadelphia Chapter.
 ## 2026 Completed
 | Date | Event | Location | Status / Key Highlight |
 | :--- | :--- | :--- | :--- |
+| Sep 29 | [[NJ-Tech-Webinar-2026]] | Online (Zoom) | Completed (KSEA NJ Tech Webinar: Benji Shin, Zenerate) |
 | Sep 10 | [[Joint-Seminar-2026-09-10]] | UPenn Smilow Center 10F | Completed (Fall Kickoff #1: Sue Hyon Kim) |
 | Sep 04 | [[Fall-Membership-Drive-2026]] | UPenn Bodek Lounge | Completed (with KoGSA) |
 | May 16-17 | [[STEP-UP-2026]] | Philadelphia | Cancelled (Did not take place) |
