@@ -4,98 +4,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mentor Coffee Chat Micro-Grants - KSEA Philadelphia Chapter</title>
-    <meta name="description" content="KSEA Philadelphia Chapter Mentor Coffee Chat Micro-Grants ($10/person, $50–$100 per session) guidelines and application.">
-    <!-- OpenGraph / Social Sharing -->
+    <title>Mentor Coffee Chat - KSEA Philadelphia Chapter</title>
+    <meta name="description" content="KSEA Philadelphia Chapter Mentor Coffee Chat ($10/person, 5–10 attendees) guide and application.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://kseaphilly.github.io/coffee_chat.html">
-    <meta property="og:title" content="Mentor Coffee Chat Micro-Grants | KSEA Philadelphia Chapter">
-    <meta property="og:description" content="Small-group mentorship support ($10/person, $50–$100 per session) for KSEA Philadelphia Chapter members.">
+    <meta property="og:title" content="Mentor Coffee Chat | KSEA Philadelphia Chapter">
+    <meta property="og:description" content="Small-group mentorship support ($10/person, 5–10 attendees) for KSEA Philadelphia Chapter members.">
     <meta property="og:image" content="https://kseaphilly.github.io/assets/ksea_phily_logo.png">
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Mentor Coffee Chat Micro-Grants | KSEA Philadelphia Chapter">
-    <meta name="twitter:description" content="Small-group mentorship support ($10/person, $50–$100 per session).">
-    <meta name="twitter:image" content="https://kseaphilly.github.io/assets/ksea_phily_logo.png">
     <link rel="stylesheet" href="css/style.css">
     <style>
         .lang-bar {
             display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 10px;
-            margin-bottom: 35px;
-            padding: 12px 16px;
-            background: #f8fafc;
-            border: 1px solid #e2e8f0;
-            border-radius: 8px;
-            flex-wrap: wrap;
+            justify-content: flex-end;
+            gap: 8px;
+            margin-bottom: 24px;
         }
         .lang-btn {
-            padding: 8px 18px;
-            border-radius: 6px;
+            padding: 6px 14px;
+            border-radius: 4px;
             font-weight: bold;
-            font-size: 0.92em;
-            text-decoration: none;
+            font-size: 0.88em;
             cursor: pointer;
-            border: 1.5px solid #cbd5e1;
+            border: 1px solid #cbd5e1;
             background: #ffffff;
-            color: #1e293b;
-            transition: all 0.2s ease;
-        }
-        .lang-btn:hover {
-            border-color: #003478;
-            color: #003478;
+            color: #334155;
         }
         .lang-btn.active {
             background: #003478;
             color: #ffffff;
             border-color: #003478;
         }
-        .rule-card {
+        .info-box {
             background: #ffffff;
-            border: 1px solid #e5e7eb;
+            border: 1px solid #e2e8f0;
             border-radius: 8px;
-            padding: 22px 24px;
-            margin-bottom: 16px;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+            padding: 24px 28px;
+            margin-bottom: 20px;
         }
-        .rule-title {
+        .info-box h2 {
             color: #003478;
-            margin-top: 0;
-            font-size: 1.15em;
-            border-bottom: 1px solid #e5e7eb;
+            margin: 0 0 12px 0;
+            font-size: 1.2em;
+            border-bottom: 1px solid #e2e8f0;
             padding-bottom: 8px;
-            margin-bottom: 12px;
         }
-        .grid-3 {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 16px;
-            margin: 25px 0;
+        .info-box ul, .info-box ol {
+            margin: 0;
+            padding-left: 20px;
+            line-height: 1.75;
+            color: #334155;
         }
-        .grid-card {
-            background: #f8fafc;
-            border: 1px solid #cbd5e1;
-            border-radius: 8px;
-            padding: 18px;
+        .info-box li {
+            margin-bottom: 6px;
         }
         .lang-divider {
-            margin: 60px 0 45px 0;
-            border-top: 2px solid #cbd5e1;
-            text-align: center;
-            position: relative;
-        }
-        .lang-divider span {
-            background: #ffffff;
-            padding: 6px 18px;
-            color: #003478;
-            font-weight: bold;
-            font-size: 0.92em;
-            position: relative;
-            top: -14px;
-            border: 1px solid #cbd5e1;
-            border-radius: 20px;
+            margin: 45px 0 35px 0;
+            border-top: 2px solid #e2e8f0;
         }
     </style>
 </head>
@@ -121,310 +85,113 @@
     </header>
 
     <main>
-        <div class="container" style="max-width: 920px; margin: 40px auto; padding: 0 20px;">
+        <div class="container" style="max-width: 800px; margin: 40px auto; padding: 0 20px;">
 
-            <!-- Language Switcher Bar -->
             <div class="lang-bar">
-                <span style="font-size: 0.9em; color: #475569; font-weight: 600; margin-right: 4px;">Language:</span>
-                <button type="button" id="btn-both" class="lang-btn active" onclick="setLang('both')">English + 한국어</button>
-                <button type="button" id="btn-en" class="lang-btn" onclick="setLang('en')">English Only</button>
-                <button type="button" id="btn-ko" class="lang-btn" onclick="setLang('ko')">한국어만 보기</button>
+                <button type="button" id="btn-both" class="lang-btn active" onclick="setLang('both')">EN / KO</button>
+                <button type="button" id="btn-en" class="lang-btn" onclick="setLang('en')">English</button>
+                <button type="button" id="btn-ko" class="lang-btn" onclick="setLang('ko')">한국어</button>
             </div>
 
-            <!-- ================================================================= -->
-            <!-- PART 1: ENGLISH GUIDE & OPERATING REGULATIONS                     -->
-            <!-- ================================================================= -->
+            <!-- ENGLISH SECTION -->
             <section id="en">
-                <div style="text-align: center; margin-bottom: 32px;">
-                    <div style="display: inline-block; background: #003478; color: white; padding: 4px 12px; font-size: 0.8em; font-weight: bold; border-radius: 4px; margin-bottom: 10px;">
-                        FALL 2026 PILOT
-                    </div>
-                    <h1 style="font-size: 2em; color: #003478; margin: 0 0 8px 0;">
-                        Mentor Coffee Chat Micro-Grants
-                    </h1>
-                    <p style="font-size: 1.08em; color: #374151; margin: 0;">
-                        Small-group academic and career mentorship support ($10 per person)
-                    </p>
+                <h1 style="color: #003478; margin: 0 0 8px 0; text-align: left;">Mentor Coffee Chat Support</h1>
+                <p style="color: #475569; margin: 0 0 24px 0;">
+                    KSEA Philadelphia supports small-group mentoring over coffee and snacks during the Fall 2026 semester.
+                </p>
+
+                <div class="info-box">
+                    <h2>1. Support Details</h2>
+                    <ul>
+                        <li><strong>Amount:</strong> Up to <strong>$10 per person</strong> for coffee, beverages, and snacks ($50–$100 per meetup; alcohol and meals excluded).</li>
+                        <li><strong>Budget:</strong> $500 total for Fall 2026 (first-come, first-served for ~50 attendees).</li>
+                        <li><strong>Limit:</strong> Once per semester per KSEA member.</li>
+                    </ul>
                 </div>
 
-                <!-- Summary Cards (English) -->
-                <div class="grid-3">
-                    <div class="grid-card">
-                        <h3 style="margin: 0 0 8px 0; color: #003478; font-size: 1.05em;">Eligibility &amp; Size</h3>
-                        <p style="margin: 0; font-size: 0.92em; color: #374151; line-height: 1.6;">
-                            • 5 to 10 attendees per session<br>
-                            • Track 1 (Bridge): 1 KSEA Member + 1 KSEA Senior Mentor + Non-Members (50% rule waived)<br>
-                            • Track 2 (General): 50%+ KSEA members<br>
-                            • Max 1 grant per member per semester
-                        </p>
-                    </div>
-                    <div class="grid-card">
-                        <h3 style="margin: 0 0 8px 0; color: #003478; font-size: 1.05em;">Grant Amount</h3>
-                        <p style="margin: 0; font-size: 0.92em; color: #374151; line-height: 1.6;">
-                            • Up to $10 per person (coffee, tea, bakery items)<br>
-                            • $50 to $100 cap per session<br>
-                            • Fall 2026 Budget: $500 total (approx. 50 attendees)
-                        </p>
-                    </div>
-                    <div class="grid-card">
-                        <h3 style="margin: 0 0 8px 0; color: #003478; font-size: 1.05em;">Reimbursement</h3>
-                        <p style="margin: 0; font-size: 0.92em; color: #374151; line-height: 1.6;">
-                            • Submit 1 group photo + itemized receipt<br>
-                            • Direct Zelle transfer from chapter bank account<br>
-                            • Processed within 3–5 business days
-                        </p>
-                    </div>
+                <div class="info-box">
+                    <h2>2. Eligibility</h2>
+                    <ul>
+                        <li><strong>Group Size:</strong> <strong>5 to 10 attendees</strong> (1 mentor + mentees).</li>
+                        <li><strong>Mentor:</strong> Anyone more senior than the mentees (e.g., Grad Student → Undergrad, Postdoc → Grad, Faculty/Industry → Postdoc/Student). You may also request mentor matching from the chapter.</li>
+                        <li><strong>Member Ratio:</strong> At least <strong>50% KSEA members</strong>.
+                            <br><span style="color: #003478;">* If an active KSEA member organizes the meetup with a KSEA Philly senior mentor, the 50% rule is waived and non-member peers are also covered.</span>
+                        </li>
+                    </ul>
                 </div>
 
-                <!-- Regulations (English) -->
-                <div style="margin-top: 32px;">
-                    <h2 style="color: #003478; border-bottom: 2px solid #003478; padding-bottom: 8px; font-size: 1.4em;">
-                        Operating Guidelines
-                    </h2>
-
-                    <div class="rule-card">
-                        <h3 class="rule-title">Article 1 (Purpose)</h3>
-                        <p style="line-height: 1.65; color: #374151; margin: 0;">
-                            This program supports small-group academic and career mentoring among students, postdocs, and senior researchers in Greater Philadelphia, and introduces non-member participants to the KSEA Philadelphia Chapter.
-                        </p>
-                    </div>
-
-                    <div class="rule-card">
-                        <h3 class="rule-title">Article 2 (Period &amp; Budget)</h3>
-                        <ol style="line-height: 1.65; color: #374151; padding-left: 20px; margin: 0;">
-                            <li style="margin-bottom: 6px;"><strong>Period:</strong> Fall 2026 semester (pilot program).</li>
-                            <li style="margin-bottom: 6px;"><strong>Total Budget:</strong> $500 (approximately 50 attendees on a first-come, first-served basis; closes when funds are exhausted).</li>
-                            <li><strong>Spring 2027:</strong> A second $500 allocation will be reviewed based on Fall pilot participation.</li>
-                        </ol>
-                    </div>
-
-                    <div class="rule-card">
-                        <h3 class="rule-title">Article 3 (Group Size &amp; Eligibility)</h3>
-                        <ol style="line-height: 1.65; color: #374151; padding-left: 20px; margin: 0;">
-                            <li style="margin-bottom: 8px;">
-                                <strong>Group Size:</strong> 5 to 10 attendees per session. (Groups of 11 or more are not eligible).
-                            </li>
-                            <li style="margin-bottom: 8px;">
-                                <strong>Track 1 — Chapter Bridge Model:</strong>
-                                1 Active KSEA Member (Organizer) + 1 Active KSEA Senior Member (Mentor) + 3 to 8 Non-Member Mentees. The 50% KSEA member ratio is waived for Track 1, and all attendees receive up to $10/person.
-                            </li>
-                            <li style="margin-bottom: 8px;">
-                                <strong>Track 2 — General &amp; External Mentor Track:</strong>
-                                Peer groups or sessions inviting external (non-KSEA) mentors. At least 50% of total attendees must be active KSEA members.
-                            </li>
-                            <li style="margin-bottom: 8px;">
-                                <strong>Mentor Qualification:</strong>
-                                Anyone with relative seniority to the mentees may serve as a mentor (e.g., Graduate Student → Undergraduates; Postdoc → Graduate Students; Faculty or Industry Senior → Postdocs/Students). External industry professionals and non-Korean faculty are eligible under Track 2. Groups needing a mentor may request matching from the chapter when applying.
-                            </li>
-                            <li>
-                                <strong>Participation Limit:</strong>
-                                Up to once per semester per KSEA member. Non-members may attend once as a guest; if they subsequently register as an active KSEA member, they become eligible to organize or attend again as a member.
-                            </li>
-                        </ol>
-                    </div>
-
-                    <div class="rule-card">
-                        <h3 class="rule-title">Article 4 (Grant Amount &amp; Zelle Reimbursement)</h3>
-                        <ol style="line-height: 1.65; color: #374151; padding-left: 20px; margin: 0;">
-                            <li style="margin-bottom: 6px;"><strong>Subsidy Rate:</strong> Up to $10 per verified attendee for actual costs of coffee, tea, beverages, and bakery/snack items (alcohol and full meals excluded).</li>
-                            <li style="margin-bottom: 6px;"><strong>Session Cap:</strong> $50 (5 persons) to $100 (10 persons). Any excess amount is paid by the attendees.</li>
-                            <li style="margin-bottom: 6px;"><strong>Calculation:</strong> <code>Verified headcount in group photo × $10</code>, capped at the actual receipt total.</li>
-                            <li><strong>Disbursement:</strong> Sent via Zelle from the chapter business bank account to the organizer within 3–5 business days.</li>
-                        </ol>
-                    </div>
-
-                    <div class="rule-card">
-                        <h3 class="rule-title">Article 5 (Application &amp; Reimbursement Procedure)</h3>
-                        <div style="background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 6px; padding: 15px; margin-bottom: 12px;">
-                            <strong>Step 1. Pre-Application (at least 3 business days before the meetup):</strong><br>
-                            Email the following to <code>ksea.philly.chapter@gmail.com</code>:
-                            <pre style="background: #ffffff; border: 1px solid #d1d5db; border-radius: 4px; padding: 12px; font-size: 0.9em; margin-top: 8px; overflow-x: auto;">
-Subject: [KSEA Philly] Mentor Coffee Chat Application
-1. Meetup Title &amp; Topic:
-2. Date, Time &amp; Venue:
-3. Mentor Info (Name, Affiliation/Title, or Requested Matching Field):
-4. Estimated Headcount: 00 attendees (5–10 persons)
-5. Track &amp; Attendee List:
-   - Track 1 (Bridge Model: 50% rule waived) OR Track 2 (General: 50%+ KSEA members)
-   - Name / Affiliation / Email / KSEA Member Status (or ID)</pre>
-                        </div>
-                        <div style="background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 6px; padding: 15px; margin-bottom: 12px;">
-                            <strong>Step 2. Pre-Approval Confirmation:</strong><br>
-                            Chapter officers confirm approval via return email within 24 hours.
-                        </div>
-                        <div style="background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 6px; padding: 15px;">
-                            <strong>Step 3. Reimbursement Submission (within 7 days after the meetup):</strong><br>
-                            Email the following to <code>ksea.philly.chapter@gmail.com</code>:
-                            <ul style="margin: 6px 0 0 0; padding-left: 20px; font-size: 0.94em; line-height: 1.6;">
-                                <li>1 group photo showing all attendees</li>
-                                <li>Itemized receipt photo</li>
-                                <li>Zelle recipient info (Name and email or phone number registered with Zelle)</li>
-                            </ul>
-                        </div>
-                    </div>
+                <div class="info-box">
+                    <h2>3. How to Apply &amp; Reimburse</h2>
+                    <ol>
+                        <li>
+                            <strong>Apply (at least 3 days before):</strong> Email <code>ksea.philly.chapter@gmail.com</code>
+                            <pre style="background: #f8fafc; border: 1px solid #cbd5e1; border-radius: 4px; padding: 12px; font-size: 0.9em; margin: 8px 0; overflow-x: auto;">
+Subject: [KSEA Philly] Coffee Chat Application
+- Topic:
+- Date, Time &amp; Cafe:
+- Mentor (Name &amp; Affiliation, or request matching):
+- Attendees (5–10 people: Name / Affiliation / Email / KSEA Member Y/N):</pre>
+                        </li>
+                        <li><strong>Confirmation:</strong> Approval sent via email within 24 hours.</li>
+                        <li><strong>Reimbursement (within 7 days after):</strong> Email <strong>1 group photo</strong>, <strong>itemized receipt</strong>, and <strong>Zelle info</strong> (name, email/phone) to <code>ksea.philly.chapter@gmail.com</code>. Sent via Zelle within 3–5 business days.</li>
+                    </ol>
                 </div>
 
-                <!-- English Action Box -->
-                <div style="text-align: center; margin-top: 28px; padding: 22px; background: #f8fafc; border-radius: 8px; border: 1px solid #cbd5e1;">
-                    <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
-                        <a href="mailto:ksea.philly.chapter@gmail.com?subject=[KSEA%20Philly]%20Mentor%20Coffee%20Chat%20Application" class="btn" style="background-color: #003478; color: white; padding: 10px 22px; font-weight: bold; text-decoration: none; border-radius: 5px; display: inline-block;">
-                            Apply via Email →
-                        </a>
-                        <a href="membership_instruction.html" class="btn" style="background-color: #475569; color: white; padding: 10px 22px; font-weight: bold; text-decoration: none; border-radius: 5px; display: inline-block;">
-                            Membership Registration Guide →
-                        </a>
-                    </div>
+                <div style="margin-top: 20px; display: flex; gap: 10px; flex-wrap: wrap;">
+                    <a href="mailto:ksea.philly.chapter@gmail.com?subject=[KSEA%20Philly]%20Coffee%20Chat%20Application" class="btn" style="background-color: #003478; color: white; padding: 10px 20px; font-weight: bold; text-decoration: none; border-radius: 5px;">Apply via Email →</a>
+                    <a href="membership_instruction.html" class="btn" style="background-color: #64748b; color: white; padding: 10px 20px; font-weight: bold; text-decoration: none; border-radius: 5px;">Membership Guide →</a>
                 </div>
             </section>
 
-            <!-- Divider -->
-            <div id="lang-divider" class="lang-divider">
-                <span>한국어 안내 및 운영 규정</span>
-            </div>
+            <div id="lang-divider" class="lang-divider"></div>
 
-            <!-- ================================================================= -->
-            <!-- PART 2: KOREAN GUIDE & OPERATING REGULATIONS                      -->
-            <!-- ================================================================= -->
+            <!-- KOREAN SECTION -->
             <section id="ko">
-                <div style="text-align: center; margin-bottom: 32px;">
-                    <div style="display: inline-block; background: #003478; color: white; padding: 4px 12px; font-size: 0.8em; font-weight: bold; border-radius: 4px; margin-bottom: 10px;">
-                        2026 가을학기 파일럿
-                    </div>
-                    <h1 style="font-size: 2em; color: #003478; margin: 0 0 8px 0;">
-                        멘토와의 커피챗 지원 프로그램
-                    </h1>
-                    <p style="font-size: 1.08em; color: #374151; margin: 0;">
-                        연구·진로 멘토링 소모임 다과비 지원 (참석자 1인당 $10 실비)
-                    </p>
+                <h1 style="color: #003478; margin: 0 0 8px 0; text-align: left;">멘토 커피챗 다과비 지원 안내</h1>
+                <p style="color: #475569; margin: 0 0 24px 0;">
+                    KSEA 필라델피아 지부에서 2026년 가을학기 소규모 연구·진로 멘토링 모임의 다과비를 지원합니다.
+                </p>
+
+                <div class="info-box">
+                    <h2>1. 지원 내용</h2>
+                    <ul>
+                        <li><strong>지원 금액:</strong> 참석자 <strong>1인당 $10 한도 실비</strong> (커피·음료·디저트류, 모임당 $50~$100 한도 / 주류·식사 제외)</li>
+                        <li><strong>운영 예산:</strong> 2026 가을학기 총 $500 (선착순 약 50명분, 소진 시 마감)</li>
+                        <li><strong>참여 제한:</strong> KSEA 정회원 1인당 학기 1회</li>
+                    </ul>
                 </div>
 
-                <!-- Summary Cards (Korean) -->
-                <div class="grid-3">
-                    <div class="grid-card">
-                        <h3 style="margin: 0 0 8px 0; color: #003478; font-size: 1.05em;">지원 대상 및 인원</h3>
-                        <p style="margin: 0; font-size: 0.92em; color: #374151; line-height: 1.6;">
-                            • 모임당 5명 ~ 10명<br>
-                            • 트랙 1 (브릿지): 정회원 1명 + 시니어 정회원 1명 + 비회원 멘티 (50% 비율 요건 면제)<br>
-                            • 트랙 2 (일반): 참석자의 50% 이상 정회원<br>
-                            • 회원 1인당 학기 1회 지원
-                        </p>
-                    </div>
-                    <div class="grid-card">
-                        <h3 style="margin: 0 0 8px 0; color: #003478; font-size: 1.05em;">지원 금액</h3>
-                        <p style="margin: 0; font-size: 0.92em; color: #374151; line-height: 1.6;">
-                            • 참석자 1인당 $10 한도 실비 (커피·음료·디저트)<br>
-                            • 모임당 $50 ~ $100 한도<br>
-                            • 2026 가을학기 총 예산: $500 (약 50명분)
-                        </p>
-                    </div>
-                    <div class="grid-card">
-                        <h3 style="margin: 0 0 8px 0; color: #003478; font-size: 1.05em;">정산 방법</h3>
-                        <p style="margin: 0; font-size: 0.92em; color: #374151; line-height: 1.6;">
-                            • 전원 단체 사진 1장 + 품목별 영수증 제출<br>
-                            • 지부 은행 계좌에서 대표자 Zelle로 송금<br>
-                            • 서류 접수 후 3~5영업일 내 지급
-                        </p>
-                    </div>
+                <div class="info-box">
+                    <h2>2. 지원 자격</h2>
+                    <ul>
+                        <li><strong>모임 인원:</strong> <strong>5명 ~ 10명</strong> (멘토 1명 + 멘티)</li>
+                        <li><strong>멘토 자격:</strong> 멘티보다 앞선 단계의 선배 연구자·실무자 (대학원생 → 학부생, 포닥 → 대학원생, 교수·기업 시니어 → 포닥·학생). 신청 시 지부에 멘토 매칭 요청 가능.</li>
+                        <li><strong>회원 비율:</strong> 참석자의 <strong>50% 이상 KSEA 정회원</strong>
+                            <br><span style="color: #003478;">* 단, KSEA 정회원이 지부 시니어 정회원(멘토)과 함께 비회원 동료·후배를 모아 진행하는 경우 50% 비율 요건을 면제하며 전원 지원합니다.</span>
+                        </li>
+                    </ul>
                 </div>
 
-                <!-- Regulations (Korean) -->
-                <div style="margin-top: 32px;">
-                    <h2 style="color: #003478; border-bottom: 2px solid #003478; padding-bottom: 8px; font-size: 1.4em;">
-                        운영 규정
-                    </h2>
-
-                    <div class="rule-card">
-                        <h3 class="rule-title">제1조 (목적)</h3>
-                        <p style="line-height: 1.65; color: #374151; margin: 0;">
-                            본 프로그램은 필라델피아 지역 학생, 포닥, 시니어 연구자 간의 학술·진로 멘토링 소모임을 지원하고, 비회원 참가자에게 KSEA 필라델피아 지부 활동을 소개하기 위해 운영한다.
-                        </p>
-                    </div>
-
-                    <div class="rule-card">
-                        <h3 class="rule-title">제2조 (운영 기간 및 예산)</h3>
-                        <ol style="line-height: 1.65; color: #374151; padding-left: 20px; margin: 0;">
-                            <li style="margin-bottom: 6px;"><strong>운영 기간:</strong> 2026년 가을학기 (파일럿 운영).</li>
-                            <li style="margin-bottom: 6px;"><strong>총 예산:</strong> $500 (선착순 약 50명분, 예산 소진 시 마감).</li>
-                            <li><strong>연장 여부:</strong> 가을학기 운영 결과 검토 후 2027년 봄학기 예산($500) 편성을 결정한다.</li>
-                        </ol>
-                    </div>
-
-                    <div class="rule-card">
-                        <h3 class="rule-title">제3조 (모임 규모 및 지원 자격)</h3>
-                        <ol style="line-height: 1.65; color: #374151; padding-left: 20px; margin: 0;">
-                            <li style="margin-bottom: 8px;">
-                                <strong>모임 인원:</strong> 모임당 5명 이상 ~ 10명 이하 (10명 초과 모임은 지원 불가).
-                            </li>
-                            <li style="margin-bottom: 8px;">
-                                <strong>트랙 1 — 지부 브릿지 모델:</strong>
-                                KSEA 정회원(주최자 1명) + KSEA 시니어 정회원(멘토 1명) + 비회원 멘티(3~8명)로 구성된 모임. 트랙 1은 정회원 50% 비율 요건을 면제하며, 비회원 참석자에게도 1인당 $10 실비를 지원한다.
-                            </li>
-                            <li style="margin-bottom: 8px;">
-                                <strong>트랙 2 — 일반 및 외부 멘토 트랙:</strong>
-                                외부 멘토(기업체 재직자, 외국인 지도교수 등) 초청 또는 회원 간 소모임. 전체 참석자의 50% 이상이 KSEA 정회원이어야 한다.
-                            </li>
-                            <li style="margin-bottom: 8px;">
-                                <strong>멘토 기준:</strong>
-                                멘티보다 앞선 단계의 연구자·실무자라면 멘토로 참여할 수 있다 (예: 대학원생 → 학부생 / 포닥 → 대학원생 / 교수·기업 시니어 → 포닥·학생). 멘토 섭외가 필요한 소모임은 신청 시 희망 분야를 적어 지부에 매칭을 요청할 수 있다.
-                            </li>
-                            <li>
-                                <strong>참여 횟수 제한:</strong>
-                                KSEA 정회원 1인당 학기 1회 지원한다. 비회원은 게스트로 학기당 1회 참석할 수 있으며, 이후 KSEA 정회원으로 가입(회비 납부)하면 정회원 자격으로 다시 신청·참석할 수 있다.
-                            </li>
-                        </ol>
-                    </div>
-
-                    <div class="rule-card">
-                        <h3 class="rule-title">제4조 (지원 금액 및 정산)</h3>
-                        <ol style="line-height: 1.65; color: #374151; padding-left: 20px; margin: 0;">
-                            <li style="margin-bottom: 6px;"><strong>지원 단가:</strong> 참석자 1인당 $10 한도 내 실비 (커피, 차, 음료, 디저트/베이커리류에 한하며 주류 및 식사 제외).</li>
-                            <li style="margin-bottom: 6px;"><strong>모임당 한도:</strong> 최소 $50(5인) ~ 최대 $100(10인). 한도 초과 금액은 참가자 부담.</li>
-                            <li style="margin-bottom: 6px;"><strong>정산 기준:</strong> <code>단체 사진상 참석 인원 × $10</code> 한도 내 실제 영수증 결제 금액.</li>
-                            <li><strong>지급 방식:</strong> 서류 확인 후 3~5영업일 내 지부 공식 계좌에서 대표자 Zelle 계정(이메일 또는 전화번호)으로 송금.</li>
-                        </ol>
-                    </div>
-
-                    <div class="rule-card">
-                        <h3 class="rule-title">제5조 (신청 및 정산 절차)</h3>
-                        <div style="background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 6px; padding: 15px; margin-bottom: 12px;">
-                            <strong>1단계. 사전 신청 (모임 최소 3영업일 전):</strong><br>
-                            아래 양식을 작성하여 <code>ksea.philly.chapter@gmail.com</code>으로 발송:
-                            <pre style="background: #ffffff; border: 1px solid #d1d5db; border-radius: 4px; padding: 12px; font-size: 0.9em; margin-top: 8px; overflow-x: auto;">
-제목: [KSEA Philly] 멘토 커피챗 모임 신청
-1. 모임명 및 주제:
-2. 일시 및 장소 (카페명):
-3. 멘토 정보 (성함, 소속/직함, 또는 멘토 매칭 희망 분야):
-4. 예상 인원: 총 00명 (5~10명)
-5. 신청 트랙 및 참석자 명단:
-   - 트랙 1 (브릿지 모델: 50% 요건 면제) 또는 트랙 2 (일반: 정회원 50% 이상)
-   - 성함 / 소속 / 이메일 / KSEA 정회원 여부 (또는 회원 ID)</pre>
-                        </div>
-                        <div style="background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 6px; padding: 15px; margin-bottom: 12px;">
-                            <strong>2단계. 사전 승인 확인:</strong><br>
-                            임원진 검토 후 24시간 이내에 승인 여부를 이메일로 회신.
-                        </div>
-                        <div style="background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 6px; padding: 15px;">
-                            <strong>3단계. 정산 서류 제출 (모임 종료 후 7일 이내):</strong><br>
-                            아래 자료를 <code>ksea.philly.chapter@gmail.com</code>으로 제출:
-                            <ul style="margin: 6px 0 0 0; padding-left: 20px; font-size: 0.94em; line-height: 1.6;">
-                                <li>참석자 전원 단체 사진 1장</li>
-                                <li>품목별 결제 내역이 기재된 영수증 사진</li>
-                                <li>Zelle 수령 정보 (수령인 성함 및 Zelle 등록 이메일 또는 전화번호)</li>
-                            </ul>
-                        </div>
-                    </div>
+                <div class="info-box">
+                    <h2>3. 신청 및 정산 방법</h2>
+                    <ol>
+                        <li>
+                            <strong>사전 신청 (모임 3일 전까지):</strong> <code>ksea.philly.chapter@gmail.com</code>으로 이메일 발송
+                            <pre style="background: #f8fafc; border: 1px solid #cbd5e1; border-radius: 4px; padding: 12px; font-size: 0.9em; margin: 8px 0; overflow-x: auto;">
+제목: [KSEA Philly] 커피챗 신청
+- 모임 주제:
+- 일시 및 장소 (카페명):
+- 멘토 (성함·소속, 또는 멘토 매칭 희망 분야):
+- 참석자 명단 (5~10명: 성함 / 소속 / 이메일 / KSEA 정회원 여부):</pre>
+                        </li>
+                        <li><strong>승인 확인:</strong> 24시간 이내 이메일 회신</li>
+                        <li><strong>정산 (모임 후 7일 이내):</strong> <strong>전원 단체 사진 1장</strong>, <strong>품목별 영수증 사진</strong>, <strong>대표자 Zelle 정보(이름, 이메일/전화번호)</strong>를 이메일로 제출하면 3~5영업일 내 Zelle로 송금합니다.</li>
+                    </ol>
                 </div>
 
-                <!-- Korean Action Box -->
-                <div style="text-align: center; margin-top: 28px; padding: 22px; background: #f8fafc; border-radius: 8px; border: 1px solid #cbd5e1;">
-                    <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
-                        <a href="mailto:ksea.philly.chapter@gmail.com?subject=[KSEA%20Philly]%20멘토%20커피챗%20모임%20신청" class="btn" style="background-color: #003478; color: white; padding: 10px 22px; font-weight: bold; text-decoration: none; border-radius: 5px; display: inline-block;">
-                            이메일로 신청하기 →
-                        </a>
-                        <a href="membership_instruction.html" class="btn" style="background-color: #475569; color: white; padding: 10px 22px; font-weight: bold; text-decoration: none; border-radius: 5px; display: inline-block;">
-                            KSEA 회원가입 가이드 →
-                        </a>
-                    </div>
+                <div style="margin-top: 20px; display: flex; gap: 10px; flex-wrap: wrap;">
+                    <a href="mailto:ksea.philly.chapter@gmail.com?subject=[KSEA%20Philly]%20커피챗%20신청" class="btn" style="background-color: #003478; color: white; padding: 10px 20px; font-weight: bold; text-decoration: none; border-radius: 5px;">이메일로 신청하기 →</a>
+                    <a href="membership_instruction.html" class="btn" style="background-color: #64748b; color: white; padding: 10px 20px; font-weight: bold; text-decoration: none; border-radius: 5px;">회원가입 안내 →</a>
                 </div>
             </section>
 
@@ -440,38 +207,18 @@ Subject: [KSEA Philly] Mentor Coffee Chat Application
             const enSec = document.getElementById('en');
             const koSec = document.getElementById('ko');
             const divider = document.getElementById('lang-divider');
-            const btnBoth = document.getElementById('btn-both');
-            const btnEn = document.getElementById('btn-en');
-            const btnKo = document.getElementById('btn-ko');
+            document.getElementById('btn-both').classList.toggle('active', mode === 'both');
+            document.getElementById('btn-en').classList.toggle('active', mode === 'en');
+            document.getElementById('btn-ko').classList.toggle('active', mode === 'ko');
 
-            btnBoth.classList.remove('active');
-            btnEn.classList.remove('active');
-            btnKo.classList.remove('active');
-
-            if (mode === 'en') {
-                enSec.style.display = 'block';
-                koSec.style.display = 'none';
-                divider.style.display = 'none';
-                btnEn.classList.add('active');
-            } else if (mode === 'ko') {
-                enSec.style.display = 'none';
-                koSec.style.display = 'block';
-                divider.style.display = 'none';
-                btnKo.classList.add('active');
-            } else {
-                enSec.style.display = 'block';
-                koSec.style.display = 'block';
-                divider.style.display = 'block';
-                btnBoth.classList.add('active');
-            }
+            enSec.style.display = (mode === 'ko') ? 'none' : 'block';
+            koSec.style.display = (mode === 'en') ? 'none' : 'block';
+            divider.style.display = (mode === 'both') ? 'block' : 'none';
         }
 
         window.addEventListener('DOMContentLoaded', () => {
-            if (window.location.hash === '#ko') {
-                setLang('ko');
-            } else if (window.location.hash === '#en') {
-                setLang('en');
-            }
+            if (window.location.hash === '#ko') setLang('ko');
+            else if (window.location.hash === '#en') setLang('en');
         });
     </script>
 </body>
