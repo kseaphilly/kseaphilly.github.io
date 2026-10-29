@@ -55,9 +55,9 @@ A chapter-subsidized micro-grant program established by the KSEA Philadelphia Ch
 3. **Mentor Matching Support**: Student and postdoc groups lacking access to senior mentors may request a mentor match upon application (specifying target disciplines such as Bio/Pharma, AI/Tech, or Career Navigation). The chapter executive board will facilitate an introduction to an appropriate mentor from the chapter network.
 
 ### Article 6 (Reimbursement Rates & Audit)
-1. **Subsidy Rate**: **$10 per verified attendee** (capped between $50 and $100 per meetup).
-2. **Eligible Expenses**: Coffee, tea, and bakery/pastry items consumed during the session. (Alcohol and full meals are excluded).
-3. **Audit Metric**: Total reimbursement equals `verified attendee headcount in group photo × $10`, bounded by the actual itemized receipt amount. Expenses beyond the calculated grant cap are the responsibility of the attendees.
+1. **Subsidy Rate**: **$10 × verified attendees** (5–10 attendees, capped at $50–$100 per meetup).
+2. **Eligible Expenses**: Any coffee, beverages, snacks, or meals consumed during the session (alcohol excluded).
+3. **Audit Metric**: Total reimbursement equals `verified attendee headcount in group photo × $10` (up to $100 max for 10 attendees), bounded by the receipt total (excluding alcohol). Expenses beyond the grant cap are the responsibility of the attendees.
 
 ### Article 7 (Application & Disbursement Workflow)
 1. **Pre-Application**: Group organizer emails `ksea.philly.chapter@gmail.com` at least 3 business days before the event, providing:
