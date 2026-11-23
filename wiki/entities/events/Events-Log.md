@@ -12,7 +12,7 @@ Complete history and upcoming schedule of the KSEA Philadelphia Chapter.
 | Date | Event | Location | Status |
 | :--- | :--- | :--- | :--- |
 | Ongoing (Fall 2026 Pilot) | [[Coffee-Chat-Grants-2026]] | Greater Philadelphia | Active ($10/person micro-grants, $500 Fall Pilot, Bridge Model open) |
-| Ongoing | [[Joint-Seminar-Series-2026-2027]] | UPenn Smilow & Levine | Semester-based Series (Bi-weekly Thursdays at 6 PM) |
+| Ongoing | [[Joint-Seminar-Series-2026-2027]] | UPenn Smilow & Levine | Fall 2026 PKSA Series (6 Thursdays, 6 PM; Upcoming: Dec 3 Clara Yuri Kim, Dec 17 HeeJin Jun) & Spring 2027 |
 | Dec 2026 | End-of-Year Party | Philadelphia | Annual Year-End Celebration & Networking |
 | Jan–Feb 2027 | Chapter Symposium 2027 | Greater Philadelphia | Annual Multidisciplinary Research Symposium |
 | Apr 2027 | NRC 2027 (Northeast Regional Conference) | Regional | 36th NRC with NY & NJ Chapters |
@@ -20,6 +20,9 @@ Complete history and upcoming schedule of the KSEA Philadelphia Chapter.
 ## 2026 Completed
 | Date | Event | Location | Status / Key Highlight |
 | :--- | :--- | :--- | :--- |
+| Nov 12 | PKSA Fall Seminar #4 (Kiseok Lee) | UPenn Smilow Center | Completed (Kiseok (Keith) Lee, Ph.D., UDel) |
+| Oct 22 | PKSA Fall Seminar #3 (Bumsik Cho) | UPenn Smilow Center | Completed (Bumsik Cho, Ph.D., HHMI & UPenn) |
+| Oct 01 | PKSA Fall Seminar #2 (Heykyeong Jeong) | UPenn Smilow Center | Completed (Heykyeong Jeong, Ph.D., GSK) |
 | Sep 29 | [[NJ-Tech-Webinar-2026]] | Online (Zoom) | Completed (KSEA NJ Tech Webinar: Benji Shin, Zenerate) |
 | Sep 10 | [[Joint-Seminar-2026-09-10]] | UPenn Smilow Center 10F | Completed (Fall Kickoff #1: Sue Hyon Kim) |
 | Sep 04 | [[Fall-Membership-Drive-2026]] | UPenn Bodek Lounge | Completed (with KoGSA) |

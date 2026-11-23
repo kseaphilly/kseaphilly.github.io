@@ -62,4 +62,11 @@
 - **Site-Wide Announcement Deployment**: Published featured Mentor Coffee Chat Micro-Grants announcement cards and membership benefits across `index.html`, `events.html`, `membership.html`, `v2/index.html`, `v2/events.html`, and `v2/membership.html` highlighting the Chapter Bridge Model (100% waiver of 50% member ratio), multi-tier cascading mentorship, $10/person funding ($50–$100/session, $500 Fall Pilot), and direct Zelle reimbursement.
 - **Sitemap & Wiki Sync**: Added `coffee_chat.html` to `sitemap.xml` and updated `Events-Log.md`.
 
+## 2026-11-23
+- **Fall 2026 PKSA Seminar Series Schedule Integration**: Added the full 6-session Fall 2026 PKSA Seminar Series schedule (Sep 10 Sue Hyon Kim, Oct 1 Heykyeong Jeong, Oct 22 Bumsik Cho, Nov 12 Kiseok (Keith) Lee [all Concluded]; Dec 3 Clara Yuri Kim, Dec 17 HeeJin Jun [Upcoming]; Thursdays at 6:00 PM at UPenn Smilow Center, 3400 Civic Center Blvd) across root (`events.html`, `index.html`), `v2/` (`v2/events.html`, `v2/index.html`), and wiki entities.
+- **Co-Sponsor & Facebook Announcement Attribution**: Added Fall 2026 PKSA poster co-sponsor attribution (KSEA Philadelphia & [[KASBP]]), PKSA inquiry email (`Pksa.scholar@gmail.com`), and links to both PKSA Facebook announcements posted by admin [[Sangin-Kim]] (Aug 5 Series Announcement & Sep 2 Seminar #1 Announcement).
+- **v2 Asset Sync Fix**: Copied `20260910-seminar-photo1..6.jpg` into `v2/images/events/seminar-series/` to resolve broken gallery thumbnail paths on `v2/events.html`.
+- **Wiki Sync**: Updated `PKSA.md`, `Joint-Seminar-Series-2026-2027.md`, `Joint-Seminar-2026-09-10.md`, `Joint-Seminar-Series.md`, `Events-Log.md`, `Specific-Events.md`, `events/index.md`, and `V2-Home-Content.md`.
+- **Google Drive Proposal Spreadsheet Update**: Updated `KSEA_Proposal_Philly_20260910-20261231_Fall_Seminar_Series.xlsx` in-place on Google Drive (`1wCCw-Se9xp2oPxvgpEn_lvZPFAWNAUTy`) with accurate 6-session dates/speakers/affiliations, co-sponsors (KSEA, PKSA, KITEE, KKYU, KASBP), venue address, detailed plan, corrected formula totals, and confirmed budget (`$700` KSEA HQ + `$300` Chapter = `$1,000` total).
+
 

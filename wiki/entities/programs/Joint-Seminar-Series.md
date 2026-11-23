@@ -22,7 +22,9 @@ The Joint Monthly Seminar Series provides an ongoing forum for researchers, stud
 
 ## Series Editions
 - **Current / Active**: [[Joint-Seminar-Series-2026-2027]] (Semester-based: Fall 2026 & Spring 2027)
-  - Kickoff Seminar: [[Joint-Seminar-2026-09-10]] (Sue Hyon Kim on LLMs in Liver Transplantation)
+  - Fall 2026 PKSA Seminar Series: 6 Thursday sessions (Sep 10 – Dec 17, 2026, 6:00 PM at UPenn Smilow Center; co-sponsored with KSEA & [[KASBP]])
+  - Kickoff Seminar (#1): [[Joint-Seminar-2026-09-10]] (Sue Hyon Kim on LLMs in Liver Transplantation, Concluded)
+  - Upcoming Fall 2026 Sessions: Dec 3 (Clara Yuri Kim, Ph.D., UPenn Perelman School of Medicine) & Dec 17 (HeeJin Jun, Ph.D., UPenn Dept of Bioengineering)
 - **Previous / Concluded**: [[Joint-Seminar-Series-2025-2026]] (September 2025 – April 2026)
   - Topics: AI Diagnostics, Pharma Market, Materials Science for Clean Energy
 
